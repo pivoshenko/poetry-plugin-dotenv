@@ -1,0 +1,89 @@
+# CI workflow
+# - Run linters (flake8, mypy, security)
+# - Run tests (doctests, unittests)
+#
+# Requires GitHub secrets
+# - CODECOV_TOKEN
+
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  linters:
+    name: Run linters
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        id: checkout-repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Install Python
+        id: install-python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+          architecture: x64
+
+      - name: Install dependencies
+        id: install-dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install poetry
+          python -m poetry install
+
+      - name: Run flake8
+        id: run-flake8
+        run: |
+          python -m poetry run poe lint-flake8
+
+      - name: Run mypy
+        id: run-mypy
+        run: |
+          python -m poetry run poe lint-mypy
+
+  tests:
+    name: Run tests
+    needs: linters
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+        python-version: [ "3.7", "3.8", "3.9", "3.10" ]
+    steps:
+      - name: Checkout repository
+        id: checkout-repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Install Python
+        id: install-python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: x64
+
+      - name: Install dependencies
+        id: install-dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install poetry
+          python -m poetry install
+
+      - name: Run pytest | xdoctest
+        id: run-pytest-xdoctest
+        run: |
+          python -m poetry run poe tests
+
+      - name: Upload coverage to Codecov
+        id: upload-coverage-to-codecov
+        uses: codecov/codecov-action@v1.0.13
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          name: ${{ matrix.os }}, ${{ matrix.python-version }}
