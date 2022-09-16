@@ -62,7 +62,7 @@ mypy = "^0.971"
 wemake-python-styleguide = "^0.16.1"
 # flake8 extensions
 flake8-pytest-style = "^1.6.0"
-pyproject-flake8 = "^0.0.1-alpha.5"
+pyproject-flake8 = "^4.0.1"
 # tests
 pytest = "^7.1.2"
 xdoctest = "^1.0.2"
