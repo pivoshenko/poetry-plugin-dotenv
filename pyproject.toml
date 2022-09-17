@@ -46,10 +46,7 @@ packages = [{ include = "poetry_dotenv", from = "src" }]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-# utils
-decorator = "^5.1.1"
-typing-extensions = "^4.2.0"
-awesome-pattern-matching = "^0.24.3"
+python-dotenv = "^0.21.0"
 
 [tool.poetry.extras]
 
@@ -78,7 +75,7 @@ python-semantic-release = "^7.31.4"
 # utils
 poethepoet = "^0.16.0"
 pre-commit = "^2.20.0"
-ipython = "^7.34.0"  # newest version does not support Python 3.7
+ipython = "^7.34.0" # newest version does not support Python 3.7
 
 [tool.semantic_release]
 branch = "main"
@@ -108,12 +105,7 @@ force_alphabetical_sort_within_sections = true
 
 [tool.black]
 line-length = 100
-target-version = [
-    "py37",
-    "py38",
-    "py39",
-    "py310",
-]
+target-version = ["py37", "py38", "py39", "py310"]
 include = '\.pyi?$'
 
 [tool.flake8]
@@ -121,10 +113,7 @@ max-line-length = 100
 max-local-variables = 10
 inline-quotes = '"'
 docstring_style = "numpy"
-exclude = [
-    "__init__.py",
-    "tests/*.py",
-]
+exclude = ["__init__.py", "tests/*.py"]
 extend-ignore = []
 
 [tool.mypy]
@@ -146,10 +135,7 @@ addopts = [
     "--cov-report=term-missing",
     "--cov-report=xml",
 ]
-testpaths = [
-    "src",
-    "tests",
-]
+testpaths = ["src", "tests"]
 
 [tool.coverage.run]
 omit = ["*/__init__.py"]
@@ -161,10 +147,7 @@ format = [
 ]
 lint-flake8 = { cmd = "pflake8 --config pyproject.toml ." }
 lint-mypy = { cmd = "mypy --config-file pyproject.toml ." }
-lint = [
-    { ref = "lint-flake8" },
-    { ref = "lint-mypy" },
-]
+lint = [{ ref = "lint-flake8" }, { ref = "lint-mypy" }]
 tests = { cmd = "pytest" }
 clean = [
     { cmd = "find . -type f -name '*.py[co]' -delete" },
