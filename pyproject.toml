@@ -47,6 +47,7 @@ packages = [{ include = "poetry_dotenv", from = "src" }]
 [tool.poetry.dependencies]
 python = "^3.7"
 python-dotenv = "^0.21.0"
+poetry = ">=1.2.1"
 
 [tool.poetry.extras]
 
@@ -59,7 +60,7 @@ mypy = "^0.971"
 wemake-python-styleguide = "^0.16.1"
 # flake8 extensions
 flake8-pytest-style = "^1.6.0"
-pyproject-flake8 = "^0.0.1-alpha.5"
+pyproject-flake8 = "^3.9.0"
 # tests
 pytest = "^7.1.2"
 xdoctest = "^1.0.2"
@@ -75,7 +76,7 @@ python-semantic-release = "^7.31.4"
 # utils
 poethepoet = "^0.16.0"
 pre-commit = "^2.20.0"
-ipython = "^7.34.0" # newest version does not support Python 3.7
+ipython = "^7.34.0"
 
 [tool.semantic_release]
 branch = "main"
@@ -114,7 +115,15 @@ max-local-variables = 10
 inline-quotes = '"'
 docstring_style = "numpy"
 exclude = ["__init__.py", "tests/*.py"]
-extend-ignore = []
+extend-ignore = [
+    "D202", "DAR101", "DAR201", "DAR401", "DAR402",
+    "WPS305",
+    "WPS602",
+]
+# D202 - code is hard to read without a blank line after a docstring
+# DAR101, DAR201, DAR401, DAR402 - there's no sense to put all sections in docstrings
+# WPS305 - f-strings are actualy safe and usefull
+# WPS602 - staticmethods  are actualy safe and usefull
 
 [tool.mypy]
 python_version = "3.9"
