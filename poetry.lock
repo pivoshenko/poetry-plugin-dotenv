@@ -745,7 +745,7 @@ format-nongpl = ["fqdn", "idna", "isoduration", "jsonpointer (>1.13)", "rfc3339-
 
 [[package]]
 name = "keyring"
-version = "23.9.2"
+version = "23.9.3"
 description = "Store and access your passwords safely."
 category = "main"
 optional = false
@@ -1706,7 +1706,7 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "83d25f2f51585d5375e336428a38ffe6d623a2890ddd23357a8739788b49c0ee"
+content-hash = "d5bbc0044e7967219a9ad6ed28d84a19113c6fc91fa6cbe46b0933eead90c136"
 
 [metadata.files]
 appnope = [
@@ -2133,8 +2133,8 @@ jsonschema = [
     {file = "jsonschema-4.16.0.tar.gz", hash = "sha256:165059f076eff6971bae5b742fc029a7b4ef3f9bcf04c14e4776a7605de14b23"},
 ]
 keyring = [
-    {file = "keyring-23.9.2-py3-none-any.whl", hash = "sha256:e126cffb36da963fad93158b1b8fdf9ee2976f926163f550671241ed20d32799"},
-    {file = "keyring-23.9.2.tar.gz", hash = "sha256:44a410fdf59d66fbfb9914a6cb4b67f8ee811d2ed554682e5c9d86a5e89319df"},
+    {file = "keyring-23.9.3-py3-none-any.whl", hash = "sha256:69732a15cb1433bdfbc3b980a8a36a04878a6cfd7cb99f497b573f31618001c0"},
+    {file = "keyring-23.9.3.tar.gz", hash = "sha256:69b01dd83c42f590250fe7a1f503fc229b14de83857314b1933a3ddbf595c4a5"},
 ]
 lockfile = [
     {file = "lockfile-0.12.2-py2.py3-none-any.whl", hash = "sha256:6c3cb24f344923d30b2785d5ad75182c8ea7ac1b6171b08657258ec7429d50fa"},
