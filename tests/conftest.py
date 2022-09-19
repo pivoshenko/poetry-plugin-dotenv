@@ -7,14 +7,14 @@ import pytest
 
 @pytest.fixture()
 def dotenv_content() -> str:
-    """Get content of the ``.env`` file."""
+    """Get content of the dotenv file."""
 
     return "POSTGRES_USER=admin"
 
 
 @pytest.fixture()
 def dotenv_filepath(dotenv_content: str, tmp_path: Path) -> str:
-    """Get ``.env`` filepath."""
+    """Get the dotenv filepath."""
 
     basepath = tmp_path / ".." / ".." / ".."
 
