@@ -35,8 +35,11 @@ class DotenvPlugin(ApplicationPlugin):
     def load_dotenv(event: ConsoleCommandEvent, *args, **kwargs) -> None:
         """Load ``.env`` file."""
 
-        if isinstance(event.command, EnvCommand) and not os.environ.get("POETRY_DONT_LOAD_DOTENV"):
-            filepath = os.environ.get("POETRY_DOTENV_LOCATION") or dotenv.find_dotenv(usecwd=True)
+        dont_load_dotenv = os.getenv("POETRY_DONT_LOAD_DOTENV")
+        dotenv_location = os.getenv("POETRY_DOTENV_LOCATION")
+
+        if isinstance(event.command, EnvCommand) and not dont_load_dotenv:
+            filepath = dotenv_location if dotenv_location else dotenv.find_dotenv(usecwd=True)
 
             if event.io.is_debug():
                 event.io.write_line(f"<debug>Loading environment variables {filepath!r}.</debug>")
