@@ -121,18 +121,23 @@ max-line-length = 100
 max-local-variables = 10
 inline-quotes = '"'
 docstring_style = "numpy"
-exclude = ["__init__.py", "tests/*.py"]
+exclude = ["__init__.py"]
+per-file-ignores = [
+    "tests/conftest.py: WPS442",
+]
+# WPS442 - fixtures will always be outer scope
 extend-ignore = [
     "D202",
     "DAR101",
     "DAR201",
+    "DAR301",
     "DAR401",
     "DAR402",
     "WPS305",
     "WPS602",
 ]
 # D202 - code is hard to read without a blank line after a docstring
-# DAR101, DAR201, DAR401, DAR402 - there's no sense to put all sections in docstrings
+# DAR101, DAR201, DAR401, DAR301, DAR402 - there's no sense to put all sections in docstrings
 # WPS305 - f-strings are actualy safe and usefull
 # WPS602 - staticmethods  are actualy safe and usefull
 
