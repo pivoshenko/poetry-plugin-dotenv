@@ -1,4 +1,4 @@
-"""Tests for the plugin."""
+"""Tests for the module that contains the core functionality of the plugin."""
 
 import os
 
