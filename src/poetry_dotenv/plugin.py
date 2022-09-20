@@ -1,4 +1,4 @@
-"""poetry-dotenv - is the tool that automatically loads environment variables from .env files."""
+"""Module that contains the core functionality of the plugin."""
 
 import os
 
@@ -12,22 +12,22 @@ from poetry.plugins.application_plugin import ApplicationPlugin
 
 
 class DotenvPlugin(ApplicationPlugin):
-    """``poetry-dotenv`` - is the tool that automatically loads environment variables from ``.env``.
+    """Plugin that automatically loads environment variables from dotenv files.
 
-    ``poetry-dotenv`` - is the tool that automatically loads environment variables from ``.env``
-    files into the environment before ``poetry`` commands are run.
+    Plugin that automatically loads environment variables from dotenv files into the environment
+    before ``poetry`` commands are run.
 
     Notes
     -----
-    To prevent ``poetry`` from loading the ``.env`` file, set the ``POETRY_DONT_LOAD_ENV``
+    To prevent ``poetry`` from loading the dotenv file, set the ``POETRY_DONT_LOAD_ENV``
     environment variable.
 
-    If your ``.env`` file is located in a different path or has a different name you may set
+    If your dotenv file is located in a different path or has a different name you may set
     the ``POETRY_DOTENV_LOCATION`` environment variable.
     """
 
     def activate(self, application: Application) -> None:
-        """Activate plugin."""
+        """Activate the plugin."""
 
         application.event_dispatcher.add_listener(  # pragma: no cover
             event_name=COMMAND,
@@ -36,7 +36,7 @@ class DotenvPlugin(ApplicationPlugin):
 
     @staticmethod
     def load_dotenv(event: ConsoleCommandEvent, *args, **kwargs) -> None:
-        """Load ``.env`` file."""
+        """Load the dotenv file."""
 
         dont_load_dotenv = os.getenv("POETRY_DONT_LOAD_DOTENV")
         dotenv_location = os.getenv("POETRY_DOTENV_LOCATION")
