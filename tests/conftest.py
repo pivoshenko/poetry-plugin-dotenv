@@ -1,26 +1,24 @@
 """Fixtures and configuration for the tests."""
 
 from pathlib import Path
+from typing import Callable
+from typing import Dict
 
 import pytest
 
 
 @pytest.fixture()
-def dotenv_content() -> str:
-    """Get content of the dotenv file."""
+def crearte_dotenv_file(tmp_path: Path) -> Callable[[str, str], Dict[str, str]]:
+    """Get the dotenv filepath and it's content."""
 
-    return "POSTGRES_USER=admin"
+    def create(filename: str, user: str) -> Dict[str, str]:
+        """Create dotenv file."""
 
+        dotenv_content = {"POSTGRES_USER": user}
+        dotenv_file = tmp_path / ".." / ".." / ".." / filename
+        stream = (f"{env_key}={env_var}" for env_key, env_var in dotenv_content.items())
+        dotenv_file.write_text("/n".join(stream))
 
-@pytest.fixture()
-def dotenv_filepath(dotenv_content: str, tmp_path: Path) -> str:
-    """Get the dotenv filepath."""
+        return dotenv_content
 
-    basepath = tmp_path / ".." / ".." / ".."
-
-    filepath = basepath / ".env"
-    filepath.write_text(dotenv_content)
-
-    yield filepath
-
-    filepath.unlink()
+    return create
