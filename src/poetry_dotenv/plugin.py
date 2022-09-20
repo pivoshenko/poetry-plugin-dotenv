@@ -29,7 +29,10 @@ class DotenvPlugin(ApplicationPlugin):
     def activate(self, application: Application) -> None:
         """Activate plugin."""
 
-        application.event_dispatcher.add_listener(event_name=COMMAND, listener=self.load_dotenv)
+        application.event_dispatcher.add_listener(  # pragma: no cover
+            event_name=COMMAND,
+            listener=self.load_dotenv,
+        )
 
     @staticmethod
     def load_dotenv(event: ConsoleCommandEvent, *args, **kwargs) -> None:
