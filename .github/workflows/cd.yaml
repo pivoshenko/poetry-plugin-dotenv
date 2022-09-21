@@ -67,4 +67,3 @@ jobs:
           steps: ${{ toJson(steps) }}
           channel: "#project-releases"
           config: .github/config/slack.yaml
-        if: always()
