@@ -48,7 +48,7 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          semantic-release publish -D commit_author="github-actions <github-actions@github.com>" -v DEBUG
+          python -m semantic-release publish -D commit_author="github-actions <github-actions@github.com>" -v DEBUG
 
       - name: Build package
         id: build-package
