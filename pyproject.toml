@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "poetry-dotenv"
 version = "0.0.1"
-description = "poetry-dotenv - is the tool that automatically loads environment variables from .env files into the environment before poetry commands are run."
+description = "poetry-dotenv - is the plugin that automatically loads environment variables from a dotenv file into the environment before poetry commands are run."
 license = "MIT"
 authors = ["Volodymyr Pivoshenko <volodymyr.pivoshenko@gmail.com>"]
 maintainers = ["Volodymyr Pivoshenko <volodymyr.pivoshenko@gmail.com>"]
@@ -10,6 +10,9 @@ keywords = [
     "pypi",
     "poetry",
     "plugins",
+    "poetry-plugin",
+    "poetry-plugins",
+    "env",
     "dotenv",
     "cross-platform",
     "hacktoberfest",
@@ -47,35 +50,42 @@ packages = [{ include = "poetry_dotenv", from = "src" }]
 [tool.poetry.dependencies]
 python = "^3.7"
 python-dotenv = "^0.21.0"
+poetry = "^1.2.1"
 
 [tool.poetry.extras]
 
-[tool.poetry.dev-dependencies]
-# formatters
+[tool.poetry.group.dev.dependencies]
 isort = "^5.10.1"
 black = "^22.6.0"
-# linters
-mypy = "^0.971"
-wemake-python-styleguide = "^0.16.1"
-# flake8 extensions
-flake8-pytest-style = "^1.6.0"
-pyproject-flake8 = "^0.0.1-alpha.5"
-# tests
+pre-commit = "^2.20.0"
+ipython = "^7.34.0"
+poethepoet = "^0.16.2"
+commitizen = "^2.34.0"
+
+[tool.poetry.group.test.dependencies]
 pytest = "^7.1.2"
 xdoctest = "^1.0.2"
-# pytest extensions
 pytest-datafiles = "^2.0.1"
 pytest-lazy-fixture = "^0.6.3"
 pytest-mock = "^3.8.2"
 pytest-cov = "^3.0.0"
 pytest-sugar = "^0.9.5"
 coverage = { version = "^6.4.4", extras = ["toml"] }
-# CI
+
+[tool.poetry.group.lint.dependencies]
+mypy = "^0.971"
+wemake-python-styleguide = "^0.16.1"
+flake8-pytest-style = "^1.6.0"
+pyproject-flake8 = "^3.9.0"
+
+[tool.poetry.group.ci.dependencies]
 python-semantic-release = "^7.31.4"
-# utils
-poethepoet = "^0.16.0"
-pre-commit = "^2.20.0"
-ipython = "^7.34.0" # newest version does not support Python 3.7
+
+[tool.poetry.group.docs.dependencies]
+
+[tool.poetry.plugins."poetry.application.plugin"]
+poetry-dotenv = "poetry_dotenv.plugin:DotenvPlugin"
+poethepoet = "poethepoet.plugin:PoetryPlugin"
 
 [tool.semantic_release]
 branch = "main"
@@ -111,10 +121,33 @@ include = '\.pyi?$'
 [tool.flake8]
 max-line-length = 100
 max-local-variables = 10
+max-line-complexity = 15
 inline-quotes = '"'
 docstring_style = "numpy"
-exclude = ["__init__.py", "tests/*.py"]
-extend-ignore = []
+exclude = ["__init__.py"]
+per-file-ignores = [
+    "tests/conftest.py: WPS430, WPS442",
+    "tests/test_plugin.py: S101, S404, S603, WPS226",
+]
+# WPS430,WPS442 - fixtures will always be outer scope or as a nested functions
+# S101 - asserts are necessary for the tests
+# S404, S603 - subprocess is necessary for the tests
+extend-ignore = [
+    "D202",
+    "DAR101",
+    "DAR201",
+    "DAR301",
+    "DAR401",
+    "DAR402",
+    "WPS305",
+    "WPS348",
+    "WPS602",
+]
+# D202 - code is hard to read without a blank line after a docstring
+# DAR101, DAR201, DAR401, DAR301, DAR402 - there is no sense to put all sections in docstrings
+# WPS305 - f-strings are actually safe and useful
+# WPS483 - chaining is a good option for method calls
+# WPS602 - static methods are actually safe and useful
 
 [tool.mypy]
 python_version = "3.9"
@@ -129,39 +162,61 @@ minversion = "6.0"
 addopts = [
     "-l",
     "-vv",
+    "-rx",
     "--xdoc",
     "--color=yes",
     "--cov=src",
     "--cov-report=term-missing",
     "--cov-report=xml",
+    "--basetemp=tests/fixtures",
 ]
 testpaths = ["src", "tests"]
 
 [tool.coverage.run]
 omit = ["*/__init__.py"]
 
+[tool.poe]
+poetry_command = ""
+
 [tool.poe.tasks]
-format = [
+
+[tool.poe.tasks.format]
+help = "Run code formatters"
+sequence = [
     { cmd = "isort --settings-path pyproject.toml ." },
     { cmd = "black --config pyproject.toml ." },
 ]
-lint-flake8 = { cmd = "pflake8 --config pyproject.toml ." }
-lint-mypy = { cmd = "mypy --config-file pyproject.toml ." }
-lint = [{ ref = "lint-flake8" }, { ref = "lint-mypy" }]
-tests = { cmd = "pytest" }
-clean = [
-    { cmd = "find . -type f -name '*.py[co]' -delete" },
+
+[tool.poe.tasks.lint]
+help = "Run code linters"
+sequence = [{ ref = "flake8" }, { ref = "mypy" }]
+
+[tool.poe.tasks.flake8]
+help = "Run flake8"
+cmd = "pflake8 --config pyproject.toml ."
+
+[tool.poe.tasks.mypy]
+help = "Run mypy"
+cmd = "mypy --config-file pyproject.toml ."
+
+[tool.poe.tasks.tests]
+help = "Run tests"
+cmd = "pytest"
+
+[tool.poe.tasks.clean]
+help = "Cleanup"
+sequence = [
     { cmd = "find . -type f -name .DS_Store -delete" },
+    { cmd = "find . -type f -name '*.py[co]' -delete" },
     { cmd = "find . -type d -name __pycache__ -exec rm -rf {} +" },
-    { cmd = "rm -rf dist" },
-    { cmd = "rm -rf .pytest" },
-    { cmd = "rm -rf .pytest_cache" },
-    { cmd = "rm -rf .coverage" },
-    { cmd = "rm -rf .flake8" },
-    { cmd = "rm -rf .mypy" },
-    { cmd = "rm -rf .mypy_cache" },
-    { cmd = "rm -rf docs/_build" },
-    { cmd = "rm -rf docs/_sources" },
+    { cmd = "find . -type d -name dist -exec rm -rf {} +" },
+    { cmd = "find . -type d -name .pytest_cache -exec rm -rf {} +" },
+    { cmd = "find . -type d -name fixtures -exec rm -rf {} +" },
+    { cmd = "find . -type f -name '.env' -delete" },
+    { cmd = "find . -type f -name '.env.*' -delete" },
+    { cmd = "find . -type f -name .coverage -delete" },
+    { cmd = "find . -type f -name coverage.xml -delete" },
+    { cmd = "find . -type d -name .mypy_cache -exec rm -rf {} +" },
 ]
 
 [build-system]

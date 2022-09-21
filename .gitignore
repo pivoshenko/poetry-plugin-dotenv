@@ -103,6 +103,8 @@ celerybeat.pid
 
 # Environments
 .env
+*.env
+.env.*
 .venv
 env/
 venv/
@@ -134,3 +136,6 @@ dmypy.json
 
 # OS
 .DS_Store
+
+# tests
+tests/fixtures
