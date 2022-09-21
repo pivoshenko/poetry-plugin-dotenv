@@ -82,8 +82,6 @@ pyproject-flake8 = "^3.9.0"
 python-semantic-release = "^7.31.4"
 
 [tool.poetry.group.docs.dependencies]
-Sphinx = "^5.1.1"
-sphinx-typlog-theme = "^0.8.0"
 
 [tool.poetry.plugins."poetry.application.plugin"]
 poetry-dotenv = "poetry_dotenv.plugin:DotenvPlugin"
