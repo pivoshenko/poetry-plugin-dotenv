@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "poetry-dotenv"
 version = "0.0.1"
-description = "poetry-dotenv - is the tool that automatically loads environment variables from .env files into the environment before poetry commands are run."
+description = "poetry-dotenv - is the plugin that automatically loads environment variables from a dotenv file into the environment before poetry commands are run."
 license = "MIT"
 authors = ["Volodymyr Pivoshenko <volodymyr.pivoshenko@gmail.com>"]
 maintainers = ["Volodymyr Pivoshenko <volodymyr.pivoshenko@gmail.com>"]
@@ -10,6 +10,7 @@ keywords = [
     "pypi",
     "poetry",
     "plugins",
+    "poetry-plugin",
     "poetry-plugins",
     "env",
     "dotenv",
@@ -59,6 +60,7 @@ black = "^22.6.0"
 pre-commit = "^2.20.0"
 ipython = "^7.34.0"
 poethepoet = "^0.16.2"
+commitizen = "^2.34.0"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.1.2"
@@ -78,7 +80,6 @@ pyproject-flake8 = "^3.9.0"
 
 [tool.poetry.group.ci.dependencies]
 python-semantic-release = "^7.31.4"
-commitizen = "^2.33.1"
 
 [tool.poetry.group.docs.dependencies]
 Sphinx = "^5.1.1"
@@ -163,6 +164,7 @@ minversion = "6.0"
 addopts = [
     "-l",
     "-vv",
+    "-rx",
     "--xdoc",
     "--color=yes",
     "--cov=src",
@@ -179,28 +181,44 @@ omit = ["*/__init__.py"]
 poetry_command = ""
 
 [tool.poe.tasks]
-format = [
+
+[tool.poe.tasks.format]
+help = "Run code formatters"
+sequence = [
     { cmd = "isort --settings-path pyproject.toml ." },
     { cmd = "black --config pyproject.toml ." },
 ]
-lint-flake8 = { cmd = "pflake8 --config pyproject.toml ." }
-lint-mypy = { cmd = "mypy --config-file pyproject.toml ." }
-lint = [{ ref = "lint-flake8" }, { ref = "lint-mypy" }]
-tests = { cmd = "pytest" }
-clean = [
-    { cmd = "find . -type f -name '*.py[co]' -delete" },
+
+[tool.poe.tasks.lint]
+help = "Run code linters"
+sequence = [{ ref = "flake8" }, { ref = "mypy" }]
+
+[tool.poe.tasks.flake8]
+help = "Run flake8"
+cmd = "pflake8 --config pyproject.toml ."
+
+[tool.poe.tasks.mypy]
+help = "Run mypy"
+cmd = "mypy --config-file pyproject.toml ."
+
+[tool.poe.tasks.tests]
+help = "Run tests"
+cmd = "pytest"
+
+[tool.poe.tasks.clean]
+help = "Cleanup"
+sequence = [
     { cmd = "find . -type f -name .DS_Store -delete" },
+    { cmd = "find . -type f -name '*.py[co]' -delete" },
     { cmd = "find . -type d -name __pycache__ -exec rm -rf {} +" },
-    { cmd = "rm -rf dist" },
-    { cmd = "rm -rf .pytest" },
-    { cmd = "rm -rf .pytest_cache" },
-    { cmd = "rm -rf .coverage" },
-    { cmd = "rm -rf coverage.xml" },
-    { cmd = "rm -rf .flake8" },
-    { cmd = "rm -rf .mypy" },
-    { cmd = "rm -rf .mypy_cache" },
-    { cmd = "rm -rf docs/_build" },
-    { cmd = "rm -rf docs/_sources" },
+    { cmd = "find . -type d -name dist -exec rm -rf {} +" },
+    { cmd = "find . -type d -name .pytest_cache -exec rm -rf {} +" },
+    { cmd = "find . -type d -name fixtures -exec rm -rf {} +" },
+    { cmd = "find . -type f -name '.env' -delete" },
+    { cmd = "find . -type f -name '.env.*' -delete" },
+    { cmd = "find . -type f -name .coverage -delete" },
+    { cmd = "find . -type f -name coverage.xml -delete" },
+    { cmd = "find . -type d -name .mypy_cache -exec rm -rf {} +" },
 ]
 
 [build-system]
