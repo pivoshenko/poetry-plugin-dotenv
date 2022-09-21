@@ -39,12 +39,12 @@ jobs:
       - name: Run flake8
         id: run-flake8
         run: |
-          python -m poetry flake8
+          python -m poetry run poe flake8
 
       - name: Run mypy
         id: run-mypy
         run: |
-          python -m poetry mypy
+          python -m poetry run poe mypy
 
   tests:
     name: Run tests
@@ -77,7 +77,7 @@ jobs:
       - name: Run pytest
         id: run-pytest
         run: |
-          python -m poetry tests
+          python -m poetry run poe tests
 
       - name: Upload coverage to Codecov
         id: upload-coverage-to-codecov
