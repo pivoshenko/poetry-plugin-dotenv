@@ -17,8 +17,8 @@ keywords = [
     "cross-platform",
     "hacktoberfest",
 ]
-homepage = "https://poetry-dotenv.readthedocs.io/en/latest"
-documentation = "https://poetry-dotenv.readthedocs.io/en/latest"
+homepage = "https://github.com/volopivoshenko/poetry-dotenv"
+documentation = "https://github.com/volopivoshenko/poetry-dotenv"
 repository = "https://github.com/volopivoshenko/poetry-dotenv"
 readme = "README.md"
 classifiers = [
