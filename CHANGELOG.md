@@ -10,7 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0), 
 
 ### Feature
 
--   Add plugin ([`30cc8ea`](https://github.com/volopivoshenko/poetry-dotenv/commit/30cc8eaf0e1cf4193427736fb8f26e9b899530ff))
+- Add plugin ([`30cc8ea`](https://github.com/volopivoshenko/poetry-dotenv/commit/30cc8eaf0e1cf4193427736fb8f26e9b899530ff))
 
 ### Documentation
 
