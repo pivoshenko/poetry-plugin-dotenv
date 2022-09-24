@@ -17,14 +17,14 @@ from poetry_dotenv.plugin import DotenvPlugin
 @mock.patch.dict(os.environ, {"POETRY_DOTENV_LOCATION": ".env.dev"}, clear=True)
 def test_dev_dotenv_file(
     mocker: pytest_mock.MockerFixture,
-    crearte_dotenv_file: Callable[[str, str], Dict[str, str]],
+    create_dotenv_file: Callable[[str, str], Dict[str, str]],
 ) -> None:
     """Test for the plugin with the dev dotenv file location."""
 
     event = mocker.MagicMock()
     event.command = EnvCommand()
 
-    expected_vars = crearte_dotenv_file(user="root", filename=".env.dev")
+    expected_vars = create_dotenv_file(user="root", filename=".env.dev")
 
     plugin = DotenvPlugin()
     plugin.load_dotenv(event)
@@ -34,14 +34,14 @@ def test_dev_dotenv_file(
 
 def test_default_dotenv_file(
     mocker: pytest_mock.MockerFixture,
-    crearte_dotenv_file: Callable[[str, str], Dict[str, str]],
+    create_dotenv_file: Callable[[str, str], Dict[str, str]],
 ) -> None:
     """Test for the plugin with the default dotenv file location."""
 
     event = mocker.MagicMock()
     event.command = EnvCommand()
 
-    expected_vars = crearte_dotenv_file(user="admin", filename=".env")
+    expected_vars = create_dotenv_file(user="admin", filename=".env")
 
     plugin = DotenvPlugin()
     plugin.load_dotenv(event)
@@ -52,18 +52,18 @@ def test_default_dotenv_file(
 @mock.patch.dict(os.environ, {"POETRY_DONT_LOAD_DOTENV": "1"}, clear=True)
 def test_without_dotenv_file(
     mocker: pytest_mock.MockerFixture,
-    crearte_dotenv_file: Callable[[str, str], Dict[str, str]],
+    create_dotenv_file: Callable[[str, str], Dict[str, str]],
 ) -> None:
     """Test for the plugin without loading the dotenv file."""
 
     event = mocker.MagicMock()
     event.command = EnvCommand()
 
-    crearte_dotenv_file(user="admin", filename=".env")
+    create_dotenv_file(user="admin", filename=".env")
 
     plugin = DotenvPlugin()
     plugin.load_dotenv(event)
 
-    # WPS428 - "empty call" is neccessary to check the exception
+    # WPS428 - "empty call" is necessary to check the exception
     with pytest.raises(KeyError):
         os.environ["POSTGRES_USER"]  # noqa: WPS428

@@ -8,7 +8,7 @@ import pytest
 
 
 @pytest.fixture()
-def crearte_dotenv_file(tmp_path: Path) -> Callable[[str, str], Dict[str, str]]:
+def create_dotenv_file(tmp_path: Path) -> Callable[[str, str], Dict[str, str]]:
     """Get the dotenv filepath and it's content."""
 
     def create(filename: str, user: str) -> Dict[str, str]:
