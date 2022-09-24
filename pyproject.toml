@@ -60,7 +60,6 @@ black = "^22.6.0"
 pre-commit = "^2.20.0"
 ipython = "^7.34.0"
 poethepoet = "^0.16.2"
-commitizen = "^2.34.0"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.1.2"
