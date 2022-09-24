@@ -53,9 +53,6 @@
   <a href="https://github.com/volopivoshenko/poetry-dotenv/actions/workflows/codeql.yaml">
     <img alt="codeql" src="https://img.shields.io/github/workflow/status/volopivoshenko/poetry-dotenv/CodeQL?label=codeQL&logo=github">
   </a>
-  <a href="https://poetry-dotenv.readthedocs.io/en/latest">
-    <img alt="docs" src="https://img.shields.io/readthedocs/poetry-dotenv?logo=readthedocs">
-  </a>
   <a href="https://pypi.org/project/poetry-dotenv">
     <img alt="wheel" src="https://img.shields.io/pypi/wheel/poetry-dotenv?logo=pypi">
   </a>
