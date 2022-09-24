@@ -49,7 +49,6 @@ packages = [{ include = "poetry_dotenv", from = "src" }]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-python-dotenv = "^0.21.0"
 poetry = "^1.2.1"
 
 [tool.poetry.extras]
@@ -79,8 +78,6 @@ pyproject-flake8 = "^3.9.0"
 
 [tool.poetry.group.ci.dependencies]
 python-semantic-release = "^7.31.4"
-
-[tool.poetry.group.docs.dependencies]
 
 [tool.poetry.plugins."poetry.application.plugin"]
 poetry-dotenv = "poetry_dotenv.plugin:DotenvPlugin"
