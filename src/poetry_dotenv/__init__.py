@@ -2,7 +2,7 @@
 
 __title__ = "poetry-dotenv"
 __summary__ = "poetry-dotenv - is the plugin that automatically loads environment variables from a dotenv file into the environment before poetry commands are run."
-__uri__ = "https://poetry-dotenv.readthedocs.io/en/latest"
+__uri__ = "https://github.com/volopivoshenko/poetry-dotenv"
 
 __version__ = "0.1.0"
 
