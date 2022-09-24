@@ -7,7 +7,7 @@ assignees: ""
 ---
 
 - [ ] I have searched the [issues](https://github.com/volopivoshenko/poetry-dotenv/issues) of this repository and believe that this is not a duplicate.
-- [ ] I have searched the [documentation](https://poetry-dotenv.readthedocs.io/en/latest) and believe that my question is not covered.
+- [ ] I have searched the [documentation](https://github.com/volopivoshenko/poetry-dotenv) and believe that my question is not covered.
 
 **Is your feature request related to a problem? Please describe.**
 
