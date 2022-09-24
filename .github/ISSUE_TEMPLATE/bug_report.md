@@ -7,8 +7,7 @@ assignees: ""
 ---
 
 - [ ] I am on the [latest](https://github.com/volopivoshenko/poetry-dotenv/releases/latest) version.
-- [ ] I have searched the [issues](https://github.com/volopivoshenko/poetry-dotenv/issues) of this
-repository and believe that this is not a duplicate.
+- [ ] I have searched the [issues](https://github.com/volopivoshenko/poetry-dotenv/issues) of this repository and believe that this is not a duplicate.
 
 **Describe the bug**
 
