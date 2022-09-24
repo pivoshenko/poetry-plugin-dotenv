@@ -1257,17 +1257,6 @@ pytest = ">=2.9"
 termcolor = ">=1.1.0"
 
 [[package]]
-name = "python-dotenv"
-version = "0.21.0"
-description = "Read key-value pairs from a .env file and set them as environment variables"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.extras]
-cli = ["click (>=5.0)"]
-
-[[package]]
 name = "python-gitlab"
 version = "3.9.0"
 description = "Interact with GitLab API"
@@ -1706,7 +1695,7 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "c97102d92dfa5a44678fc0549f315ceea02811fc7624442e4fa6ddd9f1b7a755"
+content-hash = "3b283d0dacbd5cdd015afe414c0071620b0bc95224ad3fe22ff9672ca47c579c"
 
 [metadata.files]
 appnope = [
@@ -2397,10 +2386,6 @@ pytest-mock = [
 pytest-sugar = [
     {file = "pytest-sugar-0.9.5.tar.gz", hash = "sha256:eea78b6f15b635277d3d90280cd386d8feea1cab0f9be75947a626e8b02b477d"},
     {file = "pytest_sugar-0.9.5-py2.py3-none-any.whl", hash = "sha256:3da42de32ce4e1e95b448d61c92804433f5d4058c0a765096991c2e93d5a289f"},
-]
-python-dotenv = [
-    {file = "python-dotenv-0.21.0.tar.gz", hash = "sha256:b77d08274639e3d34145dfa6c7008e66df0f04b7be7a75fd0d5292c191d79045"},
-    {file = "python_dotenv-0.21.0-py3-none-any.whl", hash = "sha256:1684eb44636dd462b66c3ee016599815514527ad99965de77f43e0944634a7e5"},
 ]
 python-gitlab = [
     {file = "python-gitlab-3.9.0.tar.gz", hash = "sha256:5fc5e88f81f366e11851cb8b4b9a5b827491ce20ba7585446b74c9b097726ba3"},
