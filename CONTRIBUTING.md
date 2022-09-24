@@ -94,7 +94,7 @@ We use `poetry` to manage the [dependencies][poetry].
 To install them and activate `virtualenv` you will need to run commands:
 
 ```shell
-poetry install
+poetry install --no-cache
 poetry shell
 ```
 
@@ -106,7 +106,7 @@ poetry shell
 To format code you will need to run command:
 
 ```shell
-poe format
+poetry format
 ```
 
 ### Linters
@@ -117,7 +117,7 @@ poe format
 To lint code you will need to run command:
 
 ```shell
-poe lint
+poetry lint
 ```
 
 ### Tests
@@ -128,7 +128,7 @@ poe lint
 To run unit tests:
 
 ```shell
-poe tests
+poetry tests
 ```
 
 ### Pre-Commit
