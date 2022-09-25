@@ -2,13 +2,13 @@
 
 import os
 
-import dotenv
-
 from cleo.events.console_command_event import ConsoleCommandEvent
 from cleo.events.console_events import COMMAND
 from poetry.console.application import Application
 from poetry.console.commands.env_command import EnvCommand
 from poetry.plugins.application_plugin import ApplicationPlugin
+
+from poetry_dotenv import dotenv
 
 
 class DotenvPlugin(ApplicationPlugin):
