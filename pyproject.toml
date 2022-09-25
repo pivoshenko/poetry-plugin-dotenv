@@ -115,16 +115,14 @@ include = '\.pyi?$'
 max-line-length = 100
 max-local-variables = 10
 max-line-complexity = 15
+max-module-members = 15
 inline-quotes = '"'
 docstring_style = "numpy"
 exclude = ["__init__.py"]
 per-file-ignores = [
     "tests/conftest.py: WPS430, WPS442",
-    "tests/test_plugin.py: S101, S404, S603, WPS226",
+    "tests/*.py: S101, S404, S603, WPS221, WPS226, WPS342, PT014",
 ]
-# WPS430,WPS442 - fixtures will always be outer scope or as a nested functions
-# S101 - asserts are necessary for the tests
-# S404, S603 - subprocess is necessary for the tests
 extend-ignore = [
     "D202",
     "DAR101",
@@ -132,18 +130,20 @@ extend-ignore = [
     "DAR301",
     "DAR401",
     "DAR402",
+    "WPS110",
     "WPS305",
     "WPS348",
+    "WPS472",
     "WPS602",
 ]
 # D202 - code is hard to read without a blank line after a docstring
 # DAR101, DAR201, DAR401, DAR301, DAR402 - there is no sense to put all sections in docstrings
-# WPS305 - f-strings are actually safe and useful
+# WPS305 - f-stringsd are actually safe and useful
 # WPS483 - chaining is a good option for method calls
 # WPS602 - static methods are actually safe and useful
 
 [tool.mypy]
-python_version = "3.9"
+python_version = "3.8"
 warn_unused_configs = true
 ignore_missing_imports = true
 show_error_codes = true
