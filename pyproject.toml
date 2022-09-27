@@ -116,12 +116,15 @@ max-line-length = 100
 max-local-variables = 10
 max-line-complexity = 15
 max-module-members = 15
+max-arguments = 10
+max-imports = 15
+max-annotation-complexity = 5
 inline-quotes = '"'
 docstring_style = "numpy"
 exclude = ["__init__.py"]
 per-file-ignores = [
     "tests/conftest.py: WPS430, WPS442",
-    "tests/*.py: S101, S404, S603, WPS221, WPS226, WPS342, PT014",
+    "tests/*.py: S101, S404, S603, WPS221, WPS226, WPS342, PT011, PT014",
 ]
 extend-ignore = [
     "D202",
