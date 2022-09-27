@@ -12,9 +12,9 @@ from poetry_dotenv import dotenv
 
 
 class DotenvPlugin(ApplicationPlugin):
-    """Plugin that automatically loads environment variables from dotenv files.
+    """Plugin that automatically loads environment variables from a dotenv file.
 
-    Plugin that automatically loads environment variables from dotenv files into the environment
+    Plugin that automatically loads environment variables from a dotenv file into the environment
     before ``poetry`` commands are run.
 
     Notes
@@ -34,17 +34,18 @@ class DotenvPlugin(ApplicationPlugin):
             listener=self.load_dotenv,
         )
 
+    # noinspection PyUnusedLocal
     @staticmethod
     def load_dotenv(event: ConsoleCommandEvent, *args, **kwargs) -> None:
-        """Load the dotenv file."""
+        """Load a dotenv file."""
 
         dont_load_dotenv = os.getenv("POETRY_DONT_LOAD_DOTENV")
         dotenv_location = os.getenv("POETRY_DOTENV_LOCATION")
 
         if isinstance(event.command, EnvCommand) and not dont_load_dotenv:
-            filepath = dotenv_location if dotenv_location else dotenv.find_dotenv(usecwd=True)
+            filepath = dotenv_location if dotenv_location else dotenv.core.find_dotenv(usecwd=True)
 
             if event.io.is_debug():
                 event.io.write_line(f"<debug>Loading environment variables {filepath!r}.</debug>")
 
-            dotenv.load_dotenv(dotenv_path=filepath, override=True)
+            dotenv.core.load_dotenv(dotenv_path=filepath, override=True)
