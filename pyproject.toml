@@ -124,8 +124,15 @@ docstring_style = "numpy"
 exclude = ["__init__.py"]
 per-file-ignores = [
     "tests/conftest.py: WPS430, WPS442",
-    "tests/*.py: S101, S404, S603, WPS221, WPS226, WPS342, PT011, PT014",
+    "tests/*.py: S101, WPS221, WPS226",
+    "tests/dotenv/test_parsers.py: WPS342",
 ]
+# WPS430 - nested functions are necessary for the pytest fixtures
+# WPS442 - pytest fixtures don't violate shadowing variables from outer scopes
+# S101 - asserts are necessary for the pytest
+# WPS221 - high complexity is not a problem for the parametrized fixtures/tests
+# WPS226 - overuse of literal is fine for the fixtures/tests
+# WPS342 - raw strings are necessary for that tests as they are part of a legacy code
 extend-ignore = [
     "D202",
     "DAR101",
@@ -140,10 +147,12 @@ extend-ignore = [
     "WPS602",
 ]
 # D202 - code is hard to read without a blank line after a docstring
-# DAR101, DAR201, DAR401, DAR301, DAR402 - there is no sense to put all sections in docstrings
-# WPS305 - f-stringsd are actually safe and useful
-# WPS483 - chaining is a good option for method calls
-# WPS602 - static methods are actually safe and useful
+# DARX - there is no sense to put all sections in docstring
+# WPS110 - forbidden names sometimes are actually useful in some context
+# WPS305 - f-strings are actually useful in some context
+# WPS348 - chaining is a good option for method calls
+# WPS472 - unpacking is more readable than indexing
+# WPS602 - static methods are actually useful in some context
 
 [tool.mypy]
 python_version = "3.8"
