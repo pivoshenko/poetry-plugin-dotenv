@@ -61,6 +61,7 @@ def test_load_dotenv_default_file(
 def test_load_dotenv_without_file(
     mocker: pytest_mock.MockerFixture,
     create_dotenv_file: Callable[[str, str], Dict[str, str]],
+    remove_dotenv_file: Callable[[str], None],
 ) -> None:
     """Test ``load_dotenv`` function without a dotenv file."""
 
@@ -77,3 +78,5 @@ def test_load_dotenv_without_file(
     with pytest.raises(KeyError):
         # noinspection PyStatementEffect
         os.environ["POSTGRES_USER"]  # noqa: WPS428
+
+    remove_dotenv_file(".env")
