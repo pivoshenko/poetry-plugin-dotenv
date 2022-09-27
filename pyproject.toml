@@ -124,8 +124,7 @@ docstring_style = "numpy"
 exclude = ["__init__.py"]
 per-file-ignores = [
     "tests/conftest.py: WPS430, WPS442",
-    "tests/*.py: S101, WPS221, WPS226",
-    "tests/dotenv/test_parsers.py: WPS342",
+    "tests/*.py: S101, WPS221, WPS226, WPS342",
 ]
 # WPS430 - nested functions are necessary for the pytest fixtures
 # WPS442 - pytest fixtures don't violate shadowing variables from outer scopes
