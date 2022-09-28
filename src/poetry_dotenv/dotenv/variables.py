@@ -2,11 +2,8 @@
 
 import re
 import abc
-import inspect
 
-from typing import Any
 from typing import Iterator
-from typing import List
 from typing import Mapping
 from typing import Optional
 from typing import Pattern
@@ -15,11 +12,11 @@ from typing import Pattern
 _posix_variable: Pattern[str] = re.compile(
     r"""
     \$\{
-        (?P<name>[^\}:]*)
+        (?P<name>[^}:]*)
         (?::-
-            (?P<default>[^\}]*)
+            (?P<default>[^}]*)
         )?
-    \}
+    }
     """,
     re.VERBOSE,
 )
@@ -31,11 +28,10 @@ class Atom(abc.ABC, metaclass=abc.ABCMeta):
     def __repr__(self) -> str:
         """Get object representation."""
 
-        attrs = self._get_attrs()
-        attrs_vals = map(self._get_attr_value, attrs)
+        fields = tuple(self.__dict__.items())
 
-        pairs = map(lambda attr, attr_val: f"{attr!s}={attr_val!r}", attrs, attrs_vals)
-        signature = ", ".join(pairs)
+        signature_parts = ("{0!s}={1!r}".format(*pair) for pair in fields)
+        signature = ", ".join(signature_parts)
 
         # WPS237 - no need to use format-string here
         return f"{self.__class__.__name__!s}({signature!s})"  # noqa: WPS237
@@ -45,47 +41,11 @@ class Atom(abc.ABC, metaclass=abc.ABCMeta):
 
         return self.__repr__()
 
-    def __ne__(self, other: object) -> bool:
-        """Implement not identity operator."""
-
-        equal = self.__eq__(other)
-
-        if equal is NotImplemented:
-            return NotImplemented
-
-        return not equal
-
     @abc.abstractmethod
     def resolve(self, *args, **kwargs) -> str:
         """Resolve a variable/literal."""
 
-        raise NotImplementedError
-
-    def _get_attrs(self) -> List[str]:
-        """Get all attributes."""
-
-        # WPS609 - init is necessary here to get signature
-        signature = inspect.signature(self.__init__)  # type: ignore[misc]  # noqa: WPS609
-        return [arg for arg in signature.parameters.keys() if arg != "self"]
-
-    def _get_attr_value(self, attr: str) -> Any:
-        """Get value of an attribute."""
-
-        public = attr
-        protected = f"_{attr}"
-        # WPS237 - no need to use format-string here
-        private = f"_{self.__class__.__name__}__{attr}"  # noqa: WPS237
-
-        if public in self.__dict__:
-            return self.__dict__.get(public)
-
-        elif protected in self.__dict__:
-            return self.__dict__.get(protected)
-
-        elif private in self.__dict__:
-            return self.__dict__.get(private)
-
-        return None
+        raise NotImplementedError  # pragma: no cover
 
 
 class Literal(Atom):
@@ -100,14 +60,14 @@ class Literal(Atom):
         """Implement identity operator."""
 
         if not isinstance(other, self.__class__):
-            return NotImplemented
+            raise NotImplemented  # pragma: no cover
 
         return self.value == other.value
 
     def __hash__(self) -> int:
         """Get object hash."""
 
-        return hash((self.__class__, self.value))
+        return hash((self.__class__, self.value))  # pragma: no cover
 
     def resolve(self, *args, **kwargs) -> str:
         """Resolve a literal."""
@@ -128,21 +88,21 @@ class Variable(Atom):
         """Implement identity operator."""
 
         if not isinstance(other, self.__class__):
-            return NotImplemented
+            raise NotImplemented  # pragma: no cover
 
         return (self.name, self.default) == (other.name, other.default)
 
     def __hash__(self) -> int:
         """Get object hash."""
 
-        return hash((self.__class__, self.name, self.default))
+        return hash((self.__class__, self.name, self.default))  # pragma: no cover
 
     def resolve(self, env: Mapping[str, Optional[str]]) -> str:  # type: ignore[override]
         """Resolve a variable."""
 
-        default = self.default if self.default is not None else ""
-        env_val = env.get(self.name, default)
-        return env_val if env_val is not None else ""
+        default = self.default if self.default is not None else ""  # pragma: no cover
+        env_val = env.get(self.name, default)  # pragma: no cover
+        return env_val if env_val is not None else ""  # pragma: no cover
 
 
 def parse_variables(value: str) -> Iterator[Atom]:
