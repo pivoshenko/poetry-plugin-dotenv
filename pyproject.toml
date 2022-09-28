@@ -79,6 +79,10 @@ pyproject-flake8 = "^3.9.0"
 [tool.poetry.group.ci.dependencies]
 python-semantic-release = "^7.31.4"
 
+
+[tool.poetry.group.tests.dependencies]
+sh = "^1.14.3"
+
 [tool.poetry.plugins."poetry.application.plugin"]
 poetry-dotenv = "poetry_dotenv.plugin:DotenvPlugin"
 poethepoet = "poethepoet.plugin:PoetryPlugin"
