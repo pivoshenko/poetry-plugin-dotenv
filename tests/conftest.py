@@ -5,6 +5,7 @@ import os
 from pathlib import Path
 from typing import Callable
 from typing import Dict
+from typing import Generator
 
 import pytest
 
@@ -36,3 +37,15 @@ def remove_dotenv_file() -> Callable[[str], None]:
         os.unlink(filepath)
 
     return remove
+
+
+@pytest.fixture()
+def dotenv_file(tmp_path: Path) -> Generator:
+    """Get a dotenv file."""
+
+    file = tmp_path / ".env"
+    file.write_bytes(b"")
+
+    yield str(file)
+
+    file.unlink()
