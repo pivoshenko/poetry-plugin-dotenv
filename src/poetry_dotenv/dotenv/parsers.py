@@ -127,7 +127,7 @@ class Reader(object):
         return self.string[self.position.chars: self.position.chars + count]
         # fmt: on
 
-    def read(self, count: int) -> str:
+    def read(self, count: int) -> str:  # pragma: no cover
         """Read a dotenv."""
 
         # fmt: off
