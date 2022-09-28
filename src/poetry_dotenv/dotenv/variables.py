@@ -42,10 +42,10 @@ class Atom(abc.ABC, metaclass=abc.ABCMeta):
         return self.__repr__()
 
     @abc.abstractmethod
-    def resolve(self, *args, **kwargs) -> str:
+    def resolve(self, *args, **kwargs) -> str:  # pragma: no cover
         """Resolve a variable/literal."""
 
-        raise NotImplementedError  # pragma: no cover
+        raise NotImplementedError
 
 
 class Literal(Atom):
@@ -59,15 +59,17 @@ class Literal(Atom):
     def __eq__(self, other: object) -> bool:
         """Implement identity operator."""
 
-        if not isinstance(other, self.__class__):
-            raise NotImplemented  # pragma: no cover
+        # WPS237 - it is not a complex f-string
+
+        if not isinstance(other, self.__class__):  # pragma: no cover
+            raise TypeError(f"Invalid type: {type(other)!r}.")  # noqa: WPS237
 
         return self.value == other.value
 
-    def __hash__(self) -> int:
+    def __hash__(self) -> int:  # pragma: no cover
         """Get object hash."""
 
-        return hash((self.__class__, self.value))  # pragma: no cover
+        return hash((self.__class__, self.value))
 
     def resolve(self, *args, **kwargs) -> str:
         """Resolve a literal."""
@@ -87,15 +89,17 @@ class Variable(Atom):
     def __eq__(self, other: object) -> bool:
         """Implement identity operator."""
 
-        if not isinstance(other, self.__class__):
-            raise NotImplemented  # pragma: no cover
+        # WPS237 - it is not a complex f-string
+
+        if not isinstance(other, self.__class__):  # pragma: no cover
+            raise TypeError(f"Invalid type: {type(other)!r}.")  # noqa: WPS237
 
         return (self.name, self.default) == (other.name, other.default)
 
-    def __hash__(self) -> int:
+    def __hash__(self) -> int:  # pragma: no cover
         """Get object hash."""
 
-        return hash((self.__class__, self.name, self.default))  # pragma: no cover
+        return hash((self.__class__, self.name, self.default))
 
     def resolve(self, env: Mapping[str, Optional[str]]) -> str:  # type: ignore[override]
         """Resolve a variable."""
