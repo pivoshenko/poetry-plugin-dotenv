@@ -66,7 +66,7 @@ class DotEnv(object):
     def set_as_environment_variables(self) -> bool:
         """Load current dotenv as a system environment variable."""
 
-        if not self.dict():
+        if not self.dict():  # pragma: no cover
             return False
 
         for key, value in self.dict().items():
@@ -79,7 +79,7 @@ class DotEnv(object):
 
         return True
 
-    def get(self, key: str) -> Optional[str]:
+    def get(self, key: str) -> Optional[str]:  # pragma: no cover
         """Get a dotenv variable."""
 
         data = self.dict()
@@ -98,7 +98,7 @@ class DotEnv(object):
             yield self.stream
 
         else:
-            yield io.StringIO("")
+            yield io.StringIO("")  # pragma: no cover
 
 
 def resolve_variables(
@@ -111,16 +111,20 @@ def resolve_variables(
 
     for (name, value) in values:
         if value is None:
-            result = None
+            result = None  # pragma: no cover
+
         else:
             atoms = parse_variables(value)
             env: Dict[str, Optional[str]] = {}
+
             if override:
                 env.update(os.environ)  # type: ignore
                 env.update(new_values)
+
             else:
                 env.update(new_values)
                 env.update(os.environ)  # type: ignore
+
             result = "".join(atom.resolve(env) for atom in atoms)
 
         new_values[name] = result
@@ -132,10 +136,10 @@ def walk_to_root(path: str) -> Iterator[str]:
     """Yield directories starting from the given directory up to the root."""
 
     if not os.path.exists(path):
-        raise IOError("Starting path not found")
+        raise IOError("Starting path not found.")  # pragma: no cover
 
     if os.path.isfile(path):
-        path = os.path.dirname(path)
+        path = os.path.dirname(path)  # pragma: no cover
 
     last_dir = None
     current_dir = os.path.abspath(path)
@@ -158,7 +162,8 @@ def find_dotenv(
     if usecwd or getattr(sys, "frozen", False):
         path = os.getcwd()
 
-    else:
+    else:  # pragma: no cover
+        # noinspection PyUnresolvedReferences,PyProtectedMember
         frame = sys._getframe()  # noqa: WPS437
         current_file = __file__
 
@@ -191,7 +196,7 @@ def load_dotenv(
     """Parse a dotenv file and then load all the variables found as environment variables."""
 
     if dotenv_path is None and stream is None:
-        dotenv_path = find_dotenv()
+        dotenv_path = find_dotenv()  # pragma: no cover
 
     dotenv = DotEnv(
         dotenv_path=dotenv_path,
@@ -212,12 +217,11 @@ def dotenv_values(
     """Parse a dotenv file and return its content as a dictionary."""
 
     if dotenv_path is None and stream is None:
-        dotenv_path = find_dotenv()
+        dotenv_path = find_dotenv()  # pragma: no cover
 
     return DotEnv(
         dotenv_path=dotenv_path,
         stream=stream,
         interpolate=interpolate,
-        override=True,
         encoding=encoding,
     ).dict()
