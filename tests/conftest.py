@@ -14,7 +14,7 @@ def create_dotenv_file(tmp_path: Path) -> Callable[[str, str], Dict[str, str]]:
     """Get a dotenv file."""
 
     def create(user: str, filename: str) -> Dict[str, str]:
-        """Create dotenv file."""
+        """Create a dotenv file."""
 
         dotenv_content = {"POSTGRES_USER": user}
         dotenv_file = tmp_path / ".." / ".." / ".." / filename
