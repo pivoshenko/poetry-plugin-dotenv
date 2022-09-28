@@ -128,14 +128,18 @@ docstring_style = "numpy"
 exclude = ["__init__.py"]
 per-file-ignores = [
     "tests/conftest.py: WPS430, WPS442",
-    "tests/*.py: S101, WPS221, WPS226, WPS342",
+    "tests/*.py: S101, WPS118, WPS204, WPS221, WPS226, WPS342, WPS440",
+    "src/poetry_dotenv/dotenv/*.py: WPS403",
 ]
 # WPS430 - nested functions are necessary for the pytest fixtures
 # WPS442 - pytest fixtures don't violate shadowing variables from outer scopes
 # S101 - asserts are necessary for the pytest
+# WPS118 - long function names in tests is a common thing
+# WPS204, WPS440 - in tests overuse of functions is a common thing
 # WPS221 - high complexity is not a problem for the parametrized fixtures/tests
 # WPS226 - overuse of literal is fine for the fixtures/tests
 # WPS342 - raw strings are necessary for that tests as they are part of a legacy code
+# WPS403 - it is a legacy package and there is no sense to cover all as some functions are not used
 extend-ignore = [
     "D202",
     "DAR101",
