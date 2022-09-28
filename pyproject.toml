@@ -154,7 +154,7 @@ extend-ignore = [
 # WPS602 - static methods are actually useful in some context
 
 [tool.mypy]
-python_version = "3.8"
+python_version = "3.9"
 warn_unused_configs = true
 ignore_missing_imports = true
 show_error_codes = true
