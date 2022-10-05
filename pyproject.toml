@@ -127,6 +127,8 @@ exclude = ["__init__.py"]
 per-file-ignores = [
     "tests/conftest.py: WPS430, WPS442",
 ]
+# WPS430 - nested functions are necessary for the parameterized pytest fixtures
+# WPS442 - pytest fixtures don't violate "variables from outer scopes"
 extend-ignore = [
     "D202",
     "DAR101",
