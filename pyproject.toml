@@ -111,7 +111,7 @@ force_alphabetical_sort_within_sections = true
 
 [tool.black]
 line-length = 100
-target-version = "py39"
+target-version = ["py39"]
 include = '\.pyi?$'
 
 [tool.flake8]
