@@ -51,6 +51,7 @@ packages = [{ include = "poetry_dotenv", from = "src" }]
 [tool.poetry.dependencies]
 python = "^3.7"
 poetry = "^1.2.1"
+returns = "^0.19.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^2.20.0"
@@ -116,11 +117,10 @@ include = '\.pyi?$'
 
 [tool.flake8]
 max-line-length = 100
-max-line-complexity = 15
-max-module-members = 15
-max-imports = 15
+max-cognitive-score = 15
+max-imports = 10
 max-local-variables = 10
-max-annotation-complexity = 5
+max-module-members = 10
 inline-quotes = '"'
 docstring_style = "numpy"
 exclude = ["__init__.py"]
