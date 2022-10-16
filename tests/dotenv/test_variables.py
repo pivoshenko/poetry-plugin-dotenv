@@ -1,6 +1,7 @@
 """Tests for the module ``src/poetry_update/dotenv/variables.py``."""
 
 from typing import List
+from typing import Union
 
 import pytest
 
@@ -33,18 +34,8 @@ from poetry_dotenv.dotenv import variables
         ),
     ],
 )
-def test_parse(value: str, expected: List[variables.Literal]) -> None:
+def test_parse(value: str, expected: List[Union[variables.Literal, variables.Variable]]) -> None:
     """Test ``parse`` function."""
 
     parsed_vars = list(variables.parse(value))
     assert parsed_vars == expected
-
-
-def test_repr() -> None:
-    """Test ``__repr__`` method."""
-
-    variable = variables.Variable(name="b")
-    expected = "Variable(name='b', default=None)"
-
-    assert repr(variable) == expected
-    assert str(variable) == expected
