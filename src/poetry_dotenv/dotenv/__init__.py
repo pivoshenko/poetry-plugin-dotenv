@@ -7,4 +7,5 @@ References
 #. `python-dotenv <https://github.com/theskumar/python-dotenv>`_
 """
 
+from poetry_dotenv.dotenv import parsers
 from poetry_dotenv.dotenv import variables

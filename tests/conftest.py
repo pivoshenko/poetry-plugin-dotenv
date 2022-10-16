@@ -19,10 +19,7 @@ def create_dotenv_file(tmp_path: Path) -> Callable[[str, str], Dict[str, str]]:
 
         dotenv_content = {"POSTGRES_USER": user}
         dotenv_file = tmp_path / ".." / ".." / ".." / filename
-        stream = (
-            "{0!s}={1!s}".format(kay, value)
-            for kay, value in dotenv_content.items()
-        )
+        stream = ("{0!s}={1!s}".format(kay, value) for kay, value in dotenv_content.items())
         dotenv_file.write_text("/n".join(stream))
 
         return dotenv_content
