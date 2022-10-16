@@ -6,7 +6,9 @@ import re
 import dataclasses
 
 from typing import Iterator
+from typing import Optional
 from typing import OrderedDict
+from typing import Union
 
 
 _posix_variable = re.compile(
@@ -28,7 +30,7 @@ class Literal(object):
 
     value: str
 
-    def resolve(self) -> str:
+    def resolve(self, *args, **kwargs) -> str:
         """Get a literal value."""
 
         return self.value
@@ -39,9 +41,9 @@ class Variable(object):
     """Model of a variable."""
 
     name: str
-    default: str | None = None
+    default: Optional[str] = None
 
-    def resolve(self, env: OrderedDict[str, str | None]) -> str:
+    def resolve(self, env: OrderedDict[str, str], *args, **kwargs) -> str:
         """Get a variable value."""
 
         default = self.default if self.default else ""
@@ -49,7 +51,7 @@ class Variable(object):
         return env_val if env_val else ""
 
 
-def parse(value: str) -> Iterator[Literal | Variable]:
+def parse(value: str) -> Iterator[Union[Literal, Variable]]:
     """Parse values."""
 
     cursor = 0
