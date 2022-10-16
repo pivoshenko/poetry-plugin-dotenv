@@ -30,7 +30,7 @@ class Atom(abc.ABC, metaclass=abc.ABCMeta):
 
         fields = tuple(self.__dict__.items())
 
-        signature_parts = ("{!s}={!r}".format(*pair) for pair in fields)
+        signature_parts = ("{0!s}={1!r}".format(*pair) for pair in fields)
         signature = ", ".join(signature_parts)
 
         return "{class_name!s}({signature!s})".format(
@@ -64,7 +64,7 @@ class Literal(Atom):
         if isinstance(other, Literal):
             return self.value == other.value
 
-        raise TypeError("Invalid type: {!r}.".format(type(other)))
+        raise TypeError("Invalid type: {0!r}.".format(type(other)))
 
     def __hash__(self) -> int:
         """Get object hash."""
@@ -92,7 +92,7 @@ class Variable(Atom):
         if isinstance(other, Variable):
             return (self.name, self.default) == (other.name, other.default)
 
-        raise TypeError("Invalid type: {!r}.".format(type(other)))
+        raise TypeError("Invalid type: {0!r}.".format(type(other)))
 
     def __hash__(self) -> int:
         """Get object hash."""
