@@ -83,6 +83,10 @@ sh = "^1.14.3"
 [tool.poetry.group.ci.dependencies]
 python-semantic-release = "^7.32.0"
 
+
+[tool.poetry.group.formatters.dependencies]
+pyupgrade = "^3.1.0"
+
 [tool.poetry.plugins."poetry.application.plugin"]
 poetry-dotenv = "poetry_dotenv.plugin:DotenvPlugin"
 poethepoet = "poethepoet.plugin:PoetryPlugin"
@@ -124,11 +128,15 @@ max-module-members = 10
 inline-quotes = '"'
 docstring_style = "numpy"
 exclude = ["__init__.py"]
+allowed-domain-names = ["variable", "value"]
 per-file-ignores = [
     "tests/conftest.py: WPS430, WPS442",
+    "tests/*.py: S101, WPS226"
 ]
 # WPS430 - nested functions are necessary for the parameterized pytest fixtures
 # WPS442 - pytest fixtures don't violate "variables from outer scopes"
+# S101 - asserts are necessary for the tests
+# WPS226 - overuse of the literals is a common thing in the tests
 extend-ignore = [
     "D202",
     "DAR101",
