@@ -119,21 +119,21 @@ include = '\.pyi?$'
 [tool.flake8]
 max-line-length = 100
 max-cognitive-score = 15
-max-imports = 10
+max-imports = 15
 max-local-variables = 10
-max-module-members = 10
+max-module-members = 12
 inline-quotes = '"'
 docstring_style = "numpy"
 exclude = ["__init__.py"]
 allowed-domain-names = ["variable", "value", "key"]
 per-file-ignores = [
-    "tests/conftest.py: WPS430, WPS442",
-    "tests/*.py: S101, WPS226"
+    "tests/*.py: S101, WPS226, WPS342, WPS430, WPS442",
 ]
-# WPS430 - nested functions are necessary for the parameterized pytest fixtures
-# WPS442 - pytest fixtures don't violate "variables from outer scopes"
 # S101 - asserts are necessary for the tests
 # WPS226 - overuse of the literals is a common thing in the tests
+# WPS342 - raw strings are necessary for the parsers' tests
+# WPS430 - nested functions are necessary for the parameterized pytest fixtures
+# WPS442 - pytest fixtures don't violate "variables from outer scopes"
 extend-ignore = [
     "D202",
     "DAR101",
@@ -141,9 +141,11 @@ extend-ignore = [
     "DAR301",
     "DAR401",
     "DAR402",
+    "WPS472",
 ]
 # D202 - code is hard to read without a blank line after a docstring
 # DARX - there is no sense to put all sections in docstring
+# WPS472 - unpacking for the single variable is more readable than indexing
 
 [tool.mypy]
 python_version = "3.9"
