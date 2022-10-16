@@ -120,12 +120,13 @@ include = '\.pyi?$'
 max-line-length = 100
 max-cognitive-score = 15
 max-imports = 15
-max-local-variables = 10
 max-module-members = 12
+max-local-variables = 10
+max-annotation-complexity = 5
 inline-quotes = '"'
 docstring_style = "numpy"
 exclude = ["__init__.py"]
-allowed-domain-names = ["variable", "value", "key"]
+allowed-domain-names = ["variable", "value", "values", "key", "result"]
 per-file-ignores = [
     "tests/*.py: S101, WPS226, WPS342, WPS430, WPS442",
 ]

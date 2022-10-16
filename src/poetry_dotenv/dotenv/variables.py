@@ -43,7 +43,7 @@ class Variable(object):
     name: str
     default: Optional[str] = None
 
-    def resolve(self, env: OrderedDict[str, str], *args, **kwargs) -> str:
+    def resolve(self, env: OrderedDict[str, Optional[str]], *args, **kwargs) -> str:
         """Get a variable value."""
 
         default = self.default if self.default else ""
