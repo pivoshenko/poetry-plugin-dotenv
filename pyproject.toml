@@ -125,7 +125,7 @@ max-module-members = 10
 inline-quotes = '"'
 docstring_style = "numpy"
 exclude = ["__init__.py"]
-allowed-domain-names = ["variable", "value"]
+allowed-domain-names = ["variable", "value", "key"]
 per-file-ignores = [
     "tests/conftest.py: WPS430, WPS442",
     "tests/*.py: S101, WPS226"
