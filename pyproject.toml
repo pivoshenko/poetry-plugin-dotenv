@@ -61,9 +61,10 @@ ipython = [
     { version = "^8.5.0", python = ">=3.8" },
 ]
 
-[tool.poetry.group.fomatters.dependencies]
+[tool.poetry.group.formatters.dependencies]
 isort = "^5.10.1"
 black = "^22.8.0"
+pyupgrade = "^3.1.0"
 
 [tool.poetry.group.linters.dependencies]
 mypy = "^0.982"
@@ -82,10 +83,6 @@ sh = "^1.14.3"
 
 [tool.poetry.group.ci.dependencies]
 python-semantic-release = "^7.32.0"
-
-
-[tool.poetry.group.formatters.dependencies]
-pyupgrade = "^3.1.0"
 
 [tool.poetry.plugins."poetry.application.plugin"]
 poetry-dotenv = "poetry_dotenv.plugin:DotenvPlugin"
