@@ -40,7 +40,7 @@ python-versions = ">=3.5"
 dev = ["cloudpickle", "coverage[toml] (>=5.0.2)", "furo", "hypothesis", "mypy (>=0.900,!=0.940)", "pre-commit", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "sphinx", "sphinx-notfound-page", "zope.interface"]
 docs = ["furo", "sphinx", "sphinx-notfound-page", "zope.interface"]
 tests = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy (>=0.900,!=0.940)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "zope.interface"]
-tests_no_zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy (>=0.900,!=0.940)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins"]
+tests-no-zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy (>=0.900,!=0.940)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins"]
 
 [[package]]
 name = "backcall"
@@ -182,7 +182,7 @@ optional = false
 python-versions = ">=3.6.0"
 
 [package.extras]
-unicode_backport = ["unicodedata2"]
+unicode-backport = ["unicodedata2"]
 
 [[package]]
 name = "cleo"
@@ -720,9 +720,9 @@ python-versions = ">=3.6.1,<4.0"
 
 [package.extras]
 colors = ["colorama (>=0.4.3,<0.5.0)"]
-pipfile_deprecated_finder = ["pipreqs", "requirementslib"]
+pipfile-deprecated-finder = ["pipreqs", "requirementslib"]
 plugins = ["setuptools"]
-requirements_deprecated_finder = ["pip-api", "pipreqs"]
+requirements-deprecated-finder = ["pip-api", "pipreqs"]
 
 [[package]]
 name = "jaraco.classes"
@@ -1045,11 +1045,11 @@ pastel = ">=0.2.1,<0.3.0"
 tomli = ">=1.2.2"
 
 [package.extras]
-poetry_plugin = ["poetry (>=1.0,<2.0)"]
+poetry-plugin = ["poetry (>=1.0,<2.0)"]
 
 [[package]]
 name = "poetry"
-version = "1.2.1"
+version = "1.2.2"
 description = "Python dependency management and packaging made easy."
 category = "main"
 optional = false
@@ -1070,8 +1070,8 @@ packaging = ">=20.4"
 pexpect = ">=4.7.0,<5.0.0"
 pkginfo = ">=1.5,<2.0"
 platformdirs = ">=2.5.2,<3.0.0"
-poetry-core = "1.2.0"
-poetry-plugin-export = ">=1.0.7,<2.0.0"
+poetry-core = "1.3.2"
+poetry-plugin-export = ">=1.1.2,<2.0.0"
 requests = ">=2.18,<3.0"
 requests-toolbelt = ">=0.9.1,<0.10.0"
 shellingham = ">=1.5,<2.0"
@@ -1082,7 +1082,7 @@ xattr = {version = ">=0.9.7,<0.10.0", markers = "sys_platform == \"darwin\""}
 
 [[package]]
 name = "poetry-core"
-version = "1.2.0"
+version = "1.3.2"
 description = "Poetry PEP 517 Build Backend"
 category = "main"
 optional = false
@@ -1093,7 +1093,7 @@ importlib-metadata = {version = ">=1.7.0", markers = "python_version < \"3.8\""}
 
 [[package]]
 name = "poetry-plugin-export"
-version = "1.0.7"
+version = "1.1.2"
 description = "Poetry plugin to export the dependencies to various formats"
 category = "main"
 optional = false
@@ -1438,7 +1438,7 @@ urllib3 = ">=1.21.1,<1.27"
 
 [package.extras]
 socks = ["PySocks (>=1.5.6,!=1.5.7)"]
-use_chardet_on_py3 = ["chardet (>=3.0.2,<6)"]
+use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
 
 [[package]]
 name = "requests-toolbelt"
@@ -2429,16 +2429,16 @@ poethepoet = [
     {file = "poethepoet-0.16.2.tar.gz", hash = "sha256:a24632fa123d6f15d72be86dd6c7e009384b70848f5369a766af89ff5ab8d608"},
 ]
 poetry = [
-    {file = "poetry-1.2.1-py3-none-any.whl", hash = "sha256:43be0a7b0fdc3efa661324e288e9630ad00c54dcf17e2a054740a160d7f25d63"},
-    {file = "poetry-1.2.1.tar.gz", hash = "sha256:2750bb2b636ef435d8beac51dde0b13d06199017a1d9b96cba899863d1e81024"},
+    {file = "poetry-1.2.2-py3-none-any.whl", hash = "sha256:93ea3c4a622485c2a7b7249f1e34e4ac84f8229ded76153b67506313201b154f"},
+    {file = "poetry-1.2.2.tar.gz", hash = "sha256:6d9ed0b1b826a0a79190f2078d7d78483fa24bf2494f3b170e354eaa5e7b5ea1"},
 ]
 poetry-core = [
-    {file = "poetry-core-1.2.0.tar.gz", hash = "sha256:ceccec95487e46c63a41761fbac5211b809bca22658e25a049f4c7da96269f71"},
-    {file = "poetry_core-1.2.0-py3-none-any.whl", hash = "sha256:e248d36c1314dd60fbc66390791923ad8b58c629d3e587080b7c1537a1c0d30f"},
+    {file = "poetry-core-1.3.2.tar.gz", hash = "sha256:0ab006a40cb38d6a38b97264f6835da2f08a96912f2728ce668e9ac6a34f686f"},
+    {file = "poetry_core-1.3.2-py3-none-any.whl", hash = "sha256:ea0f5a90b339cde132b4e43cff78a1b440cd928db864bb67cfc97fdfcefe7218"},
 ]
 poetry-plugin-export = [
-    {file = "poetry-plugin-export-1.0.7.tar.gz", hash = "sha256:f6ac707ae227b06b2481249ed2678ff6b810b3487cac0fbb66eb0dc2bfd6ecf1"},
-    {file = "poetry_plugin_export-1.0.7-py3-none-any.whl", hash = "sha256:dd9d4552e7113a86c97908c13b9a439cb46830f247c7e4969e46a0d8d70e4d3f"},
+    {file = "poetry-plugin-export-1.1.2.tar.gz", hash = "sha256:5e92525dd63f38ce74a51ed68ea91d753523f21ce5f9ef8d3b793e2a4b2222ef"},
+    {file = "poetry_plugin_export-1.1.2-py3-none-any.whl", hash = "sha256:946e3313b3d00c18fb9a50522e9d5e6a7e111beaba8d6ae33297662fc2070ac1"},
 ]
 pre-commit = [
     {file = "pre_commit-2.20.0-py2.py3-none-any.whl", hash = "sha256:51a5ba7c480ae8072ecdb6933df22d2f812dc897d5fe848778116129a681aac7"},
