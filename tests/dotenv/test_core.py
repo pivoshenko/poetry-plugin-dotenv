@@ -38,16 +38,6 @@ def prepare_file_hierarchy(path: Path):
     return dirs[0], dirs[-1]
 
 
-def test_find_dotenv_no_file_raise(tmp_path: Path) -> None:
-    """Test ``find`` function."""
-
-    *_, leaf = prepare_file_hierarchy(tmp_path)
-    os.chdir(str(leaf))
-
-    with pytest.raises(IOError):
-        dotenv.find(usecwd=True)
-
-
 def test_find_dotenv_no_file_no_raise(tmp_path: Path) -> None:
     """Test ``find`` function."""
 
@@ -92,7 +82,7 @@ def test_load_dotenv_existing_variable_no_override(dotenv_file: str) -> None:
     with open(dotenv_file, "w") as env_file:
         env_file.write("a=b")
 
-    result = dotenv.load(dotenv_file)
+    result = dotenv.load(dotenv_file, override=False)
 
     assert result is True
     assert os.environ == {"a": "c"}
@@ -105,7 +95,7 @@ def test_load_dotenv_existing_variable_override(dotenv_file: str) -> None:
     with open(dotenv_file, "w") as env_file:
         env_file.write("a=b")
 
-    result = dotenv.load(dotenv_file, override=True)
+    result = dotenv.load(dotenv_file)
 
     assert result is True
     assert os.environ == {"a": "b"}
@@ -118,7 +108,7 @@ def test_load_dotenv_redefine_var_used_in_file_no_override(dotenv_file: str) -> 
     with open(dotenv_file, "w") as env_file:
         env_file.write('a=b\nd="${a}"')
 
-    result = dotenv.load(dotenv_file)
+    result = dotenv.load(dotenv_file, override=False)
 
     assert result is True
     assert os.environ == {"a": "c", "d": "c"}
@@ -174,7 +164,7 @@ def test_load_dotenv_in_current_dir(tmp_path: Path) -> None:
             """
             from poetry_dotenv.dotenv import core as dotenv
             import os
-            dotenv.load()
+            dotenv.load(dotenv.find())
             print(os.environ['a'])
         """,
         ),
