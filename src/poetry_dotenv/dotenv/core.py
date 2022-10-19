@@ -21,7 +21,7 @@ class DotEnv(object):
 
     def __init__(
         self,
-        filepath: str,
+        filepath: Optional[str],
         stream: Optional[IO[str]] = None,
         interpolate: bool = True,
         override: bool = True,
@@ -93,14 +93,14 @@ class DotEnv(object):
 
 
 def resolve(
-    values: Iterable[Tuple[str, Optional[str]]],
+    vals: Iterable[Tuple[str, Optional[str]]],
     override: bool,
 ) -> OrderedDict[str, Optional[str]]:
     """Resolve dotenv variables."""
 
     new_values: OrderedDict[str, Optional[str]] = OrderedDict()
 
-    for (name, value) in values:
+    for (name, value) in vals:
         if value is None:
             result = None
 
@@ -127,7 +127,7 @@ def walk_to_root(path: str) -> Iterator[str]:
     """Yield directories starting from the given directory up to the root."""
 
     if not os.path.exists(path):
-        raise IOError("Starting path not found.")  # pragma: no cover
+        raise IOError("Starting path not found.")
 
     if os.path.isfile(path):
         path = os.path.dirname(path)
@@ -148,12 +148,13 @@ def find(filename: str = ".env", usecwd: bool = False) -> str:
         path = os.getcwd()
 
     else:
-        # WPS437 - call of a protected method is a only way to get a frame
+        # WPS437 - call of a protected method is an only way to get a frame
+        # noinspection PyUnresolvedReferences,PyProtectedMember
         frame = sys._getframe()  # noqa: WPS437
         current_file = __file__
 
         while frame.f_code.co_filename == current_file:
-            # S101 - this assert is part of the original package
+            # S101 - this asserts is part of the original package
             assert frame.f_back is not None  # noqa: S101
             frame = frame.f_back
 
@@ -169,18 +170,28 @@ def find(filename: str = ".env", usecwd: bool = False) -> str:
     return ""
 
 
-def load(filepath: str, interpolate: bool = True, override: bool = False) -> bool:
+def load(
+    filepath: Optional[str] = None,
+    stream: Optional[IO[str]] = None,
+    interpolate: bool = True,
+    override: bool = True,
+) -> bool:
     """Parse a dotenv file and then load all the variables found as environment variables."""
 
     dotenv = DotEnv(
         filepath=filepath,
         interpolate=interpolate,
         override=override,
+        stream=stream,
     )
     return dotenv.set_as_environment_variables()
 
 
-def values(filepath: str, interpolate: bool = True) -> OrderedDict[str, Optional[str]]:
+def values(
+    filepath: Optional[str] = None,
+    stream: Optional[IO[str]] = None,
+    interpolate: bool = True,
+) -> OrderedDict[str, Optional[str]]:
     """Parse a dotenv file and return its content as a dictionary."""
 
-    return DotEnv(filepath=filepath, interpolate=interpolate).dict()
+    return DotEnv(filepath=filepath, stream=stream, interpolate=interpolate).dict()
