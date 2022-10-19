@@ -225,17 +225,6 @@ from poetry_dotenv.dotenv.parsers import parse_stream
             ],
         ),
         (
-            'a="b\nc"',
-            [
-                Binding(
-                    key="a",
-                    value="b\nc",
-                    original=Original(string='a="b\nc"', line=1),
-                    error=False,
-                ),
-            ],
-        ),
-        (
             "a='b\nc'",
             [
                 Binding(
