@@ -51,7 +51,6 @@ packages = [{ include = "poetry_dotenv", from = "src" }]
 [tool.poetry.dependencies]
 python = "^3.7"
 poetry = "^1.2.1"
-returns = "^0.19.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^2.20.0"
@@ -70,6 +69,10 @@ pyupgrade = "^3.1.0"
 mypy = "^0.982"
 wemake-python-styleguide = "^0.17.0"
 pyproject-flake8 = "^3.9.0"
+flake8-pytest-style = "^1.6.0"
+dotenv-linter = "^0.4.0"
+yamllint = "^1.28.0"
+safety = "^2.3.1"
 
 [tool.poetry.group.tests.dependencies]
 pytest = "^7.1.3"
@@ -185,15 +188,10 @@ sequence = [
 
 [tool.poe.tasks.lint]
 help = "Run code linters"
-sequence = [{ ref = "flake8" }, { ref = "mypy" }]
-
-[tool.poe.tasks.flake8]
-help = "Run flake8"
-cmd = "pflake8 --config pyproject.toml ."
-
-[tool.poe.tasks.mypy]
-help = "Run mypy"
-cmd = "mypy --config-file pyproject.toml ."
+sequence = [
+    { cmd = "pflake8 --config pyproject.toml ." },
+    { cmd = "mypy --config-file pyproject.toml ." },
+]
 
 [tool.poe.tasks.tests]
 help = "Run tests"
