@@ -1,3 +1,9 @@
+<div align="center">
+  <a href="https://pypi.org/project/poetry-dotenv">
+    <img alt="logo" src="https://github.com/volopivoshenko/poetry-dotenv/blob/main/docs/static/assets/logo.svg?raw=True" height=200>
+  </a>
+</div>
+
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
     <img alt="license" src="https://img.shields.io/pypi/l/poetry-dotenv?logo=opensourceinitiative">
@@ -108,7 +114,7 @@
 
 - [Overview](#overview)
 - [Installation](#installation)
-  - [Optional dependencies](#optional-dependencies)
+    - [Optional dependencies](#optional-dependencies)
 
 # Overview
 
