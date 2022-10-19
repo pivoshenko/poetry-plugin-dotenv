@@ -6,8 +6,8 @@ labels: ""
 assignees: ""
 ---
 
-- [ ] I am on the [latest](https://github.com/volopivoshenko/poetry-dotenv/releases/latest) version.
-- [ ] I have searched the [issues](https://github.com/volopivoshenko/poetry-dotenv/issues) of this repository and believe that this is not a duplicate.
+- [ ] I am on the [latest] version.
+- [ ] I have searched the [issues] of this repository and believe that this is not a duplicate.
 
 **Describe the bug**
 
@@ -32,8 +32,14 @@ If applicable, add screenshots to help explain your problem.
 - OS: e.g. `MacOS BigSur 11.6.1`.
 - Python version: e.g. `3.8.12`.
 - `poetry-dotenv` version: e.g. `1.0.0`.
-- Link of a [gist](https://gist.github.com) with the contents of your `pyproject.toml` file.
+- Link of a [gist] with the contents of your `pyproject.toml` file.
 
 **Additional context**
 
 Add any other context about the problem here.
+
+[gist]: https://gist.github.com
+
+[issues]: https://github.com/volopivoshenko/poetry-dotenv/issues
+
+[latest]: https://github.com/volopivoshenko/poetry-dotenv/releases/latest
