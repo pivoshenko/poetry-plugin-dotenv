@@ -123,7 +123,7 @@ include = '\.pyi?$'
 max-line-length = 100
 max-cognitive-score = 15
 max-imports = 15
-max-module-members = 12
+max-module-members = 15
 max-local-variables = 10
 max-annotation-complexity = 5
 inline-quotes = '"'
@@ -131,12 +131,14 @@ docstring_style = "numpy"
 exclude = ["__init__.py"]
 allowed-domain-names = ["variable", "value", "values", "key", "result"]
 per-file-ignores = [
-    "tests/*.py: S101, WPS226, WPS342, WPS430, WPS442",
+    "tests/*.py: S101, WPS118, WPS204, WPS226, WPS342, WPS430, WPS440, WPS442",
 ]
 # S101 - asserts are necessary for the tests
+# WPS118 - long names for the tests contain description of the tests
 # WPS226 - overuse of the literals is a common thing in the tests
 # WPS342 - raw strings are necessary for the parsers' tests
 # WPS430 - nested functions are necessary for the parameterized pytest fixtures
+# WPS204, WPS440 - overuse of the expression is a common thing in the tests
 # WPS442 - pytest fixtures don't violate "variables from outer scopes"
 extend-ignore = [
     "D202",

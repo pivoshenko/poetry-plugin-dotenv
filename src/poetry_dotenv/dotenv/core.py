@@ -21,7 +21,7 @@ class DotEnv(object):
 
     def __init__(
         self,
-        filepath: Optional[str],
+        filepath: Optional[str] = None,
         stream: Optional[IO[str]] = None,
         interpolate: bool = True,
         override: bool = True,
@@ -35,9 +35,9 @@ class DotEnv(object):
 
         self.encoding = "utf-8"
 
-        self._dict: Optional[OrderedDict[str, Optional[str]]] = None
+        self._dict: Optional[OrderedDict[str, str]] = None
 
-    def dict(self) -> OrderedDict[str, Optional[str]]:
+    def dict(self) -> OrderedDict[str, str]:
         """Return content of a dotenv file."""
 
         if self._dict:
@@ -53,13 +53,13 @@ class DotEnv(object):
 
         return self._dict
 
-    def parse(self) -> Iterator[Tuple[str, Optional[str]]]:
+    def parse(self) -> Iterator[Tuple[str, str]]:
         """Parse a dotenv file."""
 
         with self._get_stream() as stream:
             for mapping in parsers.parse_stream(stream):
                 if mapping.key is not None:
-                    yield mapping.key, mapping.value
+                    yield mapping.key, mapping.value  # type: ignore
 
     def set_as_environment_variables(self) -> bool:
         """Load current dotenv as a system environment variable."""
@@ -93,20 +93,20 @@ class DotEnv(object):
 
 
 def resolve(
-    vals: Iterable[Tuple[str, Optional[str]]],
+    values: Iterable[Tuple[str, str]],
     override: bool,
-) -> OrderedDict[str, Optional[str]]:
+) -> OrderedDict[str, str]:
     """Resolve dotenv variables."""
 
-    new_values: OrderedDict[str, Optional[str]] = OrderedDict()
+    new_values: OrderedDict[str, str] = OrderedDict()
 
-    for (name, value) in vals:
+    for (name, value) in values:
         if value is None:
             result = None
 
         else:
             atoms = variables.parse(value)
-            env: OrderedDict[str, Optional[str]] = OrderedDict()
+            env: OrderedDict[str, str] = OrderedDict()
 
             if override:
                 env.update(os.environ)
@@ -191,7 +191,7 @@ def values(
     filepath: Optional[str] = None,
     stream: Optional[IO[str]] = None,
     interpolate: bool = True,
-) -> OrderedDict[str, Optional[str]]:
+) -> OrderedDict[str, str]:
     """Parse a dotenv file and return its content as a dictionary."""
 
     return DotEnv(filepath=filepath, stream=stream, interpolate=interpolate).dict()
