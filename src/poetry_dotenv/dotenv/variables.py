@@ -5,9 +5,9 @@ from __future__ import annotations
 import re
 import dataclasses
 
+from collections import OrderedDict
 from typing import Iterator
 from typing import Optional
-from typing import OrderedDict
 from typing import Union
 
 
