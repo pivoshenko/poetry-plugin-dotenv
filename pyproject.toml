@@ -188,10 +188,15 @@ sequence = [
 
 [tool.poe.tasks.lint]
 help = "Run code linters"
-sequence = [
-    { cmd = "pflake8 --config pyproject.toml ." },
-    { cmd = "mypy --config-file pyproject.toml ." },
-]
+sequence = [{ ref = "flake8" }, { ref = "mypy" }]
+
+[tool.poe.tasks.flake8]
+help = "Run flake8"
+cmd = "pflake8 --config pyproject.toml ."
+
+[tool.poe.tasks.mypy]
+help = "Run mypy"
+cmd = "mypy --config-file pyproject.toml ."
 
 [tool.poe.tasks.tests]
 help = "Run tests"
