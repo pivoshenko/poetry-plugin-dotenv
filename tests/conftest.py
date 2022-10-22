@@ -34,7 +34,8 @@ def remove_dotenv_file() -> Callable[[str], None]:
     def remove(filepath: str) -> None:
         """Remove a dotenv file."""
 
-        os.unlink(filepath)
+        if os.path.exists(filepath):
+            os.unlink(filepath)
 
     return remove
 
