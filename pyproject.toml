@@ -89,7 +89,6 @@ python-semantic-release = "^7.32.0"
 
 [tool.poetry.plugins."poetry.application.plugin"]
 poetry-dotenv = "poetry_dotenv.plugin:DotenvPlugin"
-poethepoet = "poethepoet.plugin:PoetryPlugin"
 
 [tool.semantic_release]
 branch = "main"
