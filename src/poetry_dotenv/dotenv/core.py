@@ -71,7 +71,7 @@ class DotEnv(object):
 
             return True
 
-        return False
+        return False  # pragma: nocover
 
     @contextlib.contextmanager
     def _get_stream(self) -> typing.Iterator[typing.IO[str]]:
@@ -85,9 +85,10 @@ class DotEnv(object):
             yield self.stream
 
         else:
-            yield io.StringIO("")
+            yield io.StringIO("")  # pragma: nocover
 
 
+# noinspection PyShadowingNames
 def resolve(
     values: typing.Iterable[typing.Tuple[str, str]],
     override: bool,
@@ -98,7 +99,7 @@ def resolve(
 
     for (name, value) in values:
         if value is None:
-            result = None
+            result = None  # pragma: nocover
 
         else:
             atoms = variables.parse(value)
@@ -123,10 +124,10 @@ def walk_to_root(path: str) -> typing.Iterator[str]:
     """Yield directories starting from the given directory up to the root."""
 
     if not os.path.exists(path):
-        raise IOError("Starting path not found.")
+        raise IOError("Starting path not found.")  # pragma: nocover
 
     if os.path.isfile(path):
-        path = os.path.dirname(path)
+        path = os.path.dirname(path)  # pragma: nocover
 
     last_dir = None
     current_dir = os.path.abspath(path)
