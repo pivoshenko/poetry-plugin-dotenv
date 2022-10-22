@@ -3,12 +3,8 @@
 from __future__ import annotations
 
 import re
+import typing
 import dataclasses
-
-from collections import OrderedDict
-from typing import Iterator
-from typing import Optional
-from typing import Union
 
 
 _posix_variable = re.compile(
@@ -41,9 +37,9 @@ class Variable(object):
     """Model of a variable."""
 
     name: str
-    default: Optional[str] = None
+    default: typing.Optional[str] = None
 
-    def resolve(self, env: OrderedDict[str, str], *args, **kwargs) -> str:
+    def resolve(self, env: typing.OrderedDict[str, str], *args, **kwargs) -> str:
         """Get a variable value."""
 
         default = self.default if self.default else ""
@@ -51,7 +47,7 @@ class Variable(object):
         return env_val if env_val else ""
 
 
-def parse(value: str) -> Iterator[Union[Literal, Variable]]:
+def parse(value: str) -> typing.Iterator[typing.Union[Literal, Variable]]:
     """Parse values."""
 
     cursor = 0
