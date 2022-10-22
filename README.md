@@ -11,7 +11,7 @@
   <a href="https://pypi.org/project/poetry-dotenv">
     <img alt="python" src="https://img.shields.io/pypi/pyversions/poetry-dotenv?logo=python">
   </a>
-  <a href="https://pypi.org/project/poetry-dotenv">`
+  <a href="https://pypi.org/project/poetry-dotenv">
     <img alt="pypi" src="https://img.shields.io/pypi/v/poetry-dotenv?logo=pypi">
   </a>
   <a href="https://github.com/volopivoshenko/poetry-dotenv/releases">
