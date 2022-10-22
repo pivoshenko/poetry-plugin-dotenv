@@ -7,6 +7,38 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 <!--next-version-placeholder-->
 
+## v0.2.0 (2022-10-22)
+### Feature
+* **plugin:** Add core dotenv functionality ([`2da6bf1`](https://github.com/volopivoshenko/poetry-dotenv/commit/2da6bf193269f283cad477eddce39fef8ef8a991))
+* **dotenv:** Add core ([`2ce7dcf`](https://github.com/volopivoshenko/poetry-dotenv/commit/2ce7dcf294bc3cb2de05f5894d6eda00292a4c4e))
+* **dotenv:** Add core IO functionality ([`8398fdd`](https://github.com/volopivoshenko/poetry-dotenv/commit/8398fdd76ce7c544a1bcb0838a69c0dcc0cc0055))
+* **dotenv:** Add parsers ([`b338ecb`](https://github.com/volopivoshenko/poetry-dotenv/commit/b338ecbd1c9d647b01fd3a14803378b0a1748315))
+* **dotenv:** Add core IO functionality ([`d2923d5`](https://github.com/volopivoshenko/poetry-dotenv/commit/d2923d5b7d8d2d2ac15d5b8f381ed83964c3430a))
+
+### Fix
+* **dotenv:** Resolve issue with `OrderedDict` ([`440171e`](https://github.com/volopivoshenko/poetry-dotenv/commit/440171e5eb757d44ddd402d3fc21f085d3a0011a))
+* **dotenv:** Update `OrderedDict` ([`13dabf2`](https://github.com/volopivoshenko/poetry-dotenv/commit/13dabf2b175332ccb9a74dae5d3d0f87753af553))
+* **dotenv:** Add parsers ([`4eac1a9`](https://github.com/volopivoshenko/poetry-dotenv/commit/4eac1a96e7f9dc117c0bb3b497f6d788b0fd1f3d))
+* **dotenv:** Update base models to the `dataclasses` ([`9a61208`](https://github.com/volopivoshenko/poetry-dotenv/commit/9a6120850bbb476a3dede57de64340f63320c9d3))
+* **dotenv:** Update f-strings arguments ([`7ad2bfb`](https://github.com/volopivoshenko/poetry-dotenv/commit/7ad2bfbca447cefd9dcae098bf93bfe6c57e27ed))
+* **dotenv:** Add models of the variables/literals ([`af40eb2`](https://github.com/volopivoshenko/poetry-dotenv/commit/af40eb2f64bd905c9ef06df76b6a68d1c4d5ef49))
+
+### Documentation
+* Add logo ([`cd589d1`](https://github.com/volopivoshenko/poetry-dotenv/commit/cd589d1faf8922bb49d56f7cc853be578a47f6d5))
+* **docstrings:** Update docstrings ([`168c692`](https://github.com/volopivoshenko/poetry-dotenv/commit/168c692d60914c1c8eda91de84c905701918ce69))
+* **plugin:** Update docstrings ([`fd57094`](https://github.com/volopivoshenko/poetry-dotenv/commit/fd57094b4bb063ed297cac94e22118a9123df5ff))
+* **github:** Update homepage ([`2eaec85`](https://github.com/volopivoshenko/poetry-dotenv/commit/2eaec858eccda8084b66e22a3657ea1551d72663))
+* **github:** Update homepage ([`4b21426`](https://github.com/volopivoshenko/poetry-dotenv/commit/4b21426e4e6a7c42404d987281e97ff6a36609ed))
+* **github:** Update homepage ([`c9d9885`](https://github.com/volopivoshenko/poetry-dotenv/commit/c9d9885e371bba74aa35d239a8f9003e0a14bddf))
+* **github:** Format template of the feature request ([`01b860c`](https://github.com/volopivoshenko/poetry-dotenv/commit/01b860cce86bc54caa9a7a3e3ee366ff1171eaef))
+* **github:** Format contributing guide ([`8bbfa71`](https://github.com/volopivoshenko/poetry-dotenv/commit/8bbfa71a7bedcbfd327bedcdd1827283db978a9a))
+* **github:** Format changelog ([`d3d9a4f`](https://github.com/volopivoshenko/poetry-dotenv/commit/d3d9a4f976a744149b80d6fe9c34500937bacbfb))
+* **github:** Format security ([`edac82a`](https://github.com/volopivoshenko/poetry-dotenv/commit/edac82aacd95f89638e052bac9ff7a602cd040f6))
+* **github:** Format changelog ([`40ff2fa`](https://github.com/volopivoshenko/poetry-dotenv/commit/40ff2fa841eb5f5285fb67b755f9ffd92891cc71))
+* **github:** Update template of the feature request ([`d07233f`](https://github.com/volopivoshenko/poetry-dotenv/commit/d07233ff24fe154e9e5e9466d86779536dbd36d4))
+* **github:** Update template of the bug report ([`e93452f`](https://github.com/volopivoshenko/poetry-dotenv/commit/e93452ffebf1f07eb141e9d6874c39a1681a5328))
+* **github:** Update template of the bug report ([`cc2beb3`](https://github.com/volopivoshenko/poetry-dotenv/commit/cc2beb3f63e3c66335899c17c4537907c745fb19))
+
 ## v0.1.0 (2022-09-21)
 
 ### Feature
