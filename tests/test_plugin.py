@@ -80,7 +80,8 @@ def test_without_dotenv_file(
 
 
 def test_dotenv_file_doesnt_exist(
-    mocker: pytest_mock.MockerFixture, remove_dotenv_file: Callable[[str], None]
+    mocker: pytest_mock.MockerFixture,
+    remove_dotenv_file: Callable[[str], None],
 ) -> None:
     """Test for the ``load`` method."""
 
