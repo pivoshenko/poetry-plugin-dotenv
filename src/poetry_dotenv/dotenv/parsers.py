@@ -12,7 +12,7 @@ from typing import Match
 from typing import NamedTuple
 from typing import Optional
 from typing import Pattern
-from typing import Sequence
+from typing import Tuple
 
 
 Original = NamedTuple(
@@ -126,7 +126,7 @@ class Reader(object):
         return self.string[self.position.chars: self.position.chars + count]
         # fmt: on
 
-    def read_regex(self, regex: Pattern[str]) -> Sequence[str]:
+    def read_regex(self, regex: Pattern[str]) -> Tuple[str, ...]:
         """Read a dotenv with a regex."""
 
         match = regex.match(self.string, self.position.chars)
