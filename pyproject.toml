@@ -244,11 +244,11 @@ cmd = "deptry ."
 
 [tool.poe.tasks.mypy]
 help = "Run mypy (types linter)"
-cmd = "mypy ."
+cmd = "mypy"
 
 [tool.poe.tasks.flake8]
 help = "Run flake8 (code linter)"
-cmd = "pflake8 ."
+cmd = "pflake8"
 
 [tool.poe.tasks.codespell]
 help = "Run codespell (spell linter)"
