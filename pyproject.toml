@@ -78,7 +78,6 @@ deptry = "^0.6.3"
 codespell = "^2.2.2"
 yamllint = "^1.28.0"
 safety = "^2.3.1"
-pytype = "^2022.10.26"
 
 [tool.poetry.group.tests.dependencies]
 pytest = "^7.1.3"
@@ -198,6 +197,7 @@ addopts = [
 
 [tool.coverage.run]
 omit = ["*/__init__.py"]
+
 [tool.poe]
 poetry_command = ""
 
@@ -245,10 +245,6 @@ cmd = "deptry ."
 [tool.poe.tasks.mypy]
 help = "Run mypy (types linter)"
 cmd = "mypy ."
-
-[tool.poe.tasks.pytype]
-help = "Run pytype (types linter)"
-cmd = "pytype ."
 
 [tool.poe.tasks.flake8]
 help = "Run flake8 (code linter)"
