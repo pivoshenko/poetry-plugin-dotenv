@@ -7,6 +7,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 <!--next-version-placeholder-->
 
+## v0.2.1 (2022-10-29)
+### Fix
+* **plugin:** Resolve issue with debug entry ([`0714e00`](https://github.com/volopivoshenko/poetry-dotenv/commit/0714e000b6287a19d19ed8c83717a7b1f39cdd88))
+
+### Documentation
+* **README:** Add overview section ([`b3956c7`](https://github.com/volopivoshenko/poetry-dotenv/commit/b3956c74ae3c63af9b70f7ae20ac8653af478868))
+* **README:** Remove LGTM badge ([`5faf034`](https://github.com/volopivoshenko/poetry-dotenv/commit/5faf034e80f7c57a407124e0dbe6dd4d90517177))
+* **README:** Remove redunant char ([`5941462`](https://github.com/volopivoshenko/poetry-dotenv/commit/5941462eeabb9c92810c0c0ff90892faf54459b2))
+
 ## v0.2.0 (2022-10-22)
 ### Feature
 * **plugin:** Add core dotenv functionality ([`2da6bf1`](https://github.com/volopivoshenko/poetry-dotenv/commit/2da6bf193269f283cad477eddce39fef8ef8a991))
