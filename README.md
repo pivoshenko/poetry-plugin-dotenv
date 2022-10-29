@@ -68,12 +68,6 @@
   <a href="https://codecov.io/gh/volopivoshenko/poetry-dotenv">
     <img alt="coverage" src="https://img.shields.io/codecov/c/gh/volopivoshenko/poetry-dotenv?logo=codecov&token=yyck08xfTN"/>
   </a>
-  <a href="https://lgtm.com/projects/g/volopivoshenko/poetry-dotenv/alerts/">
-    <img alt="alerts" src="https://img.shields.io/lgtm/alerts/github/volopivoshenko/poetry-dotenv?logo=lgtm"/>
-  </a>
-  <a href="https://lgtm.com/projects/g/volopivoshenko/poetry-dotenv/context:python">
-    <img alt="grade" src="https://img.shields.io/lgtm/grade/python/github/volopivoshenko/poetry-dotenv?logo=lgtm"/>
-  </a>
   <a href="https://codeclimate.com/github/volopivoshenko/poetry-dotenv/maintainability">
     <img alt="codeclimate" src="https://img.shields.io/codeclimate/maintainability/volopivoshenko/poetry-dotenv?logo=codeclimate">
   </a>
@@ -114,7 +108,7 @@
 
 - [Overview](#overview)
 - [Installation](#installation)
-    - [Optional dependencies](#optional-dependencies)
+  - [Optional dependencies](#optional-dependencies)
 
 # Overview
 
