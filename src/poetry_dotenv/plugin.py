@@ -45,9 +45,10 @@ class DotenvPlugin(ApplicationPlugin):
         if isinstance(event.command, EnvCommand) and not dont_load_dotenv:
             filepath = dotenv_location if dotenv_location else dotenv.core.find(usecwd=True)
 
-            if filepath and event.io.is_debug():
-                msg = "Loading environment variables {0!r}."
-                event.io.write_line(self.debug_msg.format(msg.format(filepath)))
+            if filepath:
+                if event.io.is_debug():
+                    msg = "Loading environment variables {0!r}."
+                    event.io.write_line(self.debug_msg.format(msg.format(filepath)))
 
                 dotenv.core.load(filepath=filepath)
 
