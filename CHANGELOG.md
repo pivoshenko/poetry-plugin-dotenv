@@ -7,6 +7,10 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 <!--next-version-placeholder-->
 
+## v0.2.2 (2022-10-30)
+### Fix
+* **plugin:** Add debug logger ([`01bf330`](https://github.com/volopivoshenko/poetry-dotenv/commit/01bf330fad5a5253b71aec35bdc938446dcb04ea))
+
 ## v0.2.1 (2022-10-29)
 ### Fix
 * **plugin:** Resolve issue with debug entry ([`0714e00`](https://github.com/volopivoshenko/poetry-dotenv/commit/0714e000b6287a19d19ed8c83717a7b1f39cdd88))
