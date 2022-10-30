@@ -36,22 +36,28 @@ class DotenvPlugin(ApplicationPlugin):
             listener=self.load,
         )
 
+    def debug(self, event: ConsoleCommandEvent, message: str) -> None:  # pragma: no cover
+        """Log a debug message."""
+
+        if event.io.is_debug():
+            event.io.write_line(self.debug_msg.format(message))
+
     def load(self, event: ConsoleCommandEvent, *args, **kwargs) -> None:
         """Load a dotenv file."""
 
         dont_load_dotenv = os.getenv("POETRY_DONT_LOAD_DOTENV")
         dotenv_location = os.getenv("POETRY_DOTENV_LOCATION")
+        is_env_command = isinstance(event.command, EnvCommand)
 
-        if isinstance(event.command, EnvCommand) and not dont_load_dotenv:
+        if is_env_command and dont_load_dotenv:
+            self.debug(event, "Not loading environment variables.")
+
+        elif is_env_command and not dont_load_dotenv:
             filepath = dotenv_location if dotenv_location else dotenv.core.find(usecwd=True)
 
-            if filepath:
-                if event.io.is_debug():
-                    msg = "Loading environment variables {0!r}."
-                    event.io.write_line(self.debug_msg.format(msg.format(filepath)))
-
+            if os.path.isfile(filepath):
+                self.debug(event, "Loading environment variables from {0!r}.".format(filepath))
                 dotenv.core.load(filepath=filepath)
 
-            elif not filepath and event.io.is_debug():
-                msg = "File {0!r} doesn't exist."
-                event.io.write_line(self.debug_msg.format(msg.format(filepath)))
+            else:
+                self.debug(event, "File {0!r} doesn't exist.".format(filepath))
