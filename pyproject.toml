@@ -65,7 +65,7 @@ ipython = [
 [tool.poetry.group.formatters.dependencies]
 isort = "^5.10.1"
 black = "^22.10.0"
-pyupgrade = "^3.1.0"
+pyupgrade = "^3.2.0"
 yesqa = "^1.4.0"
 
 [tool.poetry.group.linters.dependencies]
@@ -80,17 +80,17 @@ yamllint = "^1.28.0"
 safety = "^2.3.1"
 
 [tool.poetry.group.tests.dependencies]
-pytest = "^7.1.3"
+pytest = "^7.2.0"
 xdoctest = "^1.1.0"
 pytest-lazy-fixture = "^0.6.3"
-pytest-mock = "^3.9.0"
+pytest-mock = "^3.10.0"
 pytest-cov = "^4.0.0"
 pytest-sugar = "^0.9.5"
 coverage = { version = "^6.5.0", extras = ["toml"] }
 sh = "^1.14.3"
 
 [tool.poetry.group.ci.dependencies]
-python-semantic-release = "^7.32.0"
+python-semantic-release = "^7.32.2"
 
 [tool.poetry.plugins."poetry.application.plugin"]
 poetry-dotenv = "poetry_dotenv.plugin:DotenvPlugin"
