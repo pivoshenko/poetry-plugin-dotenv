@@ -107,8 +107,8 @@
 </p>
 
 - [Overview](#overview)
-    - [Usage](#usage)
 - [Installation](#installation)
+- [Usage](#usage)
 
 # Overview
 
@@ -118,7 +118,13 @@ into the environment before `poetry` commands are run.
 This plugin doesn't have any dependencies, but therefore it also supports features that
 `python-dotenv` supports (e.g. templates, interpolating variables using `POSIX` variable expansions etc).
 
-## Usage
+# Installation
+
+```bash
+poetry self add poetry-dotenv
+```
+
+# Usage
 
 By default, plugin will load the `.env` file from the current working directory or "higher directories".
 
@@ -127,9 +133,3 @@ environment variable.
 
 If your dotenv file is located in a different path or has a different name you may set
 the ``POETRY_DOTENV_LOCATION`` environment variable.
-
-# Installation
-
-```bash
-poetry self add poetry-dotenv
-```
