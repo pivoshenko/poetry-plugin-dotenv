@@ -120,7 +120,7 @@ This plugin doesn't have any dependencies, but therefore it also supports featur
 
 ## Usage
 
-By default plugin will load the `.env` file from the current working directory or "higher directories".
+By default, plugin will load the `.env` file from the current working directory or "higher directories".
 
 To prevent ``poetry`` from loading the dotenv file, set the ``POETRY_DONT_LOAD_ENV``
 environment variable.
