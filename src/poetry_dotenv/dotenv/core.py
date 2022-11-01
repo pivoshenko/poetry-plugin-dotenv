@@ -144,7 +144,7 @@ def find(filename: str = ".env", usecwd: bool = False) -> str:
     if usecwd or getattr(sys, "frozen", False):
         path = os.getcwd()
 
-    else:
+    else:  # pragma: no cover
         # WPS437 - call of a protected method is an only way to get a frame
         # noinspection PyUnresolvedReferences,PyProtectedMember
         frame = sys._getframe()  # noqa: WPS437

@@ -28,10 +28,10 @@ class DotenvPlugin(ApplicationPlugin):
 
     debug_msg = "<debug>{0!s}</debug>"
 
-    def activate(self, application: Application) -> None:
+    def activate(self, application: Application) -> None:  # pragma: no cover
         """Activate the plugin."""
 
-        application.event_dispatcher.add_listener(  # pragma: no cover
+        application.event_dispatcher.add_listener(
             event_name=COMMAND,
             listener=self.load,
         )
