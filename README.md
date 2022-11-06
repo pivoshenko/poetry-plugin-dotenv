@@ -130,4 +130,44 @@ To prevent ``poetry`` from loading the dotenv file, set the ``POETRY_DONT_LOAD_D
 
 If your dotenv file is located in a different path or has a different name you may set the ``POETRY_DOTENV_LOCATION`` environment variable.
 
+```dotenv
+# .env
+DB__HOST=localhost
+DB__DBNAME=prod
+DB__USER=admin
+DB__PASSWORD=admin
+DB__ENGINE=postgresql://${DB__USER}:${DB__PASSWORD}@${DB__HOST}/${DB__DBNAME}
+```
+
+```dotenv
+# .env.dev
+DB__HOST=localhost
+DB__DBNAME=dev
+DB__USER=root
+DB__PASSWORD=root
+DB__ENGINE=postgresql://${DB__USER}:${DB__PASSWORD}@${DB__HOST}/${DB__DBNAME}
+```
+
+```python
+# main.py
+if __name__ == "__main__":
+    try:
+        print(f"Host: {os.environ['DB__HOST']!r}")
+        print(f"Name: {os.environ['DB__DBNAME']!r}")
+        print(f"Username: {os.environ['DB__USER']!r}")
+        print(f"Password: {os.environ['DB__PASSWORD']!r}")
+        print(f"Engine: {os.environ['DB__ENGINE']!r}")
+
+    except KeyError:
+        print("Environment variables not set!")
+```
+
+```bash
+poetry run -vvv python main.py
+
+export POETRY_DOTENV_LOCATION=.env.dev && poetry run -vvv python main.py
+
+export POETRY_DONT_LOAD_DOTENV=1 && poetry run -vvv python main.py
+```
+
 ![example](https://raw.githubusercontent.com/volopivoshenko/poetry-dotenv/main/docs/static/assets/example.gif)
