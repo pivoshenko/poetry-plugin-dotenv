@@ -19,7 +19,7 @@ class DotenvPlugin(ApplicationPlugin):
 
     Notes
     -----
-    To prevent ``poetry`` from loading the dotenv file, set the ``POETRY_DONT_LOAD_ENV``
+    To prevent ``poetry`` from loading the dotenv file, set the ``POETRY_DONT_LOAD_DOTENV``
     environment variable.
 
     If your dotenv file is located in a different path or has a different name you may set
