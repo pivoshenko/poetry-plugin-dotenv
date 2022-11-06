@@ -23,7 +23,7 @@ documentation = "https://github.com/volopivoshenko/poetry-dotenv"
 repository = "https://github.com/volopivoshenko/poetry-dotenv"
 readme = "README.md"
 classifiers = [
-    "Development Status :: 1 - Planning",
+    "Development Status :: 5 - Production/Stable",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Environment :: Other Environment",
