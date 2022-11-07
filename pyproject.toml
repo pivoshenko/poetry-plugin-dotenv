@@ -61,6 +61,7 @@ ipython = [
     { version = "^7.34.0", python = ">=3.7,<3.8" },
     { version = "^8.5.0", python = ">=3.8" },
 ]
+monkeytype = "^22.2.0"
 
 [tool.poetry.group.formatters.dependencies]
 isort = "^5.10.1"
