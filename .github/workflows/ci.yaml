@@ -19,13 +19,13 @@ jobs:
     steps:
       - name: Checkout repository
         id: checkout-repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: Install Python
         id: install-python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: 3.9
           architecture: x64
@@ -57,13 +57,13 @@ jobs:
     steps:
       - name: Checkout repository
         id: checkout-repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: Install Python
         id: install-python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python-version }}
           architecture: x64
@@ -81,7 +81,7 @@ jobs:
 
       - name: Upload coverage to Codecov
         id: upload-coverage-to-codecov
-        uses: codecov/codecov-action@v1.0.13
+        uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           name: ${{ matrix.os }}, ${{ matrix.python-version }}
