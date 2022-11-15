@@ -86,7 +86,7 @@ xdoctest = "^1.1.0"
 pytest-lazy-fixture = "^0.6.3"
 pytest-mock = "^3.10.0"
 pytest-cov = "^4.0.0"
-pytest-sugar = "^0.9.5"
+pytest-sugar = "^0.9.6"
 coverage = { version = "^6.5.0", extras = ["toml"] }
 sh = "^1.14.3"
 
@@ -143,6 +143,7 @@ inline-quotes = '"'
 docstring_style = "numpy"
 exclude = ["__init__.py"]
 allowed-domain-names = [
+    "info",
     "variable",
     "value",
     "values",
