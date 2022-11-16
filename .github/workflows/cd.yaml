@@ -26,13 +26,13 @@ jobs:
     steps:
       - name: Checkout repository
         id: checkout-repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: Install Python
         id: install-python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: 3.9
           architecture: x64
