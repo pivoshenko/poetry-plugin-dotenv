@@ -8,12 +8,10 @@ name: CodeQL
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
 
   pull_request:
-    branches:
-      - main
+    branches: [ "main" ]
 
 jobs:
   analyze:
@@ -23,21 +21,29 @@ jobs:
       actions: read
       contents: read
       security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'python' ]
+
     steps:
-      - name: Checkout repository
-        id: checkout-repository
-        uses: actions/checkout@v3
+    - name: Checkout repository
+      id: checkout-repository
+      uses: actions/checkout@v3
 
-      - name: Initialize CodeQL
-        id: initialize-codeql
-        uses: github/codeql-action/init@v2
-        with:
-          languages: python
+    - name: Initialize CodeQL
+      id: initialize-codeql
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
 
-      - name: Autobuild
-        id: autobuild
-        uses: github/codeql-action/autobuild@v2
+    - name: Autobuild
+      id: autobuild
+      uses: github/codeql-action/autobuild@v2
 
-      - name: Perform CodeQL analysis
-        id: perform-codeql-analysis
-        uses: github/codeql-action/analyze@v2
+    - name: Perform CodeQL analysis
+      id: perform-codeql-analysis
+      uses: github/codeql-action/analyze@v2
+      with:
+        category: "/language:${{matrix.language}}"
