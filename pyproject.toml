@@ -29,7 +29,6 @@ classifiers = [
     "Environment :: Other Environment",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
@@ -49,19 +48,14 @@ packages = [{ include = "poetry_dotenv", from = "src" }]
 "Say Thanks!" = "https://www.buymeacoffee.com/volopivoshenko"
 
 [tool.poetry.dependencies]
-python = ">=3.7,<3.11"
+python = ">=3.8,<3.11"
 poetry = "^1.2.2"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^2.20.0"
 poethepoet = "^0.16.4"
 poetryup = "^0.12.3"
-MonkeyType = "^22.2.0"
-ipython = [
-    { version = "^7.34.0", python = ">=3.7,<3.8" },
-    { version = "^8.5.0", python = ">=3.8" },
-]
-monkeytype = "^22.2.0"
+ipython = "^8.5.0"
 
 [tool.poetry.group.formatters.dependencies]
 isort = "^5.10.1"
@@ -70,12 +64,12 @@ pyupgrade = "^3.2.2"
 yesqa = "^1.4.0"
 
 [tool.poetry.group.linters.dependencies]
-mypy = "^0.982"
+mypy = "^0.991"
 wemake-python-styleguide = "^0.17.0"
 pyproject-flake8 = "^3.9.2"
 flake8-pytest-style = "^1.6.0"
 dotenv-linter = "^0.4.0"
-deptry = "^0.6.3"
+deptry = "^0.6.5"
 codespell = "^2.2.2"
 yamllint = "^1.28.0"
 safety = "^2.3.1"
