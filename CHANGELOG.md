@@ -7,6 +7,11 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 <!--next-version-placeholder-->
 
+## v0.2.6 (2022-12-03)
+### Fix
+* **docs:** Update docs ([`68ae66b`](https://github.com/volopivoshenko/poetry-dotenv/commit/68ae66b4655b2bce3ba30868818442eaf2197353))
+* **dependencies:** Update dependencies ([`9bb1b31`](https://github.com/volopivoshenko/poetry-dotenv/commit/9bb1b31aa4f3c1941f560d86cae7ddb5a6cd909c))
+
 ## v0.2.5 (2022-11-18)
 ### Fix
 * **dependencies:** Update base Python version ([`54d9c24`](https://github.com/volopivoshenko/poetry-dotenv/commit/54d9c2449d9adb2ae01398f900c839623640cbf5))
