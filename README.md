@@ -106,23 +106,23 @@
     </a>
 </p>
 
-- [Overview](#overview)
-- [Installation](#installation)
-- [Usage](#usage)
+- [🔮 Overview](#-overview)
+- [⚙️ Installation](#️-installation)
+- [👩🏻‍💻 Usage](#-usage)
 
-# Overview
+# 🔮 Overview
 
 `poetry-dotenv` - is the plugin that automatically loads environment variables from a dotenv file into the environment before `poetry` commands are run.
 
 **This plugin doesn't have any dependencies, but therefore it also supports features that `python-dotenv` supports (e.g. templates, interpolating variables using `POSIX` variable expansions etc).**
 
-# Installation
+# ⚙️ Installation
 
 ```bash
 poetry self add poetry-dotenv
 ```
 
-# Usage
+# 👩🏻‍💻 Usage
 
 By default, plugin will load the `.env` file from the current working directory or "higher directories".
 
