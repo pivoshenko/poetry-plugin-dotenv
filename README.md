@@ -164,10 +164,21 @@ if __name__ == "__main__":
 
 ```bash
 poetry run -vvv python main.py
+# Loading environment variables from '.env'.
+# Host: 'localhost'
+# Name: 'prod'
+# Username: 'admin'
+# Password: 'admin'
+# Engine 'postgresql://admin:admin@localhost/prod'
 
 export POETRY_DOTENV_LOCATION=.env.dev && poetry run -vvv python main.py
+# Loading environment variables from '.env.dev'.
+# Host: 'localhost'
+# Name: 'dev'
+# Username: 'root'
+# Password: 'root'
+# Engine 'postgresql://root:root@localhost/dev'
 
 export POETRY_DONT_LOAD_DOTENV=1 && poetry run -vvv python main.py
+# Not loading environment variables.
 ```
-
-![example](https://raw.githubusercontent.com/volopivoshenko/poetry-dotenv/main/docs/static/assets/example.gif)
