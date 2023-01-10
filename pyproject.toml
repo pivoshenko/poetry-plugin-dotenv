@@ -55,6 +55,7 @@ poetry = "^1.3.1"
 pre-commit = "^2.21.0"
 poethepoet = "^0.17.1"
 ipython = "^8.8.0"
+ipdb = "^0.13.11"
 
 [tool.poetry.group.formatters.dependencies]
 isort = "^5.11.4"
@@ -70,7 +71,6 @@ flake8-pytest-style = "^1.6.0"
 dotenv-linter = "^0.4.0"
 deptry = "^0.7.1"
 codespell = "^2.2.2"
-yamllint = "^1.28.0"
 safety = "^2.3.5"
 
 [tool.poetry.group.tests.dependencies]
@@ -135,14 +135,7 @@ max-annotation-complexity = 5
 inline-quotes = '"'
 docstring_style = "numpy"
 exclude = ["__init__.py"]
-allowed-domain-names = [
-    "info",
-    "variable",
-    "value",
-    "values",
-    "key",
-    "result",
-]
+allowed-domain-names = ["info", "variable", "value", "values", "key", "result"]
 per-file-ignores = [
     "tests/*.py: S101, WPS118, WPS204, WPS226, WPS342, WPS430, WPS440, WPS442",
 ]
@@ -170,10 +163,7 @@ extend-ignore = [
 skip = "tests,.git,.mypy_cache,.pytest_cache,.idea,.vscode"
 
 [tool.deptry]
-ignore_transitive = [
-    "cleo",
-    "poetry_dotenv",
-]
+ignore_transitive = ["cleo", "poetry_dotenv"]
 
 [tool.pytest.ini_options]
 minversion = "6.0"
@@ -196,62 +186,23 @@ omit = ["*/__init__.py"]
 [tool.poe]
 poetry_command = ""
 
-[tool.poe.tasks.poetryup]
-help = "Run poetryup (upgrade dependencies)"
-cmd = "poetryup --latest"
-
 [tool.poe.tasks.format]
 help = "Run formatters"
 sequence = [
-    { ref = "isort" },
-    { ref = "black" },
-    { ref = "yesqa" },
+    { cmd = "isort .", help = "Run imports formatter" },
+    { cmd = "black .", help = "Run code formatter" },
+    { cmd = "yesqa", help = "Run flake8 formatter" },
+    { cmd = "pyupgrade", help = "Run annotations formatter" },
 ]
-
-[tool.poe.tasks.pyupgrade]
-help = "Run pyupgrade (annotations formatter)"
-cmd = "pyupgrade"
-
-[tool.poe.tasks.black]
-help = "Run black (code formatter)"
-cmd = "black ."
-
-[tool.poe.tasks.isort]
-help = "Run isort (imports formatter)"
-cmd = "isort ."
-
-[tool.poe.tasks.yesqa]
-help = "Run yesqa (flake8 formatter)"
-cmd = "yesqa"
 
 [tool.poe.tasks.lint]
 help = "Run linters"
 sequence = [
-    { ref = "deptry" },
-    { ref = "mypy" },
-    { ref = "flake8" },
-    { ref = "codespell" },
+    { cmd = "deptry .", help = "Run dependencies linter" },
+    { cmd = "mypy .", help = "Run types linter" },
+    { cmd = "pflake8 .", help = "Run code linter" },
+    { cmd = "codespell .", help = "Run spell linter" },
 ]
-
-[tool.poe.tasks.deptry]
-help = "Run deptry (dependencies linter)"
-cmd = "deptry ."
-
-[tool.poe.tasks.mypy]
-help = "Run mypy (types linter)"
-cmd = "mypy"
-
-[tool.poe.tasks.flake8]
-help = "Run flake8 (code linter)"
-cmd = "pflake8"
-
-[tool.poe.tasks.codespell]
-help = "Run codespell (spell linter)"
-cmd = "codespell"
-
-[tool.poe.tasks.yamllint]
-help = "Run yamllint (YAML linter)"
-cmd = "yamllint ."
 
 [tool.poe.tasks.tests]
 help = "Run tests"
