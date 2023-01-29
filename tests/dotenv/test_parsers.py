@@ -1,8 +1,8 @@
 """Tests for the module ``src/poetry_update/dotenv/parsers.py``."""
 
-import io
+from __future__ import annotations
 
-from typing import List
+import io
 
 import pytest
 
@@ -540,7 +540,7 @@ from poetry_dotenv.dotenv.parsers import parse_stream
         ),
     ],
 )
-def test_parse_stream(test_input: str, expected: List[Binding]) -> None:
+def test_parse_stream(test_input: str, expected: list[Binding]) -> None:
     """Test ``parse_stream`` function."""
 
     parsed_stream = list(parse_stream(io.StringIO(test_input)))

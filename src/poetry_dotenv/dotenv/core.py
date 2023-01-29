@@ -1,5 +1,7 @@
 """Module that contains core dotenv functionality."""
 
+from __future__ import annotations
+
 import io
 import os
 import sys
@@ -12,13 +14,13 @@ from poetry_dotenv.dotenv import parsers
 from poetry_dotenv.dotenv import variables
 
 
-class DotEnv(object):
+class DotEnv:
     """Model of a dotenv file."""
 
     def __init__(
         self,
-        filepath: typing.Optional[str] = None,
-        stream: typing.Optional[typing.IO[str]] = None,
+        filepath: str | None = None,
+        stream: typing.IO[str] | None = None,
         interpolate: bool = True,
         override: bool = True,
     ) -> None:
@@ -31,7 +33,7 @@ class DotEnv(object):
 
         self.encoding = "utf-8"
 
-        self._dict: typing.Optional[typing.OrderedDict[str, str]] = None
+        self._dict: typing.OrderedDict[str, str] | None = None
 
     def dict(self) -> typing.OrderedDict[str, str]:
         """Return content of a dotenv file."""
@@ -49,7 +51,7 @@ class DotEnv(object):
 
         return self._dict
 
-    def parse(self) -> typing.Iterator[typing.Tuple[str, str]]:
+    def parse(self) -> typing.Iterator[tuple[str, str]]:
         """Parse a dotenv file."""
 
         with self._get_stream() as stream:
@@ -90,7 +92,7 @@ class DotEnv(object):
 
 # noinspection PyShadowingNames
 def resolve(
-    values: typing.Iterable[typing.Tuple[str, str]],
+    values: typing.Iterable[tuple[str, str]],
     override: bool,
 ) -> typing.OrderedDict[str, str]:
     """Resolve dotenv variables."""
@@ -124,7 +126,7 @@ def walk_to_root(path: str) -> typing.Iterator[str]:
     """Yield directories starting from the given directory up to the root."""
 
     if not os.path.exists(path):
-        raise IOError("Starting path not found.")  # pragma: nocover
+        raise OSError("Starting path not found.")  # pragma: nocover
 
     if os.path.isfile(path):
         path = os.path.dirname(path)  # pragma: nocover
@@ -168,8 +170,8 @@ def find(filename: str = ".env", usecwd: bool = False) -> str:
 
 
 def load(
-    filepath: typing.Optional[str] = None,
-    stream: typing.Optional[typing.IO[str]] = None,
+    filepath: str | None = None,
+    stream: typing.IO[str] | None = None,
     interpolate: bool = True,
     override: bool = True,
 ) -> bool:
@@ -185,8 +187,8 @@ def load(
 
 
 def values(
-    filepath: typing.Optional[str] = None,
-    stream: typing.Optional[typing.IO[str]] = None,
+    filepath: str | None = None,
+    stream: typing.IO[str] | None = None,
     interpolate: bool = True,
 ) -> typing.OrderedDict[str, str]:
     """Parse a dotenv file and return its content as a dictionary."""

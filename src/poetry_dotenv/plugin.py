@@ -21,7 +21,7 @@ class Verbosity(enum.Enum):  # pragma: no cover
     error: str = "<error>{0!s}</error>"
 
 
-class Logger(object):  # pragma: no cover
+class Logger:  # pragma: no cover
     """Logger of the ``poetry`` events.
 
     Because this logger is used for the plugin that are running before the main command,
@@ -97,8 +97,8 @@ class DotenvPlugin(ApplicationPlugin):
             filepath = dotenv_location if dotenv_location else dotenv.core.find(usecwd=True)
 
             if os.path.isfile(filepath):
-                logger.info("Loading environment variables from {0!r}.".format(filepath))
+                logger.info(f"Loading environment variables from {filepath!r}.")
                 dotenv.core.load(filepath=filepath)
 
             else:
-                logger.error("File {0!r} doesn't exist.".format(filepath))
+                logger.error(f"File {filepath!r} doesn't exist.")
