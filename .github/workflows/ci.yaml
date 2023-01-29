@@ -30,10 +30,11 @@ jobs:
         run: |
           python -m pip install -U pip setuptools poetry
           python -m poetry install
+          python -m poetry self add 'poethepoet[poetry_plugin]'
       - name: Run linters
         id: run-linters
         run: |
-          python -m poe lint
+          python -m poetry lint
   tests:
     name: Run tests
     needs: linters
@@ -63,10 +64,11 @@ jobs:
         run: |
           python -m pip install -U pip setuptools poetry
           python -m poetry install
+          python -m poetry self add 'poethepoet[poetry_plugin]'
       - name: Run tests
         id: run-tests
         run: |
-          python -m poe tests
+          python -m poetry tests
       - name: Upload coverage to Codecov
         id: upload-coverage-to-codecov
         uses: codecov/codecov-action@v3
