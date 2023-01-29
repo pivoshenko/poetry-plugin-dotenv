@@ -1,12 +1,13 @@
 """Tests for the module ``src/poetry_update/dotenv/core.py``."""
 
+from __future__ import annotations
+
 import io
 import os
 import sys
 import textwrap
 
 from pathlib import Path
-from typing import Dict
 from unittest import mock
 
 import sh
@@ -146,7 +147,7 @@ def test_load_dotenv_file_stream(dotenv_file: str) -> None:
     with open(dotenv_file, "w") as env_file:
         env_file.write("a=b")
 
-    with open(dotenv_file, "r") as env_file:
+    with open(dotenv_file) as env_file:
         result = dotenv.load(stream=env_file)
 
     assert result is True
@@ -195,7 +196,7 @@ def test_dotenv_values_file_stream(dotenv_file: str) -> None:
     with open(dotenv_file, "w") as env_file:
         env_file.write("a=b")
 
-    with open(dotenv_file, "r") as env_file:
+    with open(dotenv_file) as env_file:
         result = dotenv.values(stream=env_file)
 
     assert result == {"a": "b"}
@@ -227,10 +228,10 @@ def test_dotenv_values_file_stream(dotenv_file: str) -> None:
     ],
 )
 def test_dotenv_values_string_io(
-    env: Dict[str, str],
+    env: dict[str, str],
     string: str,
     interpolate: bool,
-    expected: Dict[str, str],
+    expected: dict[str, str],
 ) -> None:
     """Test ``values`` function."""
 

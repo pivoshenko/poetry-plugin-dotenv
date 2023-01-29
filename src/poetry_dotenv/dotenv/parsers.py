@@ -6,39 +6,32 @@ import re
 import codecs
 import dataclasses
 
+from collections.abc import Iterator
 from typing import IO
-from typing import Iterator
-from typing import Match
 from typing import NamedTuple
-from typing import Optional
-from typing import Pattern
-from typing import Tuple
 
 
-Original = NamedTuple(
-    "Original",
-    [
-        ("string", str),
-        ("line", int),
-    ],
-)
+class Original(NamedTuple):
+    """Position of the original string in the file."""
 
-Binding = NamedTuple(
-    "Binding",
-    [
-        ("key", Optional[str]),
-        ("value", Optional[str]),
-        ("original", Original),
-        ("error", bool),
-    ],
-)
+    string: str
+    line: int
+
+
+class Binding(NamedTuple):
+    """Binding of a key and a value."""
+
+    key: str | None
+    value: str | None
+    original: Original
+    error: bool
 
 
 class DotenvParseError(Exception):
     """Exception for dotenv parse errors."""
 
 
-def make_regex(string: str, extra_flags: int = 0) -> Pattern[str]:
+def make_regex(string: str, extra_flags: int = 0) -> re.Pattern[str]:
     """Construct a regex expression."""
 
     return re.compile(string, re.UNICODE | extra_flags)
@@ -62,7 +55,7 @@ _single_quote_escapes = make_regex(r"\\[\\']")
 
 
 @dataclasses.dataclass
-class Position(object):
+class Position:
     """Model of a cursor position."""
 
     chars: int
@@ -87,7 +80,7 @@ class Position(object):
         self.line += len(re.findall(_newline, string))
 
 
-class Reader(object):
+class Reader:
     """Dotenv reader."""
 
     def __init__(self, stream: IO[str]) -> None:
@@ -126,7 +119,7 @@ class Reader(object):
         return self.string[self.position.chars: self.position.chars + count]
         # fmt: on
 
-    def read_regex(self, regex: Pattern[str]) -> Tuple[str, ...]:
+    def read_regex(self, regex: re.Pattern[str]) -> tuple[str, ...]:
         """Read a dotenv with a regex."""
 
         match = regex.match(self.string, self.position.chars)
@@ -142,19 +135,19 @@ class Reader(object):
         return match.groups()
 
 
-def decode_match(match: Match[str]) -> str:
+def decode_match(match: re.Match[str]) -> str:
     """Decode matches."""
 
     return codecs.decode(match.group(0), "unicode-escape")
 
 
-def decode_escapes(regex: Pattern[str], string: str) -> str:
+def decode_escapes(regex: re.Pattern[str], string: str) -> str:
     """Decode escape symbols."""
 
     return regex.sub(decode_match, string)
 
 
-def parse_key(reader: Reader) -> Optional[str]:
+def parse_key(reader: Reader) -> str | None:
     """Parse a dotenv key."""
 
     char = reader.peek(1)
