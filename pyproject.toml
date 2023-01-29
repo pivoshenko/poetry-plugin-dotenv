@@ -191,7 +191,7 @@ sequence = [
     { cmd = "isort .", help = "Run imports formatter" },
     { cmd = "black .", help = "Run code formatter" },
     { cmd = "yesqa", help = "Run flake8 formatter" },
-    { cmd = "pyupgrade", help = "Run annotations formatter" },
+    { cmd = "find . -type f -name '*.py' | pyupgrade --py311-plus {}", help = "Run annotations formatter" },
 ]
 
 [tool.poe.tasks.lint]
