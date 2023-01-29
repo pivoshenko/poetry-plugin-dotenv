@@ -17,9 +17,6 @@
     <a href="https://github.com/volopivoshenko/poetry-dotenv/releases">
         <img alt="release" src="https://img.shields.io/github/v/release/volopivoshenko/poetry-dotenv?logo=github">
     </a>
-    <a href="https://www.sphinx-doc.org/en/master">
-        <img alt="sphinx" src="https://img.shields.io/badge/made_with-Sphinx-1f425f.svg?logo=readthedocs">
-    </a>
     <a href="https://numpydoc.readthedocs.io/en/latest/format.html">
         <img alt="numpydoc" src="https://img.shields.io/badge/docstrings-numpy-1f425f.svg?logo=numpy">
     </a>
@@ -38,9 +35,6 @@
     <a href="https://mypy.readthedocs.io/en/stable/index.html">
         <img alt="mypy" src="https://img.shields.io/badge/mypy-checked-success.svg?logo=python">
     </a>
-    <a href="https://github.com/pyupio/safety">
-        <img alt="safety" src="https://img.shields.io/badge/safety-checked-success.svg?logo=windowsterminal">
-    </a>
     <a href="https://github.com/semantic-release/semantic-release">
         <img alt="semantic_release" src="https://img.shields.io/badge/semantic_release-angular-e10079?logo=semantic-release">
     </a>
@@ -50,14 +44,17 @@
     <a href="https://github.com/dependabot">
         <img alt="dependabot" src="https://img.shields.io/badge/dependabot-enable-success?logo=Dependabot">
     </a>
-    <a href="https://github.com/volopivoshenko/poetry-dotenv/actions/workflows/integration.yaml">
-        <img alt="integration" src="https://img.shields.io/github/workflow/status/volopivoshenko/poetry-dotenv/CI?label=CI&logo=github">
+    <a href="https://github.com/volopivoshenko/poetry-dotenv/actions/workflows/ci.yaml">
+        <img alt="CI" src="https://img.shields.io/github/actions/workflow/status/volopivoshenko/poetry-dotenv/ci.yaml?label=CI&logo=github">
     </a>
-    <a href="https://github.com/volopivoshenko/poetry-dotenv/actions/workflows/deployment.yaml">
-        <img alt="deployment" src="https://img.shields.io/github/workflow/status/volopivoshenko/poetry-dotenv/CD?label=CD&logo=github">
+    <a href="https://github.com/volopivoshenko/poetry-dotenv/actions/workflows/cd.yaml">
+        <img alt="CD" src="https://img.shields.io/github/actions/workflow/status/volopivoshenko/poetry-dotenv/cd.yaml?label=CD&logo=github">
     </a>
     <a href="https://github.com/volopivoshenko/poetry-dotenv/actions/workflows/codeql.yaml">
-        <img alt="codeql" src="https://img.shields.io/github/workflow/status/volopivoshenko/poetry-dotenv/CodeQL?label=codeQL&logo=github">
+        <img alt="CodeQL" src="https://img.shields.io/github/actions/workflow/status/volopivoshenko/poetry-dotenv/codeql.yaml?label=CodeQL&logo=github">
+    </a>
+    <a href="https://github.com/volopivoshenko/poetry-dotenv/actions/workflows/dependency-review.yaml">
+        <img alt="Dependency Review" src="https://img.shields.io/github/actions/workflow/status/volopivoshenko/poetry-dotenv/dependency-review.yaml?label=Dependency%20Review&logo=github">
     </a>
     <a href="https://pypi.org/project/poetry-dotenv">
         <img alt="wheel" src="https://img.shields.io/pypi/wheel/poetry-dotenv?logo=pypi">
@@ -150,6 +147,9 @@ DB__ENGINE=postgresql://${DB__USER}:${DB__PASSWORD}@${DB__HOST}/${DB__DBNAME}
 
 ```python
 # main.py
+import os
+
+
 if __name__ == "__main__":
     try:
         print(f"Host: {os.environ['DB__HOST']!r}")

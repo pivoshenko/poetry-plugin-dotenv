@@ -1,9 +1,3 @@
-# For most projects, this workflow file will not need changing; you simply need
-# to commit it to your repository.
-#
-# You may wish to alter this file to override the set of languages analyzed,
-# or to provide custom queries or build logic.
-
 name: CodeQL
 
 on:
@@ -28,22 +22,22 @@ jobs:
         language: [ 'python' ]
 
     steps:
-    - name: Checkout repository
-      id: checkout-repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        id: checkout-repository
+        uses: actions/checkout@v3
 
-    - name: Initialize CodeQL
-      id: initialize-codeql
-      uses: github/codeql-action/init@v2
-      with:
-        languages: ${{ matrix.language }}
+      - name: Initialize CodeQL
+        id: initialize-codeql
+        uses: github/codeql-action/init@v2
+        with:
+          languages: ${{ matrix.language }}
 
-    - name: Autobuild
-      id: autobuild
-      uses: github/codeql-action/autobuild@v2
+      - name: Autobuild
+        id: autobuild
+        uses: github/codeql-action/autobuild@v2
 
-    - name: Perform CodeQL analysis
-      id: perform-codeql-analysis
-      uses: github/codeql-action/analyze@v2
-      with:
-        category: "/language:${{matrix.language}}"
+      - name: Perform CodeQL analysis
+        id: perform-codeql-analysis
+        uses: github/codeql-action/analyze@v2
+        with:
+          category: "/language:${{matrix.language}}"

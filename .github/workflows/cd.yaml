@@ -1,26 +1,18 @@
-# Continuous deployment workflow
-# - Build package
-# - Deploy package on GitHub and PYPI
-# - Send notification
-#
 # Requires GitHub secrets
 # - GITHUB_TOKEN
 # - PYPI_TOKEN
-# - SLACK_WEBHOOK_URL
 
 name: CD
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
 
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
     env:
-      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
