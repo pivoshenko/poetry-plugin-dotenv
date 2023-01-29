@@ -7,6 +7,21 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 <!--next-version-placeholder-->
 
+## v0.3.0 (2023-01-29)
+### Feature
+* **dependencies:** Add support of the Python 3.11 ([`8cb07d2`](https://github.com/volopivoshenko/poetry-dotenv/commit/8cb07d222fcd30cce61df864755189dbf48f5e63))
+
+### Fix
+* Update annotations ([`dfa7a88`](https://github.com/volopivoshenko/poetry-dotenv/commit/dfa7a88348a5f785d317d04e37bb3d86cbe78807))
+
+### Documentation
+* Update README ([`155b5d1`](https://github.com/volopivoshenko/poetry-dotenv/commit/155b5d168752ab5816e97ef9f76861d7a48da4ce))
+* Refactor changelog ([`9de0e0f`](https://github.com/volopivoshenko/poetry-dotenv/commit/9de0e0f04b95b2eea9e437b3d2fa5d5c95618e6a))
+* Update security notes ([`2d91876`](https://github.com/volopivoshenko/poetry-dotenv/commit/2d918766f9432a3b85e49aef2111409193a5f070))
+* Update license ([`33fa03c`](https://github.com/volopivoshenko/poetry-dotenv/commit/33fa03c31859f53c2ad8eefae6c8dc764a338b90))
+* Update contributing ([`4a82254`](https://github.com/volopivoshenko/poetry-dotenv/commit/4a8225453370a4ca1bd678437861180db4d4f17f))
+* Update code of conduct ([`8a8ac6c`](https://github.com/volopivoshenko/poetry-dotenv/commit/8a8ac6c049697ecf6aa87b9dea55f393e4db1ca9))
+
 ## v0.2.7 (2022-12-03)
 
 ### Fix
