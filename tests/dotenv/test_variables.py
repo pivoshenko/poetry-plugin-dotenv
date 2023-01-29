@@ -1,8 +1,8 @@
 """Tests for the module ``src/poetry_update/dotenv/variables.py``."""
 
+from __future__ import annotations
+
 from collections import OrderedDict
-from typing import List
-from typing import Union
 
 import pytest
 
@@ -35,7 +35,7 @@ from poetry_dotenv.dotenv import variables
         ),
     ],
 )
-def test_parse(value: str, expected: List[Union[variables.Literal, variables.Variable]]) -> None:
+def test_parse(value: str, expected: list[variables.Literal | variables.Variable]) -> None:
     """Test ``parse`` function."""
 
     parsed_vars = list(variables.parse(value))
@@ -50,7 +50,7 @@ def test_parse(value: str, expected: List[Union[variables.Literal, variables.Var
         (variables.Variable(name="a"), "b"),
     ],
 )
-def test_resolve(model: Union[variables.Literal, variables.Variable], expected: str) -> None:
+def test_resolve(model: variables.Literal | variables.Variable, expected: str) -> None:
     """Test ``resolve`` method."""
 
     env = OrderedDict({"a": "b", "c": "d"})

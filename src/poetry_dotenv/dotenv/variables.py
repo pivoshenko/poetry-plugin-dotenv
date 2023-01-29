@@ -21,7 +21,7 @@ _posix_variable = re.compile(
 
 
 @dataclasses.dataclass(frozen=True)
-class Literal(object):
+class Literal:
     """Model of a literal."""
 
     value: str
@@ -33,11 +33,11 @@ class Literal(object):
 
 
 @dataclasses.dataclass(frozen=True)
-class Variable(object):
+class Variable:
     """Model of a variable."""
 
     name: str
-    default: typing.Optional[str] = None
+    default: str | None = None
 
     def resolve(self, env: typing.OrderedDict[str, str], *args, **kwargs) -> str:
         """Get a variable value."""
@@ -47,7 +47,7 @@ class Variable(object):
         return env_val if env_val else ""
 
 
-def parse(value: str) -> typing.Iterator[typing.Union[Literal, Variable]]:
+def parse(value: str) -> typing.Iterator[Literal | Variable]:
     """Parse values."""
 
     cursor = 0

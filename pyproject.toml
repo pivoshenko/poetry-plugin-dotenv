@@ -136,7 +136,7 @@ docstring_style = "numpy"
 exclude = ["__init__.py"]
 allowed-domain-names = ["info", "variable", "value", "values", "key", "result"]
 per-file-ignores = [
-    "tests/*.py: S101, WPS118, WPS204, WPS226, WPS342, WPS430, WPS440, WPS442",
+    "tests/*.py: S101, WPS118, WPS204, WPS221, WPS226, WPS342, WPS430, WPS440, WPS442",
 ]
 # S101 - asserts are necessary for the tests
 # WPS118 - long names for the tests contain description of the tests
@@ -146,16 +146,18 @@ per-file-ignores = [
 # WPS204, WPS440 - overuse of the expression is a common thing in the tests
 # WPS442 - pytest fixtures don't violate "variables from outer scopes"
 extend-ignore = [
+    "NIP",
     "D202",
-    "DAR101",
-    "DAR201",
-    "DAR301",
-    "DAR401",
-    "DAR402",
+    "DAR",
+    "WPS305",
+    "WPS306",
     "WPS472",
 ]
+# NIP - no need to use nitpick plugin
 # D202 - code is hard to read without a blank line after a docstring
-# DARX - there is no sense to put all sections in docstring
+# DAR - there is no sense to put all sections in docstring
+# WPS305 - f-strings are more readable than .format()
+# WPS306 - no need to inherit from object
 # WPS472 - unpacking for the single variable is more readable than indexing
 
 [tool.codespell]
@@ -188,24 +190,24 @@ poetry_command = ""
 [tool.poe.tasks.format]
 help = "Run formatters"
 sequence = [
-    { cmd = "isort .", help = "Run imports formatter" },
-    { cmd = "black .", help = "Run code formatter" },
-    { cmd = "yesqa", help = "Run flake8 formatter" },
-    { cmd = "find . -type f -name '*.py' | pyupgrade --py311-plus {}", help = "Run annotations formatter" },
+    { shell = "find . -type f -name '*.py' | xargs pyupgrade --py311-plus", help = "Run annotations formatter" },
+    { shell = "isort .", help = "Run imports formatter" },
+    { shell = "black .", help = "Run code formatter" },
+    { shell = "yesqa", help = "Run flake8 formatter" },
 ]
 
 [tool.poe.tasks.lint]
 help = "Run linters"
 sequence = [
-    { cmd = "deptry .", help = "Run dependencies linter" },
-    { cmd = "mypy .", help = "Run types linter" },
-    { cmd = "pflake8 .", help = "Run code linter" },
-    { cmd = "codespell .", help = "Run spell linter" },
+    { shell = "deptry .", help = "Run dependencies linter" },
+    { shell = "mypy .", help = "Run types linter" },
+    { shell = "pflake8 .", help = "Run code linter" },
+    { shell = "codespell .", help = "Run spell linter" },
 ]
 
 [tool.poe.tasks.tests]
 help = "Run tests"
-cmd = "pytest"
+shell = "pytest"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

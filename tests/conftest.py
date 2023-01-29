@@ -1,25 +1,26 @@
 """Fixtures and configuration for the tests."""
 
+from __future__ import annotations
+
 import os
 
+from collections.abc import Callable
+from collections.abc import Generator
 from pathlib import Path
-from typing import Callable
-from typing import Dict
-from typing import Generator
 
 import pytest
 
 
 @pytest.fixture()
-def create_dotenv_file(tmp_path: Path) -> Callable[[str, str], Dict[str, str]]:
+def create_dotenv_file(tmp_path: Path) -> Callable[[str, str], dict[str, str]]:
     """Get a dotenv file."""
 
-    def create(user: str, filename: str) -> Dict[str, str]:
+    def create(user: str, filename: str) -> dict[str, str]:
         """Create a dotenv file."""
 
         dotenv_content = {"POSTGRES_USER": user}
         dotenv_file = tmp_path / ".." / ".." / ".." / filename
-        stream = ("{0!s}={1!s}".format(kay, value) for kay, value in dotenv_content.items())
+        stream = (f"{kay!s}={value!s}" for kay, value in dotenv_content.items())
         dotenv_file.write_text("/n".join(stream))
 
         return dotenv_content
