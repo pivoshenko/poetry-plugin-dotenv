@@ -65,7 +65,7 @@ pyupgrade = "^3.3.1"
 yesqa = "^1.4.0"
 
 [tool.poetry.group.linters.dependencies]
-mypy = ">=0.991,<1.1"
+mypy = ">=0.991,<1.2"
 wemake-python-styleguide = "^0.17.0"
 pyproject-flake8 = "^3.9.2"
 flake8-pytest-style = "^1.6.0"
