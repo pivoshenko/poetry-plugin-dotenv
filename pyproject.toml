@@ -154,7 +154,7 @@ extend-ignore = ["NIP", "D202", "DAR", "WPS305", "WPS306", "WPS472"]
 # WPS472 - unpacking for the single variable is more readable than indexing
 
 [tool.codespell]
-skip = "tests,.git,.mypy_cache,.pytest_cache,.idea,.vscode"
+skip = "tests,pyproject.toml,poetry.lock,.git,.mypy_cache,.pytest_cache,.idea,.vscode"
 
 [tool.deptry]
 ignore_transitive = ["cleo", "poetry_dotenv"]
