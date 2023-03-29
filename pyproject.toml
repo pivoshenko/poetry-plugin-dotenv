@@ -49,18 +49,18 @@ packages = [{ include = "poetry_dotenv", from = "src" }]
 
 [tool.poetry.dependencies]
 python = ">=3.8.1,<4.0"
-poetry = "^1.4.0"
+poetry = "^1.4.1"
 
 [tool.poetry.group.dev.dependencies]
-pre-commit = "^3.1.1"
-poethepoet = "^0.18.1"
+pre-commit = "^3.2.1"
+poethepoet = "^0.19.0"
 ipython = "^8.11.0"
 ipdb = "^0.13.13"
-nitpick = "^0.32.0"
+nitpick = "^0.33.1"
 
 [tool.poetry.group.formatters.dependencies]
 isort = "^5.12.0"
-black = "^23.1.0"
+black = "^23.3.0"
 pyupgrade = "^3.3.1"
 yesqa = "^1.4.0"
 
@@ -80,7 +80,7 @@ pytest-mock = "^3.10.0"
 pytest-cov = "^4.0.0"
 pytest-sugar = "^0.9.6"
 coverage = { version = "^7.2.2", extras = ["toml"] }
-sh = "^2.0.2"
+sh = "^2.0.3"
 
 [tool.poetry.group.ci.dependencies]
 python-semantic-release = "^7.33.2"
@@ -154,7 +154,7 @@ extend-ignore = ["NIP", "D202", "DAR", "WPS305", "WPS306", "WPS472"]
 # WPS472 - unpacking for the single variable is more readable than indexing
 
 [tool.codespell]
-skip = "tests,.git,.mypy_cache,.pytest_cache,.idea,.vscode"
+skip = "tests,pyproject.toml,poetry.lock,.git,.mypy_cache,.pytest_cache,.idea,.vscode"
 
 [tool.deptry]
 ignore_transitive = ["cleo", "poetry_dotenv"]
