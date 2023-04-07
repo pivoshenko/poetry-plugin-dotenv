@@ -13,14 +13,13 @@ repos:
       - id: isort
 
   - repo: https://github.com/psf/black
-    rev: 22.12.0
+    rev: 23.3.0
     hooks:
       - id: black
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
-      - id: trailing-whitespace
       - id: check-merge-conflict
       - id: check-case-conflict
       - id: check-added-large-files
@@ -41,7 +40,7 @@ repos:
       - id: python-check-blanket-type-ignore
 
   - repo: https://github.com/pre-commit/pre-commit
-    rev: v3.0.1
+    rev: v3.2.2
     hooks:
       - id: validate_manifest
 
@@ -53,9 +52,8 @@ repos:
         additional_dependencies:
           - pyproject-flake8
           - wemake-python-styleguide
-          - flake8-pytest-style
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v0.991
+    rev: v1.1.1
     hooks:
       - id: mypy

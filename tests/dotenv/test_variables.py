@@ -1,4 +1,4 @@
-"""Tests for the module ``src/poetry_update/dotenv/variables.py``."""
+"""Tests for the module ``src/poetry_plugin_dotenv/dotenv/variables.py``."""
 
 from __future__ import annotations
 
@@ -6,7 +6,7 @@ from collections import OrderedDict
 
 import pytest
 
-from poetry_dotenv.dotenv import variables
+from poetry_plugin_dotenv.dotenv import variables
 
 
 @pytest.mark.parametrize(

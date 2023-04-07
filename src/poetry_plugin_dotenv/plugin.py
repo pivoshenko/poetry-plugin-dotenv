@@ -1,5 +1,7 @@
 """Module that contains the core functionality of the plugin."""
 
+from __future__ import annotations
+
 import os
 import enum
 
@@ -9,16 +11,16 @@ from poetry.console.application import Application
 from poetry.console.commands.env_command import EnvCommand
 from poetry.plugins.application_plugin import ApplicationPlugin
 
-from poetry_dotenv import dotenv
+from poetry_plugin_dotenv import dotenv
 
 
 class Verbosity(enum.Enum):  # pragma: no cover
     """Levels of verbosity."""
 
-    info: str = "<info>{0!s}</info>"
-    debug: str = "<debug>{0!s}</debug>"
-    warning: str = "<warning>{0!s}</warning>"
-    error: str = "<error>{0!s}</error>"
+    info = "<info>{0!s}</info>"
+    debug = "<debug>{0!s}</debug>"
+    warning = "<warning>{0!s}</warning>"
+    error = "<error>{0!s}</error>"
 
 
 class Logger:  # pragma: no cover
@@ -76,10 +78,7 @@ class DotenvPlugin(ApplicationPlugin):
     def activate(self, application: Application) -> None:  # pragma: no cover
         """Activate the plugin."""
 
-        application.event_dispatcher.add_listener(
-            event_name=COMMAND,
-            listener=self.load,
-        )
+        application.event_dispatcher.add_listener(COMMAND, listener=self.load)  # type: ignore
 
     def load(self, event: ConsoleCommandEvent, *args, **kwargs) -> None:
         """Load a dotenv file."""
