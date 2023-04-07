@@ -31,7 +31,7 @@ If applicable, add screenshots to help explain your problem.
 
 - OS: e.g. `MacOS BigSur 11.6.1`.
 - Python version: e.g. `3.8.12`.
-- `poetry-dotenv` version: e.g. `1.0.0`.
+- `poetry-plugin-dotenv` version: e.g. `1.0.0`.
 - Link of a [gist] with the contents of your `pyproject.toml` file.
 
 **Additional context**
@@ -40,6 +40,6 @@ Add any other context about the problem here.
 
 [gist]: https://gist.github.com
 
-[issues]: https://github.com/volopivoshenko/poetry-dotenv/issues
+[issues]: https://github.com/volopivoshenko/poetry-plugin-dotenv/issues
 
-[latest]: https://github.com/volopivoshenko/poetry-dotenv/releases/latest
+[latest]: https://github.com/volopivoshenko/poetry-plugin-dotenv/releases/latest

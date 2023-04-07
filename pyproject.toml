@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "poetry-dotenv"
+name = "poetry-plugin-dotenv"
 version = "0.3.0"
-description = "poetry-dotenv - is the plugin that automatically loads environment variables from a dotenv file into the environment before poetry commands are run."
+description = "poetry-plugin-dotenv - is the plugin that automatically loads environment variables from a dotenv file into the environment before poetry commands are run."
 license = "MIT"
 authors = ["Volodymyr Pivoshenko <volodymyr.pivoshenko@gmail.com>"]
 maintainers = ["Volodymyr Pivoshenko <volodymyr.pivoshenko@gmail.com>"]
@@ -18,9 +18,9 @@ keywords = [
     "cross-platform",
     "hacktoberfest",
 ]
-homepage = "https://github.com/volopivoshenko/poetry-dotenv"
-documentation = "https://github.com/volopivoshenko/poetry-dotenv"
-repository = "https://github.com/volopivoshenko/poetry-dotenv"
+homepage = "https://github.com/volopivoshenko/poetry-plugin-dotenv"
+documentation = "https://github.com/volopivoshenko/poetry-plugin-dotenv"
+repository = "https://github.com/volopivoshenko/poetry-plugin-dotenv"
 readme = "README.md"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -40,16 +40,16 @@ classifiers = [
     "Topic :: Scientific/Engineering",
     "Natural Language :: English",
 ]
-packages = [{ include = "poetry_dotenv", from = "src" }]
+packages = [{ include = "poetry_plugin_dotenv", from = "src" }]
 
 [tool.poetry.urls]
-"Issues" = "https://github.com/volopivoshenko/poetry-dotenv/issues"
-"Releases" = "https://github.com/volopivoshenko/poetry-dotenv/releases"
+"Issues" = "https://github.com/volopivoshenko/poetry-plugin-dotenv/issues"
+"Releases" = "https://github.com/volopivoshenko/poetry-plugin-dotenv/releases"
 "Say Thanks!" = "https://www.buymeacoffee.com/volopivoshenko"
 
 [tool.poetry.dependencies]
 python = ">=3.8.1,<4.0"
-poetry = "^1.4.1"
+poetry = "^1.4.2"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.2.1"
@@ -86,7 +86,7 @@ sh = "^2.0.3"
 python-semantic-release = "^7.33.2"
 
 [tool.poetry.plugins."poetry.application.plugin"]
-poetry-dotenv = "poetry_dotenv.plugin:DotenvPlugin"
+poetry-plugin-dotenv = "poetry_plugin_dotenv.plugin:DotenvPlugin"
 
 [tool.semantic_release]
 branch = "main"
@@ -97,7 +97,7 @@ upload_to_repository = false
 upload_to_release = true
 remove_dist = false
 version_toml = "pyproject.toml:tool.poetry.version"
-version_variable = ["src/poetry_dotenv/__init__.py:__version__"]
+version_variable = ["src/poetry_plugin_dotenv/__init__.py:__version__"]
 
 [tool.isort]
 profile = "black"
@@ -157,7 +157,7 @@ extend-ignore = ["NIP", "D202", "DAR", "WPS305", "WPS306", "WPS472"]
 skip = "tests,pyproject.toml,poetry.lock,.git,.mypy_cache,.pytest_cache,.idea,.vscode"
 
 [tool.deptry]
-ignore_transitive = ["cleo", "poetry_dotenv"]
+ignore_transitive = ["cleo", "poetry_plugin_dotenv"]
 
 [tool.pytest.ini_options]
 minversion = "6.0"

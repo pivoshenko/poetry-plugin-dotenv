@@ -1,4 +1,4 @@
-"""Tests for the module ``src/poetry_update/dotenv/parsers.py``."""
+"""Tests for the module ``src/poetry_plugin_dotenv/dotenv/parsers.py``."""
 
 from __future__ import annotations
 
@@ -6,9 +6,9 @@ import io
 
 import pytest
 
-from poetry_dotenv.dotenv.parsers import Binding
-from poetry_dotenv.dotenv.parsers import Original
-from poetry_dotenv.dotenv.parsers import parse_stream
+from poetry_plugin_dotenv.dotenv.parsers import Binding
+from poetry_plugin_dotenv.dotenv.parsers import Original
+from poetry_plugin_dotenv.dotenv.parsers import parse_stream
 
 
 @pytest.mark.parametrize(

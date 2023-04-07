@@ -1,4 +1,4 @@
-"""Tests for the module ``src/poetry_update/dotenv/core.py``."""
+"""Tests for the module ``src/poetry_plugin_dotenv/dotenv/core.py``."""
 
 from __future__ import annotations
 
@@ -13,7 +13,7 @@ from unittest import mock
 import sh
 import pytest
 
-from poetry_dotenv.dotenv import core as dotenv
+from poetry_plugin_dotenv.dotenv import core as dotenv
 
 
 def prepare_file_hierarchy(path: Path):
@@ -163,7 +163,7 @@ def test_load_dotenv_in_current_dir(tmp_path: Path) -> None:
     code_path.write_text(
         textwrap.dedent(  # noqa: WPS462
             """
-            from poetry_dotenv.dotenv import core as dotenv
+            from poetry_plugin_dotenv.dotenv import core as dotenv
             import os
             dotenv.load(dotenv.find())
             print(os.environ['a'])

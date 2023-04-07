@@ -10,8 +10,8 @@ import contextlib
 
 from collections import OrderedDict
 
-from poetry_dotenv.dotenv import parsers
-from poetry_dotenv.dotenv import variables
+from poetry_plugin_dotenv.dotenv import parsers
+from poetry_plugin_dotenv.dotenv import variables
 
 
 class DotEnv:
@@ -64,7 +64,6 @@ class DotEnv:
 
         if self.dict():
             for key, value in self.dict().items():
-
                 if key in os.environ and not self.override:
                     continue
 
@@ -99,7 +98,7 @@ def resolve(
 
     new_values: typing.OrderedDict[str, str] = OrderedDict()
 
-    for (name, value) in values:
+    for name, value in values:
         if value is None:
             result = None  # pragma: nocover
 
@@ -117,7 +116,7 @@ def resolve(
 
             result = "".join(atom.resolve(env) for atom in atoms)
 
-        new_values[name] = result
+        new_values[name] = result  # type: ignore
 
     return new_values
 

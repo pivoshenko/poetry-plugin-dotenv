@@ -7,7 +7,6 @@
     - [How Do I Submit an Enhancement Suggestion?](#how-do-i-submit-an-enhancement-suggestion)
   - [Contributing to Code](#contributing-to-code)
     - [Dependencies](#dependencies)
-    - [Tooling](#tooling)
     - [Code Formatters](#code-formatters)
     - [Linters](#linters)
     - [Tests](#tests)
@@ -97,19 +96,7 @@ poetry install
 poetry bash
 ```
 
-### Tooling
-
-- [`poetry-dotenv`][poetry-dotenv]
-- [`poethepoet`][poethepoet]
-- [`poetry-plugin-up`][poetry-plugin-up]
-- [`nitpick`][nitpick]
-
 ### Code Formatters
-
-- [`isort`][isort]
-- [`black`][black]
-- [`pyupgrade`][pyupgrade]
-- [`yesqa`][yesqa]
 
 To format code you will need to run command:
 
@@ -119,11 +106,6 @@ poetry format
 
 ### Linters
 
-- [`flake8`][flake8]
-- [`mypy`][mypy]
-- [`deptry`][deptry]
-- [`codespell`][codespell]
-
 To lint code you will need to run command:
 
 ```bash
@@ -131,9 +113,6 @@ poetry lint
 ```
 
 ### Tests
-
-- `xdoctest`
-- `pytest`
 
 To run unit tests:
 
@@ -175,48 +154,20 @@ As a standard of commit messages we are using **[conventional commits][commits]*
 > prior to merging your PR if changes have conflicts. All pull requests, unless otherwise
 > instructed, need to be first accepted into the `main` branch.
 
-[bug_report]: https://github.com/volopivoshenko/poetry-dotenv/blob/main/.github/ISSUE_TEMPLATE/bug_report.md
+[bug_report]: https://github.com/volopivoshenko/poetry-plugin-dotenv/blob/main/.github/ISSUE_TEMPLATE/bug_report.md
 
-[issues]: https://github.com/volopivoshenko/poetry-dotenv/issues
+[issues]: https://github.com/volopivoshenko/poetry-plugin-dotenv/issues
 
 [gist]: https://gist.github.com
 
-[feature_request]: https://github.com/volopivoshenko/poetry-dotenv/blob/main/.github/ISSUE_TEMPLATE/feature_request.md
+[feature_request]: https://github.com/volopivoshenko/poetry-plugin-dotenv/blob/main/.github/ISSUE_TEMPLATE/feature_request.md
 
 [poetry]: https://github.com/python-poetry/poetry
-
-[poetry-dotenv]: https://github.com/volopivoshenko/poetry-dotenv
-
-[poethepoet]: https://github.com/nat-n/poethepoet
-
-[poetry-plugin-up]: https://github.com/MousaZeidBaker/poetry-plugin-up
-
-[nitpick]: https://github.com/andreoliwa/nitpick
-
-[isort]: https://github.com/PyCQA/isort
-
-[black]: https://github.com/psf/black
-
-[pyupgrade]: https://github.com/asottile/pyupgrade
-
-[yesqa]: https://github.com/asottile/yesqa
-
-[flake8]: https://github.com/wemake-services/wemake-python-styleguide
-
-[mypy]: https://github.com/python/mypy
-
-[deptry]: https://github.com/fpgmaas/deptry
-
-[codespell]: https://github.com/codespell-project/codespell
-
-[xdoctest]: https://github.com/Erotemic/xdoctest
-
-[pytest]: https://github.com/pytest-dev/pytest
 
 [pre-commit]: https://pre-commit.com
 
 [commits]: https://www.conventionalcommits.org/en/v1.0.0
 
-[pull_request_template]: https://github.com/volopivoshenko/poetry-dotenv/blob/main/.github/PULL_REQUEST_TEMPLATE.md
+[pull_request_template]: https://github.com/volopivoshenko/poetry-plugin-dotenv/blob/main/.github/PULL_REQUEST_TEMPLATE.md
 
 [rebased]: https://docs.github.com/en/free-pro-team@latest/github/using-git/about-git-rebase

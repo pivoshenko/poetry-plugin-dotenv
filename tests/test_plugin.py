@@ -1,4 +1,4 @@
-"""Tests for the module ``src/poetry_update/plugin.py``."""
+"""Tests for the module ``src/poetry_plugin_dotenv/plugin.py``."""
 
 from __future__ import annotations
 
@@ -12,7 +12,7 @@ import pytest_mock
 
 from poetry.console.commands.env_command import EnvCommand
 
-from poetry_dotenv.plugin import DotenvPlugin
+from poetry_plugin_dotenv.plugin import DotenvPlugin
 
 
 @mock.patch.dict(os.environ, {"POETRY_DOTENV_LOCATION": ".env.dev"}, clear=True)
