@@ -7,6 +7,10 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 <!--next-version-placeholder-->
 
+## v0.4.1 (2023-04-07)
+### Fix
+* **docs:** Add demo ([`dfbf7a4`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/dfbf7a496c33ff4e652afb908ba542750ed85c5c))
+
 ## v0.4.0 (2023-04-07)
 ### Feature
 * Rename plugin from `poetry-dotenv` to `poetry-plugin-dotenv` ([`6c28010`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/6c2801005a297a7738b139014c1239fa5fae2baa))
