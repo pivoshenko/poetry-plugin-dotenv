@@ -7,6 +7,10 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 <!--next-version-placeholder-->
 
+## v0.4.0 (2023-04-07)
+### Feature
+* Rename plugin from `poetry-dotenv` to `poetry-plugin-dotenv` ([`6c28010`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/6c2801005a297a7738b139014c1239fa5fae2baa))
+
 ## v0.3.0 (2023-01-29)
 ### Feature
 * **dependencies:** Add support of the Python 3.11 ([`8cb07d2`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/8cb07d222fcd30cce61df864755189dbf48f5e63))
