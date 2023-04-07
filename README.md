@@ -135,6 +135,8 @@ To prevent ``poetry`` from loading the dotenv file, set the ``POETRY_DONT_LOAD_D
 
 If your dotenv file is located in a different path or has a different name you may set the ``POETRY_DOTENV_LOCATION`` environment variable.
 
+<img alt="logo" src="https://github.com/volopivoshenko/poetry-plugin-dotenv/blob/main/docs/static/assets/demo.gif?raw=True">
+
 ```dotenv
 # .env
 DB__HOST=localhost
