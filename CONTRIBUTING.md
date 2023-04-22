@@ -16,13 +16,13 @@
 
 First off, thanks for taking the time to contribute!
 
-The following is a set of guidelines for contributing to `{{ cookiecutter.project }}`. These are mostly guidelines,
+The following is a set of guidelines for contributing to `poetry-plugin-dotenv`. These are mostly guidelines,
 not rules. Use your best judgement, and feel free to propose changes to this document in a pull
 request.
 
 ## Reporting Bugs
 
-This section guides you through submitting a bug report for `{{ cookiecutter.project }}`. Following these guidelines
+This section guides you through submitting a bug report for `poetry-plugin-dotenv`. Following these guidelines
 helps maintainers and the community understand your report, reproduce the behaviour, and find
 related reports.
 
@@ -64,7 +64,7 @@ Include details about your configuration and environment.
 
 ## Suggesting Enhancements
 
-This section guides you through submitting an enhancement suggestion for `{{ cookiecutter.project }}`, including
+This section guides you through submitting an enhancement suggestion for `poetry-plugin-dotenv`, including
 completely new features and minor improvements to existing functionality. Following these guidelines
 helps maintainers and the community understand your suggestion and find related suggestions.
 
