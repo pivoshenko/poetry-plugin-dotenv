@@ -100,6 +100,9 @@ remove_dist = false
 version_toml = "pyproject.toml:tool.poetry.version"
 version_variable = ["src/poetry_plugin_dotenv/__init__.py:__version__"]
 
+[tool.nitpick]
+style = "github://volopivoshenko/cookiecutter-poetry/nitpick/nitpick.toml"
+
 [tool.isort]
 profile = "black"
 line_length = 100
