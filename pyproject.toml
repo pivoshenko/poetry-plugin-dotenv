@@ -70,7 +70,7 @@ mypy = "^1.2.0"
 wemake-python-styleguide = "^0.17.0"
 pyproject-flake8 = "^3.9.2"
 flake8-pytest-style = "^1.7.2"
-deptry = "^0.9.0"
+deptry = ">=0.9,<0.12"
 codespell = "^2.2.4"
 
 [tool.poetry.group.tests.dependencies]
