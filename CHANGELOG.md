@@ -7,6 +7,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 <!--next-version-placeholder-->
 
+## v0.5.0 (2023-06-02)
+
+### Feature
+
+* Update linter ([`02d54a7`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/02d54a7b5101d7fdcdf03275046de64eaaa15750))
+
+### Documentation
+
+* Resolve invalid names ([`52be123`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/52be12367ad46c3d914db581c4e4657e49e512d0))
+* Update badges ([`b88884a`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/b88884a11699a21489556b30ab8c666c772cc4c2))
+
 ## v0.4.1 (2023-04-07)
 ### Fix
 * **docs:** Add demo ([`dfbf7a4`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/dfbf7a496c33ff4e652afb908ba542750ed85c5c))
