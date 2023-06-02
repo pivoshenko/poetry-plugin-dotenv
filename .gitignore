@@ -143,3 +143,6 @@ tests/fixtures
 # temporary files
 tmp
 temp
+
+# ruff
+.ruff_cache
