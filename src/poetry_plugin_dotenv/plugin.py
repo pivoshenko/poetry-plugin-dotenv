@@ -5,13 +5,18 @@ from __future__ import annotations
 import os
 import enum
 
-from cleo.events.console_command_event import ConsoleCommandEvent
+from typing import TYPE_CHECKING
+
 from cleo.events.console_events import COMMAND
-from poetry.console.application import Application
 from poetry.console.commands.env_command import EnvCommand
 from poetry.plugins.application_plugin import ApplicationPlugin
 
 from poetry_plugin_dotenv import dotenv
+
+
+if TYPE_CHECKING:
+    from cleo.events.console_command_event import ConsoleCommandEvent
+    from poetry.console.application import Application
 
 
 class Verbosity(enum.Enum):  # pragma: no cover
@@ -78,7 +83,7 @@ class DotenvPlugin(ApplicationPlugin):
     def activate(self, application: Application) -> None:  # pragma: no cover
         """Activate the plugin."""
 
-        application.event_dispatcher.add_listener(COMMAND, listener=self.load)  # type: ignore
+        application.event_dispatcher.add_listener(COMMAND, listener=self.load)
 
     def load(self, event: ConsoleCommandEvent, *args, **kwargs) -> None:
         """Load a dotenv file."""
@@ -96,8 +101,8 @@ class DotenvPlugin(ApplicationPlugin):
             filepath = dotenv_location if dotenv_location else dotenv.core.find(usecwd=True)
 
             if os.path.isfile(filepath):
-                logger.info(f"Loading environment variables from {filepath!r}.")
+                logger.info(f"Loading environment variables from {filepath!r}.")  # noqa: G004
                 dotenv.core.load(filepath=filepath)
 
             else:
-                logger.error(f"File {filepath!r} doesn't exist.")
+                logger.error(f"File {filepath!r} doesn't exist.")  # noqa: G004

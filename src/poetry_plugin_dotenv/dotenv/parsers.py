@@ -6,9 +6,13 @@ import re
 import codecs
 import dataclasses
 
-from collections.abc import Iterator
 from typing import IO
 from typing import NamedTuple
+from typing import TYPE_CHECKING
+
+
+if TYPE_CHECKING:
+    from collections.abc import Iterator
 
 
 class Original(NamedTuple):
@@ -67,7 +71,7 @@ class Position:
 
         return cls(chars=0, line=1)
 
-    def set(self, other: Position) -> None:
+    def set(self, other: Position) -> None:  # noqa: A003
         """Set a position."""
 
         self.chars = other.chars
@@ -95,10 +99,8 @@ class Reader:
 
         return self.position.chars < len(self.string)
 
-    def set_mark(self) -> None:  # noqa: WPS615
+    def set_mark(self) -> None:
         """Set a mark."""
-
-        # WPS615 - this setter is not a standard OOP setter
 
         self.mark.set(self.position)
 
@@ -125,7 +127,8 @@ class Reader:
         match = regex.match(self.string, self.position.chars)
 
         if match is None:
-            raise DotenvParseError("Pattern not found.")
+            msg = "Pattern not found."
+            raise DotenvParseError(msg)
 
         # fmt: off
         matched = self.string[match.start(): match.end()]
@@ -155,7 +158,7 @@ def parse_key(reader: Reader) -> str | None:
     if char == "#":
         return None
 
-    elif char == "'":
+    elif char == "'":  # noqa: RET505
         key, *_ = reader.read_regex(_single_quoted_key)
 
     else:
@@ -180,7 +183,7 @@ def parse_value(reader: Reader) -> str:
         value, *_ = reader.read_regex(_single_quoted_value)
         return decode_escapes(_single_quote_escapes, value)
 
-    elif char == '"':
+    elif char == '"':  # noqa: RET505
         value, *_ = reader.read_regex(_double_quoted_value)
         return decode_escapes(_double_quote_escapes, value)
 
@@ -195,8 +198,7 @@ def parse_binding(reader: Reader) -> Binding:
 
     reader.set_mark()
 
-    # WPS229 - this part is a part of the original package
-    try:  # noqa: WPS229
+    try:
         reader.read_regex(_multiline_whitespace)
 
         if not reader.has_next():
