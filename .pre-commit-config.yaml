@@ -3,7 +3,7 @@ default_language_version:
 
 repos:
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.3.1
+    rev: v3.4.0
     hooks:
       - id: pyupgrade
 
@@ -40,20 +40,16 @@ repos:
       - id: python-check-blanket-type-ignore
 
   - repo: https://github.com/pre-commit/pre-commit
-    rev: v3.2.2
+    rev: v3.3.2
     hooks:
       - id: validate_manifest
 
-  - repo: https://github.com/pycqa/flake8
-    rev: 6.0.0
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.0.270
     hooks:
-      - id: flake8
-        entry: pflake8
-        additional_dependencies:
-          - pyproject-flake8
-          - wemake-python-styleguide
+      - id: ruff
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.1.1
+    rev: v1.3.0
     hooks:
       - id: mypy
