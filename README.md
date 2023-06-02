@@ -29,8 +29,8 @@
     <a href="https://pycqa.github.io/isort/index.html">
         <img alt="isort" src="https://img.shields.io/badge/imports-isort-black.svg?logo=windowsterminal">
     </a>
-    <a href="https://wemake-python-stylegui.de/en/latest/index.html">
-        <img alt="wemake" src="https://img.shields.io/badge/style-wemake-black.svg?logo=windowsterminal">
+    <a href="https://beta.ruff.rs/docs/">
+        <img alt="ruff" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json">
     </a>
     <a href="https://mypy.readthedocs.io/en/stable/index.html">
         <img alt="mypy" src="https://img.shields.io/badge/mypy-checked-success.svg?logo=python">
