@@ -50,7 +50,7 @@ packages = [{ include = "poetry_plugin_dotenv", from = "src" }]
 
 [tool.poetry.dependencies]
 python = ">=3.8.1,<4.0"
-poetry = "^1.4.2"
+poetry = "^1.5.1"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.3.1"
@@ -62,29 +62,29 @@ nitpick = "^0.33.1"
 [tool.poetry.group.formatters.dependencies]
 isort = "^5.12.0"
 black = "^23.3.0"
-pyupgrade = "^3.3.2"
+pyupgrade = "^3.4.0"
 yesqa = "^1.4.0"
 
 [tool.poetry.group.linters.dependencies]
-mypy = "^1.2.0"
-wemake-python-styleguide = "^0.17.0"
-pyproject-flake8 = "^3.9.2"
-flake8-pytest-style = "^1.7.2"
-deptry = ">=0.9,<0.12"
+mypy = "^1.3.0"
+ruff = "^0.0.270"
+deptry = "^0.11.0"
+memestra = "^0.2.1"
 codespell = "^2.2.4"
 
 [tool.poetry.group.tests.dependencies]
 pytest = "^7.3.1"
 xdoctest = "^1.1.1"
 pytest-lazy-fixture = "^0.6.3"
+pytest-codeblocks = "^0.16.1"
 pytest-mock = "^3.10.0"
-pytest-cov = "^4.0.0"
+pytest-cov = "^4.1.0"
 pytest-sugar = "^0.9.7"
-coverage = { version = "^7.2.5", extras = ["toml"] }
-sh = "^2.0.3"
+coverage = { version = "^7.2.7", extras = ["toml"] }
+sh = "^2.0.4"
 
 [tool.poetry.group.ci.dependencies]
-python-semantic-release = "^7.33.3"
+python-semantic-release = "^7.34.3"
 
 [tool.poetry.plugins."poetry.application.plugin"]
 poetry-plugin-dotenv = "poetry_plugin_dotenv.plugin:DotenvPlugin"
@@ -128,34 +128,33 @@ namespace_packages = false
 explicit_package_bases = false
 files = ["src", "tests"]
 
-[tool.flake8]
-max-line-length = 100
-max-cognitive-score = 15
-max-imports = 15
-max-module-members = 15
-max-local-variables = 10
-max-annotation-complexity = 5
-inline-quotes = '"'
-docstring_style = "numpy"
+[tool.ruff]
+target-version = "py311"
+line-length = 100
 exclude = ["__init__.py"]
-allowed-domain-names = ["info", "variable", "value", "values", "key", "result"]
-per-file-ignores = [
-    "tests/*.py: S101, WPS118, WPS204, WPS221, WPS226, WPS342, WPS430, WPS440, WPS442",
+select = ["ALL"]
+ignore = [
+    "ARG002",
+    "ANN002",
+    "ANN003",
+    "ANN101",
+    "ANN102",
+    "D202",
+    "I001",
+    "PTH",
+    "FBT",
 ]
-# S101 - asserts are necessary for the tests
-# WPS118 - long names for the tests contain description of the tests
-# WPS226 - overuse of the literals is a common thing in the tests
-# WPS342 - raw strings are necessary for the parsers' tests
-# WPS430 - nested functions are necessary for the parameterized pytest fixtures
-# WPS204, WPS440 - overuse of the expression is a common thing in the tests
-# WPS442 - pytest fixtures don't violate "variables from outer scopes"
-extend-ignore = ["NIP", "D202", "DAR", "WPS305", "WPS306", "WPS472"]
-# NIP - no need to use nitpick plugin
-# D202 - code is hard to read without a blank line after a docstring
-# DAR - there is no sense to put all sections in docstring
-# WPS305 - f-strings are more readable than .format()
-# WPS306 - no need to inherit from object
-# WPS472 - unpacking for the single variable is more readable than indexing
+
+[tool.ruff.per-file-ignores]
+"tests/*.*" = ["INP001", "S101"]
+
+[tool.ruff.isort]
+lines-after-imports = 2
+lines-between-types = 1
+order-by-type = false
+force-single-line = true
+force-sort-within-sections = true
+required-imports = ["from __future__ import annotations"]
 
 [tool.codespell]
 skip = "tests,pyproject.toml,poetry.lock,.git,.mypy_cache,.pytest_cache,.idea,.vscode"
@@ -190,7 +189,7 @@ sequence = [
     { shell = "find . -type f -name '*.py' | xargs pyupgrade --py311-plus", help = "Run annotations formatter" },
     { shell = "isort .", help = "Run imports formatter" },
     { shell = "black .", help = "Run code formatter" },
-    { shell = "yesqa", help = "Run flake8 formatter" },
+    { shell = "yesqa", help = "Run comments formatter" },
 ]
 
 [tool.poe.tasks.lint]
@@ -198,7 +197,7 @@ help = "Run linters"
 sequence = [
     { shell = "deptry .", help = "Run dependencies linter" },
     { shell = "mypy .", help = "Run types linter" },
-    { shell = "pflake8 .", help = "Run code linter" },
+    { shell = "ruff check .", help = "Run code linter" },
     { shell = "codespell .", help = "Run spell linter" },
 ]
 

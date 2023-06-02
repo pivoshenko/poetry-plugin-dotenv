@@ -35,7 +35,7 @@ class DotEnv:
 
         self._dict: typing.OrderedDict[str, str] | None = None
 
-    def dict(self) -> typing.OrderedDict[str, str]:
+    def dict(self) -> typing.OrderedDict[str, str]:  # noqa: A003
         """Return content of a dotenv file."""
 
         if self._dict:
@@ -51,13 +51,13 @@ class DotEnv:
 
         return self._dict
 
-    def parse(self) -> typing.Iterator[tuple[str, str]]:
+    def parse(self) -> typing.Generator:
         """Parse a dotenv file."""
 
         with self._get_stream() as stream:
             for mapping in parsers.parse_stream(stream):
                 if mapping.key is not None:
-                    yield mapping.key, mapping.value  # type: ignore
+                    yield mapping.key, mapping.value
 
     def set_as_environment_variables(self) -> bool:
         """Load current dotenv as a system environment variable."""
@@ -89,7 +89,6 @@ class DotEnv:
             yield io.StringIO("")  # pragma: nocover
 
 
-# noinspection PyShadowingNames
 def resolve(
     values: typing.Iterable[tuple[str, str]],
     override: bool,
@@ -116,7 +115,7 @@ def resolve(
 
             result = "".join(atom.resolve(env) for atom in atoms)
 
-        new_values[name] = result  # type: ignore
+        new_values[name] = result
 
     return new_values
 
@@ -125,7 +124,8 @@ def walk_to_root(path: str) -> typing.Iterator[str]:
     """Yield directories starting from the given directory up to the root."""
 
     if not os.path.exists(path):
-        raise OSError("Starting path not found.")  # pragma: nocover
+        msg = "Starting path not found."
+        raise OSError(msg)  # pragma: nocover
 
     if os.path.isfile(path):
         path = os.path.dirname(path)  # pragma: nocover
@@ -146,9 +146,7 @@ def find(filename: str = ".env", usecwd: bool = False) -> str:
         path = os.getcwd()
 
     else:  # pragma: no cover
-        # WPS437 - call of a protected method is an only way to get a frame
-        # noinspection PyUnresolvedReferences,PyProtectedMember
-        frame = sys._getframe()  # noqa: WPS437
+        frame = sys._getframe()  # noqa: SLF001
         current_file = __file__
 
         while frame.f_code.co_filename == current_file:

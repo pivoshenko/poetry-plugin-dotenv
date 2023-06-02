@@ -4,15 +4,20 @@ from __future__ import annotations
 
 import os
 
-from collections.abc import Callable
+from typing import TYPE_CHECKING
 from unittest import mock
 
 import pytest
-import pytest_mock
 
 from poetry.console.commands.env_command import EnvCommand
 
 from poetry_plugin_dotenv.plugin import DotenvPlugin
+
+
+if TYPE_CHECKING:
+    from collections.abc import Callable
+
+    import pytest_mock
 
 
 @mock.patch.dict(os.environ, {"POETRY_DOTENV_LOCATION": ".env.dev"}, clear=True)
@@ -74,10 +79,8 @@ def test_without_dotenv_file(
 
     remove_dotenv_file(".env")
 
-    # WPS428 - "empty call" is necessary to check the exception
     with pytest.raises(KeyError):
-        # noinspection PyStatementEffect
-        os.environ["POSTGRES_USER"]  # noqa: WPS428
+        os.environ["POSTGRES_USER"]
 
 
 def test_dotenv_file_doesnt_exist(
