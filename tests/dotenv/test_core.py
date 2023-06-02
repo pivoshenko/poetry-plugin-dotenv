@@ -7,7 +7,7 @@ import os
 import sys
 import textwrap
 
-from pathlib import Path
+from typing import TYPE_CHECKING
 from unittest import mock
 
 import sh
@@ -16,7 +16,11 @@ import pytest
 from poetry_plugin_dotenv.dotenv import core as dotenv
 
 
-def prepare_file_hierarchy(path: Path):
+if TYPE_CHECKING:
+    from pathlib import Path
+
+
+def prepare_file_hierarchy(path: Path) -> tuple[Path, Path]:
     """Create a temporary folder structure like the following.
 
     test_find_dotenv0/
@@ -47,7 +51,7 @@ def test_find_dotenv_no_file_no_raise(tmp_path: Path) -> None:
 
     result = dotenv.find(usecwd=True)
 
-    assert result == ""
+    assert not result
 
 
 def test_find_dotenv_found(tmp_path: Path) -> None:
@@ -129,7 +133,7 @@ def test_load_dotenv_redefine_var_used_in_file_with_override(dotenv_file: str) -
 
 
 @mock.patch.dict(os.environ, {}, clear=True)
-def test_load_dotenv_string_io():
+def test_load_dotenv_string_io() -> None:
     """Test ``load`` function."""
 
     stream = io.StringIO("a=à")
@@ -161,7 +165,7 @@ def test_load_dotenv_in_current_dir(tmp_path: Path) -> None:
     dotenv_path.write_bytes(b"a=b")
     code_path = tmp_path / "code.py"
     code_path.write_text(
-        textwrap.dedent(  # noqa: WPS462
+        textwrap.dedent(
             """
             from poetry_plugin_dotenv.dotenv import core as dotenv
             import os
