@@ -3391,13 +3391,13 @@ tests-strict = ["codecov (==2.0.15)", "pytest (==4.6.0)", "pytest (==4.6.0)", "p
 
 [[package]]
 name = "yesqa"
-version = "1.4.0"
+version = "1.5.0"
 description = "Automatically remove unnecessary `# noqa` comments."
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 files = [
-    {file = "yesqa-1.4.0-py2.py3-none-any.whl", hash = "sha256:8d66f162731173b20b29f0107804b51a7c8573f5c8d82f8ee2c8cf1724a2c84b"},
-    {file = "yesqa-1.4.0.tar.gz", hash = "sha256:7d9d784b7fb91987f9eded7d03b1a5af578e51dee59b97f0475898a2fe6a9527"},
+    {file = "yesqa-1.5.0-py2.py3-none-any.whl", hash = "sha256:600c6d6e59aff9d85422c28c0d0ff016c040f4eb653636632c18fb6c43453e00"},
+    {file = "yesqa-1.5.0.tar.gz", hash = "sha256:209c17274f3c0cc22195ddb26f93df3523634d0756f756913ed05cba970efad9"},
 ]
 
 [package.dependencies]
