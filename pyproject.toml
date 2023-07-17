@@ -54,7 +54,7 @@ poetry = "^1.5.1"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.3.3"
-poethepoet = "^0.20.0"
+poethepoet = ">=0.20,<0.22"
 ipdb = "^0.13.13"
 nitpick = "^0.33.2"
 
