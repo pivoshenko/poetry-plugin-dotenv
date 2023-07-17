@@ -66,7 +66,7 @@ yesqa = "^1.5.0"
 
 [tool.poetry.group.linters.dependencies]
 mypy = "^1.4.0"
-ruff = "^0.0.275"
+ruff = ">=0.0.275,<0.0.279"
 deptry = "^0.12.0"
 memestra = "^0.2.1"
 codespell = "^2.2.5"
