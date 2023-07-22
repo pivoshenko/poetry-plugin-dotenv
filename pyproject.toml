@@ -96,7 +96,7 @@ dist_path = "dist"
 upload_to_repository = false
 upload_to_release = true
 remove_dist = false
-version_toml = "pyproject.toml:tool.poetry.version"
+version_toml = ["pyproject.toml:tool.poetry.version"]
 version_variable = ["src/poetry_plugin_dotenv/__init__.py:__version__"]
 
 [tool.semantic_release.commit_parser_options]
