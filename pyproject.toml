@@ -98,6 +98,7 @@ upload_to_release = true
 remove_dist = false
 version_toml = ["pyproject.toml:tool.poetry.version"]
 version_variable = ["src/poetry_plugin_dotenv/__init__.py:__version__"]
+commit_author = "github-actions <github-actions@github.com>"
 
 [tool.semantic_release.commit_parser_options]
 major_tags = ["feat"]
