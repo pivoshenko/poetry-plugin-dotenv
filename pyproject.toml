@@ -163,6 +163,7 @@ required-imports = ["from __future__ import annotations"]
 
 [tool.codespell]
 skip = "tests,pyproject.toml,poetry.lock,.git,.mypy_cache,.pytest_cache,.idea,.vscode"
+ignore-words-list="redunant"
 
 [tool.deptry]
 ignore_transitive = ["cleo", "poetry_plugin_dotenv"]
