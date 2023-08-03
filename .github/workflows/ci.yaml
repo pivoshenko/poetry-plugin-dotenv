@@ -5,7 +5,9 @@ name: CI
 
 on:
   pull_request:
-    branches: ["main"]
+    branches: [ "main" ]
+  push:
+    branches: [ "main" ]
 
 jobs:
   linters:
@@ -42,8 +44,8 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
-        python-version: ["3.8", "3.9", "3.10", "3.11"]
+        os: [ ubuntu-latest, macos-latest ]
+        python-version: [ "3.8", "3.9", "3.10", "3.11" ]
 
     steps:
       - name: Checkout repository
