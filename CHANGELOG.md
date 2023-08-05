@@ -1,5 +1,56 @@
 # CHANGELOG
 
+
+
+## v0.5.2 (2023-08-05)
+
+### Build
+
+* build(poetry): update dependencies ([`a656d48`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/a656d48605d2eb3b07b3fa6096b8f9924e4b3081))
+
+* build(deps-dev): bump ruff from 0.0.275 to 0.0.280
+
+Bumps [ruff](https://github.com/astral-sh/ruff) from 0.0.275 to 0.0.280.
+- [Release notes](https://github.com/astral-sh/ruff/releases)
+- [Changelog](https://github.com/astral-sh/ruff/blob/main/BREAKING_CHANGES.md)
+- [Commits](https://github.com/astral-sh/ruff/compare/v0.0.275...v0.0.280)
+
+---
+updated-dependencies:
+- dependency-name: ruff
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`fad8f53`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/fad8f533e7cff367418e0d00b749f6ea61e35a42))
+
+### Chore
+
+* chore: update `codespell` config ([`55ae479`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/55ae4791139ef65be324172322f312cb53ef9169))
+
+### Ci
+
+* ci(pre-commit): add `deptry` ([`f6cf855`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/f6cf8556b593853af762f5d9671395cc77fa2087))
+
+* ci(workflows): update trigger events ([`cbf4937`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/cbf4937a72d8d065a0ceae83896468623db69d49))
+
+* ci(CD): update `semantic-release` ([`4634a68`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/4634a683e3010656cf893fc95b7d4bd1cacb4a89))
+
+### Documentation
+
+* docs(README): add &#34;features&#34; section ([`81873e9`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/81873e9a4716e3ad0cc156cd611992726d2ba52b))
+
+### Style
+
+* style(docs): run formatters ([`3577088`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/35770883f8e306a706fb67ed51731e0b54190b36))
+
+### Unknown
+
+* Merge pull request #94 from volopivoshenko/dependabot/pip/ruff-0.0.280
+
+build(deps-dev): bump ruff from 0.0.275 to 0.0.280 ([`c9c54bb`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/c9c54bb48bfe1d5028a27b0401469fb9c1543125))
+
+
 ## v0.5.1 (2023-07-22)
 
 ### Build
