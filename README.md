@@ -120,7 +120,12 @@
 
 `poetry-plugin-dotenv` - is the plugin that automatically loads environment variables from a dotenv file into the environment before `poetry` commands are run.
 
-**This plugin doesn't have any dependencies, but therefore it also supports features that `python-dotenv` supports (e.g. templates, interpolating variables using `POSIX` variable expansions etc).**
+**Features**
+
+- 📦 Doesn't require any dependencies
+- 📝 Supports templates, interpolating variables using POSIX variable expansions
+- 🔮 Fully type safe
+- 🥷🏻 100% tests coverage and "A" grade for maintainability
 
 # ⚙️ Installation
 
