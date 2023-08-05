@@ -166,7 +166,7 @@ skip = "tests,pyproject.toml,poetry.lock,.git,.mypy_cache,.pytest_cache,.idea,.v
 ignore-words-list="redunant"
 
 [tool.deptry]
-ignore_transitive = ["cleo", "poetry_plugin_dotenv"]
+ignore = ["DEP003"]
 
 [tool.pytest.ini_options]
 minversion = "6.0"
