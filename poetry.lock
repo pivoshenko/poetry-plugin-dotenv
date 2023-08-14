@@ -2344,13 +2344,13 @@ yaml = ["PyYaml (>=5.2)"]
 
 [[package]]
 name = "python-semantic-release"
-version = "8.0.3"
+version = "8.0.6"
 description = "Automatic Semantic Versioning for Python projects"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "python-semantic-release-8.0.3.tar.gz", hash = "sha256:f3f9492b7edfdea43e8bea6d44c116d3435d584abe1cb8e17424ef67058e14f4"},
-    {file = "python_semantic_release-8.0.3-py3-none-any.whl", hash = "sha256:37c2c6de6d25d663f2a55124fc13a1b36668cf1aa435f1211efb01807281afa6"},
+    {file = "python-semantic-release-8.0.6.tar.gz", hash = "sha256:ce9c557ed0f811413764639135fa55675eb4f95dc4fd40e12dc7483e5eb53f5b"},
+    {file = "python_semantic_release-8.0.6-py3-none-any.whl", hash = "sha256:4f23c8794da34327d90290513b83fe630643260e41487f1c87af9853a3548ba4"},
 ]
 
 [package.dependencies]
@@ -2367,10 +2367,10 @@ shellingham = ">=1.5.0.post1"
 tomlkit = ">=0.10,<1.0"
 
 [package.extras]
-dev = ["black", "isort", "tox"]
+dev = ["black", "pre-commit", "ruff (>=0.0.282)", "tox"]
 docs = ["Sphinx (<=6.0.0)", "furo (>=2023.3.27)", "sphinx-autobuild (==2021.03.14)", "sphinxcontrib-apidoc (==0.3.0)"]
 mypy = ["mypy", "types-requests"]
-test = ["coverage[toml] (>=6,<7)", "pytest (>=7,<8)", "pytest-cov (>=4,<5)", "pytest-lazy-fixture (>=0.6.3,<0.7.0)", "pytest-mock (>=3,<4)", "pytest-xdist (>=2,<3)", "requests-mock (>=1.10.0,<2)", "responses (==0.21.0)", "types-pytest-lazy-fixture (>=0.6.3.3)"]
+test = ["coverage[toml] (>=6,<8)", "pytest (>=7,<8)", "pytest-cov (>=4,<5)", "pytest-lazy-fixture (>=0.6.3,<0.7.0)", "pytest-mock (>=3,<4)", "pytest-xdist (>=2,<4)", "requests-mock (>=1.10.0,<2)", "responses (==0.23.3)", "types-pytest-lazy-fixture (>=0.6.3.3)"]
 
 [[package]]
 name = "python-slugify"
@@ -3480,4 +3480,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8.1,<4.0"
-content-hash = "c65255c413cc42ea13d78f03b7662e1e640198031f676ac688a0f9b8560a972b"
+content-hash = "3762f952cd0f9992d658794669fcce5e9e3efa2517fd2ac635e01b68f6eeb0af"
