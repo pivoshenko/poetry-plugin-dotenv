@@ -1747,13 +1747,13 @@ test = ["pep440", "pre-commit", "pytest", "testpath"]
 
 [[package]]
 name = "nitpick"
-version = "0.33.2"
+version = "0.34.0"
 description = "Enforce the same settings across multiple language-independent projects"
 optional = false
-python-versions = ">=3.7,<4.0"
+python-versions = ">=3.8,<4.0"
 files = [
-    {file = "nitpick-0.33.2-py3-none-any.whl", hash = "sha256:8b77d5968c36384c7a4cc957dc45c22bb8024e8cab83fb58fa7fbef45d3aae98"},
-    {file = "nitpick-0.33.2.tar.gz", hash = "sha256:e0f9f96128f390f95409a3d27fa922484e900ac8b974646b50ea4b8a3458cad7"},
+    {file = "nitpick-0.34.0-py3-none-any.whl", hash = "sha256:ca346dfdd256dadb7c0e6d5c939ba4182a826c40ea395705d9653cf56469cdef"},
+    {file = "nitpick-0.34.0.tar.gz", hash = "sha256:ea01639a02a01e4a49e06e3018e2c0da8fb3a25068467884f5a178d8d8d81023"},
 ]
 
 [package.dependencies]
@@ -1767,7 +1767,7 @@ flake8 = ">=3.0.0"
 flatten-dict = "*"
 furl = "*"
 identify = "*"
-importlib-resources = {version = "*", markers = "python_version >= \"3.7\" and python_version < \"3.9\""}
+importlib-resources = {version = "*", markers = "python_version >= \"3.8\" and python_version < \"3.9\""}
 jmespath = "*"
 loguru = "*"
 marshmallow = ">=3.0.0b10"
@@ -3485,4 +3485,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8.1,<4.0"
-content-hash = "72612d619456b11d231f608d39ecda9791f13e54e00768902383c1c42a368301"
+content-hash = "adcde6f406f90e94bd1cc01b8f1a8faf6b2b941885a26a08916003a579e01372"
