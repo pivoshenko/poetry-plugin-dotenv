@@ -17,9 +17,6 @@
     <a href="https://github.com/volopivoshenko/poetry-plugin-dotenv/releases">
         <img alt="release" src="https://img.shields.io/github/v/release/volopivoshenko/poetry-plugin-dotenv?logo=github">
     </a>
-    <a href="https://numpydoc.readthedocs.io/en/latest/format.html">
-        <img alt="numpydoc" src="https://img.shields.io/badge/docstrings-numpy-1f425f.svg?logo=numpy">
-    </a>
 </p>
 
 <p align="center">
@@ -37,6 +34,12 @@
     </a>
     <a href="https://github.com/semantic-release/semantic-release">
         <img alt="semantic_release" src="https://img.shields.io/badge/semantic_release-angular-e10079?logo=semantic-release">
+    </a>
+    <a href="https://python-poetry.org">
+        <img alt="poetry" src="https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json">
+    </a>
+    <a href="https://numpydoc.readthedocs.io/en/latest/format.html">
+        <img alt="numpydoc" src="https://img.shields.io/badge/docstrings-numpy-1f425f.svg?logo=numpy">
     </a>
 </p>
 
