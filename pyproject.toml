@@ -54,19 +54,19 @@ poetry = "^1.5.1"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.3.3"
-poethepoet = ">=0.20,<0.23"
+poethepoet = "^0.22.0"
 ipdb = "^0.13.13"
-nitpick = "^0.33.2"
+nitpick = "^0.34.0"
 
 [tool.poetry.group.formatters.dependencies]
 isort = "^5.12.0"
-black = "^23.3.0"
-pyupgrade = "^3.7.0"
+black = "^23.7.0"
+pyupgrade = "^3.10.1"
 yesqa = "^1.5.0"
 
 [tool.poetry.group.linters.dependencies]
-mypy = "^1.4.0"
-ruff = ">=0.0.275,<0.0.285"
+mypy = "^1.5.1"
+ruff = "^0.0.286"
 deptry = "^0.12.0"
 memestra = "^0.2.1"
 codespell = "^2.2.5"
@@ -79,8 +79,8 @@ pytest-codeblocks = "^0.16.1"
 pytest-mock = "^3.11.1"
 pytest-cov = "^4.1.0"
 pytest-sugar = "^0.9.7"
-coverage = { version = "^7.2.7", extras = ["toml"] }
-sh = "^2.0.4"
+coverage = { version = "^7.3.0", extras = ["toml"] }
+sh = "^2.0.6"
 
 [tool.poetry.group.ci.dependencies]
 python-semantic-release = "8.0.6"
