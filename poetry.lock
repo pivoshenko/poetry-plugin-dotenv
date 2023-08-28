@@ -2333,13 +2333,13 @@ yaml = ["PyYaml (>=5.2)"]
 
 [[package]]
 name = "python-semantic-release"
-version = "8.0.6"
+version = "8.0.8"
 description = "Automatic Semantic Versioning for Python projects"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "python-semantic-release-8.0.6.tar.gz", hash = "sha256:ce9c557ed0f811413764639135fa55675eb4f95dc4fd40e12dc7483e5eb53f5b"},
-    {file = "python_semantic_release-8.0.6-py3-none-any.whl", hash = "sha256:4f23c8794da34327d90290513b83fe630643260e41487f1c87af9853a3548ba4"},
+    {file = "python-semantic-release-8.0.8.tar.gz", hash = "sha256:1f7bb4979bd34364966e1d9f77780a7e472b8334c75bc2a8f75716938786e279"},
+    {file = "python_semantic_release-8.0.8-py3-none-any.whl", hash = "sha256:2c314c745cac0845d4ee342e2bf554733a25831ff014b97a144f5d625d4ca617"},
 ]
 
 [package.dependencies]
@@ -2356,10 +2356,10 @@ shellingham = ">=1.5.0.post1"
 tomlkit = ">=0.10,<1.0"
 
 [package.extras]
-dev = ["black", "pre-commit", "ruff (>=0.0.282)", "tox"]
+dev = ["black", "pre-commit", "ruff (==0.0.286)", "tox"]
 docs = ["Sphinx (<=6.0.0)", "furo (>=2023.3.27)", "sphinx-autobuild (==2021.03.14)", "sphinxcontrib-apidoc (==0.3.0)"]
 mypy = ["mypy", "types-requests"]
-test = ["coverage[toml] (>=6,<8)", "pytest (>=7,<8)", "pytest-cov (>=4,<5)", "pytest-lazy-fixture (>=0.6.3,<0.7.0)", "pytest-mock (>=3,<4)", "pytest-xdist (>=2,<4)", "requests-mock (>=1.10.0,<2)", "responses (==0.23.3)", "types-pytest-lazy-fixture (>=0.6.3.3)"]
+test = ["coverage[toml] (>=6,<8)", "pytest (>=7,<8)", "pytest-cov (>=4,<5)", "pytest-lazy-fixture (>=0.6.3,<0.7.0)", "pytest-mock (>=3,<4)", "pytest-pretty (>=1.2.0,<2)", "pytest-xdist (>=2,<4)", "requests-mock (>=1.10.0,<2)", "responses (==0.23.3)", "types-pytest-lazy-fixture (>=0.6.3.3)"]
 
 [[package]]
 name = "python-slugify"
@@ -3365,4 +3365,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8.1,<4.0"
-content-hash = "814021e7603b1c1ab69da050dd2a253b02e3d2c7e89850cdd5cf7c11ea4d80c1"
+content-hash = "0fe1a755ec9a4c109d378b51bf62d672131476eaec48ee918b9a3c277239713a"
