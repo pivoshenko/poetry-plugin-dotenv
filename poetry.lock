@@ -2208,13 +2208,13 @@ testing = ["argcomplete", "attrs (>=19.2.0)", "hypothesis (>=3.56)", "mock", "no
 
 [[package]]
 name = "pytest-codeblocks"
-version = "0.16.1"
+version = "0.17.0"
 description = "Test code blocks in your READMEs"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "pytest_codeblocks-0.16.1-py3-none-any.whl", hash = "sha256:a99f5336774241e7879a68cc86602b651154d726d3ae26efa288a805a7ad7795"},
-    {file = "pytest_codeblocks-0.16.1.tar.gz", hash = "sha256:14cc14a78e578f30f505602eb7a6fb8a22d9c4664dfa9aca6429b93da6eaea2a"},
+    {file = "pytest_codeblocks-0.17.0-py3-none-any.whl", hash = "sha256:b2aed8e66c3ce65435630783b391e7c7ae46f80b8220d3fa1bb7c689b36e78ad"},
+    {file = "pytest_codeblocks-0.17.0.tar.gz", hash = "sha256:446e1babd182f54b4f113d567737a22f5405cade144c08a0085b2985247943d5"},
 ]
 
 [package.dependencies]
@@ -3365,4 +3365,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8.1,<4.0"
-content-hash = "038907ba04cb93b2a8b884d4db8bdf404c8116fc32bf445337428e2281449ea2"
+content-hash = "6504d451cb6d6829111fada320ed2cc82e8fa2f2ca5ff583b051dd6ce346bdd6"
