@@ -59,6 +59,9 @@
     <a href="https://github.com/volopivoshenko/poetry-plugin-dotenv/actions/workflows/dependency-review.yaml">
         <img alt="Dependency Review" src="https://img.shields.io/github/actions/workflow/status/volopivoshenko/poetry-plugin-dotenv/dependency-review.yaml?label=Dependency%20Review&logo=github">
     </a>
+    <a href="https://github.com/volopivoshenko/poetry-plugin-dotenv/blob/main/.pre-commit-config.yaml">
+        <img alt="hooks" src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit">
+    </a>
     <a href="https://pypi.org/project/poetry-plugin-dotenv">
         <img alt="wheel" src="https://img.shields.io/pypi/wheel/poetry-plugin-dotenv?logo=pypi">
     </a>
