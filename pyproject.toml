@@ -62,7 +62,6 @@ nitpick = "^0.34.0"
 isort = "^5.12.0"
 black = "^23.7.0"
 pyupgrade = "^3.10.1"
-yesqa = "^1.5.0"
 
 [tool.poetry.group.linters.dependencies]
 mypy = "^1.5.1"
@@ -195,7 +194,6 @@ sequence = [
     { shell = "find . -type f -name '*.py' | xargs pyupgrade --py311-plus", help = "Run annotations formatter" },
     { shell = "isort .", help = "Run imports formatter" },
     { shell = "black .", help = "Run code formatter" },
-    { shell = "yesqa", help = "Run comments formatter" },
 ]
 
 [tool.poe.tasks.lint]
