@@ -98,11 +98,13 @@ remove_dist = false
 version_toml = ["pyproject.toml:tool.poetry.version"]
 version_variable = ["src/poetry_plugin_dotenv/__init__.py:__version__"]
 commit_author = "github-actions <github-actions@github.com>"
+commit_parser = "angular"
 
 [tool.semantic_release.commit_parser_options]
 major_tags = ["feat"]
 minor_tags = ["fix", "perf"]
 patch_tags = ["docs"]
+allowed_tags = ["build", "chore", "ci", "docs", "feat", "fix", "perf", "style", "refactor", "test"]
 
 [tool.nitpick]
 style = "github://volopivoshenko/cookiecutter-poetry/nitpick/nitpick.toml"
