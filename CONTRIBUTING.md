@@ -93,7 +93,7 @@ To install them and activate `virtualenv` you will need to run commands:
 
 ```bash
 poetry install
-poetry bash
+poetry shell
 ```
 
 ### Code Formatters
