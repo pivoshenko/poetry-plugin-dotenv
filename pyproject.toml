@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "poetry-plugin-dotenv"
-version = "0.5.3"
+version = "0.6.0"
 description = "poetry-plugin-dotenv - is the plugin that automatically loads environment variables from a dotenv file into the environment before poetry commands are run."
 license = "MIT"
 authors = ["Volodymyr Pivoshenko <volodymyr.pivoshenko@gmail.com>"]
@@ -99,6 +99,11 @@ version_toml = ["pyproject.toml:tool.poetry.version"]
 version_variable = ["src/poetry_plugin_dotenv/__init__.py:__version__"]
 commit_author = "github-actions <github-actions@github.com>"
 commit_parser = "angular"
+
+[tool.semantic_release.branches.main]
+match = "(main|master|no-issue)"
+prerelease_token = "rc"
+prerelease = false
 
 [tool.semantic_release.commit_parser_options]
 major_tags = ["feat"]
