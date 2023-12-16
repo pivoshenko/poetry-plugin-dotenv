@@ -13,8 +13,8 @@ jobs:
     steps:
       - name: Checkout repository
         id: checkout-repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Dependency review
         id: dependency-review
-        uses: actions/dependency-review-action@v2
+        uses: actions/dependency-review-action@v3
