@@ -78,7 +78,7 @@
         <img alt="downloads" src="https://img.shields.io/pypi/dm/poetry-plugin-dotenv?logo=pypi">
     </a>
     <a href="https://github.com/volopivoshenko/poetry-plugin-dotenv/">
-        <img alt="stars" src="https://img.shields.io/github/stars/volopivoshenko/poetry-plugin-dotenv?logo=github">
+        <img alt="stars" src="https://img.shields.io/github/stars/volopivoshenko/poetry-plugin-dotenv?style=flat&logo=github">
     </a>
     <a href="https://wakatime.com/badge/user/9862508c-0a86-427a-929c-46186f2d191a/project/36344bbb-7f11-4dcd-a36d-e54c81551119">
         <img alt="wakatime" src="https://wakatime.com/badge/user/9862508c-0a86-427a-929c-46186f2d191a/project/36344bbb-7f11-4dcd-a36d-e54c81551119.svg">
