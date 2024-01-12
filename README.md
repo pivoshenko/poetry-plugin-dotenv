@@ -1,7 +1,5 @@
 <div align="center">
-    <a href="https://pypi.org/project/poetry-plugin-dotenv">
-        <img alt="logo" src="https://github.com/volopivoshenko/poetry-plugin-dotenv/blob/main/docs/logo.svg?raw=True" height=200>
-    </a>
+    <img alt="logo" src="https://github.com/volopivoshenko/poetry-plugin-dotenv/blob/main/docs/logo.svg?raw=True" height=200>
 </div>
 
 <p align="center">
