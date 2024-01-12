@@ -1102,6 +1102,10 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`ee48a7b`](https://g
 
 ### Ci
 
+* ci: update CD workflow ([`c3cf992`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/c3cf9928d8f31290723ac1cf9ad153bf1871c5ab))
+
+* ci: update changelog ([`0419518`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/0419518a034dd0fdf027bc9f28cbf569fd455967))
+
 * ci: update semantic release options ([`46a7342`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/46a7342b44bc5be841ff4c50939efea21fec15f9))
 
 * ci(hooks): update revisions ([`bf0d166`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/bf0d166edd5484513620413115242215217537fc))
@@ -1122,11 +1126,19 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`ee48a7b`](https://g
 
 ### Feature
 
+* feat: bump version ([`f1f7690`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/f1f7690721a4374e7044800f00132d27f11e122a))
+
 * feat(README): remove link from the logo
 
 This change is necessary to release a new version and update README at PyPI. Nothing changes logic-wise or functionally, so it can be considered a dummy release. ([`8214b16`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/8214b16a2eb00833abb4840f88c96b0da0b5cd56))
 
+### Fix
+
+* fix: bump version ([`6781af6`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/6781af6601f0e0fd65ea2876a493ddcc9b8c51fd))
+
 ### Style
+
+* style: remove unused directive ([`c8d7bdc`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/c8d7bdced30600f5e204a23a79aee8d1be9b6b76))
 
 * style(ruff): remove stale `noqa` comments ([`d241638`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/d241638d013ca640ec960ae61b6e2e0753413de8))
 
