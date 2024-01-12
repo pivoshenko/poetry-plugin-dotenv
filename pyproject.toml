@@ -95,7 +95,7 @@ upload_to_repository = true
 upload_to_release = true
 remove_dist = false
 version_toml = ["pyproject.toml:tool.poetry.version"]
-version_variable = ["src/poetry_plugin_dotenv/__init__.py:__version__"]
+version_variables = ["src/poetry_plugin_dotenv/__init__.py:__version__"]
 commit_author = "github-actions <github-actions@github.com>"
 commit_parser = "angular"
 
