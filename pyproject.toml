@@ -90,7 +90,6 @@ poetry-plugin-dotenv = "poetry_plugin_dotenv.plugin:DotenvPlugin"
 [tool.semantic_release]
 branch = "main"
 changelog_file = "CHANGELOG.md"
-build_command = "poetry build"
 dist_path = "dist"
 upload_to_repository = true
 upload_to_release = true
