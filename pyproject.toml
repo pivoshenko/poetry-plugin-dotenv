@@ -185,6 +185,7 @@ help = "Run formatters"
 sequence = [
     { shell = "find . -type f -name '*.py' | xargs pyupgrade --py311-plus", help = "Run annotations formatter" },
     { shell = "isort .", help = "Run imports formatter" },
+    { shell = "ruff format .", help = "Run code formatter" },
     { shell = "black .", help = "Run code formatter" }
 ]
 
