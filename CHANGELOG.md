@@ -1,7 +1,8 @@
 # CHANGELOG
 
 
-## Unreleased
+
+## v0.6.1 (2024-01-12)
 
 ### Build
 
@@ -1102,6 +1103,16 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`ee48a7b`](https://g
 
 ### Ci
 
+* ci(CD): remove build command ([`efa417b`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/efa417b1e16859134f6e399066dd281d5ac9031c))
+
+* ci: update CD workflow ([`63c0eac`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/63c0eac8216a2ad5521fe21d0bae8302180c5395))
+
+* ci: update CD workflow ([`a83b349`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/a83b349cc4607381caae04d7e090913b8baaba96))
+
+* ci: update CD workflow ([`ce95f95`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/ce95f957582ce4ce92936d62feb67b7ad972a804))
+
+* ci: update changelog ([`1b6a2e2`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/1b6a2e2d0bf47db46487900089ff4b232d458dfd))
+
 * ci: update CD workflow ([`c3cf992`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/c3cf9928d8f31290723ac1cf9ad153bf1871c5ab))
 
 * ci: update changelog ([`0419518`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/0419518a034dd0fdf027bc9f28cbf569fd455967))
@@ -1423,7 +1434,6 @@ build(deps-dev): bump coverage from 7.2.7 to 7.3.0 ([`4386149`](https://github.c
 * Merge pull request #97 from volopivoshenko/dependabot/pip/ruff-0.0.282
 
 build(deps-dev): bump ruff from 0.0.280 to 0.0.282 ([`9602ba7`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/9602ba7714dbd0c7e2180c0b37bb41c0bfd769c0))
-
 
 
 ## v0.5.2 (2023-08-05)
