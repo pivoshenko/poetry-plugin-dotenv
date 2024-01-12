@@ -41,8 +41,18 @@ jobs:
 
       - name: Semantic release
         id: semantic-release
-        uses: python-semantic-release/python-semantic-release@v7.33.5
+        uses: python-semantic-release/python-semantic-release@master
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          repository_username: __token__
-          repository_password: ${{ secrets.PYPI_TOKEN }}
+
+      - name: Publish package distributions to PyPI
+        id: publish-package-distributions-to-pypi
+        uses: pypa/gh-action-pypi-publish@release/v1
+        if: steps.release.outputs.released == 'true'
+
+      - name: Publish package distributions to GitHub Releases
+        id: publish-package-distributions-to-github
+        uses: python-semantic-release/upload-to-gh-release@main
+        if: steps.release.outputs.released == 'true'
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
