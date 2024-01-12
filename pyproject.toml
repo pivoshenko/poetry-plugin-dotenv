@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "poetry-plugin-dotenv"
-version = "0.5.3"
+version = "0.6.0"
 description = "poetry-plugin-dotenv - is the plugin that automatically loads environment variables from a dotenv file into the environment before poetry commands are run."
 license = "MIT"
 authors = ["Volodymyr Pivoshenko <volodymyr.pivoshenko@gmail.com>"]
@@ -92,13 +92,17 @@ branch = "main"
 changelog_file = "CHANGELOG.md"
 build_command = "poetry build"
 dist_path = "dist"
-upload_to_repository = false
+upload_to_repository = true
 upload_to_release = true
 remove_dist = false
 version_toml = ["pyproject.toml:tool.poetry.version"]
 version_variable = ["src/poetry_plugin_dotenv/__init__.py:__version__"]
 commit_author = "github-actions <github-actions@github.com>"
 commit_parser = "angular"
+
+[tool.semantic_release.publish]
+dist_glob_patterns = ["dist/*"]
+upload_to_vcs_release = true
 
 [tool.semantic_release.commit_parser_options]
 major_tags = ["feat"]
