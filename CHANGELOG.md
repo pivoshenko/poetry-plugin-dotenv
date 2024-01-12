@@ -2,6 +2,15 @@
 
 
 
+## v0.6.2 (2024-01-12)
+
+### Ci
+
+* ci(CD): update steps ([`4b9ec46`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/4b9ec46f9b9ce63d7b60f39db7957059c4c22370))
+
+* ci(CD): update `semantic-release` config ([`48114eb`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/48114eb4a90ed2ea8ab22dede830ba5692c06f33))
+
+
 ## v0.6.1 (2024-01-12)
 
 ### Build
