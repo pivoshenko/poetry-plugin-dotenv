@@ -71,7 +71,7 @@ class Position:
 
         return cls(chars=0, line=1)
 
-    def set(self, other: Position) -> None:  # noqa: A003
+    def set(self, other: Position) -> None:
         """Set a position."""
 
         self.chars = other.chars

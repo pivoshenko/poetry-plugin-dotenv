@@ -35,7 +35,7 @@ class DotEnv:
 
         self._dict: typing.OrderedDict[str, str] | None = None
 
-    def dict(self) -> typing.OrderedDict[str, str]:  # noqa: A003
+    def dict(self) -> typing.OrderedDict[str, str]:
         """Return content of a dotenv file."""
 
         if self._dict:
