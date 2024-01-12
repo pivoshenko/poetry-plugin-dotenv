@@ -12,6 +12,10 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    concurrency: release
+    permissions:
+      id-token: write
+      contents: write
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -37,17 +41,6 @@ jobs:
 
       - name: Semantic release
         id: semantic-release
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          python -m poetry run semantic-release version
-          python -m poetry run semantic-release publish
-
-      - name: Build package
-        id: build-package
-        run: python -m poetry build
-
-      - name: Publish package
-        id: publish-package
-        run: |
-          python -m poetry run twine upload dist/* -u __token__ -p ${{ secrets.PYPI_TOKEN }} --skip-existing --verbose
+        uses: python-semantic-release/python-semantic-release@master
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
