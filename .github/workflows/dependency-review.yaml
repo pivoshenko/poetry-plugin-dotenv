@@ -17,4 +17,4 @@ jobs:
 
       - name: Dependency review
         id: dependency-review
-        uses: actions/dependency-review-action@v3
+        uses: actions/dependency-review-action@v4
