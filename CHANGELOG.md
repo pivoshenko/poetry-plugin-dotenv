@@ -2,6 +2,52 @@
 
 
 
+## v0.6.3 (2024-01-22)
+
+### Build
+
+* build(deps): bump actions/dependency-review-action from 3 to 4
+
+Bumps [actions/dependency-review-action](https://github.com/actions/dependency-review-action) from 3 to 4.
+- [Release notes](https://github.com/actions/dependency-review-action/releases)
+- [Commits](https://github.com/actions/dependency-review-action/compare/v3...v4)
+
+---
+updated-dependencies:
+- dependency-name: actions/dependency-review-action
+  dependency-type: direct:production
+  update-type: version-update:semver-major
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`5d62543`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/5d625438d8f8c6031f4f6e95d727b40cd6076acd))
+
+* build(deps-dev): bump ruff from 0.1.13 to 0.1.14
+
+Bumps [ruff](https://github.com/astral-sh/ruff) from 0.1.13 to 0.1.14.
+- [Release notes](https://github.com/astral-sh/ruff/releases)
+- [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/astral-sh/ruff/compare/v0.1.13...v0.1.14)
+
+---
+updated-dependencies:
+- dependency-name: ruff
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`bc38aa8`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/bc38aa877b092ee36af679411a9d39af45281e39))
+
+### Unknown
+
+* Merge pull request #175 from volopivoshenko/dependabot/pip/ruff-0.1.14
+
+build(deps-dev): bump ruff from 0.1.13 to 0.1.14 ([`0d223f0`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/0d223f0a02afa9a30c6dc97212d4721cb5371737))
+
+* Merge pull request #176 from volopivoshenko/dependabot/github_actions/actions/dependency-review-action-4
+
+build(deps): bump actions/dependency-review-action from 3 to 4 ([`0f312e6`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/0f312e63aaed288b7dc8bef80447b13f8c23f6f8))
+
+
 ## v0.6.2 (2024-01-12)
 
 ### Ci
