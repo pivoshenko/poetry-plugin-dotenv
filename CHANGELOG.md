@@ -2,6 +2,53 @@
 
 
 
+## v0.6.4 (2024-01-29)
+
+### Build
+
+* build(deps-dev): bump black from 23.12.1 to 24.1.1
+
+Bumps [black](https://github.com/psf/black) from 23.12.1 to 24.1.1.
+- [Release notes](https://github.com/psf/black/releases)
+- [Changelog](https://github.com/psf/black/blob/main/CHANGES.md)
+- [Commits](https://github.com/psf/black/compare/23.12.1...24.1.1)
+
+---
+updated-dependencies:
+- dependency-name: black
+  dependency-type: direct:development
+  update-type: version-update:semver-major
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`85988e7`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/85988e7adfbd220e496377384225d2a19c2a25cc))
+
+* build(deps-dev): bump coverage from 7.4.0 to 7.4.1
+
+Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.4.0 to 7.4.1.
+- [Release notes](https://github.com/nedbat/coveragepy/releases)
+- [Changelog](https://github.com/nedbat/coveragepy/blob/master/CHANGES.rst)
+- [Commits](https://github.com/nedbat/coveragepy/compare/7.4.0...7.4.1)
+
+---
+updated-dependencies:
+- dependency-name: coverage
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`3458f79`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/3458f795ec0f47441130ebf7b9e610dab2c94ab8))
+
+### Unknown
+
+* Merge pull request #177 from volopivoshenko/dependabot/pip/coverage-7.4.1
+
+build(deps-dev): bump coverage from 7.4.0 to 7.4.1 ([`bb9feb6`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/bb9feb6a4b1a446a6ce305c9e6cc5777bc83f244))
+
+* Merge pull request #179 from volopivoshenko/dependabot/pip/black-24.1.1
+
+build(deps-dev): bump black from 23.12.1 to 24.1.1 ([`aaacf8d`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/aaacf8d177bd5a711c139252fcda3681bb552f78))
+
+
 ## v0.6.3 (2024-01-22)
 
 ### Build
