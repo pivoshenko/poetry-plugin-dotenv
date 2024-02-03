@@ -2,6 +2,23 @@
 
 
 
+## v0.6.5 (2024-02-03)
+
+### Ci
+
+* ci(workflows): update days before stale ([`782f693`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/782f6933fdbc790847d7c4bad65e12ef7b986c68))
+
+* ci(workflows): add workflow that checks stale PRs ([`7975292`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/79752920de12853cd1d951d8008f8890d5f0b35a))
+
+* ci(workflows): add workflow that creates issues for branches that have become stale ([`1981046`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/1981046548e9e7d859ccef5a9ffeb4e9273ed98c))
+
+### Unknown
+
+* Merge pull request #181 from volopivoshenko/no-issue
+
+no-issue ([`4ea9361`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/4ea936188dfa76eaa1115a498d23d5e56195495b))
+
+
 ## v0.6.4 (2024-01-29)
 
 ### Build
