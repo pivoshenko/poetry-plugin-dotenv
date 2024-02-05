@@ -2,6 +2,15 @@
 
 
 
+## v0.6.8 (2024-02-05)
+
+### Unknown
+
+* Merge pull request #183 from volopivoshenko/dependabot/pip/pytest-sugar-1.0.0
+
+build(deps-dev): bump pytest-sugar from 0.9.7 to 1.0.0 ([`7a3aeca`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/7a3aecafb66d5c9ccc75611a36112b1d9211340d))
+
+
 ## v0.6.7 (2024-02-05)
 
 ### Unknown
@@ -45,6 +54,22 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`64661f1`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/64661f176ead4c76dc9a7fe8e07e7fd9a63e94b4))
+
+* build(deps-dev): bump pytest-sugar from 0.9.7 to 1.0.0
+
+Bumps [pytest-sugar](https://github.com/Teemu/pytest-sugar) from 0.9.7 to 1.0.0.
+- [Release notes](https://github.com/Teemu/pytest-sugar/releases)
+- [Changelog](https://github.com/Teemu/pytest-sugar/blob/main/CHANGES.rst)
+- [Commits](https://github.com/Teemu/pytest-sugar/compare/v0.9.7...v1.0.0)
+
+---
+updated-dependencies:
+- dependency-name: pytest-sugar
+  dependency-type: direct:development
+  update-type: version-update:semver-major
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`fb73913`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/fb739133b90bda70b06411c002defbb3b7e93e6e))
 
 ### Unknown
 
