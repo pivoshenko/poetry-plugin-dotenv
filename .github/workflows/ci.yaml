@@ -73,7 +73,7 @@ jobs:
           python -m poetry tests
       - name: Upload coverage to Codecov
         id: upload-coverage-to-codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           name: ${{ matrix.os }}, ${{ matrix.python-version }}
