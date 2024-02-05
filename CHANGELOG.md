@@ -2,6 +2,15 @@
 
 
 
+## v0.6.7 (2024-02-05)
+
+### Unknown
+
+* Merge pull request #185 from volopivoshenko/dependabot/github_actions/codecov/codecov-action-4
+
+build(deps): bump codecov/codecov-action from 3 to 4 ([`9e5e892`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/9e5e892ce2c39577c02eb1645e4cbf6c16662d60))
+
+
 ## v0.6.6 (2024-02-05)
 
 ### Build
@@ -20,6 +29,22 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`5e9fbe6`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/5e9fbe6d091cc25ba54ccb283018e9324e5b2fae))
+
+* build(deps): bump codecov/codecov-action from 3 to 4
+
+Bumps [codecov/codecov-action](https://github.com/codecov/codecov-action) from 3 to 4.
+- [Release notes](https://github.com/codecov/codecov-action/releases)
+- [Changelog](https://github.com/codecov/codecov-action/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/codecov/codecov-action/compare/v3...v4)
+
+---
+updated-dependencies:
+- dependency-name: codecov/codecov-action
+  dependency-type: direct:production
+  update-type: version-update:semver-major
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`64661f1`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/64661f176ead4c76dc9a7fe8e07e7fd9a63e94b4))
 
 ### Unknown
 
