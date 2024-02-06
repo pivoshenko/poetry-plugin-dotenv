@@ -2,6 +2,31 @@
 
 
 
+## v0.6.9 (2024-02-06)
+
+### Build
+
+* build(deps): bump cryptography from 41.0.7 to 42.0.0
+
+Bumps [cryptography](https://github.com/pyca/cryptography) from 41.0.7 to 42.0.0.
+- [Changelog](https://github.com/pyca/cryptography/blob/main/CHANGELOG.rst)
+- [Commits](https://github.com/pyca/cryptography/compare/41.0.7...42.0.0)
+
+---
+updated-dependencies:
+- dependency-name: cryptography
+  dependency-type: indirect
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`675c305`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/675c30592a622f3a39f7c86240a0ab530e2b8b94))
+
+### Unknown
+
+* Merge pull request #187 from volopivoshenko/dependabot/pip/cryptography-42.0.0
+
+build(deps): bump cryptography from 41.0.7 to 42.0.0 ([`9069e56`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/9069e564005effdebeb9330cf23ccc14775d520d))
+
+
 ## v0.6.8 (2024-02-05)
 
 ### Unknown
