@@ -2,6 +2,15 @@
 
 
 
+## v0.6.10 (2024-02-06)
+
+### Unknown
+
+* Merge pull request #184 from volopivoshenko/dependabot/pip/xdoctest-1.1.3
+
+build(deps-dev): bump xdoctest from 1.1.2 to 1.1.3 ([`cf2769b`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/cf2769be90a32456c7139d0d72afb201f54b8029))
+
+
 ## v0.6.9 (2024-02-06)
 
 ### Build
@@ -79,6 +88,22 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`64661f1`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/64661f176ead4c76dc9a7fe8e07e7fd9a63e94b4))
+
+* build(deps-dev): bump xdoctest from 1.1.2 to 1.1.3
+
+Bumps [xdoctest](https://github.com/Erotemic/xdoctest) from 1.1.2 to 1.1.3.
+- [Release notes](https://github.com/Erotemic/xdoctest/releases)
+- [Changelog](https://github.com/Erotemic/xdoctest/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/Erotemic/xdoctest/compare/v1.1.2...v1.1.3)
+
+---
+updated-dependencies:
+- dependency-name: xdoctest
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`01d44d2`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/01d44d2497e19fb9ff24c686b4789411f13188ea))
 
 * build(deps-dev): bump pytest-sugar from 0.9.7 to 1.0.0
 
