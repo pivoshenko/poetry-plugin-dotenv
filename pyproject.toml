@@ -70,7 +70,9 @@ memestra = "^0.2.1"
 codespell = "^2.2.6"
 
 [tool.poetry.group.tests.dependencies]
-pytest = "^8.0.0"
+# https://github.com/pytest-dev/pytest/issues/11890
+# https://github.com/TvoroG/pytest-lazy-fixture/issues/65
+pytest = "7.4.4"
 xdoctest = "^1.1.3"
 pytest-lazy-fixture = "^0.6.3"
 pytest-codeblocks = "^0.16.1"
