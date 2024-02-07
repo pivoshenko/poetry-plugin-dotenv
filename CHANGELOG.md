@@ -2,6 +2,39 @@
 
 
 
+## v0.6.11 (2024-02-07)
+
+### Build
+
+* build(poetry): downgrade `pytest` ([`357c1d9`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/357c1d9c379753706ced64762b009ea30519ef9a))
+
+* build(pre-commit): update dependencies ([`0615700`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/0615700eff31e5bb356af99a88c88d311b1914d6))
+
+* build(poetry): remove `nitpick` ([`d0a1f2c`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/d0a1f2c695d65c3974300598c93574c11b1864b8))
+
+* build(poetry): update dependencies ([`e2c1f75`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/e2c1f75c53076aafef06b8fecd3e0dd5071eafe5))
+
+### Chore
+
+* chore(ruff): update config ([`4b60864`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/4b608646a879d41f3e552e117ef7836ae2991251))
+
+### Ci
+
+* ci(editorconfig): add TOML config ([`279af44`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/279af447b00d605405c6fb3eb921fd5ca1e3f650))
+
+### Style
+
+* style: run formatters ([`99bcf40`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/99bcf400692094c78b6bdba3df092e399d96a0a1))
+
+### Unknown
+
+* Merge pull request #182 from volopivoshenko/dependabot/pip/ruff-0.2.0
+
+build(deps-dev): bump ruff from 0.1.14 to 0.2.0 ([`e14566f`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/e14566f133438cf02118230750ba35d092883866))
+
+* Merge remote-tracking branch &#39;origin&#39; into dependabot/pip/ruff-0.2.0 ([`8ddacb0`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/8ddacb0bf89c1600e66aef9f35538e0869b37391))
+
+
 ## v0.6.10 (2024-02-06)
 
 ### Unknown
@@ -120,6 +153,22 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`fb73913`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/fb739133b90bda70b06411c002defbb3b7e93e6e))
+
+* build(deps-dev): bump ruff from 0.1.14 to 0.2.0
+
+Bumps [ruff](https://github.com/astral-sh/ruff) from 0.1.14 to 0.2.0.
+- [Release notes](https://github.com/astral-sh/ruff/releases)
+- [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/astral-sh/ruff/compare/v0.1.14...v0.2.0)
+
+---
+updated-dependencies:
+- dependency-name: ruff
+  dependency-type: direct:development
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`26d442a`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/26d442a467546d583c074712cb3e70c7242bc9e6))
 
 ### Unknown
 
