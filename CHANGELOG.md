@@ -2,6 +2,132 @@
 
 
 
+## v0.6.10 (2024-02-06)
+
+### Unknown
+
+* Merge pull request #184 from volopivoshenko/dependabot/pip/xdoctest-1.1.3
+
+build(deps-dev): bump xdoctest from 1.1.2 to 1.1.3 ([`cf2769b`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/cf2769be90a32456c7139d0d72afb201f54b8029))
+
+
+## v0.6.9 (2024-02-06)
+
+### Build
+
+* build(deps): bump cryptography from 41.0.7 to 42.0.0
+
+Bumps [cryptography](https://github.com/pyca/cryptography) from 41.0.7 to 42.0.0.
+- [Changelog](https://github.com/pyca/cryptography/blob/main/CHANGELOG.rst)
+- [Commits](https://github.com/pyca/cryptography/compare/41.0.7...42.0.0)
+
+---
+updated-dependencies:
+- dependency-name: cryptography
+  dependency-type: indirect
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`675c305`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/675c30592a622f3a39f7c86240a0ab530e2b8b94))
+
+### Unknown
+
+* Merge pull request #187 from volopivoshenko/dependabot/pip/cryptography-42.0.0
+
+build(deps): bump cryptography from 41.0.7 to 42.0.0 ([`9069e56`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/9069e564005effdebeb9330cf23ccc14775d520d))
+
+
+## v0.6.8 (2024-02-05)
+
+### Unknown
+
+* Merge pull request #183 from volopivoshenko/dependabot/pip/pytest-sugar-1.0.0
+
+build(deps-dev): bump pytest-sugar from 0.9.7 to 1.0.0 ([`7a3aeca`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/7a3aecafb66d5c9ccc75611a36112b1d9211340d))
+
+
+## v0.6.7 (2024-02-05)
+
+### Unknown
+
+* Merge pull request #185 from volopivoshenko/dependabot/github_actions/codecov/codecov-action-4
+
+build(deps): bump codecov/codecov-action from 3 to 4 ([`9e5e892`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/9e5e892ce2c39577c02eb1645e4cbf6c16662d60))
+
+
+## v0.6.6 (2024-02-05)
+
+### Build
+
+* build(deps): bump crs-k/stale-branches from 3.0.0 to 3.1.4
+
+Bumps [crs-k/stale-branches](https://github.com/crs-k/stale-branches) from 3.0.0 to 3.1.4.
+- [Release notes](https://github.com/crs-k/stale-branches/releases)
+- [Commits](https://github.com/crs-k/stale-branches/compare/v3.0.0...v3.1.4)
+
+---
+updated-dependencies:
+- dependency-name: crs-k/stale-branches
+  dependency-type: direct:production
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`5e9fbe6`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/5e9fbe6d091cc25ba54ccb283018e9324e5b2fae))
+
+* build(deps): bump codecov/codecov-action from 3 to 4
+
+Bumps [codecov/codecov-action](https://github.com/codecov/codecov-action) from 3 to 4.
+- [Release notes](https://github.com/codecov/codecov-action/releases)
+- [Changelog](https://github.com/codecov/codecov-action/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/codecov/codecov-action/compare/v3...v4)
+
+---
+updated-dependencies:
+- dependency-name: codecov/codecov-action
+  dependency-type: direct:production
+  update-type: version-update:semver-major
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`64661f1`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/64661f176ead4c76dc9a7fe8e07e7fd9a63e94b4))
+
+* build(deps-dev): bump xdoctest from 1.1.2 to 1.1.3
+
+Bumps [xdoctest](https://github.com/Erotemic/xdoctest) from 1.1.2 to 1.1.3.
+- [Release notes](https://github.com/Erotemic/xdoctest/releases)
+- [Changelog](https://github.com/Erotemic/xdoctest/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/Erotemic/xdoctest/compare/v1.1.2...v1.1.3)
+
+---
+updated-dependencies:
+- dependency-name: xdoctest
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`01d44d2`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/01d44d2497e19fb9ff24c686b4789411f13188ea))
+
+* build(deps-dev): bump pytest-sugar from 0.9.7 to 1.0.0
+
+Bumps [pytest-sugar](https://github.com/Teemu/pytest-sugar) from 0.9.7 to 1.0.0.
+- [Release notes](https://github.com/Teemu/pytest-sugar/releases)
+- [Changelog](https://github.com/Teemu/pytest-sugar/blob/main/CHANGES.rst)
+- [Commits](https://github.com/Teemu/pytest-sugar/compare/v0.9.7...v1.0.0)
+
+---
+updated-dependencies:
+- dependency-name: pytest-sugar
+  dependency-type: direct:development
+  update-type: version-update:semver-major
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`fb73913`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/fb739133b90bda70b06411c002defbb3b7e93e6e))
+
+### Unknown
+
+* Merge pull request #186 from volopivoshenko/dependabot/github_actions/crs-k/stale-branches-3.1.4
+
+build(deps): bump crs-k/stale-branches from 3.0.0 to 3.1.4 ([`1600cd3`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/1600cd33f9e943d4ff5c5676fd29fca52a44d5a3))
+
+
 ## v0.6.5 (2024-02-03)
 
 ### Ci
