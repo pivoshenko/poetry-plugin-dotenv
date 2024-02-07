@@ -78,6 +78,7 @@ class DotenvPlugin(ApplicationPlugin):
 
     If your dotenv file is located in a different path or has a different name you may set
     the ``POETRY_DOTENV_LOCATION`` environment variable.
+
     """
 
     def activate(self, application: Application) -> None:  # pragma: no cover
