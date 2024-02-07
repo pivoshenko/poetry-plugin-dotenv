@@ -56,7 +56,6 @@ poetry = "^1.5.1"
 pre-commit = "^3.5.0"
 poethepoet = ">=0.24.2"
 ipdb = "^0.13.13"
-nitpick = ">=0.34,<0.36"
 
 [tool.poetry.group.formatters.dependencies]
 isort = "^5.13.2"
@@ -119,9 +118,6 @@ allowed_tags = [
   "refactor",
   "test",
 ]
-
-[tool.nitpick]
-style = "github://volopivoshenko/cookiecutter-poetry/nitpick/nitpick.toml"
 
 [tool.isort]
 profile = "black"
