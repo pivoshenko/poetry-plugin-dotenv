@@ -83,7 +83,7 @@ coverage = { version = "^7.4.1", extras = ["toml"] }
 sh = "^2.0.6"
 
 [tool.poetry.group.ci.dependencies]
-python-semantic-release = "^8.7.0"
+python-semantic-release = ">=8.7,<10.0"
 
 [tool.poetry.plugins."poetry.application.plugin"]
 poetry-plugin-dotenv = "poetry_plugin_dotenv.plugin:DotenvPlugin"
