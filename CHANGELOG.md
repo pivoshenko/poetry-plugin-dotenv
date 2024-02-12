@@ -2,6 +2,33 @@
 
 
 
+## v0.6.12 (2024-02-12)
+
+### Build
+
+* build(deps-dev): bump python-semantic-release from 8.7.0 to 9.0.3
+
+Bumps [python-semantic-release](https://github.com/python-semantic-release/python-semantic-release) from 8.7.0 to 9.0.3.
+- [Release notes](https://github.com/python-semantic-release/python-semantic-release/releases)
+- [Changelog](https://github.com/python-semantic-release/python-semantic-release/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v8.7.0...v9.0.3)
+
+---
+updated-dependencies:
+- dependency-name: python-semantic-release
+  dependency-type: direct:development
+  update-type: version-update:semver-major
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`392cae6`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/392cae6ffe0cffc5f6eaf34609a12b6482f480de))
+
+### Unknown
+
+* Merge pull request #188 from volopivoshenko/dependabot/pip/python-semantic-release-9.0.3
+
+build(deps-dev): bump python-semantic-release from 8.7.0 to 9.0.3 ([`93d2d90`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/93d2d905fa715a5a708315ddd80f09c4bc638931))
+
+
 ## v0.6.11 (2024-02-07)
 
 ### Build
