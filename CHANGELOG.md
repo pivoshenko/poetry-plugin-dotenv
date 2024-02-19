@@ -2,6 +2,15 @@
 
 
 
+## v0.6.16 (2024-02-19)
+
+### Unknown
+
+* Merge pull request #190 from volopivoshenko/dependabot/pip/python-semantic-release-9.1.0
+
+build(deps-dev): bump python-semantic-release from 9.0.3 to 9.1.0 ([`b7ce35b`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/b7ce35bf409ef6a02b51e3d0974dcf6c9d346353))
+
+
 ## v0.6.15 (2024-02-19)
 
 ### Unknown
@@ -69,6 +78,22 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`947aa14`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/947aa1424cd76da23f28c084dcec25be39ada472))
+
+* build(deps-dev): bump python-semantic-release from 9.0.3 to 9.1.0
+
+Bumps [python-semantic-release](https://github.com/python-semantic-release/python-semantic-release) from 9.0.3 to 9.1.0.
+- [Release notes](https://github.com/python-semantic-release/python-semantic-release/releases)
+- [Changelog](https://github.com/python-semantic-release/python-semantic-release/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.0.3...v9.1.0)
+
+---
+updated-dependencies:
+- dependency-name: python-semantic-release
+  dependency-type: direct:development
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`f1f3e3b`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/f1f3e3bd3e068e6416e86b574a173004f18dc35c))
 
 ### Unknown
 
