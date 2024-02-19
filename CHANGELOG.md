@@ -2,6 +2,15 @@
 
 
 
+## v0.6.14 (2024-02-19)
+
+### Unknown
+
+* Merge pull request #192 from volopivoshenko/dependabot/pip/ruff-0.2.2
+
+build(deps-dev): bump ruff from 0.2.1 to 0.2.2 ([`9431e25`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/9431e253f2efd4d1e79b9de3da067c0364be196f))
+
+
 ## v0.6.13 (2024-02-19)
 
 ### Build
@@ -19,6 +28,22 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`e659100`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/e659100852a91c47dd7b38c9804ef9cd6992ec54))
+
+* build(deps-dev): bump ruff from 0.2.1 to 0.2.2
+
+Bumps [ruff](https://github.com/astral-sh/ruff) from 0.2.1 to 0.2.2.
+- [Release notes](https://github.com/astral-sh/ruff/releases)
+- [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/astral-sh/ruff/compare/v0.2.1...v0.2.2)
+
+---
+updated-dependencies:
+- dependency-name: ruff
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`797e484`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/797e484f23d726640ab9deec4dc9d6685f4ba4a0))
 
 ### Unknown
 
