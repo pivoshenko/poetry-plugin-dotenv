@@ -2,6 +2,31 @@
 
 
 
+## v0.6.13 (2024-02-19)
+
+### Build
+
+* build(deps-dev): bump pyupgrade from 3.15.0 to 3.15.1
+
+Bumps [pyupgrade](https://github.com/asottile/pyupgrade) from 3.15.0 to 3.15.1.
+- [Commits](https://github.com/asottile/pyupgrade/compare/v3.15.0...v3.15.1)
+
+---
+updated-dependencies:
+- dependency-name: pyupgrade
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`e659100`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/e659100852a91c47dd7b38c9804ef9cd6992ec54))
+
+### Unknown
+
+* Merge pull request #193 from volopivoshenko/dependabot/pip/pyupgrade-3.15.1
+
+build(deps-dev): bump pyupgrade from 3.15.0 to 3.15.1 ([`4451de6`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/4451de63e27d0659e17129ac1bcb1d7527020274))
+
+
 ## v0.6.12 (2024-02-12)
 
 ### Build
