@@ -2,6 +2,45 @@
 
 
 
+## v0.6.19 (2024-02-28)
+
+### Build
+
+* build(deps): bump poetry from 1.7.1 to 1.8.1
+
+Bumps [poetry](https://github.com/python-poetry/poetry) from 1.7.1 to 1.8.1.
+- [Release notes](https://github.com/python-poetry/poetry/releases)
+- [Changelog](https://github.com/python-poetry/poetry/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/python-poetry/poetry/compare/1.7.1...1.8.1)
+
+---
+updated-dependencies:
+- dependency-name: poetry
+  dependency-type: direct:production
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`9cbf7e0`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/9cbf7e0edf9ec4326771d802c20a4cdda2fdb087))
+
+### Unknown
+
+* Merge pull request #201 from volopivoshenko/dependabot/pip/poetry-1.8.1
+
+build(deps): bump poetry from 1.7.1 to 1.8.1 ([`c4c4efe`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/c4c4efe441f63bad4dd996bac70d939eab1788ad))
+
+* Merge pull request #198 from volopivoshenko/dependabot/pip/coverage-7.4.3
+
+build(deps-dev): bump coverage from 7.4.1 to 7.4.3 ([`dcb6677`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/dcb66777514d64e648ceea647b03042aeb4d725c))
+
+* Merge pull request #197 from volopivoshenko/dependabot/pip/python-semantic-release-9.1.1
+
+build(deps-dev): bump python-semantic-release from 9.1.0 to 9.1.1 ([`755e5c2`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/755e5c2fe7d149fc6cf4729250fc5f8cab26d806))
+
+* Merge pull request #195 from volopivoshenko/dependabot/github_actions/crs-k/stale-branches-4.0.1
+
+build(deps): bump crs-k/stale-branches from 3.1.4 to 4.0.1 ([`726b64b`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/726b64b45c09490d9a62f49c413b45efa4942f03))
+
+
 ## v0.6.18 (2024-02-28)
 
 ### Build
@@ -20,6 +59,53 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`5868786`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/5868786e3143e643ea53bb0a91a34f437e5b24fd))
+
+* build(deps-dev): bump coverage from 7.4.1 to 7.4.3
+
+Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.4.1 to 7.4.3.
+- [Release notes](https://github.com/nedbat/coveragepy/releases)
+- [Changelog](https://github.com/nedbat/coveragepy/blob/master/CHANGES.rst)
+- [Commits](https://github.com/nedbat/coveragepy/compare/7.4.1...7.4.3)
+
+---
+updated-dependencies:
+- dependency-name: coverage
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`d11fb7e`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/d11fb7e1fd76023574c532fd784edb951377fc3f))
+
+* build(deps-dev): bump python-semantic-release from 9.1.0 to 9.1.1
+
+Bumps [python-semantic-release](https://github.com/python-semantic-release/python-semantic-release) from 9.1.0 to 9.1.1.
+- [Release notes](https://github.com/python-semantic-release/python-semantic-release/releases)
+- [Changelog](https://github.com/python-semantic-release/python-semantic-release/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.1.0...v9.1.1)
+
+---
+updated-dependencies:
+- dependency-name: python-semantic-release
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`e40dcee`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/e40dcee2ae8527412288765a92b30e1a6a39b1aa))
+
+* build(deps): bump crs-k/stale-branches from 3.1.4 to 4.0.1
+
+Bumps [crs-k/stale-branches](https://github.com/crs-k/stale-branches) from 3.1.4 to 4.0.1.
+- [Release notes](https://github.com/crs-k/stale-branches/releases)
+- [Commits](https://github.com/crs-k/stale-branches/compare/v3.1.4...v4.0.1)
+
+---
+updated-dependencies:
+- dependency-name: crs-k/stale-branches
+  dependency-type: direct:production
+  update-type: version-update:semver-major
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`5390eb4`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/5390eb432e255e0ae581863b9af3df31abce5a36))
 
 ### Unknown
 
