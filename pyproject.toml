@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "poetry-plugin-dotenv"
-version = "0.6.17"
+version = "0.6.18"
 description = "poetry-plugin-dotenv - is the plugin that automatically loads environment variables from a dotenv file into the environment before poetry commands are run."
 license = "MIT"
 authors = ["Volodymyr Pivoshenko <volodymyr.pivoshenko@gmail.com>"]

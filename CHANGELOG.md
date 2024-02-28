@@ -2,6 +2,32 @@
 
 
 
+## v0.6.18 (2024-02-28)
+
+### Build
+
+* build(deps-dev): bump poethepoet from 0.24.4 to 0.25.0
+
+Bumps [poethepoet](https://github.com/nat-n/poethepoet) from 0.24.4 to 0.25.0.
+- [Release notes](https://github.com/nat-n/poethepoet/releases)
+- [Commits](https://github.com/nat-n/poethepoet/compare/v0.24.4...v0.25.0)
+
+---
+updated-dependencies:
+- dependency-name: poethepoet
+  dependency-type: direct:development
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`5868786`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/5868786e3143e643ea53bb0a91a34f437e5b24fd))
+
+### Unknown
+
+* Merge pull request #199 from volopivoshenko/dependabot/pip/poethepoet-0.25.0
+
+build(deps-dev): bump poethepoet from 0.24.4 to 0.25.0 ([`70bacf6`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/70bacf66d9338f25248c7c835f7614d4938aed2b))
+
+
 ## v0.6.17 (2024-02-21)
 
 ### Build
