@@ -2,6 +2,33 @@
 
 
 
+## v0.6.20 (2024-03-04)
+
+### Build
+
+* build(deps-dev): bump ruff from 0.2.2 to 0.3.0
+
+Bumps [ruff](https://github.com/astral-sh/ruff) from 0.2.2 to 0.3.0.
+- [Release notes](https://github.com/astral-sh/ruff/releases)
+- [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/astral-sh/ruff/compare/v0.2.2...v0.3.0)
+
+---
+updated-dependencies:
+- dependency-name: ruff
+  dependency-type: direct:development
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`a123864`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/a123864fd3327aaa88284c02f3c7a936e854daf2))
+
+### Unknown
+
+* Merge pull request #202 from volopivoshenko/dependabot/pip/ruff-0.3.0
+
+build(deps-dev): bump ruff from 0.2.2 to 0.3.0 ([`dae7c46`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/dae7c46f0b57cbe7e97e26c109079a18cd176ce1))
+
+
 ## v0.6.19 (2024-02-28)
 
 ### Build
