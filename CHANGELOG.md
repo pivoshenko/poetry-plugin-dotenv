@@ -2,6 +2,33 @@
 
 
 
+## v0.6.21 (2024-03-04)
+
+### Build
+
+* build(deps): bump poetry from 1.8.1 to 1.8.2
+
+Bumps [poetry](https://github.com/python-poetry/poetry) from 1.8.1 to 1.8.2.
+- [Release notes](https://github.com/python-poetry/poetry/releases)
+- [Changelog](https://github.com/python-poetry/poetry/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/python-poetry/poetry/compare/1.8.1...1.8.2)
+
+---
+updated-dependencies:
+- dependency-name: poetry
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`d7506c3`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/d7506c378a1eca01433117096524e571437b6de2))
+
+### Unknown
+
+* Merge pull request #203 from volopivoshenko/dependabot/pip/poetry-1.8.2
+
+build(deps): bump poetry from 1.8.1 to 1.8.2 ([`cd6922e`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/cd6922e9e86313c1b9917bf4b1c6ea55fea361a8))
+
+
 ## v0.6.20 (2024-03-04)
 
 ### Build
