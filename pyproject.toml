@@ -237,6 +237,7 @@ sequence = [
   { shell = "deptry .", help = "Run dependencies linter" },
   { shell = "mypy .", help = "Run types linter" },
   { shell = "ruff check .", help = "Run code linter" },
+  { shell = "find . -type f -name '*.py' | xargs -L1 memestra", help = "Run deprecated code linter" },
   { shell = "codespell .", help = "Run spell linter" },
   { shell = "cz check --rev-range .", help = "Run commits linter" },
 ]
