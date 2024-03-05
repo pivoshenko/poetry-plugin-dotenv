@@ -137,6 +137,7 @@ name = "cz_conventional_commits"
 tag_format = "$version"
 version_scheme = "semver"
 version_provider = "poetry"
+allowed_prefixes = ["build", "tests", "Merge", "Initial", "0"]
 
 [tool.isort]
 profile = "black"
@@ -237,6 +238,7 @@ sequence = [
   { shell = "mypy .", help = "Run types linter" },
   { shell = "ruff check .", help = "Run code linter" },
   { shell = "codespell .", help = "Run spell linter" },
+  { shell = "cz check --rev-range .", help = "Run commits linter" },
 ]
 
 [tool.poe.tasks.tests]
