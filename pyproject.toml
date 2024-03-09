@@ -201,6 +201,9 @@ ignore-words-list = "redunant"
 [tool.deptry]
 ignore = ["DEP003"]
 
+[tool.importlinter]
+root_package = "poetry_plugin_dotenv"
+
 [tool.pytest.ini_options]
 minversion = "6.0"
 testpaths = ["src", "tests"]
@@ -237,6 +240,7 @@ sequence = [
   { shell = "deptry .", help = "Run dependencies linter" },
   { shell = "mypy .", help = "Run types linter" },
   { shell = "ruff check .", help = "Run code linter" },
+  { shell = "lint-imports", help = "Run imports linter" },
   { shell = "find . -type f -name '*.py' | xargs -L1 memestra", help = "Run deprecated code linter" },
   { shell = "codespell .", help = "Run spell linter" },
   { shell = "cz check --rev-range .", help = "Run commits linter" },
