@@ -50,37 +50,48 @@ packages = [{ include = "poetry_plugin_dotenv", from = "src" }]
 
 [tool.poetry.dependencies]
 python = ">=3.8.1,<4.0"
-poetry = "^1.5.1"
+poetry = ">=1.5.1"
 
 [tool.poetry.group.dev.dependencies]
-pre-commit = "^3.5.0"
+pre-commit = ">=3.5.0"
 poethepoet = ">=0.24.2"
-ipdb = "^0.13.13"
+ipdb = ">=0.13.13"
 
 [tool.poetry.group.formatters.dependencies]
-isort = "^5.13.2"
+isort = ">=5.13.2"
 black = ">=24.1.1"
-pyupgrade = "^3.15.0"
+pyupgrade = ">=3.15.0"
 
 [tool.poetry.group.linters.dependencies]
-mypy = "^1.8.0"
+mypy = ">=1.8.0"
 ruff = ">=0.2.1"
-deptry = "^0.12.0"
-memestra = "^0.2.1"
-codespell = "^2.2.6"
+deptry = ">=0.12.0"
+memestra = ">=0.2.1"
+codespell = ">=2.2.6"
+import-linter = ">=2.0"
+commitizen = ">=3.16.0"
+
+[tool.poetry.group.lsp.dependencies]
+python-lsp-server = { extras = ["all"], version = ">=1.10.0" }
+ruff-lsp = ">=0.0.53"
+pyls-memestra = ">=0.0.16"
+pylsp-mypy = ">=0.6.8"
+pylsp-rope = ">=0.1.11"
+python-lsp-black = ">=2.0.0"
+python-lsp-isort = ">=0.1"
 
 [tool.poetry.group.tests.dependencies]
 # https://github.com/pytest-dev/pytest/issues/11890
 # https://github.com/TvoroG/pytest-lazy-fixture/issues/65
 pytest = "7.4.4"
-xdoctest = "^1.1.3"
-pytest-lazy-fixture = "^0.6.3"
-pytest-codeblocks = "^0.16.1"
-pytest-mock = "^3.12.0"
-pytest-cov = "^4.1.0"
+xdoctest = ">=1.1.3"
+pytest-lazy-fixture = ">=0.6.3"
+pytest-codeblocks = ">=0.16.1"
+pytest-mock = ">=3.12.0"
+pytest-cov = ">=4.1.0"
 pytest-sugar = ">=1.0.0"
-coverage = { version = "^7.4.1", extras = ["toml"] }
-sh = "^2.0.6"
+coverage = { version = ">=7.4.1", extras = ["toml"] }
+sh = ">=2.0.6"
 
 [tool.poetry.group.ci.dependencies]
 python-semantic-release = ">=8.7,<10.0"
@@ -120,6 +131,13 @@ allowed_tags = [
   "refactor",
   "test",
 ]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "semver"
+version_provider = "poetry"
+allowed_prefixes = ["build", "tests", "Merge", "Initial", "0"]
 
 [tool.isort]
 profile = "black"
@@ -183,6 +201,9 @@ ignore-words-list = "redunant"
 [tool.deptry]
 ignore = ["DEP003"]
 
+[tool.importlinter]
+root_package = "poetry_plugin_dotenv"
+
 [tool.pytest.ini_options]
 minversion = "6.0"
 testpaths = ["src", "tests"]
@@ -219,7 +240,10 @@ sequence = [
   { shell = "deptry .", help = "Run dependencies linter" },
   { shell = "mypy .", help = "Run types linter" },
   { shell = "ruff check .", help = "Run code linter" },
+  { shell = "lint-imports", help = "Run imports linter" },
+  { shell = "find . -type f -name '*.py' | xargs -L1 memestra", help = "Run deprecated code linter" },
   { shell = "codespell .", help = "Run spell linter" },
+  { shell = "cz check --rev-range .", help = "Run commits linter" },
 ]
 
 [tool.poe.tasks.tests]
