@@ -2,6 +2,41 @@
 
 
 
+## v0.6.22 (2024-03-09)
+
+### Build
+
+* build(pre-commit): update dependencies ([`557bc14`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/557bc1487d2444daf73f1d24285ab62b716255d7))
+
+* build(poetry): update dependencies
+
+- add LSPs
+- add `import-linter` ([`56229bc`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/56229bc06406e3115e454786495a64fb8d6c12e1))
+
+* build(poetry): add `commitizen` ([`31bb62e`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/31bb62eeead8bdf5222a73e901f62dab72d6baa5))
+
+* build(pre-commit): update dependencies ([`6d26f33`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/6d26f3382a41131117ba380b153c6f42a994b40a))
+
+* build(poetry): update dependencies
+
+- add LSPs
+- add `import-linter` ([`ae6d306`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/ae6d3069249bc0a2e687fa521f206ce485aea896))
+
+### Chore
+
+* chore(poe): add `lint-imports` task ([`fbc6146`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/fbc6146c59864a7179aca5a81bedfdddde516019))
+
+* chore(poe): add `memestra` task ([`993e653`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/993e653a9e06cac0248209366e7f0a42b4d1ce70))
+
+* chore(poe): add `commitizen` task ([`6291c34`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/6291c34a6d45e23d1edd61e1c7b2b813a6dc7cdd))
+
+* chore(commitizen): add config ([`72cae48`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/72cae48fedea8e018bd8e9f947ff46648938c015))
+
+### Unknown
+
+* Merge pull request #206 from volopivoshenko/205-update-linters ([`9858d4e`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/9858d4e78a228eb3971f69ca4b0ca6283fa91e23))
+
+
 ## v0.6.21 (2024-03-04)
 
 ### Build
