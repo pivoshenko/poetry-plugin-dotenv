@@ -2,6 +2,32 @@
 
 
 
+## v0.6.23 (2024-03-11)
+
+### Build
+
+* build(deps): bump crs-k/stale-branches from 4.0.1 to 4.1.0
+
+Bumps [crs-k/stale-branches](https://github.com/crs-k/stale-branches) from 4.0.1 to 4.1.0.
+- [Release notes](https://github.com/crs-k/stale-branches/releases)
+- [Commits](https://github.com/crs-k/stale-branches/compare/v4.0.1...v4.1.0)
+
+---
+updated-dependencies:
+- dependency-name: crs-k/stale-branches
+  dependency-type: direct:production
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`650df06`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/650df0692a4b5c05695d219e5bd8e99e8e9b7aad))
+
+### Unknown
+
+* Merge pull request #208 from volopivoshenko/dependabot/github_actions/crs-k/stale-branches-4.1.0
+
+build(deps): bump crs-k/stale-branches from 4.0.1 to 4.1.0 ([`73fbc3b`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/73fbc3bfdbf68c37b2d06666bd6c6d562cf8b50a))
+
+
 ## v0.6.22 (2024-03-09)
 
 ### Build
