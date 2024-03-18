@@ -2,6 +2,33 @@
 
 
 
+## v0.6.25 (2024-03-18)
+
+### Build
+
+* build(deps-dev): bump black from 24.2.0 to 24.3.0
+
+Bumps [black](https://github.com/psf/black) from 24.2.0 to 24.3.0.
+- [Release notes](https://github.com/psf/black/releases)
+- [Changelog](https://github.com/psf/black/blob/main/CHANGES.md)
+- [Commits](https://github.com/psf/black/compare/24.2.0...24.3.0)
+
+---
+updated-dependencies:
+- dependency-name: black
+  dependency-type: direct:development
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`1facdf4`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/1facdf48b5a3e0aa44ada4a800f192dafbec43a4))
+
+### Unknown
+
+* Merge pull request #212 from volopivoshenko/dependabot/pip/black-24.3.0
+
+build(deps-dev): bump black from 24.2.0 to 24.3.0 ([`9e02d15`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/9e02d15e83877e89dcaab44343a5051756800f3f))
+
+
 ## v0.6.24 (2024-03-18)
 
 ### Build
