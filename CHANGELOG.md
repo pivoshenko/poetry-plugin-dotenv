@@ -2,6 +2,15 @@
 
 
 
+## v0.6.27 (2024-03-18)
+
+### Unknown
+
+* Merge pull request #209 from volopivoshenko/dependabot/pip/coverage-7.4.4
+
+build(deps-dev): bump coverage from 7.4.3 to 7.4.4 ([`b5ff1c7`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/b5ff1c7220170f899facabce5faef52cefb8e222))
+
+
 ## v0.6.26 (2024-03-18)
 
 ### Unknown
@@ -29,6 +38,22 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`e097c4a`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/e097c4a17dbd1277f817ddb971fd258d109af3b6))
+
+* build(deps-dev): bump coverage from 7.4.3 to 7.4.4
+
+Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.4.3 to 7.4.4.
+- [Release notes](https://github.com/nedbat/coveragepy/releases)
+- [Changelog](https://github.com/nedbat/coveragepy/blob/master/CHANGES.rst)
+- [Commits](https://github.com/nedbat/coveragepy/compare/7.4.3...7.4.4)
+
+---
+updated-dependencies:
+- dependency-name: coverage
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`24cd501`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/24cd50164f25527caf36f02d013f438bc9def396))
 
 * build(deps-dev): bump black from 24.2.0 to 24.3.0
 
