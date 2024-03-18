@@ -2408,18 +2408,19 @@ test = ["coverage", "pytest", "pytest-cov", "tox"]
 
 [[package]]
 name = "pylsp-rope"
-version = "0.1.11"
+version = "0.1.15"
 description = "Extended refactoring capabilities for Python LSP Server using Rope."
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "pylsp-rope-0.1.11.tar.gz", hash = "sha256:48aadf993dafa5e8fca1108b4a5431314cf80bc78cffdd56400ead9c407553be"},
-    {file = "pylsp_rope-0.1.11-py3-none-any.whl", hash = "sha256:71fb08dc6ead9a69202f2e7c5f7bbc5ada037a0f0722d7eb2d1f8cac2c9a18af"},
+    {file = "pylsp-rope-0.1.15.tar.gz", hash = "sha256:d1fd16cc971539f1f569b267bd908b339fd6d497d5c520c01fe67500303a9144"},
+    {file = "pylsp_rope-0.1.15-py3-none-any.whl", hash = "sha256:fc14ed2ebfd6f26c18945d163d5c99c5ff77d2077f1d6b4051868dd2192ea369"},
 ]
 
 [package.dependencies]
 python-lsp-server = "*"
 rope = ">=0.21.0"
+typing-extensions = {version = "*", markers = "python_version < \"3.10\""}
 
 [package.extras]
 dev = ["build", "pytest", "twine"]
