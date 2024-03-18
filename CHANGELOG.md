@@ -2,6 +2,33 @@
 
 
 
+## v0.6.24 (2024-03-18)
+
+### Build
+
+* build(deps-dev): bump python-lsp-server from 1.10.0 to 1.10.1
+
+Bumps [python-lsp-server](https://github.com/python-lsp/python-lsp-server) from 1.10.0 to 1.10.1.
+- [Release notes](https://github.com/python-lsp/python-lsp-server/releases)
+- [Changelog](https://github.com/python-lsp/python-lsp-server/blob/develop/CHANGELOG.md)
+- [Commits](https://github.com/python-lsp/python-lsp-server/compare/v1.10.0...v1.10.1)
+
+---
+updated-dependencies:
+- dependency-name: python-lsp-server
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`34b5b70`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/34b5b7021ac9a57a2fbe5f49f9a5215e7fbfdcaa))
+
+### Unknown
+
+* Merge pull request #213 from volopivoshenko/dependabot/pip/python-lsp-server-1.10.1
+
+build(deps-dev): bump python-lsp-server from 1.10.0 to 1.10.1 ([`a4101ac`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/a4101ac6f46f7adfd0fa2fff669712d62a89f8e4))
+
+
 ## v0.6.23 (2024-03-11)
 
 ### Build
