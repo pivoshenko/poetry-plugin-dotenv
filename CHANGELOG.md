@@ -2,6 +2,15 @@
 
 
 
+## v0.6.28 (2024-03-18)
+
+### Unknown
+
+* Merge pull request #211 from volopivoshenko/dependabot/pip/deptry-0.14.0
+
+build(deps-dev): bump deptry from 0.12.0 to 0.14.0 ([`87da5e7`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/87da5e7938520a5c45f7eaa557150daddd8207aa))
+
+
 ## v0.6.27 (2024-03-18)
 
 ### Unknown
@@ -70,6 +79,22 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`1facdf4`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/1facdf48b5a3e0aa44ada4a800f192dafbec43a4))
+
+* build(deps-dev): bump deptry from 0.12.0 to 0.14.0
+
+Bumps [deptry](https://github.com/fpgmaas/deptry) from 0.12.0 to 0.14.0.
+- [Release notes](https://github.com/fpgmaas/deptry/releases)
+- [Changelog](https://github.com/fpgmaas/deptry/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/fpgmaas/deptry/compare/0.12.0...0.14.0)
+
+---
+updated-dependencies:
+- dependency-name: deptry
+  dependency-type: direct:development
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`fb30008`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/fb3000883c9ff93d3aae14fceb037e5dcb92884c))
 
 ### Unknown
 
