@@ -2,9 +2,33 @@
 
 
 
+## v0.6.26 (2024-03-18)
+
+### Unknown
+
+* Merge pull request #210 from volopivoshenko/dependabot/pip/pylsp-rope-0.1.15
+
+build(deps-dev): bump pylsp-rope from 0.1.11 to 0.1.15 ([`fb05fbf`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/fb05fbf34276d0062ae0d5c1d75a9c919d2372ef))
+
+
 ## v0.6.25 (2024-03-18)
 
 ### Build
+
+* build(deps-dev): bump pylsp-rope from 0.1.11 to 0.1.15
+
+Bumps [pylsp-rope](https://github.com/python-rope/pylsp-rope) from 0.1.11 to 0.1.15.
+- [Release notes](https://github.com/python-rope/pylsp-rope/releases)
+- [Commits](https://github.com/python-rope/pylsp-rope/compare/0.1.11...0.1.15)
+
+---
+updated-dependencies:
+- dependency-name: pylsp-rope
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`e097c4a`](https://github.com/volopivoshenko/poetry-plugin-dotenv/commit/e097c4a17dbd1277f817ddb971fd258d109af3b6))
 
 * build(deps-dev): bump black from 24.2.0 to 24.3.0
 
