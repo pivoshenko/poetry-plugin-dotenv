@@ -2,6 +2,15 @@
 
 
 
+## v0.6.30 (2024-03-30)
+
+### Unknown
+
+* Merge pull request #218 from pivoshenko/dependabot/pip/commitizen-3.20.0
+
+build(deps-dev): bump commitizen from 3.18.0 to 3.20.0 ([`a39aebb`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a39aebbbb2df97e7eb8d55390fe95f595eb4943f))
+
+
 ## v0.6.29 (2024-03-30)
 
 ### Build
@@ -20,6 +29,22 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`11f658a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/11f658a3bd2afa5020e1c4a764b8a14874b3baa0))
+
+* build(deps-dev): bump commitizen from 3.18.0 to 3.20.0
+
+Bumps [commitizen](https://github.com/commitizen-tools/commitizen) from 3.18.0 to 3.20.0.
+- [Release notes](https://github.com/commitizen-tools/commitizen/releases)
+- [Changelog](https://github.com/commitizen-tools/commitizen/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/commitizen-tools/commitizen/compare/v3.18.0...v3.20.0)
+
+---
+updated-dependencies:
+- dependency-name: commitizen
+  dependency-type: direct:development
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`622aa90`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/622aa90a18503d9d11da661f7fd8a9fd45e346cd))
 
 ### Unknown
 
