@@ -2,6 +2,15 @@
 
 
 
+## v0.6.33 (2024-03-30)
+
+### Unknown
+
+* Merge pull request #217 from pivoshenko/dependabot/pip/pytest-mock-3.14.0
+
+build(deps-dev): bump pytest-mock from 3.12.0 to 3.14.0 ([`6c25926`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6c25926a10c1be1a8b53e57e06e0d425ec0a8207))
+
+
 ## v0.6.32 (2024-03-30)
 
 ### Unknown
@@ -63,6 +72,22 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`622aa90`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/622aa90a18503d9d11da661f7fd8a9fd45e346cd))
+
+* build(deps-dev): bump pytest-mock from 3.12.0 to 3.14.0
+
+Bumps [pytest-mock](https://github.com/pytest-dev/pytest-mock) from 3.12.0 to 3.14.0.
+- [Release notes](https://github.com/pytest-dev/pytest-mock/releases)
+- [Changelog](https://github.com/pytest-dev/pytest-mock/blob/main/CHANGELOG.rst)
+- [Commits](https://github.com/pytest-dev/pytest-mock/compare/v3.12.0...v3.14.0)
+
+---
+updated-dependencies:
+- dependency-name: pytest-mock
+  dependency-type: direct:development
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`89730fa`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/89730fae900e5a8408030efd6ff4172acc390ae9))
 
 * build(deps-dev): bump pytest-cov from 4.1.0 to 5.0.0
 
