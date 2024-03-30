@@ -2,6 +2,15 @@
 
 
 
+## v0.6.32 (2024-03-30)
+
+### Unknown
+
+* Merge pull request #216 from pivoshenko/dependabot/pip/pytest-cov-5.0.0
+
+build(deps-dev): bump pytest-cov from 4.1.0 to 5.0.0 ([`86f7bab`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/86f7bab743328003e7dc141c60fb0683e26f55b1))
+
+
 ## v0.6.31 (2024-03-30)
 
 ### Unknown
@@ -54,6 +63,21 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`622aa90`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/622aa90a18503d9d11da661f7fd8a9fd45e346cd))
+
+* build(deps-dev): bump pytest-cov from 4.1.0 to 5.0.0
+
+Bumps [pytest-cov](https://github.com/pytest-dev/pytest-cov) from 4.1.0 to 5.0.0.
+- [Changelog](https://github.com/pytest-dev/pytest-cov/blob/master/CHANGELOG.rst)
+- [Commits](https://github.com/pytest-dev/pytest-cov/compare/v4.1.0...v5.0.0)
+
+---
+updated-dependencies:
+- dependency-name: pytest-cov
+  dependency-type: direct:development
+  update-type: version-update:semver-major
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`898ef31`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/898ef3171c89ff607beecb0cd7abed3be541da78))
 
 * build(deps-dev): bump deptry from 0.14.0 to 0.15.0
 
