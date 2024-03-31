@@ -2,6 +2,13 @@
 
 
 
+## v0.8.0 (2024-03-31)
+
+### Fix
+
+* fix(README): resovle issue with missing assets ([`9eb7fc4`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9eb7fc4997ece57a445db3fcec599c556c9acba5))
+
+
 ## v0.7.0 (2024-03-31)
 
 ### Build
