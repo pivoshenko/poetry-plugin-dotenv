@@ -1,5 +1,5 @@
 <div align="center">
-    <img alt="logo" src="https://github.com/volopivoshenko/poetry-plugin-dotenv/blob/main/docs/logo.svg?raw=True" height=200>
+    <img alt="logo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/logo.svg?raw=True" height=200>
 </div>
 
 <p align="center">
@@ -12,8 +12,8 @@
     <a href="https://pypi.org/project/poetry-plugin-dotenv">
         <img alt="pypi" src="https://img.shields.io/pypi/v/poetry-plugin-dotenv?logo=pypi">
     </a>
-    <a href="https://github.com/volopivoshenko/poetry-plugin-dotenv/releases">
-        <img alt="release" src="https://img.shields.io/github/v/release/volopivoshenko/poetry-plugin-dotenv?logo=github">
+    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/releases">
+        <img alt="release" src="https://img.shields.io/github/v/release/pivoshenko/poetry-plugin-dotenv?logo=github">
     </a>
 </p>
 
@@ -21,7 +21,7 @@
     <a href="https://github.com/psf/black">
         <img alt="black" src="https://img.shields.io/badge/code_style-black-black.svg?logo=windowsterminal">
     </a>
-    <a href="https://pycqa.github.io/isort/index.html">
+    <a href="https://github.com/PyCQA/isort">
         <img alt="isort" src="https://img.shields.io/badge/imports-isort-black.svg?logo=windowsterminal">
     </a>
     <a href="https://beta.ruff.rs/docs/">
@@ -45,19 +45,19 @@
     <a href="https://github.com/dependabot">
         <img alt="dependabot" src="https://img.shields.io/badge/dependabot-enable-success?logo=Dependabot">
     </a>
-    <a href="https://github.com/volopivoshenko/poetry-plugin-dotenv/actions/workflows/ci.yaml">
-        <img alt="CI" src="https://img.shields.io/github/actions/workflow/status/volopivoshenko/poetry-plugin-dotenv/ci.yaml?label=CI&logo=github">
+    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/ci.yaml">
+        <img alt="CI" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/ci.yaml?label=CI&logo=github">
     </a>
-    <a href="https://github.com/volopivoshenko/poetry-plugin-dotenv/actions/workflows/cd.yaml">
-        <img alt="CD" src="https://img.shields.io/github/actions/workflow/status/volopivoshenko/poetry-plugin-dotenv/cd.yaml?label=CD&logo=github">
+    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/cd.yaml">
+        <img alt="CD" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/cd.yaml?label=CD&logo=github">
     </a>
-    <a href="https://github.com/volopivoshenko/poetry-plugin-dotenv/actions/workflows/codeql.yaml">
-        <img alt="CodeQL" src="https://img.shields.io/github/actions/workflow/status/volopivoshenko/poetry-plugin-dotenv/codeql.yaml?label=CodeQL&logo=github">
+    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/codeql.yaml">
+        <img alt="CodeQL" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/codeql.yaml?label=CodeQL&logo=github">
     </a>
-    <a href="https://github.com/volopivoshenko/poetry-plugin-dotenv/actions/workflows/dependency-review.yaml">
-        <img alt="Dependency Review" src="https://img.shields.io/github/actions/workflow/status/volopivoshenko/poetry-plugin-dotenv/dependency-review.yaml?label=Dependency%20Review&logo=github">
+    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/dependency-review.yaml">
+        <img alt="Dependency Review" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/dependency-review.yaml?label=Dependency%20Review&logo=github">
     </a>
-    <a href="https://github.com/volopivoshenko/poetry-plugin-dotenv/blob/main/.pre-commit-config.yaml">
+    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/.pre-commit-config.yaml">
         <img alt="hooks" src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit">
     </a>
     <a href="https://pypi.org/project/poetry-plugin-dotenv">
@@ -66,17 +66,17 @@
 </p>
 
 <p align="center">
-    <a href="https://codecov.io/gh/volopivoshenko/poetry-plugin-dotenv">
-        <img alt="coverage" src="https://img.shields.io/codecov/c/gh/volopivoshenko/poetry-plugin-dotenv?logo=codecov&token=yyck08xfTN"/>
+    <a href="https://codecov.io/gh/pivoshenko/poetry-plugin-dotenv" >
+        <img src="https://codecov.io/gh/pivoshenko/poetry-plugin-dotenv/graph/badge.svg?token=cqRQxVnDR6"/>
     </a>
-    <a href="https://codeclimate.com/github/volopivoshenko/poetry-plugin-dotenv/maintainability">
-        <img alt="codeclimate" src="https://img.shields.io/codeclimate/maintainability/volopivoshenko/poetry-plugin-dotenv?logo=codeclimate">
+    <a href="https://codeclimate.com/github/pivoshenko/poetry-plugin-dotenv/maintainability">
+        <img src="https://api.codeclimate.com/v1/badges/90ec571dbc9a489d0f44/maintainability" />
     </a>
     <a href="https://pypi.org/project/poetry-plugin-dotenv">
         <img alt="downloads" src="https://img.shields.io/pypi/dm/poetry-plugin-dotenv?logo=pypi">
     </a>
-    <a href="https://github.com/volopivoshenko/poetry-plugin-dotenv/">
-        <img alt="stars" src="https://img.shields.io/github/stars/volopivoshenko/poetry-plugin-dotenv?style=flat&logo=github">
+    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/">
+        <img alt="stars" src="https://img.shields.io/github/stars/pivoshenko/poetry-plugin-dotenv?style=flat&logo=github">
     </a>
     <a href="https://wakatime.com/badge/user/9862508c-0a86-427a-929c-46186f2d191a/project/36344bbb-7f11-4dcd-a36d-e54c81551119">
         <img alt="wakatime" src="https://wakatime.com/badge/user/9862508c-0a86-427a-929c-46186f2d191a/project/36344bbb-7f11-4dcd-a36d-e54c81551119.svg">
@@ -84,28 +84,28 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/volopivoshenko/poetry-plugin-dotenv/issues">
-        <img alt="issues" src="https://img.shields.io/github/issues/volopivoshenko/poetry-plugin-dotenv?logo=github">
+    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/issues">
+        <img alt="issues" src="https://img.shields.io/github/issues/pivoshenko/poetry-plugin-dotenv?logo=github">
     </a>
-    <a href="https://github.com/volopivoshenko/poetry-plugin-dotenv/issues">
-        <img alt="issues" src="https://img.shields.io/github/issues-closed/volopivoshenko/poetry-plugin-dotenv?logo=github">
+    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/issues">
+        <img alt="issues" src="https://img.shields.io/github/issues-closed/pivoshenko/poetry-plugin-dotenv?logo=github">
     </a>
-    <a href="https://github.com/volopivoshenko/poetry-plugin-dotenv/pulls">
-        <img alt="pr" src="https://img.shields.io/github/issues-pr/volopivoshenko/poetry-plugin-dotenv?logo=github">
+    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/pulls">
+        <img alt="pr" src="https://img.shields.io/github/issues-pr/pivoshenko/poetry-plugin-dotenv?logo=github">
     </a>
-    <a href="https://github.com/volopivoshenko/poetry-plugin-dotenv/pulls">
-        <img alt="pr" src="https://img.shields.io/github/issues-pr-closed/volopivoshenko/poetry-plugin-dotenv?logo=github">
+    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/pulls">
+        <img alt="pr" src="https://img.shields.io/github/issues-pr-closed/pivoshenko/poetry-plugin-dotenv?logo=github">
     </a>
-    <a href="https://github.com/volopivoshenko/poetry-plugin-dotenv/graphs/contributors">
-        <img alt="contributors" src="https://img.shields.io/github/contributors/volopivoshenko/poetry-plugin-dotenv?logo=github">
+    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/graphs/contributors">
+        <img alt="contributors" src="https://img.shields.io/github/contributors/pivoshenko/poetry-plugin-dotenv?logo=github">
     </a>
-    <a href="https://github.com/volopivoshenko/poetry-plugin-dotenv/commits/main">
-        <img alt="commit" src="https://img.shields.io/github/last-commit/volopivoshenko/poetry-plugin-dotenv?logo=github">
+    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/commits/main">
+        <img alt="commit" src="https://img.shields.io/github/last-commit/pivoshenko/poetry-plugin-dotenv?logo=github">
     </a>
 </p>
 
 <p align="center">
-    <a href="https://www.buymeacoffee.com/volopivoshenko" target="_blank">
+    <a href="https://www.buymeacoffee.com/pivoshenko" target="_blank">
         <img alt="buymeacoffee" src="https://img.shields.io/badge/buy_me_-a_coffee-ff6964?logo=buymeacoffee">
     </a>
     <a href="https://stand-with-ukraine.pp.ua/">
@@ -116,28 +116,29 @@
     </a>
 </p>
 
-- [🔮 Overview](#-overview)
-- [⚙️ Installation](#️-installation)
-- [👩🏻‍💻 Usage](#-usage)
+- [Overview](#overview)
+  - [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
 
-# 🔮 Overview
+## Overview
 
 `poetry-plugin-dotenv` - is the plugin that automatically loads environment variables from a dotenv file into the environment before `poetry` commands are run.
 
-**Features**
+### Features
 
-- 📦 Doesn't require any dependencies
-- 📝 Supports templates, interpolating variables using POSIX variable expansions
-- 🔮 Fully type safe
-- 🥷🏻 100% tests coverage and "A" grade for maintainability
+- Doesn't require any dependencies
+- Supports templates, interpolating variables using POSIX variable expansions
+- Fully type safe
+- 100% tests coverage and "A" grade for maintainability
 
-# ⚙️ Installation
+## Installation
 
 ```bash
 poetry self add poetry-plugin-dotenv
 ```
 
-# 👩🏻‍💻 Usage
+## Usage
 
 By default, plugin will load the `.env` file from the current working directory or "higher directories".
 
@@ -145,7 +146,7 @@ To prevent ``poetry`` from loading the dotenv file, set the ``POETRY_DONT_LOAD_D
 
 If your dotenv file is located in a different path or has a different name you may set the ``POETRY_DOTENV_LOCATION`` environment variable.
 
-<img alt="logo" src="https://github.com/volopivoshenko/poetry-plugin-dotenv/blob/main/docs/demo.gif?raw=True">
+<img alt="demo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/demo.gif?raw=True">
 
 ```dotenv
 # .env
