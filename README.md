@@ -51,9 +51,6 @@
     <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/cd.yaml">
         <img alt="CD" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/cd.yaml?label=CD&logo=github">
     </a>
-    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/codeql.yaml">
-        <img alt="CodeQL" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/codeql.yaml?label=CodeQL&logo=github">
-    </a>
     <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/dependency-review.yaml">
         <img alt="Dependency Review" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/dependency-review.yaml?label=Dependency%20Review&logo=github">
     </a>
