@@ -2,6 +2,15 @@
 
 
 
+## v0.8.3 (2024-03-31)
+
+### Documentation
+
+* docs(README): update badges
+
+remove CodeQL badge ([`f81d310`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/f81d310319c0c070798f30c937cf993924afeae1))
+
+
 ## v0.8.2 (2024-03-31)
 
 ### Chore
