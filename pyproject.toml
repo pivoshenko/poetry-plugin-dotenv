@@ -15,6 +15,9 @@ keywords = [
   "poetry-plugins",
   "env",
   "dotenv",
+  "config",
+  "configuration",
+  "configuration-management",
   "cross-platform",
   "hacktoberfest",
 ]
