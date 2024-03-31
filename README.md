@@ -116,28 +116,29 @@
     </a>
 </p>
 
-- [🔮 Overview](#-overview)
-- [⚙️ Installation](#️-installation)
-- [👩🏻‍💻 Usage](#-usage)
+- [Overview](#overview)
+  - [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
 
-# 🔮 Overview
+## Overview
 
 `poetry-plugin-dotenv` - is the plugin that automatically loads environment variables from a dotenv file into the environment before `poetry` commands are run.
 
-**Features**
+### Features
 
-- 📦 Doesn't require any dependencies
-- 📝 Supports templates, interpolating variables using POSIX variable expansions
-- 🔮 Fully type safe
-- 🥷🏻 100% tests coverage and "A" grade for maintainability
+- Doesn't require any dependencies
+- Supports templates, interpolating variables using POSIX variable expansions
+- Fully type safe
+- 100% tests coverage and "A" grade for maintainability
 
-# ⚙️ Installation
+## Installation
 
 ```bash
 poetry self add poetry-plugin-dotenv
 ```
 
-# 👩🏻‍💻 Usage
+## Usage
 
 By default, plugin will load the `.env` file from the current working directory or "higher directories".
 
@@ -145,7 +146,7 @@ To prevent ``poetry`` from loading the dotenv file, set the ``POETRY_DONT_LOAD_D
 
 If your dotenv file is located in a different path or has a different name you may set the ``POETRY_DOTENV_LOCATION`` environment variable.
 
-<img alt="logo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/demo.gif?raw=True">
+<img alt="demo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/demo.gif?raw=True">
 
 ```dotenv
 # .env
