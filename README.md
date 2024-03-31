@@ -67,10 +67,10 @@
 
 <p align="center">
     <a href="https://codecov.io/gh/pivoshenko/poetry-plugin-dotenv" >
-        <img src="https://codecov.io/gh/pivoshenko/poetry-plugin-dotenv/graph/badge.svg?token=cqRQxVnDR6"/>
+        <img alt="codecov" src="https://codecov.io/gh/pivoshenko/poetry-plugin-dotenv/graph/badge.svg?token=cqRQxVnDR6"/>
     </a>
     <a href="https://codeclimate.com/github/pivoshenko/poetry-plugin-dotenv/maintainability">
-        <img src="https://api.codeclimate.com/v1/badges/90ec571dbc9a489d0f44/maintainability" />
+        <img alt="codeclimate" src="https://img.shields.io/codeclimate/maintainability/pivoshenko/poetry-plugin-dotenv?logo=codeclimate">
     </a>
     <a href="https://pypi.org/project/poetry-plugin-dotenv">
         <img alt="downloads" src="https://img.shields.io/pypi/dm/poetry-plugin-dotenv?logo=pypi">
