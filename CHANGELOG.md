@@ -2,6 +2,13 @@
 
 
 
+## v0.8.1 (2024-03-31)
+
+### Documentation
+
+* docs: move VHS script ([`6d0308e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6d0308e585199936351ce81d64b4fe30b86c1fe8))
+
+
 ## v0.8.0 (2024-03-31)
 
 ### Fix
