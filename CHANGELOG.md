@@ -2,6 +2,17 @@
 
 
 
+## v0.8.2 (2024-03-31)
+
+### Chore
+
+* chore(codespell): update `ignore-words-list` ([`69cdbfb`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/69cdbfb1358882f5cd5b4029c790eedf97207e96))
+
+### Documentation
+
+* docs(README): update badges ([`d71aac0`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d71aac0d19650ab1b93aae43e16c2aa3a6bf9798))
+
+
 ## v0.8.1 (2024-03-31)
 
 ### Documentation
