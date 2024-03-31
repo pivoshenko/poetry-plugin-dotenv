@@ -1,5 +1,5 @@
 <div align="center">
-    <img alt="logo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/logo.svg?raw=True" height=200>
+    <img alt="logo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/assets/logo.svg?raw=True" height=200>
 </div>
 
 <p align="center">
@@ -146,7 +146,7 @@ To prevent ``poetry`` from loading the dotenv file, set the ``POETRY_DONT_LOAD_D
 
 If your dotenv file is located in a different path or has a different name you may set the ``POETRY_DOTENV_LOCATION`` environment variable.
 
-<img alt="demo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/demo.gif?raw=True">
+<img alt="demo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/assets/demo.gif?raw=True">
 
 ```dotenv
 # .env
