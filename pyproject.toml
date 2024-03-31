@@ -15,12 +15,15 @@ keywords = [
   "poetry-plugins",
   "env",
   "dotenv",
+  "config",
+  "configuration",
+  "configuration-management",
   "cross-platform",
   "hacktoberfest",
 ]
-homepage = "https://github.com/volopivoshenko/poetry-plugin-dotenv"
-documentation = "https://github.com/volopivoshenko/poetry-plugin-dotenv"
-repository = "https://github.com/volopivoshenko/poetry-plugin-dotenv"
+homepage = "https://github.com/pivoshenko/poetry-plugin-dotenv"
+documentation = "https://github.com/pivoshenko/poetry-plugin-dotenv"
+repository = "https://github.com/pivoshenko/poetry-plugin-dotenv"
 readme = "README.md"
 classifiers = [
   "Development Status :: 5 - Production/Stable",
@@ -44,9 +47,9 @@ classifiers = [
 packages = [{ include = "poetry_plugin_dotenv", from = "src" }]
 
 [tool.poetry.urls]
-"Issues" = "https://github.com/volopivoshenko/poetry-plugin-dotenv/issues"
-"Releases" = "https://github.com/volopivoshenko/poetry-plugin-dotenv/releases"
-"Say Thanks!" = "https://www.buymeacoffee.com/volopivoshenko"
+"Issues" = "https://github.com/pivoshenko/poetry-plugin-dotenv/issues"
+"Releases" = "https://github.com/pivoshenko/poetry-plugin-dotenv/releases"
+"Say Thanks!" = "https://www.buymeacoffee.com/pivoshenko"
 
 [tool.poetry.dependencies]
 python = ">=3.8.1,<4.0"

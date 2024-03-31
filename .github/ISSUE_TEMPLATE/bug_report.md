@@ -40,6 +40,6 @@ Add any other context about the problem here.
 
 [gist]: https://gist.github.com
 
-[issues]: https://github.com/volopivoshenko/poetry-plugin-dotenv/issues
+[issues]: https://github.com/pivoshenko/poetry-plugin-dotenv/issues
 
-[latest]: https://github.com/volopivoshenko/poetry-plugin-dotenv/releases/latest
+[latest]: https://github.com/pivoshenko/poetry-plugin-dotenv/releases/latest
