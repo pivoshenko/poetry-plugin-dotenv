@@ -120,8 +120,8 @@ upload_to_vcs_release = true
 
 [tool.semantic_release.commit_parser_options]
 major_tags = ["feat"]
-minor_tags = ["fix", "perf"]
-patch_tags = ["docs"]
+minor_tags = ["fix", "perf", "refactor"]
+patch_tags = ["docs", "style"]
 allowed_tags = [
   "build",
   "chore",
@@ -199,7 +199,7 @@ required-imports = ["from __future__ import annotations"]
 
 [tool.codespell]
 skip = "tests,pyproject.toml,poetry.lock,.git,.ruff_cache,.mypy_cache,.pytest_cache,.idea,.vscode"
-ignore-words-list = "redunant"
+ignore-words-list = "redunant,resovle"
 
 [tool.deptry]
 ignore = ["DEP003"]
@@ -231,7 +231,8 @@ poetry_command = ""
 [tool.poe.tasks.format]
 help = "Run formatters"
 sequence = [
-  { shell = "find . -type f -name '*.py' | xargs pyupgrade --py311-plus", help = "Run annotations formatter" },
+  { shell = "find src -type f -name '*.py' | xargs pyupgrade --py311-plus", help = "Run annotations formatter" },
+  { shell = "find tests -type f -name '*.py' | xargs pyupgrade --py311-plus", help = "Run annotations formatter" },
   { shell = "isort .", help = "Run imports formatter" },
   { shell = "ruff format .", help = "Run code formatter" },
   { shell = "black .", help = "Run code formatter" },
@@ -244,7 +245,8 @@ sequence = [
   { shell = "mypy .", help = "Run types linter" },
   { shell = "ruff check .", help = "Run code linter" },
   { shell = "lint-imports", help = "Run imports linter" },
-  { shell = "find . -type f -name '*.py' | xargs -L1 memestra", help = "Run deprecated code linter" },
+  { shell = "find src -type f -name '*.py' | xargs -L1 memestra", help = "Run deprecated code linter" },
+  { shell = "find tests -type f -name '*.py' | xargs -L1 memestra", help = "Run deprecated code linter" },
   { shell = "codespell .", help = "Run spell linter" },
   { shell = "cz check --rev-range .", help = "Run commits linter" },
 ]
