@@ -2,6 +2,97 @@
 
 
 
+## v0.8.4 (2024-04-11)
+
+### Build
+
+* build(deps-dev): bump deptry from 0.15.0 to 0.16.1
+
+Bumps [deptry](https://github.com/fpgmaas/deptry) from 0.15.0 to 0.16.1.
+- [Release notes](https://github.com/fpgmaas/deptry/releases)
+- [Changelog](https://github.com/fpgmaas/deptry/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/fpgmaas/deptry/compare/0.15.0...0.16.1)
+
+---
+updated-dependencies:
+- dependency-name: deptry
+  dependency-type: direct:development
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`70f5982`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/70f598251ddff0133e39d15e313d6f79b51719a9))
+
+* build(deps-dev): bump python-semantic-release from 9.4.0 to 9.4.1
+
+Bumps [python-semantic-release](https://github.com/python-semantic-release/python-semantic-release) from 9.4.0 to 9.4.1.
+- [Release notes](https://github.com/python-semantic-release/python-semantic-release/releases)
+- [Changelog](https://github.com/python-semantic-release/python-semantic-release/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.4.0...v9.4.1)
+
+---
+updated-dependencies:
+- dependency-name: python-semantic-release
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`a767f73`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a767f73c73b4beced9b540680d6130b987df68d1))
+
+* build(deps-dev): bump ruff from 0.3.4 to 0.3.5
+
+Bumps [ruff](https://github.com/astral-sh/ruff) from 0.3.4 to 0.3.5.
+- [Release notes](https://github.com/astral-sh/ruff/releases)
+- [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/astral-sh/ruff/compare/v0.3.4...v0.3.5)
+
+---
+updated-dependencies:
+- dependency-name: ruff
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`12b2716`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/12b27165ebb84898a7694515b19047d5802dd2ad))
+
+* build(deps-dev): bump python-semantic-release from 9.3.1 to 9.4.0
+
+Bumps [python-semantic-release](https://github.com/python-semantic-release/python-semantic-release) from 9.3.1 to 9.4.0.
+- [Release notes](https://github.com/python-semantic-release/python-semantic-release/releases)
+- [Changelog](https://github.com/python-semantic-release/python-semantic-release/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.3.1...v9.4.0)
+
+---
+updated-dependencies:
+- dependency-name: python-semantic-release
+  dependency-type: direct:development
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`8b42c07`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8b42c076d5497103b908fcf6bf2f8032b8ec4ea3))
+
+### Documentation
+
+* docs(README): update badges ([`1d57d53`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1d57d534ead0ada2cf1ce7d7b05bf53bc33891a7))
+
+### Unknown
+
+* Merge pull request #224 from pivoshenko/dependabot/pip/deptry-0.16.1
+
+build(deps-dev): bump deptry from 0.15.0 to 0.16.1 ([`82e0761`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/82e0761b5848203f5baa506d48802dd2cc6eda43))
+
+* Merge pull request #223 from pivoshenko/dependabot/pip/python-semantic-release-9.4.1
+
+build(deps-dev): bump python-semantic-release from 9.4.0 to 9.4.1 ([`85cb6a9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/85cb6a9a2e67b7a457f664ffc5ca2027940d62f0))
+
+* Merge pull request #222 from pivoshenko/dependabot/pip/ruff-0.3.5
+
+build(deps-dev): bump ruff from 0.3.4 to 0.3.5 ([`a87eef1`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a87eef1e01a8dfe4e61f857a163edb57c3878668))
+
+* Merge pull request #221 from pivoshenko/dependabot/pip/python-semantic-release-9.4.0
+
+build(deps-dev): bump python-semantic-release from 9.3.1 to 9.4.0 ([`48b9238`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/48b923838fc0f4e12e89a44946aa6de6039f3242))
+
+
 ## v0.8.3 (2024-03-31)
 
 ### Documentation
