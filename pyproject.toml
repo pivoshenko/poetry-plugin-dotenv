@@ -176,19 +176,15 @@ exclude = ["__init__.py"]
 [tool.ruff.lint]
 select = ["ALL"]
 ignore = [
-  "ARG002",
-  "ANN002",
-  "ANN003",
-  "ANN101",
-  "ANN102",
   "D202",
   "I001",
-  "PTH",
-  "FBT",
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/*.*" = ["INP001", "S101"]
+"tests/*.*" = ["INP001", "S101", "PTH"]
+"src/poetry_plugin_dotenv/plugin.py" = ["ANN002", "ANN003", "ARG002"]
+"src/poetry_plugin_dotenv/dotenv/core.py" = ["PTH"]
+"src/poetry_plugin_dotenv/dotenv/variables.py" = ["ANN002", "ANN003", "ARG002"]
 
 [tool.ruff.lint.isort]
 lines-after-imports = 2
