@@ -3,14 +3,14 @@ default_language_version:
 
 repos:
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v3.18.0
+    rev: v3.24.0
     hooks:
       - id: commitizen
         stages:
           - commit-msg
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.15.1
+    rev: v3.15.2
     hooks:
       - id: pyupgrade
 
@@ -20,12 +20,12 @@ repos:
       - id: isort
 
   - repo: https://github.com/psf/black
-    rev: 24.2.0
+    rev: 24.4.0
     hooks:
       - id: black
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v4.6.0
     hooks:
       - id: check-merge-conflict
       - id: check-case-conflict
@@ -47,12 +47,12 @@ repos:
       - id: python-check-blanket-type-ignore
 
   - repo: https://github.com/pre-commit/pre-commit
-    rev: v3.6.2
+    rev: v3.7.0
     hooks:
       - id: validate_manifest
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.3.2
+    rev: v0.4.1
     hooks:
       - id: ruff
 
