@@ -59,6 +59,7 @@ poetry = ">=1.5.1"
 pre-commit = ">=3.5.0"
 poethepoet = ">=0.24.2"
 ipdb = ">=0.13.13"
+ipython = "8.12.3"
 
 [tool.poetry.group.formatters.dependencies]
 isort = ">=5.13.2"
