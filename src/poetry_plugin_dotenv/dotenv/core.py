@@ -5,22 +5,31 @@ from __future__ import annotations
 import io
 import os
 import sys
-import typing
 import contextlib
 
 from collections import OrderedDict
+from typing import IO
+from typing import Self
+from typing import TYPE_CHECKING
 
 from poetry_plugin_dotenv.dotenv import parsers
 from poetry_plugin_dotenv.dotenv import variables
+
+
+if TYPE_CHECKING:
+    from collections.abc import Generator
+    from collections.abc import Iterable
+    from collections.abc import Iterator
 
 
 class DotEnv:
     """Model of a dotenv file."""
 
     def __init__(
-        self,
+        self: Self,
         filepath: str | None = None,
-        stream: typing.IO[str] | None = None,
+        stream: IO[str] | None = None,
+        *,
         interpolate: bool = True,
         override: bool = True,
     ) -> None:
@@ -33,9 +42,9 @@ class DotEnv:
 
         self.encoding = "utf-8"
 
-        self._dict: typing.OrderedDict[str, str] | None = None
+        self._dict: OrderedDict[str, str] | None = None
 
-    def dict(self) -> typing.OrderedDict[str, str]:
+    def dict(self: Self) -> OrderedDict[str, str]:
         """Return content of a dotenv file."""
 
         if self._dict:
@@ -49,9 +58,9 @@ class DotEnv:
         else:
             self._dict = OrderedDict(raw_values)
 
-        return self._dict
+        return self._dict  # type: ignore[return-value]
 
-    def parse(self) -> typing.Generator:
+    def parse(self: Self) -> Generator:
         """Parse a dotenv file."""
 
         with self._get_stream() as stream:
@@ -59,7 +68,7 @@ class DotEnv:
                 if mapping.key is not None:
                     yield mapping.key, mapping.value
 
-    def set_as_environment_variables(self) -> bool:
+    def set_as_environment_variables(self: Self) -> bool:
         """Load current dotenv as a system environment variable."""
 
         if self.dict():
@@ -75,7 +84,7 @@ class DotEnv:
         return False  # pragma: nocover
 
     @contextlib.contextmanager
-    def _get_stream(self) -> typing.Iterator[typing.IO[str]]:
+    def _get_stream(self: Self) -> Iterator[IO[str]]:
         """Get a dotenv stream."""
 
         if self.filepath and os.path.isfile(self.filepath):
@@ -90,12 +99,13 @@ class DotEnv:
 
 
 def resolve(
-    values: typing.Iterable[tuple[str, str]],
+    values: Iterable[tuple[str, str]],
+    *,
     override: bool,
-) -> typing.OrderedDict[str, str]:
+) -> OrderedDict[str, str]:
     """Resolve dotenv variables."""
 
-    new_values: typing.OrderedDict[str, str] = OrderedDict()
+    new_values: OrderedDict[str, str] = OrderedDict()
 
     for name, value in values:
         if value is None:
@@ -103,7 +113,7 @@ def resolve(
 
         else:
             atoms = variables.parse(value)
-            env: typing.OrderedDict[str, str] = OrderedDict()
+            env: OrderedDict[str, str] = OrderedDict()
 
             if override:
                 env.update(os.environ)
@@ -115,12 +125,12 @@ def resolve(
 
             result = "".join(atom.resolve(env) for atom in atoms)
 
-        new_values[name] = result
+        new_values[name] = result  # type: ignore[assignment]
 
     return new_values
 
 
-def walk_to_root(path: str) -> typing.Iterator[str]:
+def walk_to_root(path: str) -> Iterator[str]:
     """Yield directories starting from the given directory up to the root."""
 
     if not os.path.exists(path):
@@ -139,7 +149,7 @@ def walk_to_root(path: str) -> typing.Iterator[str]:
         last_dir, current_dir = current_dir, parent_dir
 
 
-def find(filename: str = ".env", usecwd: bool = False) -> str:
+def find(filename: str = ".env", *, usecwd: bool = False) -> str:
     """Search in increasingly higher folders for the given file."""
 
     if usecwd or getattr(sys, "frozen", False):
@@ -168,7 +178,8 @@ def find(filename: str = ".env", usecwd: bool = False) -> str:
 
 def load(
     filepath: str | None = None,
-    stream: typing.IO[str] | None = None,
+    stream: IO[str] | None = None,
+    *,
     interpolate: bool = True,
     override: bool = True,
 ) -> bool:
@@ -185,9 +196,10 @@ def load(
 
 def values(
     filepath: str | None = None,
-    stream: typing.IO[str] | None = None,
+    stream: IO[str] | None = None,
+    *,
     interpolate: bool = True,
-) -> typing.OrderedDict[str, str]:
+) -> OrderedDict[str, str]:
     """Parse a dotenv file and return its content as a dictionary."""
 
     return DotEnv(filepath=filepath, stream=stream, interpolate=interpolate).dict()

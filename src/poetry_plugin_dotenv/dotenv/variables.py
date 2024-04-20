@@ -3,8 +3,15 @@
 from __future__ import annotations
 
 import re
-import typing
 import dataclasses
+
+from typing import Self
+from typing import TYPE_CHECKING
+
+
+if TYPE_CHECKING:
+    from collections import OrderedDict
+    from collections.abc import Iterator
 
 
 _posix_variable = re.compile(
@@ -26,7 +33,7 @@ class Literal:
 
     value: str
 
-    def resolve(self, *args, **kwargs) -> str:
+    def resolve(self: Self, *args, **kwargs) -> str:
         """Get a literal value."""
 
         return self.value
@@ -39,7 +46,7 @@ class Variable:
     name: str
     default: str | None = None
 
-    def resolve(self, env: typing.OrderedDict[str, str], *args, **kwargs) -> str:
+    def resolve(self: Self, env: OrderedDict[str, str], *args, **kwargs) -> str:
         """Get a variable value."""
 
         default = self.default if self.default else ""
@@ -47,7 +54,7 @@ class Variable:
         return env_val if env_val else ""
 
 
-def parse(value: str) -> typing.Iterator[Literal | Variable]:
+def parse(value: str) -> Iterator[Literal | Variable]:
     """Parse values."""
 
     cursor = 0

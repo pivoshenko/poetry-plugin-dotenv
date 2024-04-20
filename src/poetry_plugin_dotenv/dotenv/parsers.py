@@ -8,6 +8,7 @@ import dataclasses
 
 from typing import IO
 from typing import NamedTuple
+from typing import Self
 from typing import TYPE_CHECKING
 
 
@@ -66,18 +67,18 @@ class Position:
     line: int
 
     @classmethod
-    def start(cls) -> Position:
+    def start(cls: type[Self]) -> Position:
         """Get a start position."""
 
         return cls(chars=0, line=1)
 
-    def set(self, other: Position) -> None:
+    def set(self: Self, other: Position) -> None:
         """Set a position."""
 
         self.chars = other.chars
         self.line = other.line
 
-    def advance(self, string: str) -> None:
+    def advance(self: Self, string: str) -> None:
         """Update a position."""
 
         self.chars += len(string)
@@ -87,24 +88,24 @@ class Position:
 class Reader:
     """Dotenv reader."""
 
-    def __init__(self, stream: IO[str]) -> None:
+    def __init__(self: Self, stream: IO[str]) -> None:
         """Initialize."""
 
         self.string = stream.read()
         self.position = Position.start()
         self.mark = Position.start()
 
-    def has_next(self) -> bool:
+    def has_next(self: Self) -> bool:
         """Check if a dotenv has the next position."""
 
         return self.position.chars < len(self.string)
 
-    def set_mark(self) -> None:
+    def set_mark(self: Self) -> None:
         """Set a mark."""
 
         self.mark.set(self.position)
 
-    def get_marked(self) -> Original:
+    def get_marked(self: Self) -> Original:
         """Get a mark."""
 
         # fmt: off
@@ -114,14 +115,14 @@ class Reader:
         )
         # fmt: on
 
-    def peek(self, count: int) -> str:
+    def peek(self: Self, count: int) -> str:
         """Peek a dotenv."""
 
         # fmt: off
         return self.string[self.position.chars: self.position.chars + count]
         # fmt: on
 
-    def read_regex(self, regex: re.Pattern[str]) -> tuple[str, ...]:
+    def read_regex(self: Self, regex: re.Pattern[str]) -> tuple[str, ...]:
         """Read a dotenv with a regex."""
 
         match = regex.match(self.string, self.position.chars)
