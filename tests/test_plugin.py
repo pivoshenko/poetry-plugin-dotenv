@@ -20,7 +20,7 @@ if TYPE_CHECKING:
     import pytest_mock
 
 
-@mock.patch.dict(os.environ, {"POETRY_DOTENV_LOCATION": ".env.dev"}, clear=True)
+@mock.patch.dict(os.environ, {"POETRY_PLUGIN_DOTENV_LOCATION": ".env.dev"}, clear=True)
 def test_dev_dotenv_file(
     mocker: pytest_mock.MockerFixture,
     create_dotenv_file: Callable[[str, str], dict[str, str]],
@@ -61,7 +61,7 @@ def test_default_dotenv_file(
     assert expected_vars["POSTGRES_USER"] == os.environ["POSTGRES_USER"]
 
 
-@mock.patch.dict(os.environ, {"POETRY_DONT_LOAD_DOTENV": "1"}, clear=True)
+@mock.patch.dict(os.environ, {"POETRY_PLUGIN_DOTENV_IGNORE": "1"}, clear=True)
 def test_without_dotenv_file(
     mocker: pytest_mock.MockerFixture,
     create_dotenv_file: Callable[[str, str], dict[str, str]],
