@@ -178,6 +178,8 @@ select = ["ALL"]
 ignore = [
   "D202",
   "I001",
+  "TD003",
+  "FIX002",
 ]
 
 [tool.ruff.lint.per-file-ignores]
