@@ -16,7 +16,7 @@ from poetry_plugin_dotenv.dotenv import parsers
 from poetry_plugin_dotenv.dotenv import variables
 
 
-if TYPE_CHECKING:
+if TYPE_CHECKING:  # pragma: no cover
     from collections.abc import Generator
     from collections.abc import Iterable
     from collections.abc import Iterator

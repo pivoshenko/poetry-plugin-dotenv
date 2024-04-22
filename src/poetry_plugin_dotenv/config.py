@@ -56,7 +56,7 @@ class Config(_Config):
             elif config_source.endswith("os"):
                 config = _load_config_from_os(section)
 
-            else:
+            else:  # pragma: no cover
                 pass
 
             source_config.update(config)
@@ -96,7 +96,7 @@ def _load_config_from_toml(
 
         return config
 
-    return {}
+    return {}  # pragma: no cover
 
 
 def _load_config_from_os(
