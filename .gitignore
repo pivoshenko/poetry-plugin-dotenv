@@ -149,3 +149,8 @@ temp
 
 # import linter
 .import_linter_cache
+
+# examples
+!docs/examples/.env
+!docs/examples/.env.dev
+!docs/examples/.env.prod
