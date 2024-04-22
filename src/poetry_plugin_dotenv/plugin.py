@@ -16,7 +16,7 @@ from poetry_plugin_dotenv import config
 from poetry_plugin_dotenv import dotenv
 
 
-if TYPE_CHECKING:
+if TYPE_CHECKING:  # pragma: no cover
     from cleo.events.console_command_event import ConsoleCommandEvent
     from poetry.console.application import Application
 

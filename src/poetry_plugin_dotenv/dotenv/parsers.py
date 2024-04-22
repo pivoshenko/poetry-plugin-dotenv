@@ -12,7 +12,7 @@ from typing import Self
 from typing import TYPE_CHECKING
 
 
-if TYPE_CHECKING:
+if TYPE_CHECKING:  # pragma: no cover
     from collections.abc import Iterator
 
 
