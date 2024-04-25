@@ -81,27 +81,6 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/issues">
-        <img alt="issues" src="https://img.shields.io/github/issues/pivoshenko/poetry-plugin-dotenv?logo=github">
-    </a>
-    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/issues">
-        <img alt="issues" src="https://img.shields.io/github/issues-closed/pivoshenko/poetry-plugin-dotenv?logo=github">
-    </a>
-    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/pulls">
-        <img alt="pr" src="https://img.shields.io/github/issues-pr/pivoshenko/poetry-plugin-dotenv?logo=github">
-    </a>
-    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/pulls">
-        <img alt="pr" src="https://img.shields.io/github/issues-pr-closed/pivoshenko/poetry-plugin-dotenv?logo=github">
-    </a>
-    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/graphs/contributors">
-        <img alt="contributors" src="https://img.shields.io/github/contributors/pivoshenko/poetry-plugin-dotenv?logo=github">
-    </a>
-    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/commits/main">
-        <img alt="commit" src="https://img.shields.io/github/last-commit/pivoshenko/poetry-plugin-dotenv?logo=github">
-    </a>
-</p>
-
-<p align="center">
     <a href="https://www.buymeacoffee.com/pivoshenko" target="_blank">
         <img alt="buymeacoffee" src="https://img.shields.io/badge/buy_me_-a_coffee-ff6964?logo=buymeacoffee">
     </a>
