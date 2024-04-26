@@ -11,10 +11,11 @@ from cleo.events.console_events import COMMAND
 from poetry.console.commands.env_command import EnvCommand
 from poetry.plugins.application_plugin import ApplicationPlugin
 
+from poetry_plugin_dotenv import config
 from poetry_plugin_dotenv import dotenv
 
 
-if TYPE_CHECKING:
+if TYPE_CHECKING:  # pragma: no cover
     from cleo.events.console_command_event import ConsoleCommandEvent
     from poetry.console.application import Application
 
@@ -70,15 +71,6 @@ class DotenvPlugin(ApplicationPlugin):
 
     Plugin that automatically loads environment variables from a dotenv file into the environment
     before ``poetry`` commands are run.
-
-    Notes
-    -----
-    To prevent ``poetry`` from loading the dotenv file, set the ``POETRY_DONT_LOAD_DOTENV``
-    environment variable.
-
-    If your dotenv file is located in a different path or has a different name you may set
-    the ``POETRY_DOTENV_LOCATION`` environment variable.
-
     """
 
     def activate(self, application: Application) -> None:  # pragma: no cover
@@ -90,20 +82,23 @@ class DotenvPlugin(ApplicationPlugin):
         """Load a dotenv file."""
 
         logger = Logger(event)
+        configuration = config.Config()
 
-        dont_load_dotenv = os.getenv("POETRY_DONT_LOAD_DOTENV")
-        dotenv_location = os.getenv("POETRY_DOTENV_LOCATION")
         is_env_command = isinstance(event.command, EnvCommand)
 
-        if is_env_command and dont_load_dotenv:
+        if is_env_command and configuration.ignore:
             logger.warning("Not loading environment variables.")
 
-        elif is_env_command and not dont_load_dotenv:
-            filepath = dotenv_location if dotenv_location else dotenv.core.find(usecwd=True)
+        elif is_env_command and not configuration.ignore:
+            filepath = (
+                configuration.location if configuration.location else dotenv.core.find(usecwd=True)
+            )
 
-            if os.path.isfile(filepath):
-                logger.info(f"Loading environment variables from {filepath!r}.")  # noqa: G004
+            if os.path.isfile(filepath):  # noqa: PTH113
+                msg = f"Loading environment variables from '{filepath}'."
+                logger.info(msg)
                 dotenv.core.load(filepath=filepath)
 
             else:
-                logger.error(f"File {filepath!r} doesn't exist.")  # noqa: G004
+                msg = f"File '{filepath}' doesn't exist."
+                logger.error(msg)

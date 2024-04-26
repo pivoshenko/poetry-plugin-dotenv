@@ -11,7 +11,7 @@ from typing import NamedTuple
 from typing import TYPE_CHECKING
 
 
-if TYPE_CHECKING:
+if TYPE_CHECKING:  # pragma: no cover
     from collections.abc import Iterator
 
 
@@ -66,7 +66,7 @@ class Position:
     line: int
 
     @classmethod
-    def start(cls) -> Position:
+    def start(cls) -> Position:  # noqa: ANN102
         """Get a start position."""
 
         return cls(chars=0, line=1)

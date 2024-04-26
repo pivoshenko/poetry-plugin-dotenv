@@ -95,7 +95,11 @@
 - [Overview](#overview)
   - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
+- [Usage and Configuration](#usage-and-configuration)
+  - [Configuration via file](#configuration-via-file)
+  - [Configuration via environment variables](#configuration-via-environment-variables)
+  - [Lookup hierarchy](#lookup-hierarchy)
+- [Examples](#examples)
 
 ## Overview
 
@@ -106,7 +110,7 @@
 - Doesn't require any dependencies
 - Supports templates, interpolating variables using POSIX variable expansions
 - Fully type safe
-- 100% tests coverage and "A" grade for maintainability
+- 100% test coverage and "A" grade for maintainability
 
 ## Installation
 
@@ -114,68 +118,127 @@
 poetry self add poetry-plugin-dotenv
 ```
 
-## Usage
+## Usage and Configuration
 
-By default, plugin will load the `.env` file from the current working directory or "higher directories".
+By default, the plugin will load the `.env` file from the current working directory or "higher directories".
 
-To prevent ``poetry`` from loading the dotenv file, set the ``POETRY_DONT_LOAD_DOTENV`` environment variable.
+To prevent `poetry` from loading the dotenv file, set the `ignore` option.
 
-If your dotenv file is located in a different path or has a different name you may set the ``POETRY_DOTENV_LOCATION`` environment variable.
+If your dotenv file is located in a different path or has a different name you may set the `location`.
+
+`ignore` option can accept the next values:
+- As True: `y / yes / t / on / 1 / true`
+- As False: `n / no / f / off / 0 / false`
+
+### Configuration via file
+
+The plugin is able to read project-specific default values for its options from a `pyproject.toml` file.
+By default, `poetry-plugin-dotenv` looks for `pyproject.toml` containing a `[tool.poetry.plugins.dotenv]` section.
+
+Example `pyproject.toml`:
+
+```toml
+[tool.poetry.plugins.dotenv]
+ignore = "false"
+location = ".env.dev"
+```
+
+> [!IMPORTANT]
+> Due to the default `poetry` parser, options in the plugins sections should be always strings.
+
+### Configuration via environment variables
+
+`poetry-plugin-dotenv` supports the following configuration options via environment variables.
+
+- `POETRY_PLUGIN_DOTENV_LOCATION`
+- `POETRY_PLUGIN_DOTENV_IGNORE`
+
+> [!IMPORTANT]
+> Due to the nature of environment variables, options should be always strings.
+
+### Lookup hierarchy
+
+A `pyproject.toml` can override default values. Options provided by the user via environment variables override both.
+
+## Examples
 
 <img alt="demo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/assets/demo.gif?raw=True">
 
 ```dotenv
 # .env
 DB__HOST=localhost
-DB__DBNAME=prod
-DB__USER=admin
-DB__PASSWORD=admin
+DB__DBNAME=local_lakehouse
+DB__USER=volodymyr
+DB__PASSWORD=super_secret_password
 DB__ENGINE=postgresql://${DB__USER}:${DB__PASSWORD}@${DB__HOST}/${DB__DBNAME}
 ```
 
 ```dotenv
 # .env.dev
-DB__HOST=localhost
-DB__DBNAME=dev
-DB__USER=root
-DB__PASSWORD=root
+DB__HOST=dev.host
+DB__DBNAME=dev_lakehouse
+DB__USER=svc_team
+DB__PASSWORD=super_secret_password
 DB__ENGINE=postgresql://${DB__USER}:${DB__PASSWORD}@${DB__HOST}/${DB__DBNAME}
+```
+
+```toml
+# pyroject.toml
+[tool.poetry.plugins.dotenv]
+location = ".env.dev"
 ```
 
 ```python
 # main.py
+from __future__ import annotations
+
 import os
 
 
 if __name__ == "__main__":
     try:
-        print(f"Host: {os.environ['DB__HOST']!r}")
-        print(f"Name: {os.environ['DB__DBNAME']!r}")
-        print(f"Username: {os.environ['DB__USER']!r}")
-        print(f"Password: {os.environ['DB__PASSWORD']!r}")
-        print(f"Engine: {os.environ['DB__ENGINE']!r}")
+        print(f"Host: {os.environ['DB__HOST']!r}")  # noqa: T201
+        print(f"Name: {os.environ['DB__DBNAME']!r}")  # noqa: T201
+        print(f"Username: {os.environ['DB__USER']!r}")  # noqa: T201
+        print(f"Password: {os.environ['DB__PASSWORD']!r}")  # noqa: T201
+        print(f"Engine: {os.environ['DB__ENGINE']!r}")  # noqa: T201
 
     except KeyError:
-        print("Environment variables not set!")
+        print("Environment variables not set!")  # noqa: T201
 ```
 
-```bash
+```shell
 poetry run -vvv python main.py
 # Loading environment variables from '.env'.
 # Host: 'localhost'
-# Name: 'prod'
-# Username: 'admin'
-# Password: 'admin'
-# Engine 'postgresql://admin:admin@localhost/prod'
+# Name: 'local_lakehouse'
+# Username: 'volodymyr'
+# Password: 'super_secret_password'
+# Engine: 'postgresql://volodymyr:super_secret_password@localhost/local_lakehouse'
 
-export POETRY_DOTENV_LOCATION=.env.dev && poetry run -vvv python main.py
+# set location section in pyproject.toml
+poetry run -vvv python main.py
 # Loading environment variables from '.env.dev'.
-# Host: 'localhost'
-# Name: 'dev'
-# Username: 'root'
-# Password: 'root'
-# Engine 'postgresql://root:root@localhost/dev'
+# Host: 'dev.host'
+# Name: 'dev_lakehouse'
+# Username: 'svc_team'
+# Password: 'super_secret_password'
+# Engine: 'postgresql://svc_team:super_secret_password@dev.host/dev_lakehouse'
 
-export POETRY_DONT_LOAD_DOTENV=1 && poetry run -vvv python main.py
+# set ignore = "true" in pyproject.toml
+poetry run -vvv python main.py
 # Not loading environment variables.
+# Environment variables not set!
+
+export POETRY_PLUGIN_DOTENV_LOCATION=.env.dev && poetry run -vvv python main.py
+# Loading environment variables from '.env.dev'.
+# Host: 'dev.host'
+# Name: 'dev_lakehouse'
+# Username: 'svc_team'
+# Password: 'super_secret_password'
+# Engine: 'postgresql://svc_team:super_secret_password@dev.host/dev_lakehouse'
+
+export POETRY_PLUGIN_DOTENV_IGNORE=true && poetry run -vvv python main.py
+# Not loading environment variables.
+# Environment variables not set!
 ```

@@ -234,8 +234,9 @@ def test_dotenv_values_file_stream(dotenv_file: str) -> None:
 def test_dotenv_values_string_io(
     env: dict[str, str],
     string: str,
-    interpolate: bool,
     expected: dict[str, str],
+    *,
+    interpolate: bool,
 ) -> None:
     """Test ``values`` function."""
 

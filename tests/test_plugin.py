@@ -20,8 +20,42 @@ if TYPE_CHECKING:
     import pytest_mock
 
 
-@mock.patch.dict(os.environ, {"POETRY_DOTENV_LOCATION": ".env.dev"}, clear=True)
-def test_dev_dotenv_file(
+@mock.patch.dict(os.environ, {"POETRY_PLUGIN_DOTENV_LOCATION": ".env.dev"}, clear=True)
+def test_dev_dotenv_file_os_config(
+    mocker: pytest_mock.MockerFixture,
+    create_dotenv_file: Callable[[str, str], dict[str, str]],
+    remove_dotenv_file: Callable[[str], None],
+) -> None:
+    """Test for the ``load`` method."""
+
+    event = mocker.MagicMock()
+    event.command = EnvCommand()
+
+    expected_vars = create_dotenv_file("root", ".env.dev")
+
+    plugin = DotenvPlugin()
+    plugin.load(event)
+
+    remove_dotenv_file(".env.dev")
+
+    assert expected_vars["POSTGRES_USER"] == os.environ["POSTGRES_USER"]
+
+
+@mock.patch(
+    "tomli.load",
+    return_value={
+        "tool": {
+            "poetry": {
+                "plugins": {
+                    "dotenv": {
+                        "location": ".env.dev",
+                    },
+                },
+            },
+        },
+    },
+)
+def test_dev_dotenv_file_toml_config(
     mocker: pytest_mock.MockerFixture,
     create_dotenv_file: Callable[[str, str], dict[str, str]],
     remove_dotenv_file: Callable[[str], None],
@@ -61,8 +95,44 @@ def test_default_dotenv_file(
     assert expected_vars["POSTGRES_USER"] == os.environ["POSTGRES_USER"]
 
 
-@mock.patch.dict(os.environ, {"POETRY_DONT_LOAD_DOTENV": "1"}, clear=True)
-def test_without_dotenv_file(
+@mock.patch.dict(os.environ, {"POETRY_PLUGIN_DOTENV_IGNORE": "y"}, clear=True)
+def test_without_dotenv_file_os_config(
+    mocker: pytest_mock.MockerFixture,
+    create_dotenv_file: Callable[[str, str], dict[str, str]],
+    remove_dotenv_file: Callable[[str], None],
+) -> None:
+    """Test for the ``load`` method."""
+
+    event = mocker.MagicMock()
+    event.command = EnvCommand()
+
+    create_dotenv_file("admin", ".env")
+
+    plugin = DotenvPlugin()
+    plugin.load(event)
+
+    remove_dotenv_file(".env")
+
+    with pytest.raises(KeyError):
+        os.environ["POSTGRES_USER"]
+
+
+@mock.patch.dict(os.environ, {}, clear=True)
+@mock.patch(
+    "tomli.load",
+    return_value={
+        "tool": {
+            "poetry": {
+                "plugins": {
+                    "dotenv": {
+                        "ignore": True,
+                    },
+                },
+            },
+        },
+    },
+)
+def test_without_dotenv_file_toml_config(
     mocker: pytest_mock.MockerFixture,
     create_dotenv_file: Callable[[str, str], dict[str, str]],
     remove_dotenv_file: Callable[[str], None],
