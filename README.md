@@ -123,6 +123,7 @@ poetry self add poetry-plugin-dotenv
 By default, the plugin will load the `.env` file from the current working directory or "higher directories".
 
 To prevent `poetry` from loading the dotenv file, set the `ignore` option.
+
 If your dotenv file is located in a different path or has a different name you may set the `location`.
 
 `ignore` option can accept the next values:
@@ -147,7 +148,7 @@ location = ".env.dev"
 
 ### Configuration via environment variables
 
-`poetry-plugin-dotenv` supports the following configuration via environment variables.
+`poetry-plugin-dotenv` supports the following configuration options via environment variables.
 
 - `POETRY_PLUGIN_DOTENV_LOCATION`
 - `POETRY_PLUGIN_DOTENV_IGNORE`
@@ -157,7 +158,7 @@ location = ".env.dev"
 
 ### Lookup hierarchy
 
-A `pyproject.toml` can override default values. Finally, options provided by the user via environment variables override both.
+A `pyproject.toml` can override default values. Options provided by the user via environment variables override both.
 
 ## Examples
 
