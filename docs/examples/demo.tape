@@ -3,7 +3,6 @@ Output ../assets/demo.gif
 Set FontSize 26
 Set Width 1920
 Set Height 1080
-Set Margin 20
 Set BorderRadius 10
 Set TypingSpeed 0.5
 Set Theme "Catppuccin Mocha"
