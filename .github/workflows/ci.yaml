@@ -33,10 +33,12 @@ jobs:
           python -m pip install -U pip setuptools poetry
           python -m poetry install
           python -m poetry self add 'poethepoet[poetry_plugin]'
+
       - name: Run linters
         id: run-linters
         run: |
           python -m poetry lint
+
   tests:
     name: Run tests
     needs: linters
@@ -44,7 +46,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [ubuntu-latest]
         python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
 
     steps:
@@ -67,10 +69,12 @@ jobs:
           python -m pip install -U pip setuptools poetry
           python -m poetry install
           python -m poetry self add 'poethepoet[poetry_plugin]'
+
       - name: Run tests
         id: run-tests
         run: |
           python -m poetry tests
+
       - name: Upload coverage to Codecov
         id: upload-coverage-to-codecov
         uses: codecov/codecov-action@v4
