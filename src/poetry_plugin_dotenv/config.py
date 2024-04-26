@@ -60,7 +60,7 @@ class Config(_Config):
 
             source_config.update(config)
 
-        for attribute in self.__match_args__:
+        for attribute in self.__dataclass_fields__:
             default_attribute_value: bool | str | None = self.__getattribute__(attribute)
             source_attribute_value = source_config.get(attribute)
 
