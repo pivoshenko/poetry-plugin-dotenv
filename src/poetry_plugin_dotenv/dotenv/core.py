@@ -9,7 +9,6 @@ import contextlib
 
 from collections import OrderedDict
 from typing import IO
-from typing import Self
 from typing import TYPE_CHECKING
 
 from poetry_plugin_dotenv.dotenv import parsers
@@ -26,7 +25,7 @@ class DotEnv:
     """Model of a dotenv file."""
 
     def __init__(
-        self: Self,
+        self,
         filepath: str | None = None,
         stream: IO[str] | None = None,
         *,
@@ -44,7 +43,7 @@ class DotEnv:
 
         self._dict: OrderedDict[str, str] | None = None
 
-    def dict(self: Self) -> OrderedDict[str, str]:
+    def dict(self) -> OrderedDict[str, str]:
         """Return content of a dotenv file."""
 
         if self._dict:
@@ -60,7 +59,7 @@ class DotEnv:
 
         return self._dict  # type: ignore[return-value]
 
-    def parse(self: Self) -> Generator:
+    def parse(self) -> Generator:
         """Parse a dotenv file."""
 
         with self._get_stream() as stream:
@@ -68,7 +67,7 @@ class DotEnv:
                 if mapping.key is not None:
                     yield mapping.key, mapping.value
 
-    def set_as_environment_variables(self: Self) -> bool:
+    def set_as_environment_variables(self) -> bool:
         """Load current dotenv as a system environment variable."""
 
         if self.dict():
@@ -84,7 +83,7 @@ class DotEnv:
         return False  # pragma: nocover
 
     @contextlib.contextmanager
-    def _get_stream(self: Self) -> Iterator[IO[str]]:
+    def _get_stream(self) -> Iterator[IO[str]]:
         """Get a dotenv stream."""
 
         if self.filepath and os.path.isfile(self.filepath):

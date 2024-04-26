@@ -5,7 +5,6 @@ from __future__ import annotations
 import os
 import enum
 
-from typing import Self
 from typing import TYPE_CHECKING
 
 from cleo.events.console_events import COMMAND
@@ -37,30 +36,30 @@ class Logger:  # pragma: no cover
     all the messages will be logged only in the debug mode.
     """
 
-    def __init__(self: Self, event: ConsoleCommandEvent) -> None:
+    def __init__(self, event: ConsoleCommandEvent) -> None:
         """Initialize."""
 
         self.event = event
 
-    def info(self: Self, msg: str) -> None:
+    def info(self, msg: str) -> None:
         """Log a info message."""
 
         if self.event.io.is_debug():
             self.event.io.write_line(Verbosity.info.value.format(msg))
 
-    def debug(self: Self, msg: str) -> None:
+    def debug(self, msg: str) -> None:
         """Log a debug message."""
 
         if self.event.io.is_debug():
             self.event.io.write_line(Verbosity.debug.value.format(msg))
 
-    def warning(self: Self, msg: str) -> None:
+    def warning(self, msg: str) -> None:
         """Log a warning message."""
 
         if self.event.io.is_debug():
             self.event.io.write_line(Verbosity.warning.value.format(msg))
 
-    def error(self: Self, msg: str) -> None:
+    def error(self, msg: str) -> None:
         """Log a error message."""
 
         if self.event.io.is_debug():
@@ -74,12 +73,12 @@ class DotenvPlugin(ApplicationPlugin):
     before ``poetry`` commands are run.
     """
 
-    def activate(self: Self, application: Application) -> None:  # pragma: no cover
+    def activate(self, application: Application) -> None:  # pragma: no cover
         """Activate the plugin."""
 
         application.event_dispatcher.add_listener(COMMAND, listener=self.load)  # type: ignore[union-attr, arg-type]
 
-    def load(self: Self, event: ConsoleCommandEvent, *args, **kwargs) -> None:
+    def load(self, event: ConsoleCommandEvent, *args, **kwargs) -> None:
         """Load a dotenv file."""
 
         logger = Logger(event)
