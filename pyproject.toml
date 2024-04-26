@@ -176,6 +176,7 @@ exclude = ["__init__.py"]
 [tool.ruff.lint]
 select = ["ALL"]
 ignore = [
+  "ANN101",
   "D202",
   "I001",
   "TD003",
