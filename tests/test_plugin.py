@@ -45,9 +45,11 @@ def test_dev_dotenv_file_os_config(
     "tomli.load",
     return_value={
         "tool": {
-            "poetry_plugin": {
-                "dotenv": {
-                    "location": ".env.dev",
+            "poetry": {
+                "plugins": {
+                    "dotenv": {
+                        "location": ".env.dev",
+                    },
                 },
             },
         },
@@ -120,9 +122,11 @@ def test_without_dotenv_file_os_config(
     "tomli.load",
     return_value={
         "tool": {
-            "poetry_plugin": {
-                "dotenv": {
-                    "ignore": True,
+            "poetry": {
+                "plugins": {
+                    "dotenv": {
+                        "ignore": True,
+                    },
                 },
             },
         },
