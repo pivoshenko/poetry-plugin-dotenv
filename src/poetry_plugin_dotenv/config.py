@@ -6,7 +6,6 @@ import os
 import dataclasses
 
 from pathlib import Path
-from typing import Self
 
 import tomli
 
@@ -45,7 +44,7 @@ class _Config:
 class Config(_Config):
     """Configuration loader."""
 
-    def __init__(self: Self) -> None:
+    def __init__(self) -> None:
         """Initialize."""
 
         source_config = {}

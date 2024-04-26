@@ -5,7 +5,6 @@ from __future__ import annotations
 import re
 import dataclasses
 
-from typing import Self
 from typing import TYPE_CHECKING
 
 
@@ -33,7 +32,7 @@ class Literal:
 
     value: str
 
-    def resolve(self: Self, *args, **kwargs) -> str:
+    def resolve(self, *args, **kwargs) -> str:
         """Get a literal value."""
 
         return self.value
@@ -46,7 +45,7 @@ class Variable:
     name: str
     default: str | None = None
 
-    def resolve(self: Self, env: OrderedDict[str, str], *args, **kwargs) -> str:
+    def resolve(self, env: OrderedDict[str, str], *args, **kwargs) -> str:
         """Get a variable value."""
 
         default = self.default if self.default else ""
