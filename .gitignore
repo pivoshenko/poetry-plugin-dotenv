@@ -154,3 +154,4 @@ temp
 !docs/examples/.env
 !docs/examples/.env.dev
 !docs/examples/.env.prod
+docs/examples/pyproject.toml
