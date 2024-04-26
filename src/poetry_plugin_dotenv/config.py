@@ -12,7 +12,7 @@ import tomli
 
 
 CONFIG_SOURCES: dict[str, str] = {
-    "pyproject.toml": "tool.poetry_plugin.dotenv",
+    "pyproject.toml": "tool.poetry.plugins.dotenv",
     "os": "POETRY_PLUGIN_DOTENV_",
 }
 
