@@ -2,6 +2,23 @@
 
 
 
+## v1.0.1 (2024-04-26)
+
+### Chore
+
+* chore(commitizen): update config ([`fae7c7d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/fae7c7db27c03690c23a507f16fd129d0d6dbde6))
+
+### Documentation
+
+* docs: update demo example ([`3dd39b2`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3dd39b2607c8f5be1589ada4f7ce6759a08477d4))
+
+### Unknown
+
+* Merge pull request #232 from pivoshenko/dependabot/pip/commitizen-3.24.0
+
+build(deps-dev): bump commitizen from 3.22.0 to 3.24.0 ([`ec7628d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ec7628d8aeebe0b3c2611524282b8542969dc716))
+
+
 ## v1.0.0 (2024-04-26)
 
 ### Breaking
@@ -20,6 +37,22 @@ BREAKING CHANGE: ([`5b65847`](https://github.com/pivoshenko/poetry-plugin-dotenv
 
 - remove `check-large-files`
 - update revisions ([`6b6f5d2`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6b6f5d295c6a868a527f7fb9109d313c28bcd887))
+
+* build(deps-dev): bump commitizen from 3.22.0 to 3.24.0
+
+Bumps [commitizen](https://github.com/commitizen-tools/commitizen) from 3.22.0 to 3.24.0.
+- [Release notes](https://github.com/commitizen-tools/commitizen/releases)
+- [Changelog](https://github.com/commitizen-tools/commitizen/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/commitizen-tools/commitizen/compare/v3.22.0...v3.24.0)
+
+---
+updated-dependencies:
+- dependency-name: commitizen
+  dependency-type: direct:development
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`1f3fd84`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1f3fd84fe2c2398a548046813b20d646ac43769e))
 
 * build(poetry): update dependencies ([`63739e3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/63739e322a793679d5012956b3ba367ae284f84a))
 
