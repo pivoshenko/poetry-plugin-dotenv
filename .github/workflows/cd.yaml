@@ -37,11 +37,11 @@ jobs:
         id: install-dependencies
         run: |
           python -m pip install -U pip setuptools poetry twine
-          python -m poetry install --only main --only ci
+          python -m poetry install --only main
 
       - name: Semantic release
         id: semantic-release
-        uses: python-semantic-release/python-semantic-release@v9.5.0
+        uses: python-semantic-release/python-semantic-release@master
         with:
           github_token: ${{ secrets.GH_TOKEN }}
 
