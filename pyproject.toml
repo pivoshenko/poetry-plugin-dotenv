@@ -104,16 +104,10 @@ python-semantic-release = ">=8.7,<10.0"
 poetry-plugin-dotenv = "poetry_plugin_dotenv.plugin:DotenvPlugin"
 
 [tool.semantic_release]
-branch = "main"
 changelog_file = "CHANGELOG.md"
-dist_path = "dist"
-upload_to_repository = true
-upload_to_release = true
-remove_dist = false
 version_toml = ["pyproject.toml:tool.poetry.version"]
 version_variables = ["src/poetry_plugin_dotenv/__init__.py:__version__"]
 commit_author = "github-actions <github-actions@github.com>"
-commit_parser = "angular"
 
 [tool.semantic_release.publish]
 dist_glob_patterns = ["dist/*"]
