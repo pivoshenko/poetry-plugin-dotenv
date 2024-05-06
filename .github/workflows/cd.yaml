@@ -44,6 +44,7 @@ jobs:
         uses: python-semantic-release/python-semantic-release@master
         with:
           github_token: ${{ secrets.GH_TOKEN }}
+          force: "major"
 
       - name: Build package
         id: build-package
