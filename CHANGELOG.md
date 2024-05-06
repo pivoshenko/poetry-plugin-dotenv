@@ -2,6 +2,21 @@
 
 
 
+## v2.1.0 (2024-05-06)
+
+### Chore
+
+* chore(commitizen): update config ([`d02567f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d02567f9d619f4a3a879b89394ecde09add57247))
+
+### Ci
+
+* ci(workflows.cd): remove `force` flag ([`9c72e2a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9c72e2a27e6e76a57f11c78ea90c41ae7a22e206))
+
+### Fix
+
+* fix(pypi): update classifiers ([`03dcfe9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/03dcfe961720be9288f475b4233088629a80d560))
+
+
 ## v2.0.0 (2024-05-06)
 
 ### Build
