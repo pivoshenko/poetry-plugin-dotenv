@@ -37,7 +37,7 @@ jobs:
         id: install-dependencies
         run: |
           python -m pip install -U pip setuptools poetry twine
-          python -m poetry install
+          python -m poetry install --only main --only ci
 
       - name: Semantic release
         id: semantic-release
