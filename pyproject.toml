@@ -131,7 +131,7 @@ name = "cz_conventional_commits"
 tag_format = "$version"
 version_scheme = "semver"
 version_provider = "poetry"
-allowed_prefixes = ["build", "tests", "Merge", "Initial", "0", "1"]
+allowed_prefixes = ["build", "tests", "Merge", "Initial", "0", "1", "2"]
 
 [tool.isort]
 profile = "black"
