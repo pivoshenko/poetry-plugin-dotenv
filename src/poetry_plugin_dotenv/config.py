@@ -7,7 +7,7 @@ import dataclasses
 
 from pathlib import Path
 
-import tomli
+import tomlkit
 
 
 CONFIG_SOURCES: dict[str, str] = {
@@ -39,8 +39,7 @@ class _Config:
     location: str | None = None
 
 
-# TODO(pivoshenko): this configuration loader is a "quick patch" solution.
-# It should be considered to rewrite it
+# TODO(pivoshenko): this configuration loader is a "quick patch" solution
 class Config(_Config):
     """Configuration loader."""
 
@@ -87,7 +86,7 @@ def _load_config_from_toml(
 
     if filepath.exists():
         with filepath.open("rb") as toml_file:
-            toml = tomli.load(toml_file)
+            toml = tomlkit.load(toml_file)
 
         config = toml
         for key in section.split("."):
@@ -113,7 +112,7 @@ def _load_config_from_os(
 def _as_bool(value: str) -> bool:
     """Given a string value that represents True or False, returns the Boolean equivalent.
 
-    Heavily inspired from distutils strtobool.
+    Heavily inspired from ``distutils strtobool``.
     """
 
     try:

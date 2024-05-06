@@ -42,7 +42,7 @@ def test_dev_dotenv_file_os_config(
 
 
 @mock.patch(
-    "tomli.load",
+    "tomlkit.load",
     return_value={
         "tool": {
             "poetry": {
@@ -119,7 +119,7 @@ def test_without_dotenv_file_os_config(
 
 @mock.patch.dict(os.environ, {}, clear=True)
 @mock.patch(
-    "tomli.load",
+    "tomlkit.load",
     return_value={
         "tool": {
             "poetry": {
