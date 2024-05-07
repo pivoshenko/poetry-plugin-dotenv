@@ -2,6 +2,31 @@
 
 
 
+## v2.1.1 (2024-05-07)
+
+### Documentation
+
+* docs(README): update demo ([`b710015`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b71001596b1407307c1b870d3fe523a274a0ae9d))
+
+### Unknown
+
+* Merge pull request #240 from pivoshenko/dependabot/pip/poethepoet-0.26.1
+
+build(deps-dev): bump poethepoet from 0.26.0 to 0.26.1 ([`b638bfe`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b638bfecda5642bab37deb271c4a9f4ec6621ab5))
+
+* Merge pull request #242 from pivoshenko/dependabot/pip/commitizen-3.25.0
+
+build(deps-dev): bump commitizen from 3.24.0 to 3.25.0 ([`0c831df`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/0c831dfaaf7dfda78c6fcf6b66111a0a71ffb42b))
+
+* Merge pull request #239 from pivoshenko/dependabot/pip/coverage-7.5.1
+
+build(deps-dev): bump coverage from 7.5.0 to 7.5.1 ([`6dcc13f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6dcc13febf2df8af90645955599ba69bd4688228))
+
+* Merge pull request #243 from pivoshenko/dependabot/pip/ruff-0.4.3
+
+build(deps-dev): bump ruff from 0.4.2 to 0.4.3 ([`f158c03`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/f158c03bf48d5d3f5ef44d2722061a1bae9267bc))
+
+
 ## v2.1.0 (2024-05-06)
 
 ### Chore
@@ -24,6 +49,69 @@
 * build(poetry): update dependencies ([`97f3d92`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/97f3d92c43a527030b60c7255d2cc3b8a538a093))
 
 * build(pre-commit): update dependencies ([`f89a7ee`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/f89a7ee5e963531d3ffda29bf25c16806339f3a2))
+
+* build(deps-dev): bump ruff from 0.4.2 to 0.4.3
+
+Bumps [ruff](https://github.com/astral-sh/ruff) from 0.4.2 to 0.4.3.
+- [Release notes](https://github.com/astral-sh/ruff/releases)
+- [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/astral-sh/ruff/compare/v0.4.2...v0.4.3)
+
+---
+updated-dependencies:
+- dependency-name: ruff
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`bd68c3e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/bd68c3e2dde3e493406a53bb365e4b56f8a4a81b))
+
+* build(deps-dev): bump commitizen from 3.24.0 to 3.25.0
+
+Bumps [commitizen](https://github.com/commitizen-tools/commitizen) from 3.24.0 to 3.25.0.
+- [Release notes](https://github.com/commitizen-tools/commitizen/releases)
+- [Changelog](https://github.com/commitizen-tools/commitizen/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/commitizen-tools/commitizen/compare/v3.24.0...v3.25.0)
+
+---
+updated-dependencies:
+- dependency-name: commitizen
+  dependency-type: direct:development
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`aebb123`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/aebb123c401c3e38558edf4b829b32f4b4cd3ab4))
+
+* build(deps-dev): bump poethepoet from 0.26.0 to 0.26.1
+
+Bumps [poethepoet](https://github.com/nat-n/poethepoet) from 0.26.0 to 0.26.1.
+- [Release notes](https://github.com/nat-n/poethepoet/releases)
+- [Commits](https://github.com/nat-n/poethepoet/compare/v0.26.0...v0.26.1)
+
+---
+updated-dependencies:
+- dependency-name: poethepoet
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`2b63f63`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/2b63f63950390be81a34cedaaddf0fc2b4ed85d9))
+
+* build(deps-dev): bump coverage from 7.5.0 to 7.5.1
+
+Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.5.0 to 7.5.1.
+- [Release notes](https://github.com/nedbat/coveragepy/releases)
+- [Changelog](https://github.com/nedbat/coveragepy/blob/master/CHANGES.rst)
+- [Commits](https://github.com/nedbat/coveragepy/compare/7.5.0...7.5.1)
+
+---
+updated-dependencies:
+- dependency-name: coverage
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`c74ebe3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c74ebe38be5288d24edfbd2457d01024a5f79279))
 
 * build(deps-dev): bump black from 24.4.1 to 24.4.2
 
