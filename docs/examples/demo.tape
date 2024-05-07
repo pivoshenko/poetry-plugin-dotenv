@@ -6,7 +6,6 @@ Set Height 1080
 Set BorderRadius 10
 Set TypingSpeed 0.5
 Set Theme "Catppuccin Mocha"
-Set WindowBar Colorful
 Set Shell "zsh"
 
 # ================================================================
