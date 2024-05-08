@@ -2,6 +2,19 @@
 
 
 
+## v2.1.2 (2024-05-08)
+
+### Documentation
+
+* docs(README): update logo ([`4315e21`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4315e21fabc217152c8c996a32e1495f3348c734))
+
+* docs(README): update logo ([`6170cfb`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6170cfbdc6b01c0cc8a5eeee8f509b48ea76bdfb))
+
+### Unknown
+
+* Merge pull request #245 from pivoshenko/update-logo ([`5f9a43e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5f9a43e11b70fd7805ffa3abd0016fac744327b2))
+
+
 ## v2.1.1 (2024-05-07)
 
 ### Documentation
