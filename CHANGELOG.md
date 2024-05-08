@@ -2,6 +2,15 @@
 
 
 
+## v2.1.4 (2024-05-08)
+
+### Documentation
+
+* docs(README): update badges order ([`8e3131a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8e3131a9abe920b8e74aa9b1a3799f934642c066))
+
+* docs(README): update logo size ([`5199424`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/51994246a5ca066a14b722110e109c0023ee6b17))
+
+
 ## v2.1.3 (2024-05-08)
 
 ### Documentation
