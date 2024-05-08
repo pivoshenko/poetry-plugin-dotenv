@@ -2,6 +2,15 @@
 
 
 
+## v2.1.3 (2024-05-08)
+
+### Documentation
+
+* docs(README): remove badges ([`acc067f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/acc067ff232c0358daf008405164c1f9476bb164))
+
+* docs(assets): update logo colors ([`55943bb`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/55943bb380cd42b066aeba4bc2b60d3c43b3840a))
+
+
 ## v2.1.2 (2024-05-08)
 
 ### Documentation
