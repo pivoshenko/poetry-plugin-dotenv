@@ -1,6 +1,8 @@
 <div align="center">
-    <img alt="logo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/assets/logo.svg?raw=True" height=300>
+    <img alt="logo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/assets/logo.svg?raw=True" height=200>
 </div>
+
+<br>
 
 <p align="center">
     <a href="https://python-poetry.org">
