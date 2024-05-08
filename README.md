@@ -3,6 +3,9 @@
 </div>
 
 <p align="center">
+    <a href="https://python-poetry.org">
+        <img alt="poetry" src="https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json">
+    </a>
     <a href="https://opensource.org/licenses/MIT">
         <img alt="license" src="https://img.shields.io/pypi/l/poetry-plugin-dotenv?logo=opensourceinitiative">
     </a>
@@ -33,12 +36,6 @@
     <a href="https://github.com/semantic-release/semantic-release">
         <img alt="semantic_release" src="https://img.shields.io/badge/semantic_release-angular-e10079?logo=semantic-release">
     </a>
-    <a href="https://python-poetry.org">
-        <img alt="poetry" src="https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json">
-    </a>
-    <a href="https://numpydoc.readthedocs.io/en/latest/format.html">
-        <img alt="numpydoc" src="https://img.shields.io/badge/docstrings-numpy-1f425f.svg?logo=numpy">
-    </a>
 </p>
 
 <p align="center">
@@ -50,9 +47,6 @@
     </a>
     <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/cd.yaml">
         <img alt="CD" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/cd.yaml?label=CD&logo=github">
-    </a>
-    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/dependency-review.yaml">
-        <img alt="Dependency Review" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/dependency-review.yaml?label=Dependency%20Review&logo=github">
     </a>
     <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/.pre-commit-config.yaml">
         <img alt="hooks" src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit">
@@ -75,15 +69,9 @@
     <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/">
         <img alt="stars" src="https://img.shields.io/github/stars/pivoshenko/poetry-plugin-dotenv?style=flat&logo=github">
     </a>
-    <a href="https://wakatime.com/badge/user/9862508c-0a86-427a-929c-46186f2d191a/project/36344bbb-7f11-4dcd-a36d-e54c81551119">
-        <img alt="wakatime" src="https://wakatime.com/badge/user/9862508c-0a86-427a-929c-46186f2d191a/project/36344bbb-7f11-4dcd-a36d-e54c81551119.svg">
-    </a>
 </p>
 
 <p align="center">
-    <a href="https://www.buymeacoffee.com/pivoshenko" target="_blank">
-        <img alt="buymeacoffee" src="https://img.shields.io/badge/buy_me_-a_coffee-ff6964?logo=buymeacoffee">
-    </a>
     <a href="https://stand-with-ukraine.pp.ua/">
         <img alt="standwithukraine" src="https://img.shields.io/badge/Support-Ukraine-FFD500?style=flat&labelColor=005BBB">
     </a>
