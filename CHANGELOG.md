@@ -2,6 +2,13 @@
 
 
 
+## v2.1.5 (2024-05-09)
+
+### Documentation
+
+* docs(assets): make logo transparent ([`2882bb0`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/2882bb04f64a906f6590f6a606d3c5b87284d368))
+
+
 ## v2.1.4 (2024-05-08)
 
 ### Documentation
