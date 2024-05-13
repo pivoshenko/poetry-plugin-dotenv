@@ -2,6 +2,17 @@
 
 
 
+## v2.1.6 (2024-05-13)
+
+### Documentation
+
+* docs(README): update list of features ([`f482c3a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/f482c3aad72ad422540794228e3a13cb951cd73c))
+
+### Unknown
+
+* Merge pull request #250 from pivoshenko/chores ([`630ac6e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/630ac6ebb2327de762be1091af3279ec3fce9a79))
+
+
 ## v2.1.5 (2024-05-09)
 
 ### Documentation
