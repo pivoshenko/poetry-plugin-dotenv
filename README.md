@@ -100,6 +100,7 @@
 - Doesn't require any dependencies
 - Supports templates, interpolating variables using POSIX variable expansions
 - Fully type safe
+- Supports multiple configuration sources
 - 100% test coverage and "A" grade for maintainability
 
 ## Installation
