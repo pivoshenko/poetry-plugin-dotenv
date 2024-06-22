@@ -11,7 +11,7 @@ import pytest
 
 if TYPE_CHECKING:
     from collections.abc import Callable
-    from collections.abc import Generator
+    from collections.abc import Iterator
     from pathlib import Path
 
 
@@ -46,7 +46,7 @@ def remove_dotenv_file() -> Callable[[str], None]:
 
 
 @pytest.fixture()
-def dotenv_file(tmp_path: Path) -> Generator:
+def dotenv_file(tmp_path: Path) -> Iterator[str]:
     """Get a dotenv file."""
 
     filepath = tmp_path / ".env"

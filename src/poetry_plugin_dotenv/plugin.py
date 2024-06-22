@@ -32,7 +32,7 @@ class DotenvPlugin(ApplicationPlugin):
 
         application.event_dispatcher.add_listener(COMMAND, listener=self.load)  # type: ignore[union-attr, arg-type]
 
-    def load(self, event: ConsoleCommandEvent, *args, **kwargs) -> None:
+    def load(self, event: ConsoleCommandEvent, *args, **kwargs) -> None:  # type: ignore[no-untyped-def]
         """Load a dotenv file."""
 
         logger = Logger(event)
