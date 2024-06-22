@@ -1,7 +1,5 @@
 # CHANGELOG
 
-
-
 ## v2.1.6 (2024-05-13)
 
 ### Documentation
