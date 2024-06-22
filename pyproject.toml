@@ -19,7 +19,7 @@ keywords = [
   "configuration",
   "configuration-management",
   "cross-platform",
-  "hacktoberfest",
+  "hacktoberfest"
 ]
 homepage = "https://github.com/pivoshenko/poetry-plugin-dotenv"
 documentation = "https://github.com/pivoshenko/poetry-plugin-dotenv"
@@ -43,7 +43,7 @@ classifiers = [
   "Topic :: Software Development :: Libraries",
   "Topic :: Software Development :: Libraries :: Python Modules",
   "Topic :: Scientific/Engineering",
-  "Natural Language :: English",
+  "Natural Language :: English"
 ]
 packages = [{ include = "poetry_plugin_dotenv", from = "src" }]
 
@@ -64,7 +64,7 @@ ipython = "8.12.3"
 
 [tool.poetry.group.formatters.dependencies]
 isort = ">=5.13.2"
-black = ">=24.1.1"
+ruff = ">=0.2.1"
 pyupgrade = ">=3.15.0"
 
 [tool.poetry.group.linters.dependencies]
@@ -73,7 +73,6 @@ ruff = ">=0.2.1"
 deptry = ">=0.12.0"
 memestra = ">=0.2.1"
 codespell = ">=2.2.6"
-import-linter = ">=2.0"
 commitizen = ">=3.16.0"
 
 [tool.poetry.group.lsp.dependencies]
@@ -82,7 +81,6 @@ ruff-lsp = ">=0.0.53"
 pyls-memestra = ">=0.0.16"
 pylsp-mypy = ">=0.6.8"
 pylsp-rope = ">=0.1.11"
-python-lsp-black = ">=2.0.0"
 python-lsp-isort = ">=0.1"
 
 [tool.poetry.group.tests.dependencies]
@@ -99,7 +97,7 @@ coverage = { version = ">=7.4.1", extras = ["toml"] }
 sh = ">=2.0.6"
 
 [tool.poetry.group.ci.dependencies]
-python-semantic-release = ">=8.7,<10.0"
+python-semantic-release = ">=8.7"
 
 [tool.poetry.plugins."poetry.application.plugin"]
 poetry-plugin-dotenv = "poetry_plugin_dotenv.plugin:DotenvPlugin"
@@ -109,29 +107,14 @@ changelog_file = "CHANGELOG.md"
 version_toml = ["pyproject.toml:tool.poetry.version"]
 version_variables = ["src/poetry_plugin_dotenv/__init__.py:__version__"]
 commit_author = "github-actions <github-actions@github.com>"
+exclude_commit_patterns = ["Merge pull request"]
 
 [tool.semantic_release.commit_parser_options]
 major_tags = ["feat"]
 minor_tags = ["fix", "perf", "refactor"]
 patch_tags = ["docs", "style"]
-allowed_tags = [
-  "build",
-  "chore",
-  "ci",
-  "docs",
-  "feat",
-  "fix",
-  "perf",
-  "style",
-  "refactor",
-  "test",
-]
 
 [tool.commitizen]
-name = "cz_conventional_commits"
-tag_format = "$version"
-version_scheme = "semver"
-version_provider = "poetry"
 allowed_prefixes = ["build", "tests", "Merge", "Initial", "0", "1", "2"]
 
 [tool.isort]
@@ -139,43 +122,31 @@ profile = "black"
 line_length = 100
 lines_after_imports = 2
 lines_between_types = 1
-atomic = false
 color_output = true
 force_single_line = true
 length_sort_straight = true
 force_alphabetical_sort_within_sections = true
 
-[tool.black]
-line-length = 100
-target-version = ["py311"]
-include = '\.pyi?$'
-
 [tool.mypy]
-python_version = "3.11"
+python_version = "3.12"
+strict = true
 warn_unused_configs = true
 ignore_missing_imports = true
 show_error_codes = true
 namespace_packages = true
 explicit_package_bases = false
-files = ["src", "tests"]
 
 [tool.ruff]
-target-version = "py311"
+target-version = "py312"
 line-length = 100
-exclude = ["__init__.py"]
 
 [tool.ruff.lint]
 select = ["ALL"]
-ignore = [
-  "ANN101",
-  "D202",
-  "I001",
-  "TD003",
-  "FIX002",
-]
+ignore = ["ANN101", "D202", "FIX002", "I001", "TD003"]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/*.*" = ["INP001", "S101", "PTH"]
+"tests/*.*" = ["INP001", "PTH", "S101"]
+"src/poetry_plugin_dotenv/__init__.py" = ["E501"]
 "src/poetry_plugin_dotenv/plugin.py" = ["ANN002", "ANN003", "ARG002"]
 "src/poetry_plugin_dotenv/dotenv/core.py" = ["PTH"]
 "src/poetry_plugin_dotenv/dotenv/variables.py" = ["ANN002", "ANN003", "ARG002"]
@@ -186,21 +157,19 @@ lines-between-types = 1
 order-by-type = false
 force-single-line = true
 force-sort-within-sections = true
+length-sort-straight = true
 required-imports = ["from __future__ import annotations"]
 
 [tool.codespell]
-skip = "tests,pyproject.toml,poetry.lock,.git,.ruff_cache,.mypy_cache,.pytest_cache,.idea,.vscode"
-ignore-words-list = "redunant,resovle"
+skip = ["poetry.lock"]
+ignore-words-list = ["redunant", "resovle", "socio-economic"]
 
-[tool.deptry]
-ignore = ["DEP003"]
-
-[tool.importlinter]
-root_package = "poetry_plugin_dotenv"
+[tool.deptry.per_rule_ignores]
+DEP002 = ["poetry"]
+DEP003 = ["cleo", "poetry_plugin_dotenv", "tomlkit"]
 
 [tool.pytest.ini_options]
-minversion = "6.0"
-testpaths = ["src", "tests"]
+testpaths = ["tests"]
 addopts = [
   "-l",
   "-vv",
@@ -210,7 +179,7 @@ addopts = [
   "--cov=src",
   "--cov-report=term-missing",
   "--cov-report=xml",
-  "--basetemp=tests/fixtures",
+  "--basetemp=tests/fixtures"
 ]
 
 [tool.coverage.run]
@@ -221,25 +190,23 @@ poetry_command = ""
 
 [tool.poe.tasks.format]
 help = "Run formatters"
+args = { dir = { options = ["--directory", "-d"], default = ".", help = "Target directory" } }
 sequence = [
-  { shell = "find src -type f -name '*.py' | xargs pyupgrade --py311-plus", help = "Run annotations formatter" },
-  { shell = "find tests -type f -name '*.py' | xargs pyupgrade --py311-plus", help = "Run annotations formatter" },
-  { shell = "isort .", help = "Run imports formatter" },
-  { shell = "ruff format .", help = "Run code formatter" },
-  { shell = "black .", help = "Run code formatter" },
+  { shell = "find ${dir} -type f -name '*.py' | xargs pyupgrade --py311-plus", help = "Run annotations formatter" },
+  { shell = "isort ${dir}", help = "Run imports formatter" },
+  { shell = "ruff format ${dir}", help = "Run code formatter" }
 ]
 
 [tool.poe.tasks.lint]
 help = "Run linters"
+args = { dir = { options = ["--directory", "-d"], default = ".", help = "Target directory" } }
 sequence = [
-  { shell = "deptry .", help = "Run dependencies linter" },
-  { shell = "mypy .", help = "Run types linter" },
-  { shell = "ruff check .", help = "Run code linter" },
-  { shell = "lint-imports", help = "Run imports linter" },
-  { shell = "find src -type f -name '*.py' | xargs -L1 memestra", help = "Run deprecated code linter" },
-  { shell = "find tests -type f -name '*.py' | xargs -L1 memestra", help = "Run deprecated code linter" },
-  { shell = "codespell .", help = "Run spell linter" },
-  { shell = "cz check --rev-range .", help = "Run commits linter" },
+  { shell = "deptry ${dir}", help = "Run dependencies linter" },
+  { shell = "mypy ${dir}", help = "Run types linter" },
+  { shell = "ruff check ${dir}", help = "Run code linter" },
+  { shell = "find ${dir} -type f -name '*.py' | xargs -L1 memestra", help = "Run deprecated code linter" },
+  { shell = "codespell ${dir}", help = "Run spell linter" },
+  { shell = "cz check --rev-range .", help = "Run commits linter" }
 ]
 
 [tool.poe.tasks.tests]
