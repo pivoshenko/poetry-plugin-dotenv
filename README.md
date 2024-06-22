@@ -1,85 +1,82 @@
 <div align="center">
-    <img alt="logo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/assets/logo.svg?raw=True" height=200>
+  <img alt="logo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/assets/logo.svg?raw=True" height=200>
 </div>
 
 <br>
 
 <p align="center">
-    <a href="https://opensource.org/licenses/MIT">
-        <img alt="license" src="https://img.shields.io/pypi/l/poetry-plugin-dotenv?logo=opensourceinitiative">
-    </a>
-    <a href="https://python-poetry.org">
-        <img alt="poetry" src="https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json">
-    </a>
-    <a href="https://pypi.org/project/poetry-plugin-dotenv">
-        <img alt="python" src="https://img.shields.io/pypi/pyversions/poetry-plugin-dotenv?logo=python">
-    </a>
-    <a href="https://pypi.org/project/poetry-plugin-dotenv">
-        <img alt="pypi" src="https://img.shields.io/pypi/v/poetry-plugin-dotenv?logo=pypi">
-    </a>
-    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/releases">
-        <img alt="release" src="https://img.shields.io/github/v/release/pivoshenko/poetry-plugin-dotenv?logo=github">
-    </a>
+  <a href="https://opensource.org/licenses/MIT">
+    <img alt="license" src="https://img.shields.io/pypi/l/poetry-plugin-dotenv?logo=opensourceinitiative">
+  </a>
+  <a href="https://python-poetry.org">
+    <img alt="poetry" src="https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json">
+  </a>
+  <a href="https://pypi.org/project/poetry-plugin-dotenv">
+    <img alt="python" src="https://img.shields.io/pypi/pyversions/poetry-plugin-dotenv?logo=python">
+  </a>
+  <a href="https://pypi.org/project/poetry-plugin-dotenv">
+    <img alt="pypi" src="https://img.shields.io/pypi/v/poetry-plugin-dotenv?logo=pypi">
+  </a>
+  <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/releases">
+    <img alt="release" src="https://img.shields.io/github/v/release/pivoshenko/poetry-plugin-dotenv?logo=github">
+  </a>
 </p>
 
 <p align="center">
-    <a href="https://github.com/psf/black">
-        <img alt="black" src="https://img.shields.io/badge/code_style-black-black.svg?logo=windowsterminal">
-    </a>
-    <a href="https://github.com/PyCQA/isort">
-        <img alt="isort" src="https://img.shields.io/badge/imports-isort-black.svg?logo=windowsterminal">
-    </a>
-    <a href="https://beta.ruff.rs/docs/">
-        <img alt="ruff" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json">
-    </a>
-    <a href="https://mypy.readthedocs.io/en/stable/index.html">
-        <img alt="mypy" src="https://img.shields.io/badge/mypy-checked-success.svg?logo=python">
-    </a>
-    <a href="https://github.com/semantic-release/semantic-release">
-        <img alt="semantic_release" src="https://img.shields.io/badge/semantic_release-angular-e10079?logo=semantic-release">
-    </a>
+  <a href="https://github.com/PyCQA/isort">
+    <img alt="isort" src="https://img.shields.io/badge/imports-isort-black.svg?logo=windowsterminal">
+  </a>
+  <a href="https://beta.ruff.rs/docs/">
+    <img alt="ruff" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json">
+  </a>
+  <a href="https://mypy.readthedocs.io/en/stable/index.html">
+    <img alt="mypy" src="https://img.shields.io/badge/mypy-checked-success.svg?logo=python">
+  </a>
+  <a href="https://github.com/semantic-release/semantic-release">
+    <img alt="semantic_release" src="https://img.shields.io/badge/semantic_release-angular-e10079?logo=semantic-release">
+  </a>
 </p>
 
 <p align="center">
-    <a href="https://github.com/dependabot">
-        <img alt="dependabot" src="https://img.shields.io/badge/dependabot-enable-success?logo=Dependabot">
-    </a>
-    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/ci.yaml">
-        <img alt="CI" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/ci.yaml?label=CI&logo=github">
-    </a>
-    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/cd.yaml">
-        <img alt="CD" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/cd.yaml?label=CD&logo=github">
-    </a>
-    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/.pre-commit-config.yaml">
-        <img alt="hooks" src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit">
-    </a>
-    <a href="https://pypi.org/project/poetry-plugin-dotenv">
-        <img alt="wheel" src="https://img.shields.io/pypi/wheel/poetry-plugin-dotenv?logo=pypi">
-    </a>
+  <a href="https://github.com/dependabot">
+    <img alt="dependabot" src="https://img.shields.io/badge/dependabot-enable-success?logo=Dependabot">
+  </a>
+  <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/ci.yaml">
+    <img alt="CI" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/ci.yaml?label=CI&logo=github">
+  </a>
+  <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/cd.yaml">
+    <img alt="CD" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/cd.yaml?label=CD&logo=github">
+  </a>
+  <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/.pre-commit-config.yaml">
+    <img alt="hooks" src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit">
+  </a>
+  <a href="https://pypi.org/project/poetry-plugin-dotenv">
+    <img alt="wheel" src="https://img.shields.io/pypi/wheel/poetry-plugin-dotenv?logo=pypi">
+  </a>
 </p>
 
 <p align="center">
-    <a href="https://codecov.io/gh/pivoshenko/poetry-plugin-dotenv" >
-        <img alt="codecov" src="https://codecov.io/gh/pivoshenko/poetry-plugin-dotenv/graph/badge.svg?token=cqRQxVnDR6"/>
-    </a>
-    <a href="https://codeclimate.com/github/pivoshenko/poetry-plugin-dotenv/maintainability">
-        <img alt="codeclimate" src="https://img.shields.io/codeclimate/maintainability/pivoshenko/poetry-plugin-dotenv?logo=codeclimate">
-    </a>
-    <a href="https://pypi.org/project/poetry-plugin-dotenv">
-        <img alt="downloads" src="https://img.shields.io/pypi/dm/poetry-plugin-dotenv?logo=pypi">
-    </a>
-    <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/">
-        <img alt="stars" src="https://img.shields.io/github/stars/pivoshenko/poetry-plugin-dotenv?style=flat&logo=github">
-    </a>
+  <a href="https://codecov.io/gh/pivoshenko/poetry-plugin-dotenv" >
+    <img alt="codecov" src="https://codecov.io/gh/pivoshenko/poetry-plugin-dotenv/graph/badge.svg?token=cqRQxVnDR6"/>
+  </a>
+  <a href="https://codeclimate.com/github/pivoshenko/poetry-plugin-dotenv/maintainability">
+    <img alt="codeclimate" src="https://img.shields.io/codeclimate/maintainability/pivoshenko/poetry-plugin-dotenv?logo=codeclimate">
+  </a>
+  <a href="https://pypi.org/project/poetry-plugin-dotenv">
+    <img alt="downloads" src="https://img.shields.io/pypi/dm/poetry-plugin-dotenv?logo=pypi">
+  </a>
+  <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/">
+    <img alt="stars" src="https://img.shields.io/github/stars/pivoshenko/poetry-plugin-dotenv?style=flat&logo=github">
+  </a>
 </p>
 
 <p align="center">
-    <a href="https://stand-with-ukraine.pp.ua/">
-        <img alt="standwithukraine" src="https://img.shields.io/badge/Support-Ukraine-FFD500?style=flat&labelColor=005BBB">
-    </a>
-    <a href="https://stand-with-ukraine.pp.ua">
-        <img alt="standwithukraine" src="https://img.shields.io/badge/made_in-Ukraine-ffd700.svg?labelColor=0057b7">
-    </a>
+  <a href="https://stand-with-ukraine.pp.ua/">
+    <img alt="standwithukraine" src="https://img.shields.io/badge/Support-Ukraine-FFD500?style=flat&labelColor=005BBB">
+  </a>
+  <a href="https://stand-with-ukraine.pp.ua">
+    <img alt="standwithukraine" src="https://img.shields.io/badge/made_in-Ukraine-ffd700.svg?labelColor=0057b7">
+  </a>
 </p>
 
 - [Overview](#overview)
@@ -101,6 +98,7 @@
 - Supports templates, interpolating variables using POSIX variable expansions
 - Fully type safe
 - Supports multiple configuration sources
+- Supports configuration auto-completion and validation in IDEs such as Visual Studio Code or PyCharm (part of [JSON Schema Store](https://www.schemastore.org/json/))
 - 100% test coverage and "A" grade for maintainability
 
 ## Installation
