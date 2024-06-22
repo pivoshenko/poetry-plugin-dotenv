@@ -131,10 +131,8 @@ force_alphabetical_sort_within_sections = true
 python_version = "3.12"
 strict = true
 warn_unused_configs = true
-ignore_missing_imports = true
 show_error_codes = true
 namespace_packages = true
-explicit_package_bases = false
 
 [tool.ruff]
 target-version = "py312"
@@ -192,7 +190,7 @@ poetry_command = ""
 help = "Run formatters"
 args = { dir = { options = ["--directory", "-d"], default = ".", help = "Target directory" } }
 sequence = [
-  { shell = "find ${dir} -type f -name '*.py' | xargs pyupgrade --py311-plus", help = "Run annotations formatter" },
+  { shell = "find ${dir} -type f -name '*.py' | xargs pyupgrade --py312-plus", help = "Run annotations formatter" },
   { shell = "isort ${dir}", help = "Run imports formatter" },
   { shell = "ruff format ${dir}", help = "Run code formatter" }
 ]
