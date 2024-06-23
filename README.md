@@ -84,7 +84,7 @@
 - [Installation](#installation)
 - [Usage and Configuration](#usage-and-configuration)
     - [`ignore`](#ignore)
-  - [`location`](#location)
+    - [`location`](#location)
   - [Configuration via file](#configuration-via-file)
   - [Configuration via environment variables](#configuration-via-environment-variables)
   - [Lookup hierarchy](#lookup-hierarchy)
@@ -126,7 +126,7 @@ By default, the plugin will load the `.env` file from the current working direct
 
 Prevents `poetry` from loading the dotenv file.
 
-### `location`
+#### `location`
 
 **Type**: `str`
 
