@@ -83,8 +83,8 @@
   - [Features](#features)
 - [Installation](#installation)
 - [Usage and Configuration](#usage-and-configuration)
-    - [`ignore`](#ignore)
-    - [`location`](#location)
+  - [`ignore`](#ignore)
+  - [`location`](#location)
   - [Configuration via file](#configuration-via-file)
   - [Configuration via environment variables](#configuration-via-environment-variables)
   - [Lookup hierarchy](#lookup-hierarchy)
@@ -114,7 +114,7 @@ poetry self add poetry-plugin-dotenv
 
 By default, the plugin will load the `.env` file from the current working directory or "higher directories".
 
-#### `ignore`
+### `ignore`
 
 **Type**: `str`
 
@@ -126,7 +126,7 @@ By default, the plugin will load the `.env` file from the current working direct
 
 Prevents `poetry` from loading the dotenv file.
 
-#### `location`
+### `location`
 
 **Type**: `str`
 
