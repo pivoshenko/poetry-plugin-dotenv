@@ -30,6 +30,7 @@ def test_dev_dotenv_file_os_config(
 
     event = mocker.MagicMock()
     event.command = EnvCommand()
+    event.io.input.option.return_value = {}
 
     expected_vars = create_dotenv_file("root", ".env.dev")
 
@@ -64,6 +65,7 @@ def test_dev_dotenv_file_toml_config(
 
     event = mocker.MagicMock()
     event.command = EnvCommand()
+    event.io.input.option.return_value = {}
 
     expected_vars = create_dotenv_file("root", ".env.dev")
 
@@ -105,6 +107,7 @@ def test_without_dotenv_file_os_config(
 
     event = mocker.MagicMock()
     event.command = EnvCommand()
+    event.io.input.option.return_value = {}
 
     create_dotenv_file("admin", ".env")
 
@@ -141,6 +144,7 @@ def test_without_dotenv_file_toml_config(
 
     event = mocker.MagicMock()
     event.command = EnvCommand()
+    event.io.input.option.return_value = {}
 
     create_dotenv_file("admin", ".env")
 
@@ -161,6 +165,7 @@ def test_dotenv_file_doesnt_exist(
 
     event = mocker.MagicMock()
     event.command = EnvCommand()
+    event.io.input.option.return_value = {}
 
     remove_dotenv_file(".env")
 
