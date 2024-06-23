@@ -190,7 +190,8 @@ poetry_command = ""
 help = "Run formatters"
 args = { dir = { options = ["--directory", "-d"], default = ".", help = "Target directory" } }
 sequence = [
-  { shell = "find ${dir} -type f -name '*.py' | xargs pyupgrade --py312-plus", help = "Run annotations formatter" },
+  { shell = "find src -type f -name '*.py' | xargs pyupgrade --py312-plus", help = "Run annotations formatter" },
+  { shell = "find tests -type f -name '*.py' | xargs pyupgrade --py312-plus", help = "Run annotations formatter" },
   { shell = "isort ${dir}", help = "Run imports formatter" },
   { shell = "ruff format ${dir}", help = "Run code formatter" }
 ]
