@@ -35,24 +35,34 @@ class DotenvPlugin(ApplicationPlugin):
     def load(self, event: ConsoleCommandEvent, *args, **kwargs) -> None:  # type: ignore[no-untyped-def]
         """Load a dotenv file."""
 
-        logger = Logger(event)
-        configuration = Config()
+        working_dir: str = event.io.input.option("directory")
+        working_dir = working_dir if working_dir else os.path.curdir
 
         is_env_command = isinstance(event.command, EnvCommand)
 
-        if is_env_command and configuration.ignore:
+        logger = Logger(event)
+        config = Config(working_dir)
+
+        if is_env_command and config.ignore:
             logger.warning("Not loading environment variables.")
 
-        elif is_env_command and not configuration.ignore:
-            filepath = (
-                configuration.location if configuration.location else dotenv.core.find(usecwd=True)
-            )
+        elif is_env_command and not config.ignore:
+            if config.location and os.path.isabs(config.location):
+                filepath = config.location
 
-            if os.path.isfile(filepath):  # noqa: PTH113
-                msg = f"Loading environment variables from '{filepath}'."
-                logger.info(msg)
-                dotenv.core.load(filepath=filepath)
+            elif config.location and not os.path.isabs(config.location):
+                filepath = (
+                    os.path.join(working_dir, config.location)
+                    if working_dir != "."
+                    else config.location
+                )
 
             else:
-                msg = f"File '{filepath}' doesn't exist."
-                logger.error(msg)
+                filepath = dotenv.core.find(usecwd=True)
+
+            if os.path.isfile(filepath):
+                logger.info(f"Loading environment variables from '{filepath}'.")
+                dotenv.core.load(filepath)
+
+            else:
+                logger.error(f"File '{filepath}' doesn't exist.")
