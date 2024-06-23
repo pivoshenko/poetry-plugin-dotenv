@@ -34,7 +34,7 @@ class _Config:
     """Defines the data schema and defaults used for plugin configuration."""
 
     ignore: bool = False
-    location: str | None = None
+    location: str = ""
 
 
 # TODO(pivoshenko): this configuration loader is a "quick patch" solution
