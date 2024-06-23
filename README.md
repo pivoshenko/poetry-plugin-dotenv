@@ -83,6 +83,8 @@
   - [Features](#features)
 - [Installation](#installation)
 - [Usage and Configuration](#usage-and-configuration)
+    - [`ignore`](#ignore)
+    - [`location`](#location)
   - [Configuration via file](#configuration-via-file)
   - [Configuration via environment variables](#configuration-via-environment-variables)
   - [Lookup hierarchy](#lookup-hierarchy)
@@ -94,9 +96,10 @@
 
 ### Features
 
+- - Fully type safe
 - Doesn't require any dependencies
 - Supports templates, interpolating variables using POSIX variable expansions
-- Fully type safe
+- Supports `--directory` - working directory for the `poetry` command
 - Supports multiple configuration sources
 - Supports configuration auto-completion and validation in IDEs such as Visual Studio Code or PyCharm (part of [JSON Schema Store](https://www.schemastore.org/json/))
 - 100% test coverage and "A" grade for maintainability
@@ -111,13 +114,23 @@ poetry self add poetry-plugin-dotenv
 
 By default, the plugin will load the `.env` file from the current working directory or "higher directories".
 
-To prevent `poetry` from loading the dotenv file, set the `ignore` option.
+#### `ignore`
 
-If your dotenv file is located in a different path or has a different name you may set the `location`.
+**Type**: `str`
+**Default**: `false`
+**Allowed values (as True)**: `y / yes / t / on / 1 / true`
+**Allowed values (as False)**: `n / no / f / off / 0 / false`
 
-`ignore` option can accept the next values:
-- As True: `y / yes / t / on / 1 / true`
-- As False: `n / no / f / off / 0 / false`
+Prevents `poetry` from loading the dotenv file.
+
+#### `location`
+
+**Type**: `str`
+**Default**: `.env`
+**Allowed values (as True)**: `y / yes / t / on / 1 / true`
+**Allowed values (as False)**: `n / no / f / off / 0 / false`
+
+If your dotenv file is located in a different path or has a different name you may set this parameter.
 
 ### Configuration via file
 
