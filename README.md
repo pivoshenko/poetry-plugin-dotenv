@@ -117,8 +117,11 @@ By default, the plugin will load the `.env` file from the current working direct
 #### `ignore`
 
 **Type**: `str`
+
 **Default**: `false`
+
 **Allowed values (as True)**: `y / yes / t / on / 1 / true`
+
 **Allowed values (as False)**: `n / no / f / off / 0 / false`
 
 Prevents `poetry` from loading the dotenv file.
@@ -126,8 +129,11 @@ Prevents `poetry` from loading the dotenv file.
 #### `location`
 
 **Type**: `str`
+
 **Default**: `.env`
+
 **Allowed values (as True)**: `y / yes / t / on / 1 / true`
+
 **Allowed values (as False)**: `n / no / f / off / 0 / false`
 
 If your dotenv file is located in a different path or has a different name you may set this parameter.
