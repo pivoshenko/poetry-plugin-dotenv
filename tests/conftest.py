@@ -16,18 +16,15 @@ if TYPE_CHECKING:
 
 
 @pytest.fixture()
-def create_dotenv_file(tmp_path: Path) -> Callable[[str, str], dict[str, str]]:
+def create_dotenv_file(tmp_path: Path) -> Callable[[dict[str, str], str], None]:
     """Get a dotenv file."""
 
-    def create(user: str, filename: str) -> dict[str, str]:
+    def create(content: dict[str, str], filename: str) -> None:
         """Create a dotenv file."""
 
-        dotenv_content = {"POSTGRES_USER": user}
         dotenv_file = tmp_path / ".." / ".." / ".." / filename
-        stream = (f"{kay!s}={value!s}" for kay, value in dotenv_content.items())
+        stream = (f"{kay!s}={value!s}" for kay, value in content.items())
         dotenv_file.write_text("/n".join(stream))
-
-        return dotenv_content
 
     return create
 
