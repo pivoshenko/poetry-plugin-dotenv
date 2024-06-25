@@ -132,10 +132,6 @@ Prevents `poetry` from loading the dotenv file.
 
 **Default**: `.env`
 
-**Allowed values (as True)**: `y / yes / t / on / 1 / true`
-
-**Allowed values (as False)**: `n / no / f / off / 0 / false`
-
 If your dotenv file is located in a different path or has a different name you may set this parameter.
 
 ### Configuration via file
