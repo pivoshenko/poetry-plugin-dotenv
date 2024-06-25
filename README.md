@@ -152,6 +152,8 @@ location = ".env.dev"
 
 As it was mentioned in the **Features** list, the schema of the plugin configuration is now part of the [JSON Schema Store](https://www.schemastore.org/json) which brings auto-completion and validation in IDEs such as Visual Studio Code or PyCharm "out of the box".
 
+https://github.com/pivoshenko/poetry-plugin-dotenv/assets/40499728/15d3a988-a723-49f8-960d-f91cd6bfe536
+
 ### Configuration via environment variables
 
 `poetry-plugin-dotenv` supports the following configuration options via environment variables.
