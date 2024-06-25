@@ -96,7 +96,7 @@
 
 ### Features
 
-- - Fully type safe
+- Fully type safe
 - Doesn't require any dependencies
 - Supports templates, interpolating variables using POSIX variable expansions
 - Supports `--directory` - working directory for the `poetry` command
