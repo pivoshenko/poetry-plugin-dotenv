@@ -85,7 +85,7 @@
 - [Usage and Configuration](#usage-and-configuration)
     - [`ignore`](#ignore)
     - [`location`](#location)
-  - [Configuration via file](#configuration-via-file)
+  - [Configuration via TOML file](#configuration-via-toml-file)
   - [Configuration via environment variables](#configuration-via-environment-variables)
   - [Lookup hierarchy](#lookup-hierarchy)
 - [Examples](#examples)
@@ -101,7 +101,7 @@
 - Supports templates, interpolating variables using POSIX variable expansions
 - Supports `--directory` - working directory for the `poetry` command
 - Supports multiple configuration sources
-- Supports configuration auto-completion and validation in IDEs such as Visual Studio Code or PyCharm (part of [JSON Schema Store](https://www.schemastore.org/json/))
+- Supports configuration auto-completion and validation in IDEs such as Visual Studio Code or PyCharm (part of [JSON Schema Store](https://www.schemastore.org/json))
 - 100% test coverage and "A" grade for maintainability
 
 ## Installation
@@ -134,7 +134,7 @@ Prevents `poetry` from loading the dotenv file.
 
 If your dotenv file is located in a different path or has a different name you may set this parameter.
 
-### Configuration via file
+### Configuration via TOML file
 
 The plugin is able to read project-specific default values for its options from a `pyproject.toml` file.
 By default, `poetry-plugin-dotenv` looks for `pyproject.toml` containing a `[tool.poetry.plugins.dotenv]` section.
@@ -149,6 +149,8 @@ location = ".env.dev"
 
 > [!IMPORTANT]
 > Due to the default `poetry` parser, options in the plugins sections should be always strings.
+
+As it was mentioned in the **Features** list, the schema of the plugin configuration is now part of the [JSON Schema Store](https://www.schemastore.org/json) which brings auto-completion and validation in IDEs such as Visual Studio Code or PyCharm "out of the box".
 
 ### Configuration via environment variables
 
