@@ -21,33 +21,32 @@ jobs:
   pytest:
     name: pytest
     runs-on: ${{ inputs.runner }}
-    if: inputs.run-pytest
     steps:
       - name: Checkout repository
-        id: checkout
+        id: checkout-repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Setup environment
-        id: environment
+        id: setup-environment
         uses: ./.github/actions/setup-environment
         with:
           python-version: ${{ inputs.python-version }}
           poetry-version: ${{ inputs.poetry-version }}
 
       - name: Install dependencies
-        id: dependencies
+        id: install-dependencies
         uses: ./.github/actions/poetry-install
         with:
           args: --with tests
 
       - name: Run tests
-        id: tests
+        id: run-tests
         run: poetry run pytest
 
       - name: Upload coverage to Codecov
-        id: coverage
+        id: upload-coverage
         uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
