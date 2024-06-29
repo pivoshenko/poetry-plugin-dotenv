@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## v2.2.1 (2024-06-29)
+
+### Ci
+
+* ci(labels): update color fields ([`9126316`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9126316a4a7ac0e99785e12266ced2eedfbc3ae4))
+
+* ci(labels): update color fields ([`4b1a5b3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4b1a5b301ba2b492469b16e99f3f106bc2090f37))
+
+* ci(workflows): update names ([`639d8e1`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/639d8e1ae23d98ca323ffd1d305d7c1e919d0010))
+
+### Documentation
+
+* docs(README): update badges ([`86e4e32`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/86e4e323b40ab5b87d6e4f577f7f1c281ba2452f))
+
 ## v2.2.0 (2024-06-29)
 
 ### Build
