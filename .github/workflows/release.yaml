@@ -2,7 +2,7 @@
 # - GH_TOKEN
 # - PYPI_TOKEN
 
-name: CD
+name: Release
 
 on:
   push:
