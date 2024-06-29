@@ -1,0 +1,39 @@
+name: Setup Environment
+description: Setup environment with the specified Python and poetry version
+
+inputs:
+  python-version:
+    description: Desired node-semver compatible Python version expression
+    default: default
+
+  poetry-version:
+    description: Desired node-semver compatible poetry version expression
+    default: latest
+
+outputs:
+  python-path:
+    description: Path to the installed Python interpreter
+    value: ${{ steps.setup-python.outputs.python-path }}
+
+  python-version:
+    description: Version of the installed Python interpreter
+    value: ${{ steps.setup-python.outputs.python-version }}
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Python
+      id: setup-python
+      uses: actions/setup-python@v5
+      if: inputs.python-version != 'default'
+      with:
+        python-version: ${{ inputs.python-version }}
+        update-environment: false
+
+    - name: Install poetry
+      id: install-poetry
+      run: >
+        pipx install \
+          ${{ inputs.python-version != 'default' && format('--python "{0}"', steps.setup-python.outputs.python-path) || '' }} \
+          ${{ inputs.poetry-version == 'latest' && 'poetry' || format('poetry=={0}', inputs.poetry-version) }}
+      shell: bash

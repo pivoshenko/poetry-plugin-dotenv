@@ -32,7 +32,7 @@ class Literal:
 
     value: str
 
-    def resolve(self, *args, **kwargs) -> str:
+    def resolve(self, *args, **kwargs) -> str:  # type: ignore[no-untyped-def]
         """Get a literal value."""
 
         return self.value
@@ -45,7 +45,7 @@ class Variable:
     name: str
     default: str | None = None
 
-    def resolve(self, env: OrderedDict[str, str], *args, **kwargs) -> str:
+    def resolve(self, env: OrderedDict[str, str], *args, **kwargs) -> str:  # type: ignore[no-untyped-def]
         """Get a variable value."""
 
         default = self.default if self.default else ""

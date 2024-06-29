@@ -10,7 +10,7 @@ import textwrap
 from typing import TYPE_CHECKING
 from unittest import mock
 
-import sh
+import sh  # type: ignore[import-untyped]
 import pytest
 
 from poetry_plugin_dotenv.dotenv import core as dotenv
