@@ -4,7 +4,7 @@ description: Detect changes in files
 outputs:
   pyproject:
     description: Whether there are changes in `poetry.lock / pyproject.toml`
-    value: ${{ steps.changes.outputs.project }}
+    value: ${{ steps.changes.outputs.pyproject }}
 
   src:
     description: Whether there are changes in `src`
@@ -17,12 +17,6 @@ outputs:
 runs:
   using: composite
   steps:
-    - name: Checkout repository
-      id: checkout-repository
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-
     - name: Detect changes
       id: detect-changes
       uses: dorny/paths-filter@v3
@@ -32,9 +26,9 @@ runs:
             - 'poetry.lock'
             - 'pyproject.toml'
           src:
-            - *project
+            - *pyproject
             - 'src/**/*.py'
           tests:
-            - *project
+            - *pyproject
             - 'src/**/*.py'
             - 'tests/**'
