@@ -3,7 +3,7 @@ description: Detect changes in files
 
 outputs:
   pyproject:
-    description: Whether there are changes in `poetry.lock / pyroject.toml`
+    description: Whether there are changes in `poetry.lock / pyproject.toml`
     value: ${{ steps.changes.outputs.project }}
 
   src:
