@@ -1,11 +1,9 @@
-"""Module that contains plugin configuration."""
+"""Module that contains plugin's configurator."""
 
 from __future__ import annotations
 
 import os
 import dataclasses
-
-from pathlib import Path
 
 import tomlkit
 
@@ -36,20 +34,20 @@ class _Config:
     """Defines the data schema and defaults used for plugin configuration."""
 
     ignore: bool = False
-    location: str | None = None
+    location: str = ""
 
 
 # TODO(pivoshenko): this configuration loader is a "quick patch" solution
 class Config(_Config):
     """Configuration loader."""
 
-    def __init__(self) -> None:
+    def __init__(self, working_dir: str) -> None:
         """Initialize."""
 
         source_config = {}
         for config_source, section in CONFIG_SOURCES.items():
             if config_source.endswith(".toml"):
-                config = _load_config_from_toml(config_source, section)
+                config = _load_config_from_toml(os.path.join(working_dir, config_source), section)
 
             elif config_source.endswith("os"):
                 config = _load_config_from_os(section)
@@ -76,16 +74,11 @@ class Config(_Config):
                 self.__setattr__(attribute, source_attribute_value)
 
 
-def _load_config_from_toml(
-    filename: str,
-    section: str,
-) -> dict[str, str | bool | None]:
+def _load_config_from_toml(filepath: str, section: str) -> dict[str, str | bool | None]:
     """Load configuration from the TOML file."""
 
-    filepath = Path(filename)
-
-    if filepath.exists():
-        with filepath.open("rb") as toml_file:
+    if os.path.exists(filepath):
+        with open(filepath, "rb") as toml_file:
             toml = tomlkit.load(toml_file)
 
         config = toml
@@ -97,9 +90,7 @@ def _load_config_from_toml(
     return {}  # pragma: no cover
 
 
-def _load_config_from_os(
-    section: str,
-) -> dict[str, str | bool | None]:
+def _load_config_from_os(section: str) -> dict[str, str | bool | None]:
     """Load configuration from the OS environment variables."""
 
     return {

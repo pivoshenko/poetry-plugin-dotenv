@@ -1,0 +1,41 @@
+name: Documentation Issue
+labels: ["type: documentation"]
+description: Did you find errors, omissions, or anything unintelligible in the documentation?
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to file a complete bug report.
+        Before submitting your issue, please review [the contribution guidelines](https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/CONTRIBUTING.md).
+        Feel free to use markdown syntax in text areas.
+
+  - type: dropdown
+    attributes:
+      label: Issue kind
+      description: |
+        What best describes the issue?
+      options:
+        - Improving documentation
+        - Missing documentation
+        - Error in existing documentation
+        - Unclear documentation
+        - Other concerns with documentation
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Existing link
+      description: |
+        If the documentation in question exists, please provide a link to it.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Description
+      description: |
+        Please describe the feature, with as much pertinent information as you can.
+    validations:
+      required: true
