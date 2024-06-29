@@ -23,21 +23,19 @@ jobs:
 
     steps:
       - name: Checkout repository
-        id: checkout-repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Initialize CodeQL
-        id: initialize-codeql
         uses: github/codeql-action/init@v3
         with:
           languages: ${{ matrix.language }}
 
       - name: Autobuild
-        id: autobuild
         uses: github/codeql-action/autobuild@v3
 
       - name: Perform CodeQL analysis
-        id: perform-codeql-analysis
         uses: github/codeql-action/analyze@v3
         with:
           category: "/language:${{matrix.language}}"
