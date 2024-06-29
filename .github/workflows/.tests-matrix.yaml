@@ -1,0 +1,54 @@
+on:
+  workflow_call:
+    inputs:
+      runner:
+        required: true
+        type: string
+
+      python-version:
+        required: true
+        type: string
+
+      poetry-version:
+        required: true
+        type: string
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  pytest:
+    name: pytest
+    runs-on: ${{ inputs.runner }}
+    if: inputs.run-pytest
+    steps:
+      - name: Checkout repository
+        id: checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup environment
+        id: environment
+        uses: ./.github/actions/setup-environment
+        with:
+          python-version: ${{ inputs.python-version }}
+          poetry-version: ${{ inputs.poetry-version }}
+
+      - name: Install dependencies
+        id: dependencies
+        uses: ./.github/actions/poetry-install
+        with:
+          args: --with tests
+
+      - name: Run tests
+        id: tests
+        run: poetry run pytest
+
+      - name: Upload coverage to Codecov
+        id: coverage
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          name: OS ${{ matrix.os.name }} Python ${{ matrix.python-version }} poetry ${{ matrix.poetry-version }}
