@@ -8,6 +8,7 @@ updates:
     labels:
       - "priority: low"
       - "type: maintenance"
+      - "type: dependencies"
 
   - package-ecosystem: pip
     directory: /
@@ -16,3 +17,5 @@ updates:
     labels:
       - "priority: low"
       - "type: maintenance"
+      - "type: dependencies"
+
