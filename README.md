@@ -41,17 +41,20 @@
   <a href="https://github.com/dependabot">
     <img alt="dependabot" src="https://img.shields.io/badge/dependabot-enable-success?logo=Dependabot">
   </a>
-  <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/ci.yaml">
-    <img alt="CI" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/ci.yaml?label=CI&logo=github">
+  <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/tests.yaml">
+    <img alt="tests" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/tests.yaml?label=Tests&logo=pytest">
   </a>
-  <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/cd.yaml">
-    <img alt="CD" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/cd.yaml?label=CD&logo=github">
+  <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/linters.yaml">
+    <img alt="linters" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/linters.yaml?label=Linters&logo=lintcode">
+  </a>
+  <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/release.yaml">
+    <img alt="release" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/release.yaml?label=Release&logo=pypi">
   </a>
   <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/.pre-commit-config.yaml">
     <img alt="hooks" src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit">
   </a>
   <a href="https://pypi.org/project/poetry-plugin-dotenv">
-    <img alt="wheel" src="https://img.shields.io/pypi/wheel/poetry-plugin-dotenv?logo=pypi">
+    <img alt="wheel" src="https://img.shields.io/pypi/wheel/poetry-plugin-dotenv?logo=pypy">
   </a>
 </p>
 
