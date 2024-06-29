@@ -14,11 +14,15 @@ jobs:
   labels:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        id: checkout
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: crazy-max/ghaction-github-labeler@v5
+      - name: Update labels
+        id: labeler
+        uses: crazy-max/ghaction-github-labeler@v5
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           yaml-file: .github/labels.yaml
