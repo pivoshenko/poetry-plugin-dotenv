@@ -1,0 +1,69 @@
+# Requires GitHub secrets
+# - CODECOV_TOKEN
+
+name: Tests
+
+on:
+  pull_request:
+    branches: ["main"]
+  push:
+    branches: ["main"]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  tests-matrix:
+    name: OS ${{ matrix.os.name }} / Python ${{ matrix.python-version }} / poetry ${{ matrix.poetry-version }}
+    runs-on: ${{ matrix.os.image }}
+    strategy:
+      matrix:
+        os:
+          - name: Ubuntu
+            image: ubuntu-22.04
+          - name: macOS x86_64
+            image: macos-13
+          - name: macOS aarch64
+            image: macos-14
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+        poetry-version: ["1.5.0", "1.6.0", "1.7.0", "1.8.0"]
+      fail-fast: false
+    steps:
+      - name: Checkout repository
+        id: checkout-repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Python
+        id: install-python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install poetry
+        id: install-poetry
+        run: |
+          python -m pip install "poetry==${{ matrix.poetry-version }}"
+
+      - name: Install dependencies
+        id: install-dependencies
+        run: |
+          python -m poetry install --only main --only tests
+
+      - name: Run tests
+        id: run-tests
+        run: |
+          python -m poetry run pytest
+
+      - name: Upload coverage to Codecov
+        id: upload-coverage
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          name: OS ${{ matrix.os.name }} / Python ${{ matrix.python-version }} / poetry ${{ matrix.poetry-version }}
