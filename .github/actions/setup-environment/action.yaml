@@ -35,5 +35,5 @@ runs:
       run: >
         pipx install \
           ${{ inputs.python-version != 'default' && format('--python "{0}"', steps.setup-python.outputs.python-path) || '' }} \
-          ${{ inputs.poetry-version == 'latest' && 'poetry' || format('poetry "{0}"', inputs.poetry-version) }}
+          ${{ inputs.poetry-version == 'latest' && 'poetry' || format('poetry=={0}', inputs.poetry-version) }}
       shell: bash
