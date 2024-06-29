@@ -1,0 +1,75 @@
+name: Linters
+
+on:
+  pull_request:
+    branches: ["main"]
+  push:
+    branches: ["main"]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  lockfile:
+    name: Check poetry.lock
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        id: checkout-repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Python
+        id: install-python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+
+      - name: Install poetry
+        id: install-poetry
+        run: |
+          python -m pip install -U poetry
+
+      - name: Check `poetry.lock`
+        id: check-lock
+        run: python -m poetry check --lock
+
+  linters:
+    name: Run linters
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        id: checkout-repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Python
+        id: install-python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+
+      - name: Install poetry
+        id: install-poetry
+        run: |
+          python -m pip install -U poetry
+
+      - name: Install dependencies
+        id: install-dependencies
+        run: |
+          python -m poetry install \
+            --only main \
+            --only linters \
+            --only dev
+
+      - name: Run linters
+        id: lint
+        run: |
+          python -m poetry run poe lint --directory src

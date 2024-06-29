@@ -16,7 +16,6 @@ from poetry_plugin_dotenv.dotenv import variables
 
 
 if TYPE_CHECKING:  # pragma: no cover
-    from collections.abc import Generator
     from collections.abc import Iterable
     from collections.abc import Iterator
 
@@ -57,15 +56,15 @@ class DotEnv:
         else:
             self._dict = OrderedDict(raw_values)
 
-        return self._dict  # type: ignore[return-value]
+        return self._dict
 
-    def parse(self) -> Generator:
+    def parse(self) -> Iterator[tuple[str, str]]:
         """Parse a dotenv file."""
 
         with self._get_stream() as stream:
             for mapping in parsers.parse_stream(stream):
                 if mapping.key is not None:
-                    yield mapping.key, mapping.value
+                    yield mapping.key, mapping.value  # type: ignore[misc]
 
     def set_as_environment_variables(self) -> bool:
         """Load current dotenv as a system environment variable."""
@@ -124,7 +123,7 @@ def resolve(
 
             result = "".join(atom.resolve(env) for atom in atoms)
 
-        new_values[name] = result  # type: ignore[assignment]
+        new_values[name] = result
 
     return new_values
 
@@ -132,9 +131,9 @@ def resolve(
 def walk_to_root(path: str) -> Iterator[str]:
     """Yield directories starting from the given directory up to the root."""
 
-    if not os.path.exists(path):
+    if not os.path.exists(path):  # pragma: no cover
         msg = "Starting path not found."
-        raise OSError(msg)  # pragma: nocover
+        raise OSError(msg)
 
     if os.path.isfile(path):
         path = os.path.dirname(path)  # pragma: nocover
@@ -159,7 +158,6 @@ def find(filename: str = ".env", *, usecwd: bool = False) -> str:
         current_file = __file__
 
         while frame.f_code.co_filename == current_file:
-            # S101 - this asserts is part of the original package
             assert frame.f_back is not None  # noqa: S101
             frame = frame.f_back
 
