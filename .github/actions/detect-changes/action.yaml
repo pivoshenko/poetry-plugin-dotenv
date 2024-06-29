@@ -18,13 +18,13 @@ runs:
   using: composite
   steps:
     - name: Checkout repository
-      id: checkout
+      id: checkout-repository
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
 
     - name: Detect changes
-      id: changes
+      id: detect-changes
       uses: dorny/paths-filter@v3
       with:
         filters: |
