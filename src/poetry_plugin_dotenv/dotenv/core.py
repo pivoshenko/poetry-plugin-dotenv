@@ -131,9 +131,9 @@ def resolve(
 def walk_to_root(path: str) -> Iterator[str]:
     """Yield directories starting from the given directory up to the root."""
 
-    if not os.path.exists(path):
+    if not os.path.exists(path):  # pragma: no cover
         msg = "Starting path not found."
-        raise OSError(msg)  # pragma: nocover
+        raise OSError(msg)
 
     if os.path.isfile(path):
         path = os.path.dirname(path)  # pragma: nocover
