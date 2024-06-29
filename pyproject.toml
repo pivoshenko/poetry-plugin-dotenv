@@ -71,14 +71,12 @@ pyupgrade = ">=3.16.0"
 mypy = ">=1.10.1"
 ruff = ">=0.5.0"
 deptry = ">=0.16.1"
-memestra = ">=0.2.1"
 codespell = ">=2.3.0"
 commitizen = ">=3.27.0"
 
 [tool.poetry.group.lsp.dependencies]
 python-lsp-server = { extras = ["all"], version = ">=1.11.0" }
 ruff-lsp = ">=0.0.54"
-pyls-memestra = ">=0.0.16"
 pylsp-mypy = ">=0.6.8"
 pylsp-rope = ">=0.1.16"
 python-lsp-isort = ">=0.1"
@@ -205,7 +203,6 @@ sequence = [
   { shell = "deptry ${dir}", help = "Run dependencies linter" },
   { shell = "mypy ${dir}", help = "Run types linter" },
   { shell = "ruff check ${dir}", help = "Run code linter" },
-  { shell = "find ${dir} -type f -name '*.py' | xargs -L1 memestra", help = "Run deprecated code linter" },
   { shell = "codespell ${dir}", help = "Run spell linter" },
   { shell = "cz check --rev-range .", help = "Run commits linter" }
 ]
