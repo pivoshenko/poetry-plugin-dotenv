@@ -48,7 +48,7 @@ class DotenvPlugin(ApplicationPlugin):
 
         elif is_env_command and not config.ignore:
             if config.location and os.path.isabs(config.location):
-                filepath = config.location
+                filepath = config.location  # pragma: no cover
 
             elif config.location and not os.path.isabs(config.location):
                 filepath = (
