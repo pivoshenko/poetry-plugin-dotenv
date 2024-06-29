@@ -53,9 +53,6 @@
   <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/.pre-commit-config.yaml">
     <img alt="hooks" src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit">
   </a>
-  <a href="https://pypi.org/project/poetry-plugin-dotenv">
-    <img alt="wheel" src="https://img.shields.io/pypi/wheel/poetry-plugin-dotenv?logo=pypy">
-  </a>
 </p>
 
 <p align="center">
