@@ -1,22 +1,374 @@
 # CHANGELOG
 
+## v2.2.0 (2024-06-29)
+
+### Build
+
+* build(poetry): update dependencies ([`ca96099`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ca96099e5a7830779522bdd2e8221abf098f3202))
+
+* build(poetry): lock dependencies ([`3610619`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3610619eb40f6f5dc13eb82c3cd9af28e3f0acfb))
+
+* build(poetry): update dependencies ([`a573752`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a573752fefe063ded750fabee52745d72b98108f))
+
+* build(deps-dev): bump tornado from 6.4 to 6.4.1
+
+Bumps [tornado](https://github.com/tornadoweb/tornado) from 6.4 to 6.4.1.
+- [Changelog](https://github.com/tornadoweb/tornado/blob/master/docs/releases.rst)
+- [Commits](https://github.com/tornadoweb/tornado/compare/v6.4.0...v6.4.1)
+
+---
+updated-dependencies:
+- dependency-name: tornado
+  dependency-type: indirect
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`994c36a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/994c36accfcf12fa994a94c019832ff6b49ce860))
+
+* build(deps-dev): bump ruff from 0.4.5 to 0.4.7
+
+Bumps [ruff](https://github.com/astral-sh/ruff) from 0.4.5 to 0.4.7.
+- [Release notes](https://github.com/astral-sh/ruff/releases)
+- [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/astral-sh/ruff/compare/v0.4.5...v0.4.7)
+
+---
+updated-dependencies:
+- dependency-name: ruff
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`b5eab62`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b5eab626a4d2a2bb3ae9c74bb05016b62b345384))
+
+* build(deps-dev): bump sh from 2.0.6 to 2.0.7
+
+Bumps [sh](https://github.com/amoffat/sh) from 2.0.6 to 2.0.7.
+- [Release notes](https://github.com/amoffat/sh/releases)
+- [Changelog](https://github.com/amoffat/sh/blob/develop/CHANGELOG.md)
+- [Commits](https://github.com/amoffat/sh/compare/2.0.6...2.0.7)
+
+---
+updated-dependencies:
+- dependency-name: sh
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`9fff2f7`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9fff2f701b6f61d0fb04c8895946c83da4208834))
+
+* build(deps-dev): bump coverage from 7.5.2 to 7.5.3
+
+Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.5.2 to 7.5.3.
+- [Release notes](https://github.com/nedbat/coveragepy/releases)
+- [Changelog](https://github.com/nedbat/coveragepy/blob/master/CHANGES.rst)
+- [Commits](https://github.com/nedbat/coveragepy/compare/7.5.2...7.5.3)
+
+---
+updated-dependencies:
+- dependency-name: coverage
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`1950ab4`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1950ab41fa2bf4e4173205432b278f692fd195d5))
+
+* build(deps-dev): bump xdoctest from 1.1.3 to 1.1.4
+
+Bumps [xdoctest](https://github.com/Erotemic/xdoctest) from 1.1.3 to 1.1.4.
+- [Release notes](https://github.com/Erotemic/xdoctest/releases)
+- [Changelog](https://github.com/Erotemic/xdoctest/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/Erotemic/xdoctest/compare/v1.1.3...v1.1.4)
+
+---
+updated-dependencies:
+- dependency-name: xdoctest
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`003b9cf`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/003b9cf273b3b471421025a6a62986bbe6eddbf2))
+
+* build(deps-dev): bump ruff from 0.4.4 to 0.4.5
+
+Bumps [ruff](https://github.com/astral-sh/ruff) from 0.4.4 to 0.4.5.
+- [Release notes](https://github.com/astral-sh/ruff/releases)
+- [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/astral-sh/ruff/compare/v0.4.4...v0.4.5)
+
+---
+updated-dependencies:
+- dependency-name: ruff
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`bba0501`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/bba0501851c70674683467ed3d6ca39ea615ac50))
+
+* build(deps-dev): bump commitizen from 3.26.0 to 3.27.0
+
+Bumps [commitizen](https://github.com/commitizen-tools/commitizen) from 3.26.0 to 3.27.0.
+- [Release notes](https://github.com/commitizen-tools/commitizen/releases)
+- [Changelog](https://github.com/commitizen-tools/commitizen/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/commitizen-tools/commitizen/compare/v3.26.0...v3.27.0)
+
+---
+updated-dependencies:
+- dependency-name: commitizen
+  dependency-type: direct:development
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`3c7c6cd`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3c7c6cda4f4ecf49e9146cc84223bd31b0c1eab3))
+
+* build(deps-dev): bump coverage from 7.5.1 to 7.5.2
+
+Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.5.1 to 7.5.2.
+- [Release notes](https://github.com/nedbat/coveragepy/releases)
+- [Changelog](https://github.com/nedbat/coveragepy/blob/master/CHANGES.rst)
+- [Commits](https://github.com/nedbat/coveragepy/compare/7.5.1...7.5.2)
+
+---
+updated-dependencies:
+- dependency-name: coverage
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`468c48c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/468c48c07748eb659c1c287c68ec5b33e54dc91c))
+
+* build(deps-dev): bump commitizen from 3.25.0 to 3.26.0
+
+Bumps [commitizen](https://github.com/commitizen-tools/commitizen) from 3.25.0 to 3.26.0.
+- [Release notes](https://github.com/commitizen-tools/commitizen/releases)
+- [Changelog](https://github.com/commitizen-tools/commitizen/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/commitizen-tools/commitizen/compare/v3.25.0...v3.26.0)
+
+---
+updated-dependencies:
+- dependency-name: commitizen
+  dependency-type: direct:development
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`e44cc05`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e44cc05636e57dacc536b7d800e40ca6f81d13a4))
+
+* build(deps-dev): bump python-semantic-release from 9.7.1 to 9.7.3
+
+Bumps [python-semantic-release](https://github.com/python-semantic-release/python-semantic-release) from 9.7.1 to 9.7.3.
+- [Release notes](https://github.com/python-semantic-release/python-semantic-release/releases)
+- [Changelog](https://github.com/python-semantic-release/python-semantic-release/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.7.1...v9.7.3)
+
+---
+updated-dependencies:
+- dependency-name: python-semantic-release
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`42ea5e5`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/42ea5e5bcb6c92282bccfe416b3bf57ad42bccef))
+
+* build(deps): bump poetry from 1.8.2 to 1.8.3
+
+Bumps [poetry](https://github.com/python-poetry/poetry) from 1.8.2 to 1.8.3.
+- [Release notes](https://github.com/python-poetry/poetry/releases)
+- [Changelog](https://github.com/python-poetry/poetry/blob/1.8.3/CHANGELOG.md)
+- [Commits](https://github.com/python-poetry/poetry/compare/1.8.2...1.8.3)
+
+---
+updated-dependencies:
+- dependency-name: poetry
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`c9b3d7d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c9b3d7db856ae2da4301533bae2da9ab6722438d))
+
+### Chore
+
+* chore(semantic-release): update config ([`db15c58`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/db15c589bf29683412071cc8b2906848ee85c275))
+
+* chore: remove `memestra` ([`d9004dc`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d9004dcb82483751c87131e55c69947093864b56))
+
+* chore(poetry): add config ([`d803d2f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d803d2fc2ff284c1f9326a8ad095a902585dcee0))
+
+* chore(poe): remove `tests` task ([`bda2975`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/bda29757d8fc5cc0f2119ae48058ffb1d89c10ff))
+
+* chore(ruff): update config ([`9a08cbf`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9a08cbfb62448207543ff236f7c84a48fdc72ac0))
+
+* chore(poe): update `format` tasks ([`28c1b62`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/28c1b62dae86a5c8d91340d8fe4348a9e0cf2770))
+
+* chore(mypy): update config ([`e18cbd5`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e18cbd5cc85faea0490a238e567e61a2d95d4dcc))
+
+### Ci
+
+* ci: add CodeCov config ([`e78bb7d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e78bb7d1ed66d03642adfad91f7ae1ff0eefd77c))
+
+* ci(workflows): update release workflow ([`09c8f7e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/09c8f7e83131248c783561afa346e32de5f971b9))
+
+* ci(workflows): add workflow that runs linters ([`9730220`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/973022067ee7ccf7c8c80c412492bafb1505e277))
+
+* ci(workflows): add workflow that runs tests ([`5756841`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5756841fc2f4db5a26c32e96cf68b8c7957d9594))
+
+* ci(actions): update action that setups environment ([`b3cfbd9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b3cfbd9d97df7c59b7f69216c61be2a27d4547da))
+
+* ci(actions): update anchors ([`3355b34`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3355b34b17a7aa8fbb14462ac9d8b16a6b793b79))
+
+* ci(actions): add action that setups env ([`2ae35fa`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/2ae35fa0c610ad29828cfd39ebdf038e437fb655))
+
+* ci(actions): add action that setups env ([`b8e7520`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b8e7520ef23eefa1e34503ce26e3e0c189eb5920))
+
+* ci(actions): rename actions ([`8af2eb1`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8af2eb12a2a785e3b0a9104a120be55aa5c85ed2))
+
+* ci(workflows): update IDs ([`b7deaae`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b7deaaeae41970b2e76c25cb705bbd6e9a455963))
+
+* ci(actions): remove typo ([`73151a3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/73151a35fd07f35b098ecbf900d5810828471c6b))
+
+* ci(workflows): add matrix for tests workflow ([`aed5b09`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/aed5b099835052793d0b729d8657be4a98ccd21f))
+
+* ci(workflows): add `name` field ([`a4bd729`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a4bd729ca3653076a7db97f7763157be475b98e3))
+
+* ci(workflows): remove CICD workflows ([`8937ba9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8937ba9aa05006008e0022bd2d68eecc8e4f01c8))
+
+* ci(workflows): add workflow that updates GitHub labels ([`34d5d26`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/34d5d265782bf49423a06c2173dc32f139b9ee67))
+
+* ci(workflows): add workflow that updates GitHub labels ([`5528817`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5528817a213e58913f0b49acca1c0fe8dc332e5c))
+
+* ci(workflows): remove step names ([`19c3062`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/19c306244095041bfd671dcfd162848768468fe3))
+
+* ci(workflows): add workflow that locks PRs and issues ([`4f8782c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4f8782cc88a812819d1ab47a54d8c76f9ef43788))
+
+* ci(workflows): update CodeQL ([`e2ec8bd`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e2ec8bd33b32612028a3260c03f1a8ed8c4f9408))
+
+* ci(workflows): update dependency review ([`49fbe62`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/49fbe62ce6535f83bf84927f8cfac524b2186462))
+
+* ci(dependabot): update labels ([`ffa923c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ffa923c4e5719ee8eaf7ecfa0db990cd16d100cc))
+
+* ci(pre-commit): update hooks ([`d575e57`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d575e57baa0f26876344d2a84d869044d08cce1c))
+
+* ci(dependabot): update labels ([`1c5fb45`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1c5fb45552e17049ad0017d711b92e8b2b689ac4))
+
+* ci(pre-commit): remove `mypy` hook ([`fe14272`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/fe1427275dcdbf6c9ccbda89087042bfd2faf02d))
+
+* ci(pre-commit): update Python version ([`c29ffb9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c29ffb904c66f74f68f4ee3aa6ef7ff644bb8306))
+
+* ci: update common IDE config ([`7d8d800`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/7d8d80092fa2bcb3b51628a80bd7dfeee92a4527))
+
+* ci(pre-commit): update hooks ([`5ca1ac8`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5ca1ac851a9e9d116062802a08a3edd7d7825de5))
+
+### Documentation
+
+* docs(README): update examples ([`53b7530`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/53b75308803c8237fa0dda16eea961d45cd77f6e))
+
+* docs(README): update badges ([`561a3f0`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/561a3f02686e9fd0121a8cac3601301ddc0535d0))
+
+* docs(templates): update issue templates ([`32a8f79`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/32a8f797b6675d979f8a7930ac77160013dac359))
+
+* docs(templates): update PR template ([`0055063`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/005506314487aa22e6eab823504479743c3e6172))
+
+* docs(README): add preview of schema validation ([`b8fcd35`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b8fcd35a5a6ce83f6ef07477833fe5667b6e4c95))
+
+* docs(README): update &#34;Configuration via TOML file&#34; section ([`dd5a0ef`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/dd5a0efd9c93c329ca6de86a7fbd806721aebaca))
+
+* docs(README): update &#34;Features&#34; section ([`55b0091`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/55b0091b9c087013f7a10d69acc4abf2f1835080))
+
+* docs(README): update description of `location` parameter ([`8c99712`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8c997128df16ea8404fbf1476a26cc4b7439be09))
+
+* docs(README): update TOC ([`609f1df`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/609f1df91f5c672233cc02d95a3c1dce5b5f9f56))
+
+* docs(README): change headers level ([`1f37587`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1f3758719c9b776d98eb44364b9935d66316a7ba))
+
+* docs(README): change headers level ([`9ef3b3f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9ef3b3f923e4aa7597147ea2b8787f64811bc40a))
+
+* docs(README): break parameters description in &#34;Usage and Configuration&#34; section ([`0917dea`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/0917dea772512e7131a6d1c43ca9b138443c9977))
+
+* docs(README): update &#34;Usage and Configuration&#34; section ([`147bfb7`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/147bfb7dd4069f8ae32281eddf209a836f22b38a))
+
+* docs(README): update &#34;Features&#34; section ([`3d3fba8`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3d3fba8563529ece15ef50aaf3a87db656574744))
+
+* docs(CONTRIBUTING): update guidelines ([`eeca302`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/eeca302db2292522906c10d68d06a6395bfce40f))
+
+* docs(LICENSE): update copyright year ([`bcf845b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/bcf845bfa3a3ada182b47cf029493fb03602004c))
+
+* docs(CODE_OF_CONDUCT): update formatting ([`da84834`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/da84834261b8f185f7d6f24568703741bed629ef))
+
+* docs(CHANGELOG): update formatting ([`ad8653c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ad8653cc41fdd6e9f3df53a7149999297b100cba))
+
+### Feature
+
+* feat: add support of `--directory` ([`67fa525`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/67fa52598b958a85550ed238fe0607d1830a496d))
+
+### Refactor
+
+* refactor(plugin): add `nocover` ([`52ba84e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/52ba84e264f0c8ea15e0403fe3f285341c8f903b))
+
+* refactor(dotenv.core): add `nocover` ([`343077e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/343077effcd47e4c7e92f8b7ac37fafddc9519fd))
+
+* refactor(dotenv.parsers): remove stale `noqa` ([`cfaa5ee`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/cfaa5eea8c9ca1aa3635078a71128b7388882e73))
+
+* refactor(config): use emtpy string as `location` default value ([`df5ee7c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/df5ee7c35c7f3ca7782dd96acf7c73fc936fdbb8))
+
+* refactor(config): replace `pathlib` with `os.path` ([`578978b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/578978b4481017b54f60be0e4bcafba0938eada6))
+
+* refactor(logger): reduce code duplication ([`34aaca8`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/34aaca89c074eef49a0547c4a7ca7de8aad516f5))
+
+* refactor: update type annotations ([`d28e69d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d28e69d255a17eb3f6cda4f5fdd2a332b9b60ed0))
+
+### Style
+
+* style(labels): update formatting ([`7289c4c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/7289c4c2a97571e16d113b3c41bf4988eedd2f20))
+
+### Test
+
+* test: split tests based on the config source ([`43ef2a0`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/43ef2a0b0d971e507c4a8b99c64594e34c7b844c))
+
+* test: mock IO options ([`df1bb8c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/df1bb8ca51770ea39cb5985a3cf15a05b31f59ac))
+
 ## v2.1.6 (2024-05-13)
+
+### Build
+
+* build(deps-dev): bump python-semantic-release from 9.7.0 to 9.7.1
+
+Bumps [python-semantic-release](https://github.com/python-semantic-release/python-semantic-release) from 9.7.0 to 9.7.1.
+- [Release notes](https://github.com/python-semantic-release/python-semantic-release/releases)
+- [Changelog](https://github.com/python-semantic-release/python-semantic-release/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.7.0...v9.7.1)
+
+---
+updated-dependencies:
+- dependency-name: python-semantic-release
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`c9a836d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c9a836d93ab580fdf985ab2577aeb590a12ed527))
+
+* build(deps-dev): bump ruff from 0.4.3 to 0.4.4
+
+Bumps [ruff](https://github.com/astral-sh/ruff) from 0.4.3 to 0.4.4.
+- [Release notes](https://github.com/astral-sh/ruff/releases)
+- [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/astral-sh/ruff/compare/v0.4.3...v0.4.4)
+
+---
+updated-dependencies:
+- dependency-name: ruff
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`1e5f232`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1e5f23265f8fa2124e7201968c8bd9014af11f3c))
 
 ### Documentation
 
 * docs(README): update list of features ([`f482c3a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/f482c3aad72ad422540794228e3a13cb951cd73c))
-
-### Unknown
-
-* Merge pull request #250 from pivoshenko/chores ([`630ac6e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/630ac6ebb2327de762be1091af3279ec3fce9a79))
-
 
 ## v2.1.5 (2024-05-09)
 
 ### Documentation
 
 * docs(assets): make logo transparent ([`2882bb0`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/2882bb04f64a906f6590f6a606d3c5b87284d368))
-
 
 ## v2.1.4 (2024-05-08)
 
@@ -26,7 +378,6 @@
 
 * docs(README): update logo size ([`5199424`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/51994246a5ca066a14b722110e109c0023ee6b17))
 
-
 ## v2.1.3 (2024-05-08)
 
 ### Documentation
@@ -34,7 +385,6 @@
 * docs(README): remove badges ([`acc067f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/acc067ff232c0358daf008405164c1f9476bb164))
 
 * docs(assets): update logo colors ([`55943bb`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/55943bb380cd42b066aeba4bc2b60d3c43b3840a))
-
 
 ## v2.1.2 (2024-05-08)
 
@@ -44,35 +394,11 @@
 
 * docs(README): update logo ([`6170cfb`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6170cfbdc6b01c0cc8a5eeee8f509b48ea76bdfb))
 
-### Unknown
-
-* Merge pull request #245 from pivoshenko/update-logo ([`5f9a43e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5f9a43e11b70fd7805ffa3abd0016fac744327b2))
-
-
 ## v2.1.1 (2024-05-07)
 
 ### Documentation
 
 * docs(README): update demo ([`b710015`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b71001596b1407307c1b870d3fe523a274a0ae9d))
-
-### Unknown
-
-* Merge pull request #240 from pivoshenko/dependabot/pip/poethepoet-0.26.1
-
-build(deps-dev): bump poethepoet from 0.26.0 to 0.26.1 ([`b638bfe`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b638bfecda5642bab37deb271c4a9f4ec6621ab5))
-
-* Merge pull request #242 from pivoshenko/dependabot/pip/commitizen-3.25.0
-
-build(deps-dev): bump commitizen from 3.24.0 to 3.25.0 ([`0c831df`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/0c831dfaaf7dfda78c6fcf6b66111a0a71ffb42b))
-
-* Merge pull request #239 from pivoshenko/dependabot/pip/coverage-7.5.1
-
-build(deps-dev): bump coverage from 7.5.0 to 7.5.1 ([`6dcc13f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6dcc13febf2df8af90645955599ba69bd4688228))
-
-* Merge pull request #243 from pivoshenko/dependabot/pip/ruff-0.4.3
-
-build(deps-dev): bump ruff from 0.4.2 to 0.4.3 ([`f158c03`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/f158c03bf48d5d3f5ef44d2722061a1bae9267bc))
-
 
 ## v2.1.0 (2024-05-06)
 
@@ -87,7 +413,6 @@ build(deps-dev): bump ruff from 0.4.2 to 0.4.3 ([`f158c03`](https://github.com/p
 ### Fix
 
 * fix(pypi): update classifiers ([`03dcfe9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/03dcfe961720be9288f475b4233088629a80d560))
-
 
 ## v2.0.0 (2024-05-06)
 
@@ -227,19 +552,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`94f5c03`](https://g
 
 * test(plugin): replace mock of `tomli` with `tomlkit` ([`bb2781a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/bb2781af214570727f74a0d8d39935c878e62452))
 
-### Unknown
-
-* Merge pull request #244 from pivoshenko/issue-238 ([`9a2951f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9a2951f78bf2519c0abd58a3416692c5ae80dbdb))
-
-* Merge pull request #236 from pivoshenko/dependabot/pip/poethepoet-0.26.0
-
-build(deps-dev): bump poethepoet from 0.25.1 to 0.26.0 ([`0f3c55e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/0f3c55ee649d2086ac39a75ac7c61038d1121a8b))
-
-* Merge pull request #237 from pivoshenko/dependabot/pip/black-24.4.2
-
-build(deps-dev): bump black from 24.4.1 to 24.4.2 ([`dafe90a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/dafe90abaaa2bf3d7b1ca444b71be7ccf117553b))
-
-
 ## v1.0.1 (2024-04-26)
 
 ### Chore
@@ -249,13 +561,6 @@ build(deps-dev): bump black from 24.4.1 to 24.4.2 ([`dafe90a`](https://github.co
 ### Documentation
 
 * docs: update demo example ([`3dd39b2`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3dd39b2607c8f5be1589ada4f7ce6759a08477d4))
-
-### Unknown
-
-* Merge pull request #232 from pivoshenko/dependabot/pip/commitizen-3.24.0
-
-build(deps-dev): bump commitizen from 3.22.0 to 3.24.0 ([`ec7628d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ec7628d8aeebe0b3c2611524282b8542969dc716))
-
 
 ## v1.0.0 (2024-04-26)
 
@@ -442,39 +747,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`d391fc8`](https://g
 
 * test: update mocks in order to new configuration keys ([`1e0273c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1e0273cb00d0bbab4cb84c540df084b3b5165cfc))
 
-### Unknown
-
-* Merge pull request #234 from pivoshenko/issue-214
-
-Issue 214 ([`81b03e7`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/81b03e71b1f602f2401d1a37e87319bba0d053dd))
-
-* Merge remote-tracking branch &#39;origin&#39; into issue-214 ([`5961c38`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5961c38127a66e15d7dd2e32188c00b99c95cbc9))
-
-* Merge pull request #231 from pivoshenko/dependabot/pip/python-semantic-release-9.4.2
-
-build(deps-dev): bump python-semantic-release from 9.4.1 to 9.4.2 ([`5d03bc8`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5d03bc8106942df33eb8a05a30be7faff67cbb2c))
-
-* Merge pull request #230 from pivoshenko/dependabot/pip/black-24.4.0
-
-build(deps-dev): bump black from 24.3.0 to 24.4.0 ([`49c6437`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/49c64378c60a7534d1f412bd810eda87871d2dab))
-
-* Merge pull request #229 from pivoshenko/dependabot/pip/commitizen-3.22.0
-
-build(deps-dev): bump commitizen from 3.21.3 to 3.22.0 ([`4be8460`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4be84603bb0eae687fcb35ebe677e2633c98d796))
-
-* Merge pull request #228 from pivoshenko/dependabot/pip/ruff-0.3.7
-
-build(deps-dev): bump ruff from 0.3.5 to 0.3.7 ([`334bb69`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/334bb691701575c7f7a761f333c42c14344c0cb6))
-
-* Merge pull request #227 from pivoshenko/dependabot/pip/poethepoet-0.25.1
-
-build(deps-dev): bump poethepoet from 0.25.0 to 0.25.1 ([`567ddfc`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/567ddfcc35dca4a84415744dcd33b2eb9dd6a487))
-
-* Merge pull request #225 from pivoshenko/dependabot/pip/idna-3.7
-
-build(deps): bump idna from 3.6 to 3.7 ([`81f1c12`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/81f1c125e9fc1824180729bd2a359c759fb29234))
-
-
 ## v0.8.4 (2024-04-11)
 
 ### Build
@@ -551,25 +823,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`8b42c07`](https://g
 
 * docs(README): update badges ([`1d57d53`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1d57d534ead0ada2cf1ce7d7b05bf53bc33891a7))
 
-### Unknown
-
-* Merge pull request #224 from pivoshenko/dependabot/pip/deptry-0.16.1
-
-build(deps-dev): bump deptry from 0.15.0 to 0.16.1 ([`82e0761`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/82e0761b5848203f5baa506d48802dd2cc6eda43))
-
-* Merge pull request #223 from pivoshenko/dependabot/pip/python-semantic-release-9.4.1
-
-build(deps-dev): bump python-semantic-release from 9.4.0 to 9.4.1 ([`85cb6a9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/85cb6a9a2e67b7a457f664ffc5ca2027940d62f0))
-
-* Merge pull request #222 from pivoshenko/dependabot/pip/ruff-0.3.5
-
-build(deps-dev): bump ruff from 0.3.4 to 0.3.5 ([`a87eef1`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a87eef1e01a8dfe4e61f857a163edb57c3878668))
-
-* Merge pull request #221 from pivoshenko/dependabot/pip/python-semantic-release-9.4.0
-
-build(deps-dev): bump python-semantic-release from 9.3.1 to 9.4.0 ([`48b9238`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/48b923838fc0f4e12e89a44946aa6de6039f3242))
-
-
 ## v0.8.3 (2024-03-31)
 
 ### Documentation
@@ -577,7 +830,6 @@ build(deps-dev): bump python-semantic-release from 9.3.1 to 9.4.0 ([`48b9238`](h
 * docs(README): update badges
 
 remove CodeQL badge ([`f81d310`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/f81d310319c0c070798f30c937cf993924afeae1))
-
 
 ## v0.8.2 (2024-03-31)
 
@@ -589,20 +841,17 @@ remove CodeQL badge ([`f81d310`](https://github.com/pivoshenko/poetry-plugin-dot
 
 * docs(README): update badges ([`d71aac0`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d71aac0d19650ab1b93aae43e16c2aa3a6bf9798))
 
-
 ## v0.8.1 (2024-03-31)
 
 ### Documentation
 
 * docs: move VHS script ([`6d0308e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6d0308e585199936351ce81d64b4fe30b86c1fe8))
 
-
 ## v0.8.0 (2024-03-31)
 
 ### Fix
 
 * fix(README): resovle issue with missing assets ([`9eb7fc4`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9eb7fc4997ece57a445db3fcec599c556c9acba5))
-
 
 ## v0.7.0 (2024-03-31)
 
@@ -646,48 +895,13 @@ remove CodeQL badge ([`f81d310`](https://github.com/pivoshenko/poetry-plugin-dot
 
 * fix: update GitHub username ([`6cf3264`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6cf32645405d57a648a0ccaa8160ac0c265bea3b))
 
-### Unknown
-
-* Merge pull request #220 from pivoshenko/issue-214
-
-issue-214 ([`dc987c5`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/dc987c5c1592153b7a35203c345a6726a047b633))
-
-
 ## v0.6.33 (2024-03-30)
-
-### Unknown
-
-* Merge pull request #217 from pivoshenko/dependabot/pip/pytest-mock-3.14.0
-
-build(deps-dev): bump pytest-mock from 3.12.0 to 3.14.0 ([`6c25926`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6c25926a10c1be1a8b53e57e06e0d425ec0a8207))
-
 
 ## v0.6.32 (2024-03-30)
 
-### Unknown
-
-* Merge pull request #216 from pivoshenko/dependabot/pip/pytest-cov-5.0.0
-
-build(deps-dev): bump pytest-cov from 4.1.0 to 5.0.0 ([`86f7bab`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/86f7bab743328003e7dc141c60fb0683e26f55b1))
-
-
 ## v0.6.31 (2024-03-30)
 
-### Unknown
-
-* Merge pull request #215 from pivoshenko/dependabot/pip/deptry-0.15.0
-
-build(deps-dev): bump deptry from 0.14.0 to 0.15.0 ([`8d2633d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8d2633d1fcf1070c777f5a939120ad77d5d16514))
-
-
 ## v0.6.30 (2024-03-30)
-
-### Unknown
-
-* Merge pull request #218 from pivoshenko/dependabot/pip/commitizen-3.20.0
-
-build(deps-dev): bump commitizen from 3.18.0 to 3.20.0 ([`a39aebb`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a39aebbbb2df97e7eb8d55390fe95f595eb4943f))
-
 
 ## v0.6.29 (2024-03-30)
 
@@ -771,39 +985,11 @@ updated-dependencies:
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`3912ebd`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3912ebd2a8bdccee9b1b54edc41bdd285b1cfcab))
 
-### Unknown
-
-* Merge pull request #219 from pivoshenko/dependabot/pip/pylsp-rope-0.1.16
-
-build(deps-dev): bump pylsp-rope from 0.1.15 to 0.1.16 ([`5a21187`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5a21187ebf3295d5319a19c11ac4069ae7fcf35f))
-
-
 ## v0.6.28 (2024-03-18)
-
-### Unknown
-
-* Merge pull request #211 from volopivoshenko/dependabot/pip/deptry-0.14.0
-
-build(deps-dev): bump deptry from 0.12.0 to 0.14.0 ([`87da5e7`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/87da5e7938520a5c45f7eaa557150daddd8207aa))
-
 
 ## v0.6.27 (2024-03-18)
 
-### Unknown
-
-* Merge pull request #209 from volopivoshenko/dependabot/pip/coverage-7.4.4
-
-build(deps-dev): bump coverage from 7.4.3 to 7.4.4 ([`b5ff1c7`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b5ff1c7220170f899facabce5faef52cefb8e222))
-
-
 ## v0.6.26 (2024-03-18)
-
-### Unknown
-
-* Merge pull request #210 from volopivoshenko/dependabot/pip/pylsp-rope-0.1.15
-
-build(deps-dev): bump pylsp-rope from 0.1.11 to 0.1.15 ([`fb05fbf`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/fb05fbf34276d0062ae0d5c1d75a9c919d2372ef))
-
 
 ## v0.6.25 (2024-03-18)
 
@@ -872,13 +1058,6 @@ updated-dependencies:
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`fb30008`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/fb3000883c9ff93d3aae14fceb037e5dcb92884c))
 
-### Unknown
-
-* Merge pull request #212 from volopivoshenko/dependabot/pip/black-24.3.0
-
-build(deps-dev): bump black from 24.2.0 to 24.3.0 ([`9e02d15`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9e02d15e83877e89dcaab44343a5051756800f3f))
-
-
 ## v0.6.24 (2024-03-18)
 
 ### Build
@@ -899,13 +1078,6 @@ updated-dependencies:
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`34b5b70`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/34b5b7021ac9a57a2fbe5f49f9a5215e7fbfdcaa))
 
-### Unknown
-
-* Merge pull request #213 from volopivoshenko/dependabot/pip/python-lsp-server-1.10.1
-
-build(deps-dev): bump python-lsp-server from 1.10.0 to 1.10.1 ([`a4101ac`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a4101ac6f46f7adfd0fa2fff669712d62a89f8e4))
-
-
 ## v0.6.23 (2024-03-11)
 
 ### Build
@@ -924,13 +1096,6 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`650df06`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/650df0692a4b5c05695d219e5bd8e99e8e9b7aad))
-
-### Unknown
-
-* Merge pull request #208 from volopivoshenko/dependabot/github_actions/crs-k/stale-branches-4.1.0
-
-build(deps): bump crs-k/stale-branches from 4.0.1 to 4.1.0 ([`73fbc3b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/73fbc3bfdbf68c37b2d06666bd6c6d562cf8b50a))
-
 
 ## v0.6.22 (2024-03-09)
 
@@ -962,11 +1127,6 @@ build(deps): bump crs-k/stale-branches from 4.0.1 to 4.1.0 ([`73fbc3b`](https://
 
 * chore(commitizen): add config ([`72cae48`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/72cae48fedea8e018bd8e9f947ff46648938c015))
 
-### Unknown
-
-* Merge pull request #206 from volopivoshenko/205-update-linters ([`9858d4e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9858d4e78a228eb3971f69ca4b0ca6283fa91e23))
-
-
 ## v0.6.21 (2024-03-04)
 
 ### Build
@@ -986,13 +1146,6 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`d7506c3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d7506c378a1eca01433117096524e571437b6de2))
-
-### Unknown
-
-* Merge pull request #203 from volopivoshenko/dependabot/pip/poetry-1.8.2
-
-build(deps): bump poetry from 1.8.1 to 1.8.2 ([`cd6922e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/cd6922e9e86313c1b9917bf4b1c6ea55fea361a8))
-
 
 ## v0.6.20 (2024-03-04)
 
@@ -1014,13 +1167,6 @@ updated-dependencies:
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`a123864`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a123864fd3327aaa88284c02f3c7a936e854daf2))
 
-### Unknown
-
-* Merge pull request #202 from volopivoshenko/dependabot/pip/ruff-0.3.0
-
-build(deps-dev): bump ruff from 0.2.2 to 0.3.0 ([`dae7c46`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/dae7c46f0b57cbe7e97e26c109079a18cd176ce1))
-
-
 ## v0.6.19 (2024-02-28)
 
 ### Build
@@ -1040,25 +1186,6 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`9cbf7e0`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9cbf7e0edf9ec4326771d802c20a4cdda2fdb087))
-
-### Unknown
-
-* Merge pull request #201 from volopivoshenko/dependabot/pip/poetry-1.8.1
-
-build(deps): bump poetry from 1.7.1 to 1.8.1 ([`c4c4efe`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c4c4efe441f63bad4dd996bac70d939eab1788ad))
-
-* Merge pull request #198 from volopivoshenko/dependabot/pip/coverage-7.4.3
-
-build(deps-dev): bump coverage from 7.4.1 to 7.4.3 ([`dcb6677`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/dcb66777514d64e648ceea647b03042aeb4d725c))
-
-* Merge pull request #197 from volopivoshenko/dependabot/pip/python-semantic-release-9.1.1
-
-build(deps-dev): bump python-semantic-release from 9.1.0 to 9.1.1 ([`755e5c2`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/755e5c2fe7d149fc6cf4729250fc5f8cab26d806))
-
-* Merge pull request #195 from volopivoshenko/dependabot/github_actions/crs-k/stale-branches-4.0.1
-
-build(deps): bump crs-k/stale-branches from 3.1.4 to 4.0.1 ([`726b64b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/726b64b45c09490d9a62f49c413b45efa4942f03))
-
 
 ## v0.6.18 (2024-02-28)
 
@@ -1126,13 +1253,6 @@ updated-dependencies:
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`5390eb4`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5390eb432e255e0ae581863b9af3df31abce5a36))
 
-### Unknown
-
-* Merge pull request #199 from volopivoshenko/dependabot/pip/poethepoet-0.25.0
-
-build(deps-dev): bump poethepoet from 0.24.4 to 0.25.0 ([`70bacf6`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/70bacf66d9338f25248c7c835f7614d4938aed2b))
-
-
 ## v0.6.17 (2024-02-21)
 
 ### Build
@@ -1151,39 +1271,11 @@ updated-dependencies:
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`fac6c11`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/fac6c116c4da9f0afc445599f505a1e168141536))
 
-### Unknown
-
-* Merge pull request #194 from volopivoshenko/dependabot/pip/cryptography-42.0.4
-
-build(deps): bump cryptography from 42.0.2 to 42.0.4 ([`2d72235`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/2d72235a7b9947d7ff52795d930236a2826b1288))
-
-
 ## v0.6.16 (2024-02-19)
-
-### Unknown
-
-* Merge pull request #190 from volopivoshenko/dependabot/pip/python-semantic-release-9.1.0
-
-build(deps-dev): bump python-semantic-release from 9.0.3 to 9.1.0 ([`b7ce35b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b7ce35bf409ef6a02b51e3d0974dcf6c9d346353))
-
 
 ## v0.6.15 (2024-02-19)
 
-### Unknown
-
-* Merge pull request #191 from volopivoshenko/dependabot/pip/black-24.2.0
-
-build(deps-dev): bump black from 24.1.1 to 24.2.0 ([`d5e579e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d5e579e59ac4c80ab9a90540aa12c3730a27a352))
-
-
 ## v0.6.14 (2024-02-19)
-
-### Unknown
-
-* Merge pull request #192 from volopivoshenko/dependabot/pip/ruff-0.2.2
-
-build(deps-dev): bump ruff from 0.2.1 to 0.2.2 ([`9431e25`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9431e253f2efd4d1e79b9de3da067c0364be196f))
-
 
 ## v0.6.13 (2024-02-19)
 
@@ -1251,13 +1343,6 @@ updated-dependencies:
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`f1f3e3b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/f1f3e3bd3e068e6416e86b574a173004f18dc35c))
 
-### Unknown
-
-* Merge pull request #193 from volopivoshenko/dependabot/pip/pyupgrade-3.15.1
-
-build(deps-dev): bump pyupgrade from 3.15.0 to 3.15.1 ([`4451de6`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4451de63e27d0659e17129ac1bcb1d7527020274))
-
-
 ## v0.6.12 (2024-02-12)
 
 ### Build
@@ -1277,13 +1362,6 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`392cae6`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/392cae6ffe0cffc5f6eaf34609a12b6482f480de))
-
-### Unknown
-
-* Merge pull request #188 from volopivoshenko/dependabot/pip/python-semantic-release-9.0.3
-
-build(deps-dev): bump python-semantic-release from 8.7.0 to 9.0.3 ([`93d2d90`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/93d2d905fa715a5a708315ddd80f09c4bc638931))
-
 
 ## v0.6.11 (2024-02-07)
 
@@ -1309,23 +1387,7 @@ build(deps-dev): bump python-semantic-release from 8.7.0 to 9.0.3 ([`93d2d90`](h
 
 * style: run formatters ([`99bcf40`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/99bcf400692094c78b6bdba3df092e399d96a0a1))
 
-### Unknown
-
-* Merge pull request #182 from volopivoshenko/dependabot/pip/ruff-0.2.0
-
-build(deps-dev): bump ruff from 0.1.14 to 0.2.0 ([`e14566f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e14566f133438cf02118230750ba35d092883866))
-
-* Merge remote-tracking branch &#39;origin&#39; into dependabot/pip/ruff-0.2.0 ([`8ddacb0`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8ddacb0bf89c1600e66aef9f35538e0869b37391))
-
-
 ## v0.6.10 (2024-02-06)
-
-### Unknown
-
-* Merge pull request #184 from volopivoshenko/dependabot/pip/xdoctest-1.1.3
-
-build(deps-dev): bump xdoctest from 1.1.2 to 1.1.3 ([`cf2769b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/cf2769be90a32456c7139d0d72afb201f54b8029))
-
 
 ## v0.6.9 (2024-02-06)
 
@@ -1345,30 +1407,9 @@ updated-dependencies:
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`675c305`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/675c30592a622f3a39f7c86240a0ab530e2b8b94))
 
-### Unknown
-
-* Merge pull request #187 from volopivoshenko/dependabot/pip/cryptography-42.0.0
-
-build(deps): bump cryptography from 41.0.7 to 42.0.0 ([`9069e56`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9069e564005effdebeb9330cf23ccc14775d520d))
-
-
 ## v0.6.8 (2024-02-05)
 
-### Unknown
-
-* Merge pull request #183 from volopivoshenko/dependabot/pip/pytest-sugar-1.0.0
-
-build(deps-dev): bump pytest-sugar from 0.9.7 to 1.0.0 ([`7a3aeca`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/7a3aecafb66d5c9ccc75611a36112b1d9211340d))
-
-
 ## v0.6.7 (2024-02-05)
-
-### Unknown
-
-* Merge pull request #185 from volopivoshenko/dependabot/github_actions/codecov/codecov-action-4
-
-build(deps): bump codecov/codecov-action from 3 to 4 ([`9e5e892`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9e5e892ce2c39577c02eb1645e4cbf6c16662d60))
-
 
 ## v0.6.6 (2024-02-05)
 
@@ -1453,13 +1494,6 @@ updated-dependencies:
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`26d442a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/26d442a467546d583c074712cb3e70c7242bc9e6))
 
-### Unknown
-
-* Merge pull request #186 from volopivoshenko/dependabot/github_actions/crs-k/stale-branches-3.1.4
-
-build(deps): bump crs-k/stale-branches from 3.0.0 to 3.1.4 ([`1600cd3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1600cd33f9e943d4ff5c5676fd29fca52a44d5a3))
-
-
 ## v0.6.5 (2024-02-03)
 
 ### Ci
@@ -1469,13 +1503,6 @@ build(deps): bump crs-k/stale-branches from 3.0.0 to 3.1.4 ([`1600cd3`](https://
 * ci(workflows): add workflow that checks stale PRs ([`7975292`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/79752920de12853cd1d951d8008f8890d5f0b35a))
 
 * ci(workflows): add workflow that creates issues for branches that have become stale ([`1981046`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1981046548e9e7d859ccef5a9ffeb4e9273ed98c))
-
-### Unknown
-
-* Merge pull request #181 from volopivoshenko/no-issue
-
-no-issue ([`4ea9361`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4ea936188dfa76eaa1115a498d23d5e56195495b))
-
 
 ## v0.6.4 (2024-01-29)
 
@@ -1513,17 +1540,6 @@ updated-dependencies:
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`3458f79`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3458f795ec0f47441130ebf7b9e610dab2c94ab8))
 
-### Unknown
-
-* Merge pull request #177 from volopivoshenko/dependabot/pip/coverage-7.4.1
-
-build(deps-dev): bump coverage from 7.4.0 to 7.4.1 ([`bb9feb6`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/bb9feb6a4b1a446a6ce305c9e6cc5777bc83f244))
-
-* Merge pull request #179 from volopivoshenko/dependabot/pip/black-24.1.1
-
-build(deps-dev): bump black from 23.12.1 to 24.1.1 ([`aaacf8d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/aaacf8d177bd5a711c139252fcda3681bb552f78))
-
-
 ## v0.6.3 (2024-01-22)
 
 ### Build
@@ -1559,17 +1575,6 @@ updated-dependencies:
 
 Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`bc38aa8`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/bc38aa877b092ee36af679411a9d39af45281e39))
 
-### Unknown
-
-* Merge pull request #175 from volopivoshenko/dependabot/pip/ruff-0.1.14
-
-build(deps-dev): bump ruff from 0.1.13 to 0.1.14 ([`0d223f0`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/0d223f0a02afa9a30c6dc97212d4721cb5371737))
-
-* Merge pull request #176 from volopivoshenko/dependabot/github_actions/actions/dependency-review-action-4
-
-build(deps): bump actions/dependency-review-action from 3 to 4 ([`0f312e6`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/0f312e63aaed288b7dc8bef80447b13f8c23f6f8))
-
-
 ## v0.6.2 (2024-01-12)
 
 ### Ci
@@ -1577,7 +1582,6 @@ build(deps): bump actions/dependency-review-action from 3 to 4 ([`0f312e6`](http
 * ci(CD): update steps ([`4b9ec46`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4b9ec46f9b9ce63d7b60f39db7957059c4c22370))
 
 * ci(CD): update `semantic-release` config ([`48114eb`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/48114eb4a90ed2ea8ab22dede830ba5692c06f33))
-
 
 ## v0.6.1 (2024-01-12)
 
@@ -2732,287 +2736,6 @@ This change is necessary to release a new version and update README at PyPI. Not
 
 * style: update `mypy` ignore comments ([`bfb3905`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/bfb3905170ee7b2249b532378e52f21fcb28d5b8))
 
-### Unknown
-
-* Merge pull request #174 from volopivoshenko/issue-173
-
-issue-173 ([`f90d51f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/f90d51f1a6731bd23ee54ba8db0caca96941e064))
-
-* Merge pull request #172 from volopivoshenko/dependabot/pip/jinja2-3.1.3
-
-build(deps-dev): bump jinja2 from 3.1.2 to 3.1.3 ([`42fc4b3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/42fc4b318406f911febf5c405d01efec33f3088d))
-
-* Merge pull request #171 from volopivoshenko/dependabot/pip/gitpython-3.1.41
-
-build(deps-dev): bump gitpython from 3.1.40 to 3.1.41 ([`51b4253`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/51b4253dd7dba1ff8bb2941633f0b39e82d76132))
-
-* Merge pull request #170 from volopivoshenko/dependabot/pip/ruff-0.1.11
-
-build(deps-dev): bump ruff from 0.1.9 to 0.1.11 ([`bf6d0f4`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/bf6d0f4d91a37662c6c0a1b97c43da7e40fdc229))
-
-* Merge pull request #167 from volopivoshenko/dependabot/pip/pytest-7.4.4
-
-build(deps-dev): bump pytest from 7.4.3 to 7.4.4 ([`1340777`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/13407779770c89182785443befdf220cefe7727c))
-
-* Merge pull request #168 from volopivoshenko/dependabot/pip/nitpick-0.35.0
-
-build(deps-dev): bump nitpick from 0.34.0 to 0.35.0 ([`aab96d9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/aab96d917b8a5533211192be61a206111958a550))
-
-* Merge pull request #169 from volopivoshenko/dependabot/pip/coverage-7.4.0
-
-build(deps-dev): bump coverage from 7.3.4 to 7.4.0 ([`ad1a779`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ad1a779c038f12bf4d85b46fe3dbdf83915868cf))
-
-* Merge pull request #166 from volopivoshenko/dependabot/pip/mypy-1.8.0
-
-build(deps-dev): bump mypy from 1.7.1 to 1.8.0 ([`6f822a2`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6f822a2b51e495067a2cb3138dbefecf18389705))
-
-* Merge pull request #165 from volopivoshenko/dependabot/pip/black-23.12.1
-
-build(deps-dev): bump black from 23.12.0 to 23.12.1 ([`d1c8bbd`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d1c8bbd1ee22042805f7be6b75bf11638a9d560d))
-
-* Merge pull request #164 from volopivoshenko/dependabot/pip/python-semantic-release-8.7.0
-
-build(deps-dev): bump python-semantic-release from 8.5.1 to 8.7.0 ([`eb2494f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/eb2494f2bdd3d891b90aaec1df0b39a933698c53))
-
-* Merge pull request #163 from volopivoshenko/dependabot/pip/ruff-0.1.9
-
-build(deps-dev): bump ruff from 0.1.8 to 0.1.9 ([`ce40be8`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ce40be81ca5101fbbce573b85cfab78fcbddee47))
-
-* Merge pull request #162 from volopivoshenko/dependabot/pip/coverage-7.3.4
-
-build(deps-dev): bump coverage from 7.3.3 to 7.3.4 ([`b4f9b80`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b4f9b80dd2056685a79d63779abdab318699c432))
-
-* Merge pull request #160 from volopivoshenko/dependabot/pip/black-23.12.0
-
-build(deps-dev): bump black from 23.11.0 to 23.12.0 ([`9280bc4`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9280bc42193056cbc53483ca26ceb4438be70974))
-
-* Merge pull request #159 from volopivoshenko/dependabot/pip/ruff-0.1.8
-
-build(deps-dev): bump ruff from 0.1.7 to 0.1.8 ([`1615f52`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1615f52ed45c55b9a79a59eb7530c35d0531afe2))
-
-* Merge pull request #161 from volopivoshenko/dependabot/pip/isort-5.13.2
-
-build(deps-dev): bump isort from 5.13.0 to 5.13.2 ([`5d23572`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5d23572b59cf7fe19a1d58286c0de6e84869b174))
-
-* Merge pull request #158 from volopivoshenko/dependabot/pip/python-semantic-release-8.5.1
-
-build(deps-dev): bump python-semantic-release from 8.5.0 to 8.5.1 ([`25788c6`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/25788c689bbba66266ff94c3b0c23e2110e772af))
-
-* Merge pull request #157 from volopivoshenko/dependabot/pip/coverage-7.3.3
-
-build(deps-dev): bump coverage from 7.3.2 to 7.3.3 ([`5393b6b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5393b6b89f59450702a134249357f48a5df98206))
-
-* Merge pull request #156 from volopivoshenko/dependabot/github_actions/github/codeql-action-3
-
-build(deps): bump github/codeql-action from 2 to 3 ([`67d0b63`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/67d0b633d90dac9ba72c62d97fa829736acf5f38))
-
-* Merge pull request #155 from AdrianDsg/adriandsg/upgrade-gh-actions ([`36f9a68`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/36f9a68af01bef8531fb08b11892f53828a7caa1))
-
-* Merge pull request #152 from volopivoshenko/dependabot/pip/isort-5.13.0
-
-build(deps-dev): bump isort from 5.12.0 to 5.13.0 ([`91d9885`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/91d9885c0a05984543d2aa07cecf9431e423292e))
-
-* Merge pull request #153 from volopivoshenko/dependabot/pip/python-semantic-release-8.5.0
-
-build(deps-dev): bump python-semantic-release from 8.3.0 to 8.5.0 ([`e18412d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e18412d7d51ff6744b976ad2dd1c939e0994d820))
-
-* Merge pull request #154 from volopivoshenko/dependabot/pip/ruff-0.1.7
-
-build(deps-dev): bump ruff from 0.1.6 to 0.1.7 ([`15d9d2e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/15d9d2e5fa3fcf52cada79147d33edbdf4342aa6))
-
-* Merge pull request #151 from volopivoshenko/dependabot/pip/cryptography-41.0.6
-
-build(deps): bump cryptography from 41.0.5 to 41.0.6 ([`a315d35`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a315d3531aa894e6b0e457e3ed62ee93fd20e8ca))
-
-* Merge pull request #150 from volopivoshenko/dependabot/pip/mypy-1.7.1
-
-build(deps-dev): bump mypy from 1.7.0 to 1.7.1 ([`ce5746b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ce5746bb0ee2c2525d552cf933b93e0ab873ef96))
-
-* Merge pull request #147 from volopivoshenko/dependabot/pip/ruff-0.1.6
-
-build(deps-dev): bump ruff from 0.1.5 to 0.1.6 ([`3a29fab`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3a29fab1fbcfb9de1ee66eba69cdc002ac9cf797))
-
-* Merge pull request #148 from volopivoshenko/dependabot/pip/poetry-1.7.1
-
-build(deps): bump poetry from 1.7.0 to 1.7.1 ([`a6ef469`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a6ef469f531867a03d1548b6558297cdabc95275))
-
-* Merge pull request #149 from volopivoshenko/dependabot/pip/poethepoet-0.24.4
-
-build(deps-dev): bump poethepoet from 0.24.3 to 0.24.4 ([`b16020c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b16020c266b1b6d5a993a93656d8778be73241c5))
-
-* Merge pull request #146 from volopivoshenko/dependabot/pip/poethepoet-0.24.3
-
-build(deps-dev): bump poethepoet from 0.24.2 to 0.24.3 ([`5bba7c6`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5bba7c6041244153d5eb19debd1ad16bb22a87e9))
-
-* Merge pull request #145 from volopivoshenko/dependabot/pip/ruff-0.1.4
-
-build(deps-dev): bump ruff from 0.1.1 to 0.1.4 ([`ecaa76e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ecaa76e67521d5c493841e92520411c0d7a52413))
-
-* Merge pull request #143 from volopivoshenko/dependabot/pip/poetry-1.7.0
-
-build(deps): bump poetry from 1.6.1 to 1.7.0 ([`86b2093`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/86b2093e4ba96ad930169a1450051b2045677878))
-
-* Merge pull request #144 from volopivoshenko/dependabot/pip/poethepoet-0.24.2
-
-build(deps-dev): bump poethepoet from 0.24.1 to 0.24.2 ([`dce3aa6`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/dce3aa63d8059ae321edfd8961c4b863b4b80409))
-
-* Merge pull request #142 from volopivoshenko/dependabot/pip/pytest-7.4.3
-
-build(deps-dev): bump pytest from 7.4.2 to 7.4.3 ([`fc59a2e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/fc59a2eaa0ecccd3e568bf219bb003db9d20c163))
-
-* Merge pull request #141 from volopivoshenko/dependabot/pip/black-23.10.1
-
-build(deps-dev): bump black from 23.10.0 to 23.10.1 ([`1a10127`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1a10127dd8f7d80a17ae14c1e76b9b306c1eec6d))
-
-* Merge pull request #139 from volopivoshenko/dependabot/pip/xdoctest-1.1.2
-
-build(deps-dev): bump xdoctest from 1.1.1 to 1.1.2 ([`09dfe58`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/09dfe58f9a08f555dee28d3badd1fdf2f6c45518))
-
-* Merge pull request #138 from volopivoshenko/dependabot/pip/python-semantic-release-8.3.0
-
-build(deps-dev): bump python-semantic-release from 8.1.2 to 8.3.0 ([`7f71948`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/7f7194859cc4e40b1d048d7802f19e8e5a010657))
-
-* Merge pull request #137 from volopivoshenko/dependabot/pip/pytest-mock-3.12.0
-
-build(deps-dev): bump pytest-mock from 3.11.1 to 3.12.0 ([`dcfe656`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/dcfe6567c55bbdfe361efaeae96a067aa5fd25a1))
-
-* Merge pull request #136 from volopivoshenko/dependabot/pip/mypy-1.6.1
-
-build(deps-dev): bump mypy from 1.6.0 to 1.6.1 ([`faab01e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/faab01e4fa37a290e61614e6a5d84aaf33634e9d))
-
-* Merge pull request #134 from volopivoshenko/dependabot/pip/black-23.10.0
-
-build(deps-dev): bump black from 23.9.1 to 23.10.0 ([`f61cc3d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/f61cc3d45bdd1e4ea41a7451a0da79782e64f835))
-
-* Merge pull request #135 from volopivoshenko/dependabot/pip/ruff-0.1.1
-
-build(deps-dev): bump ruff from 0.0.291 to 0.1.1 ([`648aa53`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/648aa53d179cda336d635773cf14493242b1bef4))
-
-* Merge pull request #133 from volopivoshenko/dependabot/pip/urllib3-2.0.7
-
-build(deps): bump urllib3 from 2.0.6 to 2.0.7 ([`1da3082`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1da3082eb7d71f94b0297a2a04047a9265b8cd91))
-
-* Merge pull request #132 from volopivoshenko/dependabot/pip/python-semantic-release-8.1.2
-
-build(deps-dev): bump python-semantic-release from 8.1.1 to 8.1.2 ([`62755d6`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/62755d602fbe4c4949294f501b92f866ba3d4ebb))
-
-* Merge pull request #130 from volopivoshenko/dependabot/pip/mypy-1.6.0
-
-build(deps-dev): bump mypy from 1.5.1 to 1.6.0 ([`9f97b19`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9f97b19db6b143f25584002a2c0a930a3b8552b6))
-
-* Merge pull request #131 from volopivoshenko/dependabot/pip/pre-commit-3.5.0
-
-build(deps-dev): bump pre-commit from 3.4.0 to 3.5.0 ([`b185642`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b185642edf6fffa4d26b28a9df833c3bbdf9be5b))
-
-* Merge pull request #128 from volopivoshenko/dependabot/pip/poethepoet-0.24.1
-
-build(deps-dev): bump poethepoet from 0.24.0 to 0.24.1 ([`4bff3b7`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4bff3b7fa05bf61676b9c3b48a9cf916ade81e42))
-
-* Merge pull request #126 from volopivoshenko/dependabot/pip/poethepoet-0.24.0
-
-build(deps-dev): bump poethepoet from 0.23.0 to 0.24.0 ([`fb91800`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/fb918007d23737f25706a3f5942d95708978d851))
-
-* Merge pull request #127 from volopivoshenko/dependabot/pip/urllib3-2.0.6
-
-build(deps): bump urllib3 from 2.0.4 to 2.0.6 ([`c691a7b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c691a7ba37a69882001a403d7c0f0002b8aee0ad))
-
-* Merge pull request #124 from volopivoshenko/dependabot/pip/ruff-0.0.291
-
-build(deps-dev): bump ruff from 0.0.290 to 0.0.291 ([`dd25e8a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/dd25e8afdc1077ebf735436f5bfe09a43dc17ee6))
-
-* Merge pull request #123 from volopivoshenko/dependabot/pip/python-semantic-release-8.1.1
-
-build(deps-dev): bump python-semantic-release from 8.0.8 to 8.1.1 ([`8b2fff6`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8b2fff66d871067514ea249341a176176efd4164))
-
-* Merge pull request #122 from volopivoshenko/dependabot/pip/pyupgrade-3.13.0
-
-build(deps-dev): bump pyupgrade from 3.11.0 to 3.13.0 ([`40f5811`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/40f5811e921847db669c5849cf98a1d03c3d6764))
-
-* Merge pull request #125 from volopivoshenko/dependabot/pip/poethepoet-0.23.0
-
-build(deps-dev): bump poethepoet from 0.22.1 to 0.23.0 ([`359389d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/359389de9c6ce53c5eb2e7d86856978c9e61b8a3))
-
-* Merge pull request #121 from volopivoshenko/dependabot/pip/cryptography-41.0.4
-
-build(deps): bump cryptography from 41.0.3 to 41.0.4 ([`7818d05`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/7818d0578c18457316ea330208683aed6832e011))
-
-* Merge pull request #119 from volopivoshenko/dependabot/pip/ruff-0.0.290
-
-build(deps-dev): bump ruff from 0.0.287 to 0.0.290 ([`e71ab51`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e71ab516146f5ec5cce0191bc1721a71f6db6c54))
-
-* Merge pull request #118 from volopivoshenko/dependabot/pip/black-23.9.1
-
-build(deps-dev): bump black from 23.9.0 to 23.9.1 ([`106a8bf`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/106a8bf0fd7805630d5e332e2a9bc42105e8f5fd))
-
-* Merge pull request #120 from volopivoshenko/dependabot/pip/pyupgrade-3.11.0
-
-build(deps-dev): bump pyupgrade from 3.10.1 to 3.11.0 ([`f7e8613`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/f7e86138ed42419f11481a752a3f0198148a946a))
-
-* Merge pull request #116 from volopivoshenko/dependabot/pip/gitpython-3.1.35
-
-build(deps-dev): bump gitpython from 3.1.32 to 3.1.35 ([`d2d7f0a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d2d7f0a2977229a51312d70414dbe4ffd35c1aed))
-
-* Merge pull request #113 from volopivoshenko/dependabot/pip/black-23.9.0
-
-build(deps-dev): bump black from 23.7.0 to 23.9.0 ([`7dbd357`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/7dbd3572444794758db2cc37069c85c24017c622))
-
-* Merge pull request #114 from volopivoshenko/dependabot/pip/pytest-7.4.2
-
-build(deps-dev): bump pytest from 7.4.1 to 7.4.2 ([`7637494`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/7637494a768f98d01502b56ef059a9983792a2c4))
-
-* Merge pull request #115 from volopivoshenko/dependabot/pip/coverage-7.3.1
-
-build(deps-dev): bump coverage from 7.3.0 to 7.3.1 ([`ff8bf9b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ff8bf9beecac09b07b81f105b86ee379c37fcdf7))
-
-* Merge pull request #109 from volopivoshenko/dependabot/pip/poethepoet-0.22.1
-
-build(deps-dev): bump poethepoet from 0.22.0 to 0.22.1 ([`2ebbf68`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/2ebbf689116310fd4e2a757a026d2e01f8760fad))
-
-* Merge pull request #110 from volopivoshenko/dependabot/pip/ruff-0.0.287
-
-build(deps-dev): bump ruff from 0.0.286 to 0.0.287 ([`82980b5`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/82980b5ea037ebb5cb5aa378f4fc4e06c38b542d))
-
-* Merge pull request #111 from volopivoshenko/dependabot/pip/pre-commit-3.4.0
-
-build(deps-dev): bump pre-commit from 3.3.3 to 3.4.0 ([`4e2a4a1`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4e2a4a143d4a6beac12d4b213e6376d56ecf11a3))
-
-* Merge pull request #112 from volopivoshenko/dependabot/pip/pytest-7.4.1
-
-build(deps-dev): bump pytest from 7.4.0 to 7.4.1 ([`953d6d6`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/953d6d6be0211c0898faf6922ee4230d4f74f2bc))
-
-* Merge pull request #108 from volopivoshenko/dependabot/pip/python-semantic-release-8.0.8
-
-build(deps-dev): bump python-semantic-release from 8.0.6 to 8.0.8 ([`fc1118b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/fc1118b70477f9e9820b75045e791da182259827))
-
-* Merge pull request #107 from volopivoshenko/dependabot/pip/poethepoet-0.22.0
-
-build(deps-dev): bump poethepoet from 0.21.1 to 0.22.0 ([`611f6da`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/611f6da344cd1e28877b7e431733d9e9d2498c82))
-
-* Merge pull request #98 from volopivoshenko/dependabot/pip/python-semantic-release-8.0.6
-
-build(deps-dev): bump python-semantic-release from 8.0.3 to 8.0.6 ([`40856d8`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/40856d8b46e92a9d99d677f285c155cddec5d4ee))
-
-* Merge pull request #99 from volopivoshenko/dependabot/pip/mypy-1.5.0
-
-build(deps-dev): bump mypy from 1.4.1 to 1.5.0 ([`2ef29ec`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/2ef29ec182156087c4aa108d42b5afc2d0a8e74a))
-
-* Merge pull request #100 from volopivoshenko/dependabot/pip/ruff-0.0.284
-
-build(deps-dev): bump ruff from 0.0.282 to 0.0.284 ([`eb40f0e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/eb40f0e451834a342355eefe4cf6011476823cee))
-
-* Merge pull request #101 from volopivoshenko/dependabot/pip/sh-2.0.6
-
-build(deps-dev): bump sh from 2.0.4 to 2.0.6 ([`2e7619c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/2e7619c90627f40ed64f53fa6434dc8306985094))
-
-* Merge pull request #102 from volopivoshenko/dependabot/pip/coverage-7.3.0
-
-build(deps-dev): bump coverage from 7.2.7 to 7.3.0 ([`4386149`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4386149f1d090146f3e012765819c272205eba48))
-
-* Merge pull request #97 from volopivoshenko/dependabot/pip/ruff-0.0.282
-
-build(deps-dev): bump ruff from 0.0.280 to 0.0.282 ([`9602ba7`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9602ba7714dbd0c7e2180c0b37bb41c0bfd769c0))
-
-
 ## v0.5.2 (2023-08-05)
 
 ### Build
@@ -3054,13 +2777,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`fad8f53`](https://g
 ### Style
 
 * style(docs): run formatters ([`3577088`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/35770883f8e306a706fb67ed51731e0b54190b36))
-
-### Unknown
-
-* Merge pull request #94 from volopivoshenko/dependabot/pip/ruff-0.0.280
-
-build(deps-dev): bump ruff from 0.0.275 to 0.0.280 ([`c9c54bb`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c9c54bb48bfe1d5028a27b0401469fb9c1543125))
-
 
 ## v0.5.1 (2023-07-22)
 
@@ -3287,61 +3003,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`117281f`](https://g
 * docs: add `wakatime` badge ([`d0c39a7`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d0c39a74343ee608587cc9cbcb52c9484bfa3573))
 
 * docs: update badges ([`86a7716`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/86a771667cacbd3c3a011ee88e93773f702d70a2))
-
-### Unknown
-
-* Merge pull request #93 from volopivoshenko/dependabot/pip/python-semantic-release-8.0.1
-
-build(deps-dev): bump python-semantic-release from 7.34.6 to 8.0.1 ([`381460e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/381460e2fd61a26dbfb116fda264dfd037eca148))
-
-* Merge pull request #91 from volopivoshenko/dependabot/pip/poethepoet-0.21.1
-
-build(deps-dev): bump poethepoet from 0.20.0 to 0.21.1 ([`fe7949a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/fe7949ac87f9a1a00b319abe65b119a429fab9f3))
-
-* Merge pull request #92 from volopivoshenko/dependabot/pip/black-23.7.0
-
-build(deps-dev): bump black from 23.3.0 to 23.7.0 ([`0e63cf1`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/0e63cf13b2e133f70dcab077bc71019d9ac4973d))
-
-* Merge pull request #84 from volopivoshenko/dependabot/pip/mypy-1.4.1
-
-build(deps-dev): bump mypy from 1.4.0 to 1.4.1 ([`60b8a90`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/60b8a9092e64f5ab2f96d1e8dc7ca072d2212157))
-
-* Merge pull request #79 from volopivoshenko/dependabot/pip/pyupgrade-3.7.0
-
-build(deps-dev): bump pyupgrade from 3.6.0 to 3.7.0 ([`8f0bf7d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8f0bf7dd334626a02209aaa1aaa79da3476d9db7))
-
-* Merge pull request #80 from volopivoshenko/dependabot/pip/pytest-mock-3.11.1
-
-build(deps-dev): bump pytest-mock from 3.10.0 to 3.11.1 ([`a689ba1`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a689ba197392af6a28ef1082f4e9b583891c0a9b))
-
-* Merge pull request #81 from volopivoshenko/dependabot/pip/codespell-2.2.5
-
-build(deps-dev): bump codespell from 2.2.4 to 2.2.5 ([`9bf681f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9bf681fb2ed72341ad455a15984c7cc53e335f81))
-
-* Merge pull request #82 from volopivoshenko/dependabot/pip/python-semantic-release-7.34.6
-
-build(deps-dev): bump python-semantic-release from 7.34.3 to 7.34.6 ([`c23c832`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c23c8325286dc7bd429e4d50e5b6b4b52252fd2f))
-
-* Merge pull request #83 from volopivoshenko/dependabot/pip/pre-commit-3.3.3
-
-build(deps-dev): bump pre-commit from 3.3.2 to 3.3.3 ([`d4a690c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d4a690ca08ad0fe065504e32e8c1a9517f980cc7))
-
-* Merge pull request #76 from volopivoshenko/dependabot/pip/pyupgrade-3.6.0
-
-build(deps-dev): bump pyupgrade from 3.4.0 to 3.6.0 ([`a514c56`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a514c56478439dd0d9e2fbecda29cc95f4cd74a6))
-
-* Merge pull request #77 from volopivoshenko/dependabot/pip/yesqa-1.5.0
-
-build(deps-dev): bump yesqa from 1.4.0 to 1.5.0 ([`b12d7d7`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b12d7d73263e8614a25bf7eb1afbf8cbe97b2074))
-
-* Merge pull request #78 from volopivoshenko/dependabot/pip/ruff-0.0.272
-
-build(deps-dev): bump ruff from 0.0.270 to 0.0.272 ([`5eec5a9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5eec5a92ad4d465a662a943e79a6bbdd705a58fe))
-
-* Merge pull request #75 from volopivoshenko/dependabot/pip/pytest-7.3.2
-
-build(deps-dev): bump pytest from 7.3.1 to 7.3.2 ([`4a0449e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4a0449e2be901f5af99a04ea09ca137cdcaea170))
-
 
 ## v0.5.0 (2023-06-02)
 
@@ -3645,81 +3306,6 @@ update linter `wemake-python-styleguide -&gt; ruff` ([`02d54a7`](https://github.
 
 * style: apply formatter ([`9bb3522`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9bb352200bf3a57918b9959082d0b2313724be94))
 
-### Unknown
-
-* Merge pull request #74 from volopivoshenko:issue-70
-
-issue-70 ([`41367fe`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/41367fe551a081963a32f466246990aaaf434821))
-
-* Merge pull request #71 from volopivoshenko/dependabot/pip/coverage-7.2.6
-
-build(deps-dev): bump coverage from 7.2.5 to 7.2.6 ([`d85a007`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d85a007595c0c22602318e1a7a9603e8f0842fea))
-
-* Merge pull request #72 from volopivoshenko/dependabot/pip/python-semantic-release-7.34.1
-
-build(deps-dev): bump python-semantic-release from 7.33.5 to 7.34.1 ([`ee14592`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ee145923884e04596cc022a3cc2064af0ef56df4))
-
-* Merge pull request #73 from volopivoshenko/dependabot/pip/pytest-cov-4.1.0
-
-build(deps-dev): bump pytest-cov from 4.0.0 to 4.1.0 ([`b7914a6`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b7914a6b86736fb3108e8b7536da224b84c71cbb))
-
-* Merge pull request #69 from volopivoshenko/dependabot/pip/requests-2.31.0
-
-build(deps): bump requests from 2.30.0 to 2.31.0 ([`81fe2e4`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/81fe2e4a5087f76e854f91e506204803ccd2efdf))
-
-* Merge pull request #65 from volopivoshenko/dependabot/pip/sh-2.0.4
-
-build(deps-dev): bump sh from 2.0.3 to 2.0.4 ([`5c2c17a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5c2c17a2a428b0f8855397652f5ff28559417640))
-
-* Merge pull request #66 from volopivoshenko/dependabot/pip/python-semantic-release-7.33.5
-
-build(deps-dev): bump python-semantic-release from 7.33.4 to 7.33.5 ([`788d0cd`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/788d0cd6a2b06e6ddeeff1b81ea5df50840e2b4e))
-
-* Merge pull request #67 from volopivoshenko/dependabot/pip/poetry-1.5.0
-
-build(deps): bump poetry from 1.4.2 to 1.5.0 ([`c308aa5`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c308aa5ce689b223744c31ae9fdef3c3d911024a))
-
-* Merge pull request #68 from volopivoshenko/dependabot/pip/pre-commit-3.3.2
-
-build(deps-dev): bump pre-commit from 3.3.1 to 3.3.2 ([`9d16340`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9d16340ddc65297ec0e56fa1c67a3b35647f0112))
-
-* Merge pull request #64 from volopivoshenko/dependabot/pip/mypy-1.3.0
-
-build(deps-dev): bump mypy from 1.2.0 to 1.3.0 ([`4302258`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/43022584e5602bb7d51144ce7fd281af9587a97c))
-
-* Merge pull request #62 from volopivoshenko/dependabot/pip/python-semantic-release-7.33.4
-
-build(deps-dev): bump python-semantic-release from 7.33.3 to 7.33.4 ([`e3d708a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e3d708a53d73bf645a10d1ea9637ec46c85250c8))
-
-* Merge pull request #63 from volopivoshenko/dependabot/pip/deptry-0.11.0
-
-build(deps-dev): bump deptry from 0.9.0 to 0.11.0 ([`a5419ff`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a5419fffee21c76eb839fd86e08fdb35a10f0c64))
-
-* Merge pull request #61 from volopivoshenko/dependabot/pip/pyupgrade-3.4.0
-
-build(deps-dev): bump pyupgrade from 3.3.2 to 3.4.0 ([`6774e1a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6774e1a90506dc6cb09b37f577dff0f2905843e3))
-
-* Merge pull request #58 from volopivoshenko/dependabot/pip/coverage-7.2.5
-
-build(deps-dev): bump coverage from 7.2.3 to 7.2.5 ([`28c7bff`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/28c7bff07429eacc3c6343896bb6b5f13e075163))
-
-* Merge pull request #59 from volopivoshenko/dependabot/pip/python-semantic-release-7.33.3
-
-build(deps-dev): bump python-semantic-release from 7.33.2 to 7.33.3 ([`2fc9c37`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/2fc9c3780fa91d33bc77f7891bd9a214193c9155))
-
-* Merge pull request #60 from volopivoshenko/dependabot/pip/ipython-8.12.1
-
-build(deps-dev): bump ipython from 8.12.0 to 8.12.1 ([`66cee04`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/66cee045d3545e212090ac5a3639ed166e3ab729))
-
-* Merge pull request #56 from volopivoshenko/dependabot/pip/pytest-7.3.1
-
-build(deps-dev): bump pytest from 7.3.0 to 7.3.1 ([`26fd2b6`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/26fd2b6bca6f225373495864716d4dbaf97b6a55))
-
-* Merge pull request #55 from volopivoshenko/dependabot/pip/pytest-sugar-0.9.7
-
-build(deps-dev): bump pytest-sugar from 0.9.6 to 0.9.7 ([`c14f1db`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c14f1db4716308608723fe3f16dcf894c11ad083))
-
-
 ## v0.4.1 (2023-04-07)
 
 ### Ci
@@ -3729,7 +3315,6 @@ build(deps-dev): bump pytest-sugar from 0.9.6 to 0.9.7 ([`c14f1db`](https://gith
 ### Fix
 
 * fix(docs): add demo ([`dfbf7a4`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/dfbf7a496c33ff4e652afb908ba542750ed85c5c))
-
 
 ## v0.4.0 (2023-04-07)
 
@@ -4014,79 +3599,6 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`f01ab43`](https://g
 
 rename plugin from `poetry-dotenv` to `poetry-plugin-dotenv` ([`6c28010`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6c2801005a297a7738b139014c1239fa5fae2baa))
 
-### Unknown
-
-* Merge pull request #52 from volopivoshenko:no-issue
-
-no-issue ([`dce8ead`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/dce8ead7d9a91e6c0f500a235380a1bfdfdc195d))
-
-* Merge pull request #43 from volopivoshenko/dependabot/pip/mypy-1.1.1
-
-build(deps-dev): bump mypy from 1.0.1 to 1.1.1 ([`928f369`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/928f3698d945c45d0884f27ddb80107e16352592))
-
-* Merge pull request #44 from volopivoshenko/dependabot/pip/ipdb-0.13.13
-
-build(deps-dev): bump ipdb from 0.13.11 to 0.13.13 ([`a9191c8`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a9191c8ac456ce807f702bfc0bf5be7f4be66466))
-
-* Merge pull request #40 from volopivoshenko/dependabot/pip/black-23.1.0
-
-build(deps-dev): bump black from 22.12.0 to 23.1.0 ([`a1ffb3e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a1ffb3ee90e8a66cae2e354a566811a277effb4c))
-
-* Merge pull request #41 from volopivoshenko/dependabot/pip/pytest-7.2.2
-
-build(deps-dev): bump pytest from 7.2.1 to 7.2.2 ([`3198dee`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3198dee7ba903c1f5f47694606a30a5e00abefb5))
-
-* Merge pull request #42 from volopivoshenko/dependabot/pip/mypy-1.0.1
-
-build(deps-dev): bump mypy from 0.991 to 1.0.1 ([`ca2b19a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ca2b19a9168ebd55493604644f7522a205c502a7))
-
-* Merge pull request #39 from volopivoshenko/dependabot/pip/pre-commit-3.1.1
-
-build(deps-dev): bump pre-commit from 3.1.0 to 3.1.1 ([`84290d4`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/84290d48e6302af3b7b591850a38510267a8cac0))
-
-* Merge pull request #38 from volopivoshenko/dependabot/pip/poetry-1.4.0
-
-build(deps): bump poetry from 1.3.2 to 1.4.0 ([`7de3b9e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/7de3b9ed132a395f36681858beeeeea7d77a1e2c))
-
-* Merge pull request #37 from volopivoshenko/dependabot/pip/pre-commit-3.1.0
-
-build(deps-dev): bump pre-commit from 3.0.4 to 3.1.0 ([`e6871c4`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e6871c4a05c0b4493f2bd02b19b4f0886267e5b1))
-
-* Merge pull request #36 from volopivoshenko/dependabot/pip/coverage-7.2.1
-
-build(deps-dev): bump coverage from 7.1.0 to 7.2.1 ([`1bfac8a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1bfac8a00af0bfbc637ec469aa8bea84294d36a9))
-
-* Merge pull request #35 from volopivoshenko/dependabot/pip/flake8-pytest-style-1.7.2
-
-build(deps-dev): bump flake8-pytest-style from 1.7.0 to 1.7.2 ([`92d1a81`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/92d1a813ef5b6dda99d1db3dbf908756ca56f25a))
-
-* Merge pull request #33 from volopivoshenko/dependabot/pip/flake8-pytest-style-1.7.0
-
-build(deps-dev): bump flake8-pytest-style from 1.6.0 to 1.7.0 ([`e2e9e59`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e2e9e59a49fa9e8c1109276a67626e97a9f24486))
-
-* Merge pull request #32 from volopivoshenko/dependabot/pip/ipython-8.10.0
-
-build(deps-dev): bump ipython from 8.9.0 to 8.10.0 ([`7ce51f7`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/7ce51f774d574529c27674a5c1c4e2ed16db2856))
-
-* Merge pull request #31 from volopivoshenko/dependabot/pip/cryptography-39.0.1
-
-build(deps): bump cryptography from 39.0.0 to 39.0.1 ([`22e9604`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/22e960434c9959c30a6c0594c47069dd50db0760))
-
-* Merge pull request #28 from volopivoshenko/dependabot/pip/pre-commit-3.0.4
-
-build(deps-dev): bump pre-commit from 3.0.2 to 3.0.4 ([`683b9de`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/683b9de1f008e445cb995ae125fa66d9f2a493a6))
-
-* Merge pull request #29 from volopivoshenko/dependabot/pip/xdoctest-1.1.1
-
-build(deps-dev): bump xdoctest from 1.1.0 to 1.1.1 ([`9c9d9df`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9c9d9dffc4f646c0c96cb3a19e699709e596d9b5))
-
-* Merge pull request #30 from volopivoshenko/dependabot/pip/python-semantic-release-7.33.1
-
-build(deps-dev): bump python-semantic-release from 7.33.0 to 7.33.1 ([`ec78e9e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ec78e9e5abc25514114ee0e3739479487e8219a6))
-
-* Merge pull request #27 from volopivoshenko/dependabot/pip/pre-commit-3.0.2 ([`d4a407e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d4a407e4ac837be37d0065b0022e9e35faf9ef0b))
-
-
 ## v0.3.0 (2023-01-29)
 
 ### Build
@@ -4159,23 +3671,11 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`a8ac35f`](https://g
 
 * refactor: update license ([`50cdd95`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/50cdd95bd05578216e0d4b20bef6a3080689a867))
 
-### Unknown
-
-* Merge pull request #26 from volopivoshenko/no-issue
-
-no-issue ([`ce1ef0d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ce1ef0de665a8a7476dede42d2ae6def7d1b9de1))
-
-* Merge pull request #19 from volopivoshenko/dependabot/pip/poetry-1.3.1
-
-build(deps): bump poetry from 1.2.2 to 1.3.1 ([`1a049eb`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1a049eb44b0c00879d288caef12a1901d891af7e))
-
-
 ## v0.2.7 (2022-12-03)
 
 ### Fix
 
 * fix(docs): update docs ([`b9e4f83`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b9e4f835104d14e09c0d7b3b67bebb5c5468504f))
-
 
 ## v0.2.6 (2022-12-03)
 
@@ -4184,11 +3684,6 @@ build(deps): bump poetry from 1.2.2 to 1.3.1 ([`1a049eb`](https://github.com/piv
 * fix(docs): update docs ([`68ae66b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/68ae66b4655b2bce3ba30868818442eaf2197353))
 
 * fix(dependencies): update dependencies ([`9bb1b31`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9bb1b31aa4f3c1941f560d86cae7ddb5a6cd909c))
-
-### Unknown
-
-* Merge branch &#39;main&#39; of github.com:volopivoshenko/poetry-dotenv ([`54cb4d9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/54cb4d9a01fa1213471f24fa5f588549ea8e722f))
-
 
 ## v0.2.5 (2022-11-18)
 
@@ -4199,7 +3694,6 @@ build(deps): bump poetry from 1.2.2 to 1.3.1 ([`1a049eb`](https://github.com/piv
 ### Fix
 
 * fix(dependencies): update base Python version ([`54d9c24`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/54d9c2449d9adb2ae01398f900c839623640cbf5))
-
 
 ## v0.2.4 (2022-11-16)
 
@@ -4222,13 +3716,6 @@ build(deps): bump poetry from 1.2.2 to 1.3.1 ([`1a049eb`](https://github.com/piv
 ### Fix
 
 * fix(plugin): update logger ([`31a7d0a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/31a7d0a454e7a87efb3cd635978725dbf06fe714))
-
-### Unknown
-
-* Merge pull request #16 from volopivoshenko/issue-15-update-github-workflows
-
-issue-15 ([`9e6eb00`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9e6eb001642abc2b7cede8ec910532d95b81b622))
-
 
 ## v0.2.3 (2022-11-06)
 
@@ -4258,7 +3745,6 @@ issue-15 ([`9e6eb00`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/
 
 * refactor(docs): refactor ([`980e172`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/980e172b79c0531ccdda8a40424935e3ee640060))
 
-
 ## v0.2.2 (2022-10-30)
 
 ### Fix
@@ -4268,7 +3754,6 @@ issue-15 ([`9e6eb00`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/
 ### Refactor
 
 * refactor(CHANGELOG): resolve typos ([`c17f9e5`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c17f9e5e2633a8feb046f49220733a09fd2b5f38))
-
 
 ## v0.2.1 (2022-10-29)
 
@@ -4297,7 +3782,6 @@ issue-15 ([`9e6eb00`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/
 ### Refactor
 
 * refactor(linters): update `mypy` task ([`f38365c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/f38365c1be8a50eafed2eb6684acecd60ea3947a))
-
 
 ## v0.2.0 (2022-10-22)
 
@@ -4452,23 +3936,6 @@ issue-15 ([`9e6eb00`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/
 * test(plugin): add cleanup ([`1705bcc`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1705bcce728d9e95e53812a077a1250738c0831b))
 
 * test(plugin): fix issue with fixtures ([`d9cdd9d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d9cdd9d43cc7929cf8e39ac92801317594283c09))
-
-### Unknown
-
-* Merge pull request #14 from volopivoshenko/issue-7-add-native-support-of-the-dotenv-functionality
-
-issue-7-add-native-support-of-the-dotenv-functionality ([`2b3216f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/2b3216fe2555b832d19d70efa06d9e06a8082889))
-
-* Merge remote-tracking branch &#39;origin/issue-7-add-native-support-of-the-dotenv-functionality&#39; into issue-7-add-native-support-of-the-dotenv-functionality ([`a68cf7d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a68cf7d66d8d366be6d5a8441b765ff4b92901ad))
-
-* Merge pull request #10 from volopivoshenko:issue-5-update-homepage
-
-issue-5 ([`2de4e85`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/2de4e859fbc02cb12b083a9f84355632b9603d41))
-
-* Merge pull request #9 from volopivoshenko:issue-8-invalid-github-templates
-
-issue-8-invalid-github-templates ([`44089af`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/44089af183d3e1dd3618c979f1fb89ffe7ad159d))
-
 
 ## v0.1.0 (2022-09-21)
 
@@ -4655,10 +4122,6 @@ Available commands:
 * test: add config ([`30d4901`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/30d49012becddc965b0e467ba45e4a4a96755165))
 
 ### Unknown
-
-* Merge pull request #2 from volopivoshenko/no-issue
-
-no-issue ([`3c0c012`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3c0c0122356017dfec8ec379173b5f87741ca4bc))
 
 * tests(plugin): update exclusions ([`18dcb6b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/18dcb6b5b96fdd763573cb616a8beba7b140e2b6))
 
