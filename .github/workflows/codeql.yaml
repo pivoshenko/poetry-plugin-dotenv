@@ -22,16 +22,22 @@ jobs:
         language: ["python"]
 
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - name: Checkout repository
+        id: checkout
+        uses: actions/checkout@v4
 
-      - uses: github/codeql-action/init@v3
+      - name: Initialize CodeQL
+        id: initialize
+        uses: github/codeql-action/init@v3
         with:
           languages: ${{ matrix.language }}
 
-      - uses: github/codeql-action/autobuild@v3
+      - name: Autobuild
+        id: autobuild
+        uses: github/codeql-action/autobuild@v3
 
-      - uses: github/codeql-action/analyze@v3
+      - name: Perform CodeQL analysis
+        id: analysis
+        uses: github/codeql-action/analyze@v3
         with:
           category: "/language:${{matrix.language}}"

@@ -14,7 +14,9 @@ jobs:
     permissions:
       issues: write
     steps:
-      - uses: dessant/lock-threads@v5
+      - name: Lock issues
+        id: lock-issues
+        uses: dessant/lock-threads@v5
         with:
           process-only: issues
           issue-inactive-days: 30
@@ -27,7 +29,9 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      - uses: dessant/lock-threads@v5
+      - name: Lock PRs
+        id: lock-prs
+        uses: dessant/lock-threads@v5
         with:
           process-only: prs
           pr-inactive-days: 30

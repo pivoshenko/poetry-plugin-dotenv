@@ -11,8 +11,12 @@ jobs:
   dependency-review:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        id: checkout
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: actions/dependency-review-action@v4
+      - name: Dependency review
+        id: review
+        uses: actions/dependency-review-action@v4
