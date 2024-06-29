@@ -1,0 +1,34 @@
+name: Detect Changed Files
+description: Detect changes in files
+
+outputs:
+  pyproject:
+    description: Whether there are changes in `poetry.lock / pyproject.toml`
+    value: ${{ steps.changes.outputs.pyproject }}
+
+  src:
+    description: Whether there are changes in `src`
+    value: ${{ steps.changes.outputs.src }}
+
+  tests:
+    description: Whether there are changes in `tests`
+    value: ${{ steps.changes.outputs.tests }}
+
+runs:
+  using: composite
+  steps:
+    - name: Detect changes
+      id: detect-changes
+      uses: dorny/paths-filter@v3
+      with:
+        filters: |
+          pyproject: &pyproject
+            - 'poetry.lock'
+            - 'pyproject.toml'
+          src:
+            - *pyproject
+            - 'src/**/*.py'
+          tests:
+            - *pyproject
+            - 'src/**/*.py'
+            - 'tests/**'
