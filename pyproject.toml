@@ -102,6 +102,7 @@ python-semantic-release = ">=9.8.3"
 poetry-plugin-dotenv = "poetry_plugin_dotenv.plugin:DotenvPlugin"
 
 [tool.semantic_release]
+logging_use_named_masks = true
 changelog_file = "CHANGELOG.md"
 version_toml = ["pyproject.toml:tool.poetry.version"]
 version_variables = ["src/poetry_plugin_dotenv/__init__.py:__version__"]
@@ -112,6 +113,13 @@ exclude_commit_patterns = ["Merge pull request"]
 major_tags = ["feat"]
 minor_tags = ["fix", "perf", "refactor"]
 patch_tags = ["docs", "style"]
+
+[tool.semantic_release.changelog]
+exclude_commit_patterns = [
+  '''Merged? .*''',
+  '''Initial Commit.*''',
+  '''^\d+\.\d+\.\d+''',
+]
 
 [tool.commitizen]
 allowed_prefixes = ["build", "tests", "Merge", "Initial", "0", "1", "2"]
