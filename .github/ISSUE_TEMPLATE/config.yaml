@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+contact_links:
+- name: Discussions
+  url: https://github.com/pivoshenko/poetry-plugin-dotenv/discussions
+  about: |
+    Ask questions about using `poetry-plugin-dotenv`, features and roadmap, or get support and feedback for using the plugin.
