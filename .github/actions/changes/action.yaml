@@ -1,0 +1,40 @@
+name: Detect Changed Files
+description: Detect changes in files
+
+outputs:
+  pyproject:
+    description: Whether there are changes in `poetry.lock / pyroject.toml`
+    value: ${{ steps.changes.outputs.project }}
+
+  src:
+    description: Whether there are changes in `src`
+    value: ${{ steps.changes.outputs.src }}
+
+  tests:
+    description: Whether there are changes in `tests`
+    value: ${{ steps.changes.outputs.tests }}
+
+runs:
+  using: composite
+  steps:
+    - name: Checkout repository
+      id: checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Detect changes
+      id: changes
+      uses: dorny/paths-filter@v3
+      with:
+        filters: |
+          pyproject: &pyproject
+            - 'poetry.lock'
+            - 'pyproject.toml'
+          src:
+            - *project
+            - 'src/**/*.py'
+          tests:
+            - *project
+            - 'src/**/*.py'
+            - 'tests/**'
