@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v2.2.2 (2024-06-30)
+
+### Documentation
+
+* docs(README): update badges ([`008aa99`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/008aa99e9d953ee19b5230a06491d0d64e5af972))
+
 ## v2.2.1 (2024-06-29)
 
 ### Ci
