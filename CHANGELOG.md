@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v2.2.3 (2024-06-30)
+
+### Documentation
+
+* docs(README): update badge colors ([`60df177`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/60df1778e7982e8a675d9ac1b8652d32c590502b))
+
 ## v2.2.2 (2024-06-30)
 
 ### Documentation
