@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
-    <img alt="license" src="https://img.shields.io/pypi/l/poetry-plugin-dotenv?style=flat-square&logo=opensourceinitiative&logoColor=white&color=81B214">
+    <img alt="license" src="https://img.shields.io/pypi/l/poetry-plugin-dotenv?style=flat-square&logo=opensourceinitiative&logoColor=white&color=0A6847">
   </a>
   <a href="https://pypi.org/project/poetry-plugin-dotenv">
     <img alt="python" src="https://img.shields.io/pypi/pyversions/poetry-plugin-dotenv?style=flat-square&logo=python&logoColor=white&color=4856CD">
@@ -24,35 +24,28 @@
     <img alt="semantic_release" src="https://img.shields.io/badge/semantic_release-angular-e10079?style=flat-square&logo=semanticrelease&logoColor=white&color=D83A56">
   </a>
   <a href="https://github.com/PyCQA/isort">
-    <img alt="isort" src="https://img.shields.io/badge/imports-isort-black.svg?style=flat-square&logo=windowsterminal&logoColor=white&color=1B1A17">
+    <img alt="isort" src="https://img.shields.io/badge/imports-isort-black.svg?style=flat-square&logo=windowsterminal&logoColor=white&color=637A9F">
   </a>
   <a href="https://beta.ruff.rs/docs/">
-    <img alt="ruff" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json&style=flat-square&logoColor=white&color=1B1A17">
+    <img alt="ruff" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json&style=flat-square&logoColor=white&color=637A9F">
   </a>
   <a href="https://mypy.readthedocs.io/en/stable/index.html">
-    <img alt="mypy" src="https://img.shields.io/badge/mypy-checked-success.svg?style=flat-square&logo=pypy&logoColor=white&color=81B214">
-  </a>
-  </a>
-  <a href="https://github.com/dependabot">
-    <img alt="dependabot" src="https://img.shields.io/badge/dependabot-enable-success?style=flat-square&logo=dependabot&logoColor=white&color=81B214">
-  </a>
-  <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/.pre-commit-config.yaml">
-    <img alt="hooks" src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?style=flat-square&logo=pre-commit&logoColor=white&color=81B214">
+    <img alt="mypy" src="https://img.shields.io/badge/mypy-checked-success.svg?style=flat-square&logo=pypy&logoColor=white&color=0A6847">
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/tests.yaml">
-    <img alt="tests" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/tests.yaml?label=tests&style=flat-square&logo=pytest&logoColor=white&color=81B214">
+    <img alt="tests" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/tests.yaml?label=tests&style=flat-square&logo=pytest&logoColor=white&color=0A6847">
   </a>
   <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/linters.yaml">
-    <img alt="linters" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/linters.yaml?label=linters&style=flat-square&logo=lintcode&logoColor=white&color=81B214">
+    <img alt="linters" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/linters.yaml?label=linters&style=flat-square&logo=lintcode&logoColor=white&color=0A6847">
   </a>
   <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/release.yaml">
-    <img alt="release" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/release.yaml?label=release&style=flat-square&logo=pypi&logoColor=white&color=81B214">
+    <img alt="release" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/release.yaml?label=release&style=flat-square&logo=pypi&logoColor=white&color=0A6847">
   </a>
   <a href="https://codecov.io/gh/pivoshenko/poetry-plugin-dotenv" >
-    <img alt="codecov" src="https://img.shields.io/codecov/c/gh/pivoshenko/poetry-plugin-dotenv?token=cqRQxVnDR6&style=flat-square&logo=codecov&logoColor=white&color=9BCF53"/>
+    <img alt="codecov" src="https://img.shields.io/codecov/c/gh/pivoshenko/poetry-plugin-dotenv?token=cqRQxVnDR6&style=flat-square&logo=codecov&logoColor=white&color=0A6847"/>
   </a>
 </p>
 
