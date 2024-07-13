@@ -64,13 +64,13 @@ ipython = "8.12.3"
 
 [tool.poetry.group.formatters.dependencies]
 isort = ">=5.13.2"
-ruff = ">=0.5.0"
+ruff = ">=0.5.1"
 pyupgrade = ">=3.16.0"
 
 [tool.poetry.group.linters.dependencies]
 mypy = ">=1.10.1"
-ruff = ">=0.5.0"
-deptry = ">=0.16.1"
+ruff = ">=0.5.1"
+deptry = ">=0.16.2"
 codespell = ">=2.3.0"
 commitizen = ">=3.27.0"
 
@@ -92,11 +92,11 @@ pytest-codeblocks = ">=0.17.0"
 pytest-mock = ">=3.14.0"
 pytest-cov = ">=5.0.0"
 pytest-sugar = ">=1.0.0"
-coverage = { version = ">=7.5.4", extras = ["toml"] }
+coverage = { version = ">=7.6.0", extras = ["toml"] }
 sh = ">=2.0.7"
 
 [tool.poetry.group.ci.dependencies]
-python-semantic-release = ">=9.8.3"
+python-semantic-release = ">=9.8.5"
 
 [tool.poetry.plugins."poetry.application.plugin"]
 poetry-plugin-dotenv = "poetry_plugin_dotenv.plugin:DotenvPlugin"
