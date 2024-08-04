@@ -48,20 +48,20 @@ class Variable:
     def resolve(self, env: OrderedDict[str, str], *args, **kwargs) -> str:  # type: ignore[no-untyped-def]
         """Get a variable value."""
 
-        default = self.default if self.default else ""
-        env_val = env.get(self.name, default)
-        return env_val if env_val else ""
+        return env.get(self.name, self.default) or ""  # type: ignore[arg-type]
 
 
 def parse(value: str) -> Iterator[Literal | Variable]:
     """Parse values."""
 
     cursor = 0
+    value_length = len(value)
+    matches = list(_posix_variable.finditer(value))
 
-    for match in _posix_variable.finditer(value):
+    for match in matches:
         start, end = match.span()
-        name = match.groupdict()["name"]
-        default = match.groupdict()["default"]
+        name = match.group("name")
+        default = match.group("default")
 
         if start > cursor:
             yield Literal(value=value[cursor:start])
@@ -69,6 +69,5 @@ def parse(value: str) -> Iterator[Literal | Variable]:
         yield Variable(name=name, default=default)
         cursor = end
 
-    length = len(value)
-    if cursor < length:
-        yield Literal(value=value[cursor:length])
+    if cursor < value_length:
+        yield Literal(value=value[cursor:])
