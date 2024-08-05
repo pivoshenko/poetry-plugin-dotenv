@@ -7,7 +7,6 @@ import codecs
 import dataclasses
 
 from typing import IO
-from typing import NamedTuple
 from typing import TYPE_CHECKING
 
 from poetry_plugin_dotenv.exceptions import PoetryPluginDotenvPatternError
@@ -15,22 +14,6 @@ from poetry_plugin_dotenv.exceptions import PoetryPluginDotenvPatternError
 
 if TYPE_CHECKING:  # pragma: no cover
     from collections.abc import Iterator
-
-
-class Original(NamedTuple):
-    """Position of the original string in the file."""
-
-    string: str
-    line: int
-
-
-class Binding(NamedTuple):
-    """Binding of a key and a value."""
-
-    key: str | None
-    value: str | None
-    original: Original
-    error: bool
 
 
 def make_regex(string: str, extra_flags: int = 0) -> re.Pattern[str]:
@@ -54,6 +37,24 @@ _end_of_line = make_regex(r"[^\S\r\n]*(?:\r\n|\n|\r|$)")
 _rest_of_line = make_regex(r"[^\r\n]*(?:\r|\n|\r\n)?")
 _double_quote_escapes = make_regex(r"\\[\\'\"abfnrtv]")
 _single_quote_escapes = make_regex(r"\\[\\']")
+
+
+@dataclasses.dataclass(frozen=True)
+class Original:
+    """Position of the original string in the file."""
+
+    string: str
+    line: int
+
+
+@dataclasses.dataclass(frozen=True)
+class Binding:
+    """Binding of a key and a value."""
+
+    key: str | None
+    value: str | None
+    original: Original
+    error: bool
 
 
 @dataclasses.dataclass
@@ -105,19 +106,15 @@ class Reader:
     def get_marked(self) -> Original:
         """Get a mark."""
 
-        # fmt: off
         return Original(
-            string=self.string[self.mark.chars: self.position.chars],
+            string=self.string[self.mark.chars : self.position.chars],
             line=self.mark.line,
         )
-        # fmt: on
 
     def peek(self, count: int) -> str:
         """Peek a dotenv."""
 
-        # fmt: off
-        return self.string[self.position.chars: self.position.chars + count]
-        # fmt: on
+        return self.string[self.position.chars : self.position.chars + count]
 
     def read_regex(self, regex: re.Pattern[str]) -> tuple[str, ...]:
         """Read a dotenv with a regex."""
@@ -128,9 +125,7 @@ class Reader:
             msg = "Pattern not found."
             raise PoetryPluginDotenvPatternError(msg)
 
-        # fmt: off
-        matched = self.string[match.start(): match.end()]
-        # fmt: on
+        matched = self.string[match.start() : match.end()]
 
         self.position.advance(matched)
         return match.groups()
@@ -156,11 +151,11 @@ def parse_key(reader: Reader) -> str | None:
     if char == "#":
         return None
 
-    elif char == "'":  # noqa: RET505
-        key, *_ = reader.read_regex(_single_quoted_key)
+    if char == "'":
+        (key,) = reader.read_regex(_single_quoted_key)
 
     else:
-        key, *_ = reader.read_regex(_unquoted_key)
+        (key,) = reader.read_regex(_unquoted_key)
 
     return key
 
@@ -168,7 +163,7 @@ def parse_key(reader: Reader) -> str | None:
 def parse_unquoted_value(reader: Reader) -> str:
     """Parse an unquoted dotenv value."""
 
-    part, *_ = reader.read_regex(_unquoted_value)
+    (part,) = reader.read_regex(_unquoted_value)
     return re.sub(r"\s+#.*", "", part).rstrip()
 
 
@@ -178,14 +173,14 @@ def parse_value(reader: Reader) -> str:
     char = reader.peek(1)
 
     if char == "'":
-        value, *_ = reader.read_regex(_single_quoted_value)
+        (value,) = reader.read_regex(_single_quoted_value)
         return decode_escapes(_single_quote_escapes, value)
 
-    elif char == '"':  # noqa: RET505
-        value, *_ = reader.read_regex(_double_quoted_value)
+    if char == '"':
+        (value,) = reader.read_regex(_double_quoted_value)
         return decode_escapes(_double_quote_escapes, value)
 
-    elif char in {"", "\n", "\r"}:
+    if char in {"", "\n", "\r"}:
         return ""
 
     return parse_unquoted_value(reader)
