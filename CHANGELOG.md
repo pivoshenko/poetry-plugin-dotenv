@@ -332,7 +332,7 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`c9b3d7d`](https://g
 
 * refactor(dotenv.parsers): remove stale `noqa` ([`cfaa5ee`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/cfaa5eea8c9ca1aa3635078a71128b7388882e73))
 
-* refactor(config): use emtpy string as `location` default value ([`df5ee7c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/df5ee7c35c7f3ca7782dd96acf7c73fc936fdbb8))
+* refactor(config): use empty string as `location` default value ([`df5ee7c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/df5ee7c35c7f3ca7782dd96acf7c73fc936fdbb8))
 
 * refactor(config): replace `pathlib` with `os.path` ([`578978b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/578978b4481017b54f60be0e4bcafba0938eada6))
 
