@@ -10,6 +10,8 @@ from typing import IO
 from typing import NamedTuple
 from typing import TYPE_CHECKING
 
+from poetry_plugin_dotenv.exceptions import PoetryPluginDotenvPatternError
+
 
 if TYPE_CHECKING:  # pragma: no cover
     from collections.abc import Iterator
@@ -29,10 +31,6 @@ class Binding(NamedTuple):
     value: str | None
     original: Original
     error: bool
-
-
-class DotenvParseError(Exception):
-    """Exception for dotenv parse errors."""
 
 
 def make_regex(string: str, extra_flags: int = 0) -> re.Pattern[str]:
@@ -128,7 +126,7 @@ class Reader:
 
         if match is None:
             msg = "Pattern not found."
-            raise DotenvParseError(msg)
+            raise PoetryPluginDotenvPatternError(msg)
 
         # fmt: off
         matched = self.string[match.start(): match.end()]
@@ -230,7 +228,7 @@ def parse_binding(reader: Reader) -> Binding:
             error=False,
         )
 
-    except DotenvParseError:
+    except PoetryPluginDotenvPatternError:
         reader.read_regex(_rest_of_line)
         return Binding(
             key=None,
