@@ -6,28 +6,28 @@
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
-    <img alt="license" src="https://img.shields.io/pypi/l/poetry-plugin-dotenv?style=flat-square&logo=opensourceinitiative&logoColor=white&color=0A6847">
+    <img alt="License" src="https://img.shields.io/pypi/l/poetry-plugin-dotenv?style=flat-square&logo=opensourceinitiative&logoColor=white&color=0A6847&label=License">
   </a>
   <a href="https://pypi.org/project/poetry-plugin-dotenv">
-    <img alt="python" src="https://img.shields.io/pypi/pyversions/poetry-plugin-dotenv?style=flat-square&logo=python&logoColor=white&color=4856CD">
+    <img alt="Python" src="https://img.shields.io/pypi/pyversions/poetry-plugin-dotenv?style=flat-square&logo=python&logoColor=white&color=4856CD&label=Python">
   </a>
   <a href="https://pypi.org/project/poetry-plugin-dotenv">
-    <img alt="pypi" src="https://img.shields.io/pypi/v/poetry-plugin-dotenv?style=flat-square&logo=pypi&logoColor=white&color=4856CD">
+    <img alt="PyPI" src="https://img.shields.io/pypi/v/poetry-plugin-dotenv?style=flat-square&logo=pypi&logoColor=white&color=4856CD&label=PyPI">
   </a>
   <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/releases">
-    <img alt="release" src="https://img.shields.io/github/v/release/pivoshenko/poetry-plugin-dotenv?style=flat-square&logo=github&logoColor=white&color=4856CD">
+    <img alt="Release" src="https://img.shields.io/github/v/release/pivoshenko/poetry-plugin-dotenv?style=flat-square&logo=github&logoColor=white&color=4856CD&label=Release">
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/semantic-release/semantic-release">
-    <img alt="semantic_release" src="https://img.shields.io/badge/semantic_release-angular-e10079?style=flat-square&logo=semanticrelease&logoColor=white&color=D83A56">
+    <img alt="Semantic_Release" src="https://img.shields.io/badge/Semantic_Release-angular-e10079?style=flat-square&logo=semanticrelease&logoColor=white&color=D83A56">
   </a>
   <a href="https://github.com/PyCQA/isort">
-    <img alt="isort" src="https://img.shields.io/badge/imports-isort-black.svg?style=flat-square&logo=windowsterminal&logoColor=white&color=637A9F">
+    <img alt="Imports" src="https://img.shields.io/badge/Imports-isort-black.svg?style=flat-square&logo=improvmx&logoColor=white&color=637A9F&">
   </a>
   <a href="https://beta.ruff.rs/docs/">
-    <img alt="ruff" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json&style=flat-square&logoColor=white&color=637A9F">
+    <img alt="Ruff" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json&style=flat-square&logoColor=white&color=637A9F">
   </a>
   <a href="https://mypy.readthedocs.io/en/stable/index.html">
     <img alt="mypy" src="https://img.shields.io/badge/mypy-checked-success.svg?style=flat-square&logo=pypy&logoColor=white&color=0A6847">
@@ -36,34 +36,34 @@
 
 <p align="center">
   <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/tests.yaml">
-    <img alt="tests" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/tests.yaml?label=tests&style=flat-square&logo=pytest&logoColor=white&color=0A6847">
+    <img alt="Tests" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/tests.yaml?label=Tests&style=flat-square&logo=pytest&logoColor=white&color=0A6847">
   </a>
   <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/linters.yaml">
-    <img alt="linters" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/linters.yaml?label=linters&style=flat-square&logo=lintcode&logoColor=white&color=0A6847">
+    <img alt="Linters" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/linters.yaml?label=Linters&style=flat-square&logo=lintcode&logoColor=white&color=0A6847">
   </a>
   <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/release.yaml">
-    <img alt="release" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/release.yaml?label=release&style=flat-square&logo=pypi&logoColor=white&color=0A6847">
+    <img alt="Release" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/release.yaml?label=Release&style=flat-square&logo=pypi&logoColor=white&color=0A6847">
   </a>
   <a href="https://codecov.io/gh/pivoshenko/poetry-plugin-dotenv" >
-    <img alt="codecov" src="https://img.shields.io/codecov/c/gh/pivoshenko/poetry-plugin-dotenv?token=cqRQxVnDR6&style=flat-square&logo=codecov&logoColor=white&color=0A6847"/>
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/pivoshenko/poetry-plugin-dotenv?token=cqRQxVnDR6&style=flat-square&logo=codecov&logoColor=white&color=0A6847&label=Coverage"/>
   </a>
 </p>
 
 <p align="center">
   <a href="https://pypi.org/project/poetry-plugin-dotenv">
-    <img alt="downloads" src="https://img.shields.io/pypi/dm/poetry-plugin-dotenv?style=flat-square&logo=pythonanywhere&logoColor=white&color=4856CD">
+    <img alt="Downloads" src="https://img.shields.io/pypi/dm/poetry-plugin-dotenv?style=flat-square&logo=pythonanywhere&logoColor=white&color=4856CD&label=Downloads">
   </a>
   <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/">
-    <img alt="stars" src="https://img.shields.io/github/stars/pivoshenko/poetry-plugin-dotenv?style=flat-square&logo=apachespark&logoColor=white&color=4856CD">
+    <img alt="Stars" src="https://img.shields.io/github/stars/pivoshenko/poetry-plugin-dotenv?style=flat-square&logo=apachespark&logoColor=white&color=4856CD&label=Stars">
   </a>
 </p>
 
 <p align="center">
   <a href="https://stand-with-ukraine.pp.ua/">
-    <img alt="standwithukraine" src="https://img.shields.io/badge/Support-Ukraine-FFC93C?style=flat-square&labelColor=07689F">
+    <img alt="StandWithUkraine" src="https://img.shields.io/badge/Support-Ukraine-FFC93C?style=flat-square&labelColor=07689F">
   </a>
   <a href="https://stand-with-ukraine.pp.ua">
-    <img alt="standwithukraine" src="https://img.shields.io/badge/made_in-Ukraine-FFC93C.svg?style=flat-square&labelColor=07689F">
+    <img alt="StandWithUkraine" src="https://img.shields.io/badge/Made_in-Ukraine-FFC93C.svg?style=flat-square&labelColor=07689F">
   </a>
 </p>
 
