@@ -42,7 +42,9 @@ class Config(_Config):
     """Configuration loader."""
 
     def __init__(self, working_dir: str) -> None:
-        """Initialize."""
+        """Initialize and load configuration from sources."""
+
+        super().__init__()
 
         source_config = {}
         for config_source, section in CONFIG_SOURCES.items():
@@ -57,51 +59,52 @@ class Config(_Config):
 
             source_config.update(config)
 
-        for attribute in self.__dataclass_fields__:
-            default_attribute_value: bool | str | None = self.__getattribute__(attribute)
-            source_attribute_value = source_config.get(attribute)
+        self._apply_source_config(source_config)
 
-            # fmt: off
+    def _apply_source_config(self, source_config: dict[str, str | bool | None]) -> None:
+        """Apply source configuration to the instance."""
+
+        for attribute, default_value in self.__dataclass_fields__.items():
+            source_value = source_config.get(attribute)
+
             if (
-                isinstance(default_attribute_value, bool)
-                and not isinstance(source_attribute_value, bool)
-                and source_attribute_value
+                isinstance(default_value.type, bool)
+                and source_value
+                and not isinstance(source_value, bool)
             ):
-                source_attribute_value = _as_bool(source_attribute_value)
-            # fmt: on
+                source_value = _as_bool(source_value)
 
-            if source_attribute_value:
-                self.__setattr__(attribute, source_attribute_value)
+            if source_value is not None:
+                setattr(self, attribute, source_value)
 
 
 def _load_config_from_toml(filepath: str, section: str) -> dict[str, str | bool | None]:
     """Load configuration from the TOML file."""
 
-    if os.path.exists(filepath):
-        with open(filepath, "rb") as toml_file:
-            toml = tomlkit.load(toml_file)
+    if not os.path.exists(filepath):
+        return {}
 
-        config = toml
-        for key in section.split("."):
-            config = config.get(key, {})
+    with open(filepath, "rb") as toml_file:
+        config = tomlkit.load(toml_file)
 
-        return config
+    for key in section.split("."):
+        config = config.get(key, {})
 
-    return {}  # pragma: no cover
+    return config if isinstance(config, dict) else {}
 
 
 def _load_config_from_os(section: str) -> dict[str, str | bool | None]:
     """Load configuration from the OS environment variables."""
 
     return {
-        key.replace(section, "").lower(): value
+        key[len(section) :].lower(): value
         for key, value in os.environ.items()
         if key.startswith(section)
     }
 
 
 def _as_bool(value: str) -> bool:
-    """Given a string value that represents True or False, returns the Boolean equivalent.
+    """Convert a string value to a Boolean equivalent.
 
     Heavily inspired from ``distutils strtobool``.
     """
@@ -110,5 +113,5 @@ def _as_bool(value: str) -> bool:
         return _STR_BOOLEAN_MAPPING[value.lower()]
 
     except KeyError:
-        msg = f"Invalid truth value {value}"
+        msg = f"Invalid truth value: {value}"
         raise ValueError(msg) from None
