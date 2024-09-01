@@ -14,13 +14,13 @@ if TYPE_CHECKING:  # pragma: no cover
     from cleo.events.console_command_event import ConsoleCommandEvent
 
 
-class Style(enum.Enum):  # pragma: no cover
+class Style(enum.Enum):
     """Style tags to color text output."""
 
-    info = "<info>{0!s}</info>"
-    debug = "<debug>{0!s}</debug>"
-    warning = "<warning>{0!s}</warning>"
-    error = "<error>{0!s}</error>"
+    INFO = "<info>{0!s}</info>"
+    DEBUG = "<debug>{0!s}</debug>"
+    WARNING = "<warning>{0!s}</warning>"
+    ERROR = "<error>{0!s}</error>"
 
     def __call__(self, text: str) -> str:
         """Apply a style to the text."""
@@ -28,8 +28,8 @@ class Style(enum.Enum):  # pragma: no cover
         return self.value.format(text)
 
 
-class Logger:  # pragma: no cover
-    """Logger of the ``poetry`` events.
+class Logger:
+    """Logger for the ``poetry`` events.
 
     Notes
     -----
@@ -41,25 +41,29 @@ class Logger:  # pragma: no cover
     def __init__(self, event: ConsoleCommandEvent) -> None:
         """Initialize."""
 
-        self.event = event
         self.write_line = partial(event.io.write_line, verbosity=Verbosity.DEBUG)
 
     def info(self, msg: str) -> None:
-        """Log a info message."""
+        """Log an info message."""
 
-        self.write_line(Style.info(msg))
+        self._log(Style.INFO, msg)
 
     def debug(self, msg: str) -> None:
         """Log a debug message."""
 
-        self.write_line(Style.debug(msg))
+        self._log(Style.DEBUG, msg)
 
     def warning(self, msg: str) -> None:
         """Log a warning message."""
 
-        self.write_line(Style.warning(msg))
+        self._log(Style.WARNING, msg)
 
     def error(self, msg: str) -> None:
-        """Log a error message."""
+        """Log an error message."""
 
-        self.write_line(Style.error(msg))
+        self._log(Style.ERROR, msg)
+
+    def _log(self, style: Style, msg: str) -> None:
+        """Log a message with the given style."""
+
+        self.write_line(style(msg))
