@@ -33,36 +33,37 @@ class DotenvPlugin(ApplicationPlugin):
         application.event_dispatcher.add_listener(COMMAND, listener=self.load)  # type: ignore[union-attr, arg-type]
 
     def load(self, event: ConsoleCommandEvent, *args, **kwargs) -> None:  # type: ignore[no-untyped-def]
-        """Load a dotenv file."""
+        """Load a dotenv file based on the provided configuration."""
 
-        working_dir: str = event.io.input.option("directory")
-        working_dir = working_dir if working_dir else os.path.curdir
-
-        is_env_command = isinstance(event.command, EnvCommand)
+        working_dir = event.io.input.option("directory") or os.path.curdir
 
         logger = Logger(event)
         config = Config(working_dir)
 
-        if is_env_command and config.ignore:
+        if not isinstance(event.command, EnvCommand):
+            return
+
+        if config.ignore:
             logger.warning("Not loading environment variables.")
+            return
 
-        elif is_env_command and not config.ignore:
-            if config.location and os.path.isabs(config.location):
-                filepath = config.location  # pragma: no cover
+        filepath = self._determine_filepath(config, working_dir)
 
-            elif config.location and not os.path.isabs(config.location):
-                filepath = (
-                    os.path.join(working_dir, config.location)
-                    if working_dir != "."
-                    else config.location
-                )
+        if os.path.isfile(filepath):
+            logger.info(f"Loading environment variables from '{filepath}'.")
+            dotenv.core.load(filepath)
 
-            else:
-                filepath = dotenv.core.find(usecwd=True)
+        else:
+            logger.error(f"File '{filepath}' doesn't exist.")
 
-            if os.path.isfile(filepath):
-                logger.info(f"Loading environment variables from '{filepath}'.")
-                dotenv.core.load(filepath)
+    def _determine_filepath(self, config: Config, working_dir: str) -> str:
+        """Determine the appropriate filepath for the dotenv file."""
 
-            else:
-                logger.error(f"File '{filepath}' doesn't exist.")
+        if config.location:
+            return (
+                os.path.abspath(config.location)
+                if os.path.isabs(config.location)
+                else os.path.join(working_dir, config.location)
+            )
+
+        return dotenv.core.find(usecwd=True)
