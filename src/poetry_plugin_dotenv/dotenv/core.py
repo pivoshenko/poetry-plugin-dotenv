@@ -43,40 +43,41 @@ class DotEnv:
     def dict(self) -> OrderedDict[str, str]:
         """Return content of a dotenv file."""
 
-        if self._dict is None:
-            raw_values = self.parse()
-            self._dict = (
-                resolve(raw_values, override=self.override)
-                if self.interpolate
-                else OrderedDict(raw_values)  # type: ignore[arg-type]
-            )
+        if self._dict:
+            return self._dict
+
+        raw_values = self.parse()
+
+        if self.interpolate:
+            self._dict = resolve(raw_values, override=self.override)
+
+        else:
+            self._dict = OrderedDict(raw_values)
 
         return self._dict
 
-    def parse(self) -> Iterator[tuple[str, str | None]]:
+    def parse(self) -> Iterator[tuple[str, str]]:
         """Parse a dotenv file."""
 
         with self._get_stream() as stream:
             for mapping in parsers.parse_stream(stream):
                 if mapping.key is not None:
-                    yield mapping.key, mapping.value
+                    yield mapping.key, mapping.value  # type: ignore[misc]
 
     def set_as_environment_variables(self) -> bool:
-        """Load current dotenv as system environment variables."""
+        """Load current dotenv as a system environment variable."""
 
-        env_dict = self.dict()
+        if self.dict():
+            for key, value in self.dict().items():
+                if key in os.environ and not self.override:
+                    continue
 
-        if not env_dict:
-            return False
+                if value:
+                    os.environ[key] = value
 
-        for key, value in env_dict.items():
-            if key in os.environ and not self.override:
-                continue
+            return True
 
-            if value:
-                os.environ[key] = value
-
-        return True
+        return False  # pragma: nocover
 
     @contextlib.contextmanager
     def _get_stream(self) -> Iterator[IO[str]]:
@@ -90,31 +91,37 @@ class DotEnv:
             yield self.stream
 
         else:
-            yield io.StringIO("")
+            yield io.StringIO("")  # pragma: nocover
 
 
 def resolve(
-    values: Iterable[tuple[str, str | None]],
+    values: Iterable[tuple[str, str]],
     *,
     override: bool,
 ) -> OrderedDict[str, str]:
     """Resolve dotenv variables."""
 
     new_values: OrderedDict[str, str] = OrderedDict()
-    env = OrderedDict(os.environ.copy()) if override else OrderedDict()
 
     for name, value in values:
-        if value is not None:
-            atoms = variables.parse(value)
+        if value is None:
+            result = None  # pragma: nocover
 
-            if not override:
+        else:
+            atoms = variables.parse(value)
+            env: OrderedDict[str, str] = OrderedDict()
+
+            if override:
+                env.update(os.environ)
                 env.update(new_values)
 
             else:
-                env = OrderedDict({**env, **new_values})
+                env.update(new_values)
+                env.update(os.environ)
 
-            resolved_value = "".join(atom.resolve(env) for atom in atoms)
-            new_values[name] = resolved_value
+            result = "".join(atom.resolve(env) for atom in atoms)
+
+        new_values[name] = result
 
     return new_values
 
