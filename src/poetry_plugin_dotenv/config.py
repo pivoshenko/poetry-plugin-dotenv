@@ -113,5 +113,5 @@ def _as_bool(value: str) -> bool:
         return _STR_BOOLEAN_MAPPING[value.lower()]
 
     except KeyError:
-        msg = f"Invalid truth value: {value}"
+        msg = f"Invalid truth value '{value}'"
         raise ValueError(msg) from None
