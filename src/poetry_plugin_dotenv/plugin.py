@@ -41,7 +41,7 @@ class DotenvPlugin(ApplicationPlugin):
         config = Config(working_dir)
 
         if not isinstance(event.command, EnvCommand):
-            return
+            return  # pragma: nocover
 
         if config.ignore:
             logger.warning("Not loading environment variables.")
