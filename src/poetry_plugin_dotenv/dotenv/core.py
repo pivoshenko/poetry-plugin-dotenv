@@ -33,53 +33,50 @@ class DotEnv:
     ) -> None:
         """Initialize."""
 
+        self.filepath = filepath
         self.stream = stream
         self.override = override
-        self.filepath = filepath
         self.interpolate = interpolate
-
         self.encoding = "utf-8"
-
         self._dict: OrderedDict[str, str] | None = None
 
     def dict(self) -> OrderedDict[str, str]:
         """Return content of a dotenv file."""
 
-        if self._dict:
-            return self._dict
-
-        raw_values = self.parse()
-
-        if self.interpolate:
-            self._dict = resolve(raw_values, override=self.override)
-
-        else:
-            self._dict = OrderedDict(raw_values)
+        if self._dict is None:
+            raw_values = self.parse()
+            self._dict = (
+                resolve(raw_values, override=self.override)
+                if self.interpolate
+                else OrderedDict(raw_values)  # type: ignore[arg-type]
+            )
 
         return self._dict
 
-    def parse(self) -> Iterator[tuple[str, str]]:
+    def parse(self) -> Iterator[tuple[str, str | None]]:
         """Parse a dotenv file."""
 
         with self._get_stream() as stream:
             for mapping in parsers.parse_stream(stream):
                 if mapping.key is not None:
-                    yield mapping.key, mapping.value  # type: ignore[misc]
+                    yield mapping.key, mapping.value
 
     def set_as_environment_variables(self) -> bool:
-        """Load current dotenv as a system environment variable."""
+        """Load current dotenv as system environment variables."""
 
-        if self.dict():
-            for key, value in self.dict().items():
-                if key in os.environ and not self.override:
-                    continue
+        env_dict = self.dict()
 
-                if value:
-                    os.environ[key] = value
+        if not env_dict:
+            return False
 
-            return True
+        for key, value in env_dict.items():
+            if key in os.environ and not self.override:
+                continue
 
-        return False  # pragma: nocover
+            if value:
+                os.environ[key] = value
+
+        return True
 
     @contextlib.contextmanager
     def _get_stream(self) -> Iterator[IO[str]]:
@@ -93,37 +90,31 @@ class DotEnv:
             yield self.stream
 
         else:
-            yield io.StringIO("")  # pragma: nocover
+            yield io.StringIO("")
 
 
 def resolve(
-    values: Iterable[tuple[str, str]],
+    values: Iterable[tuple[str, str | None]],
     *,
     override: bool,
 ) -> OrderedDict[str, str]:
     """Resolve dotenv variables."""
 
     new_values: OrderedDict[str, str] = OrderedDict()
+    env = OrderedDict(os.environ.copy()) if override else OrderedDict()
 
     for name, value in values:
-        if value is None:
-            result = None  # pragma: nocover
-
-        else:
+        if value is not None:
             atoms = variables.parse(value)
-            env: OrderedDict[str, str] = OrderedDict()
 
-            if override:
-                env.update(os.environ)
+            if not override:
                 env.update(new_values)
 
             else:
-                env.update(new_values)
-                env.update(os.environ)
+                env = OrderedDict({**env, **new_values})
 
-            result = "".join(atom.resolve(env) for atom in atoms)
-
-        new_values[name] = result
+            resolved_value = "".join(atom.resolve(env) for atom in atoms)
+            new_values[name] = resolved_value
 
     return new_values
 
@@ -131,38 +122,30 @@ def resolve(
 def walk_to_root(path: str) -> Iterator[str]:
     """Yield directories starting from the given directory up to the root."""
 
-    if not os.path.exists(path):  # pragma: no cover
+    if not os.path.exists(path):
         msg = "Starting path not found."
         raise OSError(msg)
 
-    if os.path.isfile(path):
-        path = os.path.dirname(path)  # pragma: nocover
+    current_dir = os.path.abspath(os.path.dirname(path) if os.path.isfile(path) else path)
 
-    last_dir = None
-    current_dir = os.path.abspath(path)
-
-    while last_dir != current_dir:
+    while True:
         yield current_dir
-        parent_dir = os.path.abspath(os.path.join(current_dir, os.path.pardir))
-        last_dir, current_dir = current_dir, parent_dir
+        parent_dir = os.path.abspath(os.path.join(current_dir, os.pardir))
+
+        if current_dir == parent_dir:
+            break
+
+        current_dir = parent_dir
 
 
 def find(filename: str = ".env", *, usecwd: bool = False) -> str:
     """Search in increasingly higher folders for the given file."""
 
-    if usecwd or getattr(sys, "frozen", False):
-        path = os.getcwd()
-
-    else:  # pragma: no cover
-        frame = sys._getframe()  # noqa: SLF001
-        current_file = __file__
-
-        while frame.f_code.co_filename == current_file:
-            assert frame.f_back is not None  # noqa: S101
-            frame = frame.f_back
-
-        frame_filename = frame.f_code.co_filename
-        path = os.path.dirname(os.path.abspath(frame_filename))
+    path = (
+        os.getcwd()
+        if usecwd or getattr(sys, "frozen", False)
+        else os.path.dirname(os.path.abspath(sys._getframe(1).f_code.co_filename))  # noqa: SLF001
+    )
 
     for dirname in walk_to_root(path):
         check_path = os.path.join(dirname, filename)
@@ -182,12 +165,7 @@ def load(
 ) -> bool:
     """Parse a dotenv file and then load all the variables found as environment variables."""
 
-    dotenv = DotEnv(
-        filepath=filepath,
-        interpolate=interpolate,
-        override=override,
-        stream=stream,
-    )
+    dotenv = DotEnv(filepath=filepath, interpolate=interpolate, override=override, stream=stream)
     return dotenv.set_as_environment_variables()
 
 
