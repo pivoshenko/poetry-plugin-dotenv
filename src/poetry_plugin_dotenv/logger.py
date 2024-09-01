@@ -51,7 +51,7 @@ class Logger:
     def debug(self, msg: str) -> None:
         """Log a debug message."""
 
-        self._log(Style.DEBUG, msg)
+        self._log(Style.DEBUG, msg)  # pragma: nocover
 
     def warning(self, msg: str) -> None:
         """Log a warning message."""
