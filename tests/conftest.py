@@ -15,7 +15,7 @@ if TYPE_CHECKING:
     from pathlib import Path
 
 
-@pytest.fixture()
+@pytest.fixture
 def create_dotenv_file(tmp_path: Path) -> Callable[[dict[str, str], str], None]:
     """Get a dotenv file."""
 
@@ -29,7 +29,7 @@ def create_dotenv_file(tmp_path: Path) -> Callable[[dict[str, str], str], None]:
     return create
 
 
-@pytest.fixture()
+@pytest.fixture
 def remove_dotenv_file() -> Callable[[str], None]:
     """Remove a dotenv file."""
 
@@ -42,7 +42,7 @@ def remove_dotenv_file() -> Callable[[str], None]:
     return remove
 
 
-@pytest.fixture()
+@pytest.fixture
 def dotenv_file(tmp_path: Path) -> Iterator[str]:
     """Get a dotenv file."""
 
