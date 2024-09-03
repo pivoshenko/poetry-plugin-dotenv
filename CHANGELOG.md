@@ -1,5 +1,33 @@
 # CHANGELOG
 
+## v2.4.0 (2024-09-03)
+
+### Build
+
+* build(deps-dev): bump python-semantic-release from 9.8.7 to 9.8.8
+
+Bumps [python-semantic-release](https://github.com/python-semantic-release/python-semantic-release) from 9.8.7 to 9.8.8.
+- [Release notes](https://github.com/python-semantic-release/python-semantic-release/releases)
+- [Changelog](https://github.com/python-semantic-release/python-semantic-release/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.8.7...v9.8.8)
+
+---
+updated-dependencies:
+- dependency-name: python-semantic-release
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`b73efed`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b73efed6ff499d902cded9ea54ed3118cf3c0eb6))
+
+### Ci
+
+* ci(workflows.release): add a flag to force release ([`ed68597`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ed68597e550fd7e9423c0ad7ea223801de0f3940))
+
+### Feature
+
+* feat(poetry): downgrade `poetry` version ([`5dd45a0`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5dd45a0542a735574b3c49c6112ab788e07fca20))
+
 ## v2.3.0 (2024-09-01)
 
 ### Build
