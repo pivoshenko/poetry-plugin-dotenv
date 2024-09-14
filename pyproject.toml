@@ -64,20 +64,20 @@ ipython = "8.12.3"
 
 [tool.poetry.group.formatters.dependencies]
 isort = ">=5.13.2"
-ruff = ">=0.6.3"
+ruff = ">=0.6.5"
 pyupgrade = ">=3.16.0"
 
 [tool.poetry.group.linters.dependencies]
 mypy = ">=1.11.2"
-ruff = ">=0.6.3"
+ruff = ">=0.6.5"
 deptry = ">=0.20.0"
 codespell = ">=2.3.0"
 commitizen = ">=3.29.0"
 
 [tool.poetry.group.lsp.dependencies]
 python-lsp-server = { extras = ["all"], version = ">=1.12.0" }
-ruff-lsp = ">=0.0.55"
-pylsp-mypy = ">=0.6.8"
+ruff-lsp = ">=0.0.56"
+pylsp-mypy = ">=0.6.9"
 pylsp-rope = ">=0.1.16"
 python-lsp-isort = ">=0.1"
 
@@ -96,7 +96,7 @@ coverage = { version = ">=7.6.1", extras = ["toml"] }
 sh = ">=2.0.7"
 
 [tool.poetry.group.ci.dependencies]
-python-semantic-release = ">=9.8.7"
+python-semantic-release = ">=9.8.8"
 
 [tool.poetry.plugins."poetry.application.plugin"]
 poetry-plugin-dotenv = "poetry_plugin_dotenv.plugin:DotenvPlugin"
