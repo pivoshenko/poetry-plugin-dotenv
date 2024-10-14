@@ -2213,13 +2213,13 @@ yapf = ["whatthepatch (>=1.0.2,<2.0.0)", "yapf (>=0.33.0)"]
 
 [[package]]
 name = "python-semantic-release"
-version = "9.9.0"
+version = "9.11.0"
 description = "Automatic Semantic Versioning for Python projects"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "python_semantic_release-9.9.0-py3-none-any.whl", hash = "sha256:d2475e2c55cba02c723467d4f7562cd91f2b2d29085f7a5fbbf7c9d1b9ce2256"},
-    {file = "python_semantic_release-9.9.0.tar.gz", hash = "sha256:7349ec28b9c52319bae82fb2b9dc1202e10a486cbbeedc38ef9392462ec1c7d7"},
+    {file = "python_semantic_release-9.11.0-py3-none-any.whl", hash = "sha256:f944f65b1945258aa0f0fd78acd4198a7001d26d47d93a67456704decce605f9"},
+    {file = "python_semantic_release-9.11.0.tar.gz", hash = "sha256:0c75e35abe2ba95f1bf58a65e0324997793459b25ff7b655068787c910625eca"},
 ]
 
 [package.dependencies]
