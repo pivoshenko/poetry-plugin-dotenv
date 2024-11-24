@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v2.5.1 (2024-11-24)
+
+### Documentation
+
+- Update PyPI classifiers
+  ([`1bcae44`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1bcae448fbeda58f02e4f90f01101c734366f027))
+
+
 ## v2.5.0 (2024-11-24)
 
 ### Build System
