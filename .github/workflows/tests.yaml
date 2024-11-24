@@ -30,7 +30,7 @@ jobs:
             image: macos-13
           - name: macOS aarch64
             image: macos-14
-        python-version: ["3.9", "3.10", "3.11", "3.12"]
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
         poetry-version: ["1.5.0", "1.6.0", "1.7.0", "1.8.0"]
       fail-fast: false
     steps:
