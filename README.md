@@ -94,8 +94,12 @@
 ## Installation
 
 ```bash
-poetry self add poetry-plugin-dotenv
+poetry self add poetry-plugin-dotenv@latest
 ```
+> [!TIP]
+> New releases supports only Python 3.9+.
+> If you want to use `poetry-plugin-dotenv` with Python 3.8 please install version `2.4.0` using
+> `poetry self add poetry-plugin-dotenv@2.4.0`
 
 ## Usage and Configuration
 
