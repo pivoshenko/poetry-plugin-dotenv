@@ -20,4 +20,4 @@ from poetry_plugin_dotenv import dotenv
 from poetry_plugin_dotenv import plugin
 
 
-__all__ = ["dotenv", "plugin", "config"]
+__all__ = ["config", "dotenv", "plugin"]
