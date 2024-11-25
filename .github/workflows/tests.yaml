@@ -63,7 +63,7 @@ jobs:
 
       - name: Upload coverage to Codecov
         id: upload-coverage
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           name: OS ${{ matrix.os.name }} / Python ${{ matrix.python-version }} / poetry ${{ matrix.poetry-version }}
