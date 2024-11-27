@@ -59,7 +59,7 @@ poetry = "^1.8.4"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = ">=4.0.1"
-poethepoet = ">=0.31.0"
+poethepoet = ">=0.31.1"
 ipdb = ">=0.13.13"
 ipython = ">=8.12.3"
 
@@ -73,7 +73,7 @@ mypy = ">=1.13.0"
 ruff = ">=0.8.0"
 deptry = ">=0.21.1"
 codespell = ">=2.3.0"
-commitizen = ">=3.31.0"
+commitizen = ">=4.0.0"
 
 [tool.poetry.group.lsp.dependencies]
 python-lsp-server = { extras = ["all"], version = ">=1.12.0" }
