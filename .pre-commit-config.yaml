@@ -3,7 +3,7 @@ default_language_version:
 
 repos:
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v3.29.0
+    rev: v4.0.0
     hooks:
       - id: commitizen
         stages:
@@ -20,7 +20,7 @@ repos:
       - id: poetry-lock
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
       - id: check-merge-conflict
       - id: check-case-conflict
@@ -45,17 +45,17 @@ repos:
       - id: python-check-blanket-type-ignore
 
   - repo: https://github.com/pre-commit/pre-commit
-    rev: v3.8.0
+    rev: v4.0.1
     hooks:
       - id: validate_manifest
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.17.0
+    rev: v3.19.0
     hooks:
       - id: pyupgrade
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.6.3
+    rev: v0.8.0
     hooks:
       - id: ruff
       - id: ruff-format
