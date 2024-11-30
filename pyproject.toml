@@ -65,12 +65,12 @@ ipython = ">=8.12.3"
 
 [tool.poetry.group.formatters.dependencies]
 isort = ">=5.13.2"
-ruff = ">=0.8.0"
+ruff = ">=0.8.1"
 pyupgrade = ">=3.19.0"
 
 [tool.poetry.group.linters.dependencies]
 mypy = ">=1.13.0"
-ruff = ">=0.8.0"
+ruff = ">=0.8.1"
 deptry = ">=0.21.1"
 codespell = ">=2.3.0"
 commitizen = ">=4.0.0"
