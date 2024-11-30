@@ -64,18 +64,18 @@ class Config(_Config):
     def _apply_source_config(self, source_config: dict[str, str | bool | None]) -> None:
         """Apply source configuration to the instance."""
 
-        for attribute, default_value in self.__dataclass_fields__.items():
-            source_value = source_config.get(attribute)
+        for field in self.__dataclass_fields__.values():
+            source_value = source_config.get(field.name)
 
             if (
-                isinstance(default_value.type, bool)
+                isinstance(field.default, bool)
                 and source_value
                 and not isinstance(source_value, bool)
             ):
                 source_value = _as_bool(source_value)
 
             if source_value is not None:
-                setattr(self, attribute, source_value)
+                setattr(self, field.name, source_value)
 
 
 def _load_config_from_toml(filepath: str, section: str) -> dict[str, str | bool | None]:
