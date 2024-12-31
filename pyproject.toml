@@ -59,19 +59,19 @@ poetry = ">=1.5.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = ">=4.0.1"
-poethepoet = ">=0.31.1"
+poethepoet = ">=0.32.0"
 ipdb = ">=0.13.13"
 ipython = ">=8.12.3"
 
 [tool.poetry.group.formatters.dependencies]
 isort = ">=5.13.2"
-ruff = ">=0.8.3"
-pyupgrade = ">=3.19.0"
+ruff = ">=0.8.4"
+pyupgrade = ">=3.19.1"
 
 [tool.poetry.group.linters.dependencies]
-mypy = ">=1.13.0"
-ruff = ">=0.8.3"
-deptry = ">=0.21.1"
+mypy = ">=1.14.1"
+ruff = ">=0.8.4"
+deptry = ">=0.21.2"
 codespell = ">=2.3.0"
 commitizen = ">=4.1.0"
 
@@ -93,11 +93,11 @@ pytest-codeblocks = ">=0.17.0"
 pytest-mock = ">=3.14.0"
 pytest-cov = ">=6.0.0"
 pytest-sugar = ">=1.0.0"
-coverage = { version = ">=7.6.9", extras = ["toml"] }
+coverage = { version = ">=7.6.10", extras = ["toml"] }
 sh = ">=2.1.0"
 
 [tool.poetry.group.ci.dependencies]
-python-semantic-release = ">=9.15.1"
+python-semantic-release = ">=9.15.2"
 
 [tool.poetry.plugins."poetry.application.plugin"]
 poetry-plugin-dotenv = "poetry_plugin_dotenv.plugin:DotenvPlugin"
