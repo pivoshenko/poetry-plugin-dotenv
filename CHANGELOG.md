@@ -1,6 +1,266 @@
 # CHANGELOG
 
 
+## v2.6.1 (2025-01-12)
+
+### Build System
+
+- **deps-dev**: Bump commitizen from 4.0.0 to 4.1.0
+  ([`1b2c016`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1b2c016e071d2a4759ddacf25c67f29ff9e956ec))
+
+Bumps [commitizen](https://github.com/commitizen-tools/commitizen) from 4.0.0 to 4.1.0. - [Release
+  notes](https://github.com/commitizen-tools/commitizen/releases) -
+  [Changelog](https://github.com/commitizen-tools/commitizen/blob/master/CHANGELOG.md) -
+  [Commits](https://github.com/commitizen-tools/commitizen/compare/v4.0.0...v4.1.0)
+
+--- updated-dependencies: - dependency-name: commitizen dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+- **deps-dev**: Bump coverage from 7.6.8 to 7.6.9
+  ([`9e7118c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9e7118cc374f160ac19e105b70bf2c0f4608f7b7))
+
+Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.6.8 to 7.6.9. - [Release
+  notes](https://github.com/nedbat/coveragepy/releases) -
+  [Changelog](https://github.com/nedbat/coveragepy/blob/master/CHANGES.rst) -
+  [Commits](https://github.com/nedbat/coveragepy/compare/7.6.8...7.6.9)
+
+--- updated-dependencies: - dependency-name: coverage dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+- **deps-dev**: Bump coverage from 7.6.9 to 7.6.10
+  ([`ceb42ae`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ceb42aefb2cdfe258e0be0347e62eeb133d66ecb))
+
+Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.6.9 to 7.6.10. - [Release
+  notes](https://github.com/nedbat/coveragepy/releases) -
+  [Changelog](https://github.com/nedbat/coveragepy/blob/master/CHANGES.rst) -
+  [Commits](https://github.com/nedbat/coveragepy/compare/7.6.9...7.6.10)
+
+--- updated-dependencies: - dependency-name: coverage dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+- **deps-dev**: Bump deptry from 0.21.1 to 0.21.2
+  ([`e9d0dc9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e9d0dc9c07461f8c1a6cb651a06f5f322b2b4003))
+
+Bumps [deptry](https://github.com/fpgmaas/deptry) from 0.21.1 to 0.21.2. - [Release
+  notes](https://github.com/fpgmaas/deptry/releases) -
+  [Changelog](https://github.com/fpgmaas/deptry/blob/main/CHANGELOG.md) -
+  [Commits](https://github.com/fpgmaas/deptry/compare/0.21.1...0.21.2)
+
+--- updated-dependencies: - dependency-name: deptry dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+- **deps-dev**: Bump ipython from 8.18.0 to 8.18.1
+  ([`fd36b70`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/fd36b70dcd1caeb907334d5611606a453c1a3b1e))
+
+Bumps [ipython](https://github.com/ipython/ipython) from 8.18.0 to 8.18.1. - [Release
+  notes](https://github.com/ipython/ipython/releases) -
+  [Commits](https://github.com/ipython/ipython/compare/8.18.0...8.18.1)
+
+--- updated-dependencies: - dependency-name: ipython dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+- **deps-dev**: Bump mypy from 1.13.0 to 1.14.0
+  ([`da59195`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/da59195b99197642a8df4c7a7574891fac3d9cbf))
+
+Bumps [mypy](https://github.com/python/mypy) from 1.13.0 to 1.14.0. -
+  [Changelog](https://github.com/python/mypy/blob/master/CHANGELOG.md) -
+  [Commits](https://github.com/python/mypy/compare/v1.13.0...v1.14.0)
+
+--- updated-dependencies: - dependency-name: mypy dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+- **deps-dev**: Bump poethepoet from 0.31.1 to 0.32.0
+  ([`81362dc`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/81362dcf596a87680e2bd49474e132050a8cf6ff))
+
+Bumps [poethepoet](https://github.com/nat-n/poethepoet) from 0.31.1 to 0.32.0. - [Release
+  notes](https://github.com/nat-n/poethepoet/releases) -
+  [Commits](https://github.com/nat-n/poethepoet/compare/v0.31.1...v0.32.0)
+
+--- updated-dependencies: - dependency-name: poethepoet dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+- **deps-dev**: Bump python-semantic-release from 9.14.0 to 9.15.0
+  ([`84ad8a7`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/84ad8a71be70792452e87c9b42482e4d944add00))
+
+Bumps [python-semantic-release](https://github.com/python-semantic-release/python-semantic-release)
+  from 9.14.0 to 9.15.0. - [Release
+  notes](https://github.com/python-semantic-release/python-semantic-release/releases) -
+  [Changelog](https://github.com/python-semantic-release/python-semantic-release/blob/master/CHANGELOG.md)
+  -
+  [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.14...v9.15)
+
+--- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
+  direct:development
+
+update-type: version-update:semver-minor
+
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+- **deps-dev**: Bump python-semantic-release from 9.15.0 to 9.15.1
+  ([`105dedc`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/105dedc897dad4627f409ba4cf45ca9b3ce5ff60))
+
+Bumps [python-semantic-release](https://github.com/python-semantic-release/python-semantic-release)
+  from 9.15.0 to 9.15.1. - [Release
+  notes](https://github.com/python-semantic-release/python-semantic-release/releases) -
+  [Changelog](https://github.com/python-semantic-release/python-semantic-release/blob/master/CHANGELOG.md)
+  -
+  [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.15...v9.15.1)
+
+--- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
+  direct:development
+
+update-type: version-update:semver-patch
+
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+- **deps-dev**: Bump python-semantic-release from 9.15.1 to 9.15.2
+  ([`e1679e4`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e1679e47e52c2faffaac18ad4f534a90972d1a24))
+
+Bumps [python-semantic-release](https://github.com/python-semantic-release/python-semantic-release)
+  from 9.15.1 to 9.15.2. - [Release
+  notes](https://github.com/python-semantic-release/python-semantic-release/releases) -
+  [Changelog](https://github.com/python-semantic-release/python-semantic-release/blob/master/CHANGELOG.md)
+  -
+  [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.15.1...v9.15.2)
+
+--- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
+  direct:development
+
+update-type: version-update:semver-patch
+
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+- **deps-dev**: Bump pyupgrade from 3.19.0 to 3.19.1
+  ([`87e94d3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/87e94d32bc7b5c7f2f3fccb43423858d495e45a8))
+
+Bumps [pyupgrade](https://github.com/asottile/pyupgrade) from 3.19.0 to 3.19.1. -
+  [Commits](https://github.com/asottile/pyupgrade/compare/v3.19.0...v3.19.1)
+
+--- updated-dependencies: - dependency-name: pyupgrade dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+- **deps-dev**: Bump ruff from 0.8.1 to 0.8.2
+  ([`83ff8af`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/83ff8af20a21717c694f222908ad1895ac6f355c))
+
+Bumps [ruff](https://github.com/astral-sh/ruff) from 0.8.1 to 0.8.2. - [Release
+  notes](https://github.com/astral-sh/ruff/releases) -
+  [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
+  [Commits](https://github.com/astral-sh/ruff/compare/0.8.1...0.8.2)
+
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+- **deps-dev**: Bump ruff from 0.8.3 to 0.8.4
+  ([`6a04313`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6a04313b12c9a9f06ef395d607bd1c472d19e091))
+
+Bumps [ruff](https://github.com/astral-sh/ruff) from 0.8.3 to 0.8.4. - [Release
+  notes](https://github.com/astral-sh/ruff/releases) -
+  [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
+  [Commits](https://github.com/astral-sh/ruff/compare/0.8.3...0.8.4)
+
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+- **deps-dev**: Bump ruff from 0.8.4 to 0.8.6
+  ([`66e90f5`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/66e90f5cff78edc79a7ce305665517aff5b40271))
+
+Bumps [ruff](https://github.com/astral-sh/ruff) from 0.8.4 to 0.8.6. - [Release
+  notes](https://github.com/astral-sh/ruff/releases) -
+  [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
+  [Commits](https://github.com/astral-sh/ruff/compare/0.8.4...0.8.6)
+
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+- **poetry**: Update dependencies
+  ([`cdb1981`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/cdb1981ddfdbb85189dfba75a43b2bf64d17ed84))
+
+- **poetry**: Update dependencies
+  ([`ae25cc9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ae25cc924c9263f188de8070c9ed1c40a05960ce))
+
+- **poetry**: Update dependencies
+  ([`1d5df36`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1d5df368760d808c489314e8642f9dd20be282e0))
+
+### Chores
+
+- **ruff**: Update config
+  ([`2022171`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/2022171e9cddeef1fff4c3d5bcfca94b8c218c90))
+
+### Continuous Integration
+
+- **pre-commit**: Update hooks
+  ([`04a7fac`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/04a7fac3f9be12d67a2a41c0f4aae5a92bfd1253))
+
+- **pre-commit**: Update hooks
+  ([`219bc13`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/219bc13faf18c8bb001223514d13251c35c9de67))
+
+### Documentation
+
+- Update license
+  ([`1c8ba55`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1c8ba55405d666963de542bc680441e5ce41e033))
+
+
 ## v2.6.0 (2024-11-30)
 
 ### Bug Fixes
@@ -49,7 +309,9 @@ Bumps [cryptography](https://github.com/pyca/cryptography) from 43.0.0 to 43.0.1
   [Changelog](https://github.com/pyca/cryptography/blob/main/CHANGELOG.rst) -
   [Commits](https://github.com/pyca/cryptography/compare/43.0.0...43.0.1)
 
---- updated-dependencies: - dependency-name: cryptography dependency-type: indirect ...
+--- updated-dependencies: - dependency-name: cryptography dependency-type: indirect
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -60,7 +322,10 @@ Bumps [python-lsp-isort](https://github.com/chantera/python-lsp-isort) from 0.1 
   [Commits](https://github.com/chantera/python-lsp-isort/compare/v0.1...v0.2.0)
 
 --- updated-dependencies: - dependency-name: python-lsp-isort dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -75,7 +340,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.9...v9.11)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-minor ...
+  direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -87,8 +356,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.6.3 to 0.6.4. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/0.6.3...0.6.4)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -100,8 +372,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.6.5 to 0.6.7. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/0.6.5...0.6.7)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -113,8 +388,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.6.8 to 0.6.9. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/0.6.8...0.6.9)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -126,7 +404,10 @@ Bumps [ruff-lsp](https://github.com/astral-sh/ruff-lsp) from 0.0.55 to 0.0.56. -
   [Commits](https://github.com/astral-sh/ruff-lsp/compare/v0.0.55...v0.0.56)
 
 --- updated-dependencies: - dependency-name: ruff-lsp dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -138,7 +419,10 @@ Bumps [ruff-lsp](https://github.com/astral-sh/ruff-lsp) from 0.0.56 to 0.0.57. -
   [Commits](https://github.com/astral-sh/ruff-lsp/compare/v0.0.56...v0.0.57)
 
 --- updated-dependencies: - dependency-name: ruff-lsp dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -150,8 +434,11 @@ Bumps [sh](https://github.com/amoffat/sh) from 2.0.7 to 2.1.0. - [Release
   [Changelog](https://github.com/amoffat/sh/blob/develop/CHANGELOG.md) -
   [Commits](https://github.com/amoffat/sh/compare/2.0.7...2.1.0)
 
---- updated-dependencies: - dependency-name: sh dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: sh dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -206,7 +493,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.8.7...v9.8.8)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-patch ...
+  direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -237,7 +528,9 @@ Signed-off-by: dependabot[bot] <support@github.com>
 Bumps [certifi](https://github.com/certifi/python-certifi) from 2024.6.2 to 2024.7.4. -
   [Commits](https://github.com/certifi/python-certifi/compare/2024.06.02...2024.07.04)
 
---- updated-dependencies: - dependency-name: certifi dependency-type: indirect ...
+--- updated-dependencies: - dependency-name: certifi dependency-type: indirect
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -250,7 +543,10 @@ Bumps [commitizen](https://github.com/commitizen-tools/commitizen) from 3.27.0 t
   [Commits](https://github.com/commitizen-tools/commitizen/compare/v3.27.0...v3.28.0)
 
 --- updated-dependencies: - dependency-name: commitizen dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -262,8 +558,11 @@ Bumps [deptry](https://github.com/fpgmaas/deptry) from 0.16.1 to 0.16.2. - [Rele
   [Changelog](https://github.com/fpgmaas/deptry/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/fpgmaas/deptry/compare/0.16.1...0.16.2)
 
---- updated-dependencies: - dependency-name: deptry dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: deptry dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -275,8 +574,11 @@ Bumps [deptry](https://github.com/fpgmaas/deptry) from 0.16.2 to 0.17.0. - [Rele
   [Changelog](https://github.com/fpgmaas/deptry/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/fpgmaas/deptry/compare/0.16.2...0.17.0)
 
---- updated-dependencies: - dependency-name: deptry dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: deptry dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -287,8 +589,11 @@ Bumps [mypy](https://github.com/python/mypy) from 1.10.1 to 1.11.0. -
   [Changelog](https://github.com/python/mypy/blob/master/CHANGELOG.md) -
   [Commits](https://github.com/python/mypy/compare/v1.10.1...v1.11)
 
---- updated-dependencies: - dependency-name: mypy dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: mypy dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -303,7 +608,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.8.3...v9.8.5)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-patch ...
+  direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -318,7 +627,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.8.5...v9.8.6)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-patch ...
+  direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -330,8 +643,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.5.0 to 0.5.1. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/0.5.0...0.5.1)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -343,8 +659,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.5.1 to 0.5.2. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/0.5.1...0.5.2)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -356,22 +675,25 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.5.2 to 0.5.5. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/0.5.2...0.5.5)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
+
+- **poetry**: Update dependencies
+  ([`e8a6039`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e8a60395f655247e612eac3c652c5b44b6840bd6))
 
 - **poetry**: Update dependencies
   ([`3ff980d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3ff980dfcba8d4876f3ab19a6fae5a3e4765ba04))
 
 - **poetry**: Update dependencies
-  ([`55cdab5`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/55cdab5bfaf94699c4df0fd9f3937d919f11a879))
-
-- **poetry**: Update dependencies
   ([`c68aa40`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c68aa405eee3d028eebc1d042cc16680fd9f5f9f))
 
 - **poetry**: Update dependencies
-  ([`e8a6039`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e8a60395f655247e612eac3c652c5b44b6840bd6))
+  ([`55cdab5`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/55cdab5bfaf94699c4df0fd9f3937d919f11a879))
 
 ### Chores
 
@@ -389,13 +711,13 @@ Signed-off-by: dependabot[bot] <support@github.com>
   ([`709194c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/709194c258176351974a47f52cdd8b0a08d5f2bd))
 
 - **pre-commit**: Update hooks
-  ([`c069ec6`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c069ec64bf2894db1f63d16af020df3a14c10ba6))
+  ([`cdd341a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/cdd341a86465a1d300e356f31871c35dba1988fd))
 
 - **pre-commit**: Update hooks
   ([`c418b49`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c418b49e3e019ce84de3e967c144c642c367b246))
 
 - **pre-commit**: Update hooks
-  ([`cdd341a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/cdd341a86465a1d300e356f31871c35dba1988fd))
+  ([`c069ec6`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c069ec64bf2894db1f63d16af020df3a14c10ba6))
 
 ### Documentation
 
@@ -455,10 +777,10 @@ Signed-off-by: dependabot[bot] <support@github.com>
 ### Continuous Integration
 
 - **labels**: Update color fields
-  ([`4b1a5b3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4b1a5b301ba2b492469b16e99f3f106bc2090f37))
+  ([`9126316`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9126316a4a7ac0e99785e12266ced2eedfbc3ae4))
 
 - **labels**: Update color fields
-  ([`9126316`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9126316a4a7ac0e99785e12266ced2eedfbc3ae4))
+  ([`4b1a5b3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4b1a5b301ba2b492469b16e99f3f106bc2090f37))
 
 - **workflows**: Update names
   ([`639d8e1`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/639d8e1ae23d98ca323ffd1d305d7c1e919d0010))
@@ -481,8 +803,11 @@ Bumps [poetry](https://github.com/python-poetry/poetry) from 1.8.2 to 1.8.3. - [
   [Changelog](https://github.com/python-poetry/poetry/blob/1.8.3/CHANGELOG.md) -
   [Commits](https://github.com/python-poetry/poetry/compare/1.8.2...1.8.3)
 
---- updated-dependencies: - dependency-name: poetry dependency-type: direct:production update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: poetry dependency-type: direct:production
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -495,7 +820,10 @@ Bumps [commitizen](https://github.com/commitizen-tools/commitizen) from 3.25.0 t
   [Commits](https://github.com/commitizen-tools/commitizen/compare/v3.25.0...v3.26.0)
 
 --- updated-dependencies: - dependency-name: commitizen dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -508,7 +836,10 @@ Bumps [commitizen](https://github.com/commitizen-tools/commitizen) from 3.26.0 t
   [Commits](https://github.com/commitizen-tools/commitizen/compare/v3.26.0...v3.27.0)
 
 --- updated-dependencies: - dependency-name: commitizen dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -521,7 +852,10 @@ Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.5.1 to 7.5.2. - [R
   [Commits](https://github.com/nedbat/coveragepy/compare/7.5.1...7.5.2)
 
 --- updated-dependencies: - dependency-name: coverage dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -534,7 +868,10 @@ Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.5.2 to 7.5.3. - [R
   [Commits](https://github.com/nedbat/coveragepy/compare/7.5.2...7.5.3)
 
 --- updated-dependencies: - dependency-name: coverage dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -549,7 +886,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.7.0...v9.7.1)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-patch ...
+  direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -564,7 +905,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.7.1...v9.7.3)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-patch ...
+  direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -576,8 +921,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.4.3 to 0.4.4. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.4.3...v0.4.4)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -589,8 +937,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.4.4 to 0.4.5. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.4.4...v0.4.5)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -602,8 +953,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.4.5 to 0.4.7. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.4.5...v0.4.7)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -615,8 +969,11 @@ Bumps [sh](https://github.com/amoffat/sh) from 2.0.6 to 2.0.7. - [Release
   [Changelog](https://github.com/amoffat/sh/blob/develop/CHANGELOG.md) -
   [Commits](https://github.com/amoffat/sh/compare/2.0.6...2.0.7)
 
---- updated-dependencies: - dependency-name: sh dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: sh dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -627,7 +984,9 @@ Bumps [tornado](https://github.com/tornadoweb/tornado) from 6.4 to 6.4.1. -
   [Changelog](https://github.com/tornadoweb/tornado/blob/master/docs/releases.rst) -
   [Commits](https://github.com/tornadoweb/tornado/compare/v6.4.0...v6.4.1)
 
---- updated-dependencies: - dependency-name: tornado dependency-type: indirect ...
+--- updated-dependencies: - dependency-name: tornado dependency-type: indirect
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -640,7 +999,10 @@ Bumps [xdoctest](https://github.com/Erotemic/xdoctest) from 1.1.3 to 1.1.4. - [R
   [Commits](https://github.com/Erotemic/xdoctest/compare/v1.1.3...v1.1.4)
 
 --- updated-dependencies: - dependency-name: xdoctest dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -648,12 +1010,15 @@ Signed-off-by: dependabot[bot] <support@github.com>
   ([`3610619`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3610619eb40f6f5dc13eb82c3cd9af28e3f0acfb))
 
 - **poetry**: Update dependencies
-  ([`a573752`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a573752fefe063ded750fabee52745d72b98108f))
-
-- **poetry**: Update dependencies
   ([`ca96099`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ca96099e5a7830779522bdd2e8221abf098f3202))
 
+- **poetry**: Update dependencies
+  ([`a573752`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a573752fefe063ded750fabee52745d72b98108f))
+
 ### Chores
+
+- Remove `memestra`
+  ([`d9004dc`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d9004dcb82483751c87131e55c69947093864b56))
 
 - **mypy**: Update config
   ([`e18cbd5`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e18cbd5cc85faea0490a238e567e61a2d95d4dcc))
@@ -673,15 +1038,18 @@ Signed-off-by: dependabot[bot] <support@github.com>
 - **semantic-release**: Update config
   ([`db15c58`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/db15c589bf29683412071cc8b2906848ee85c275))
 
-- Remove `memestra`
-  ([`d9004dc`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d9004dcb82483751c87131e55c69947093864b56))
-
 ### Code Style
 
 - **labels**: Update formatting
   ([`7289c4c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/7289c4c2a97571e16d113b3c41bf4988eedd2f20))
 
 ### Continuous Integration
+
+- Add CodeCov config
+  ([`e78bb7d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e78bb7d1ed66d03642adfad91f7ae1ff0eefd77c))
+
+- Update common IDE config
+  ([`7d8d800`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/7d8d80092fa2bcb3b51628a80bd7dfeee92a4527))
 
 - **actions**: Add action that setups env
   ([`2ae35fa`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/2ae35fa0c610ad29828cfd39ebdf038e437fb655))
@@ -702,19 +1070,19 @@ Signed-off-by: dependabot[bot] <support@github.com>
   ([`3355b34`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3355b34b17a7aa8fbb14462ac9d8b16a6b793b79))
 
 - **dependabot**: Update labels
-  ([`1c5fb45`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1c5fb45552e17049ad0017d711b92e8b2b689ac4))
+  ([`ffa923c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ffa923c4e5719ee8eaf7ecfa0db990cd16d100cc))
 
 - **dependabot**: Update labels
-  ([`ffa923c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ffa923c4e5719ee8eaf7ecfa0db990cd16d100cc))
+  ([`1c5fb45`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1c5fb45552e17049ad0017d711b92e8b2b689ac4))
 
 - **pre-commit**: Remove `mypy` hook
   ([`fe14272`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/fe1427275dcdbf6c9ccbda89087042bfd2faf02d))
 
 - **pre-commit**: Update hooks
-  ([`5ca1ac8`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5ca1ac851a9e9d116062802a08a3edd7d7825de5))
+  ([`d575e57`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d575e57baa0f26876344d2a84d869044d08cce1c))
 
 - **pre-commit**: Update hooks
-  ([`d575e57`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d575e57baa0f26876344d2a84d869044d08cce1c))
+  ([`5ca1ac8`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5ca1ac851a9e9d116062802a08a3edd7d7825de5))
 
 - **pre-commit**: Update Python version
   ([`c29ffb9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c29ffb904c66f74f68f4ee3aa6ef7ff644bb8306))
@@ -758,12 +1126,6 @@ Signed-off-by: dependabot[bot] <support@github.com>
 - **workflows**: Update release workflow
   ([`09c8f7e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/09c8f7e83131248c783561afa346e32de5f971b9))
 
-- Add CodeCov config
-  ([`e78bb7d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e78bb7d1ed66d03642adfad91f7ae1ff0eefd77c))
-
-- Update common IDE config
-  ([`7d8d800`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/7d8d80092fa2bcb3b51628a80bd7dfeee92a4527))
-
 ### Documentation
 
 - **CHANGELOG**: Update formatting
@@ -794,10 +1156,10 @@ Signed-off-by: dependabot[bot] <support@github.com>
   ([`dd5a0ef`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/dd5a0efd9c93c329ca6de86a7fbd806721aebaca))
 
 - **README**: Update "Features" section
-  ([`3d3fba8`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3d3fba8563529ece15ef50aaf3a87db656574744))
+  ([`55b0091`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/55b0091b9c087013f7a10d69acc4abf2f1835080))
 
 - **README**: Update "Features" section
-  ([`55b0091`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/55b0091b9c087013f7a10d69acc4abf2f1835080))
+  ([`3d3fba8`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3d3fba8563529ece15ef50aaf3a87db656574744))
 
 - **README**: Update "Usage and Configuration" section
   ([`147bfb7`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/147bfb7dd4069f8ae32281eddf209a836f22b38a))
@@ -827,6 +1189,9 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Refactoring
 
+- Update type annotations
+  ([`d28e69d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d28e69d255a17eb3f6cda4f5fdd2a332b9b60ed0))
+
 - **config**: Replace `pathlib` with `os.path`
   ([`578978b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/578978b4481017b54f60be0e4bcafba0938eada6))
 
@@ -844,9 +1209,6 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 - **plugin**: Add `nocover`
   ([`52ba84e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/52ba84e264f0c8ea15e0403fe3f285341c8f903b))
-
-- Update type annotations
-  ([`d28e69d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d28e69d255a17eb3f6cda4f5fdd2a332b9b60ed0))
 
 ### Testing
 
@@ -919,7 +1281,10 @@ Bumps [commitizen](https://github.com/commitizen-tools/commitizen) from 3.24.0 t
   [Commits](https://github.com/commitizen-tools/commitizen/compare/v3.24.0...v3.25.0)
 
 --- updated-dependencies: - dependency-name: commitizen dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -932,7 +1297,10 @@ Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.5.0 to 7.5.1. - [R
   [Commits](https://github.com/nedbat/coveragepy/compare/7.5.0...7.5.1)
 
 --- updated-dependencies: - dependency-name: coverage dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -944,7 +1312,10 @@ Bumps [poethepoet](https://github.com/nat-n/poethepoet) from 0.26.0 to 0.26.1. -
   [Commits](https://github.com/nat-n/poethepoet/compare/v0.26.0...v0.26.1)
 
 --- updated-dependencies: - dependency-name: poethepoet dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -956,8 +1327,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.4.2 to 0.4.3. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.4.2...v0.4.3)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -997,8 +1371,11 @@ Bumps [black](https://github.com/psf/black) from 24.4.1 to 24.4.2. - [Release
   [Changelog](https://github.com/psf/black/blob/main/CHANGES.md) -
   [Commits](https://github.com/psf/black/compare/24.4.1...24.4.2)
 
---- updated-dependencies: - dependency-name: black dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: black dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1010,7 +1387,10 @@ Bumps [poethepoet](https://github.com/nat-n/poethepoet) from 0.25.1 to 0.26.0. -
   [Commits](https://github.com/nat-n/poethepoet/compare/v0.25.1...v0.26.0)
 
 --- updated-dependencies: - dependency-name: poethepoet dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1023,10 +1403,10 @@ Signed-off-by: dependabot[bot] <support@github.com>
 ### Chores
 
 - **semantic-release**: Update config
-  ([`8c24a1c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8c24a1cd6373645935cd43125fd330250bd5ef26))
+  ([`decaf2b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/decaf2bc2fdc35faaad39e36fd65c746b9b0ce5e))
 
 - **semantic-release**: Update config
-  ([`decaf2b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/decaf2bc2fdc35faaad39e36fd65c746b9b0ce5e))
+  ([`8c24a1c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8c24a1cd6373645935cd43125fd330250bd5ef26))
 
 ### Continuous Integration
 
@@ -1059,11 +1439,11 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Features
 
-- **config**: Replace `tomli` with `tomlkit`
-  ([`4381b66`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4381b66dd68f56dcbdc0873649a8b647d5d3b385))
-
 - Move `Logger` into a separate module
   ([`cef85e3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/cef85e39b1ebbcdab1a8b7ef5c7ff4598b66a268))
+
+- **config**: Replace `tomli` with `tomlkit`
+  ([`4381b66`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4381b66dd68f56dcbdc0873649a8b647d5d3b385))
 
 ### Testing
 
@@ -1084,7 +1464,10 @@ Bumps [commitizen](https://github.com/commitizen-tools/commitizen) from 3.22.0 t
   [Commits](https://github.com/commitizen-tools/commitizen/compare/v3.22.0...v3.24.0)
 
 --- updated-dependencies: - dependency-name: commitizen dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1116,7 +1499,9 @@ Bumps [idna](https://github.com/kjd/idna) from 3.6 to 3.7. - [Release
   [Changelog](https://github.com/kjd/idna/blob/master/HISTORY.rst) -
   [Commits](https://github.com/kjd/idna/compare/v3.6...v3.7)
 
---- updated-dependencies: - dependency-name: idna dependency-type: indirect ...
+--- updated-dependencies: - dependency-name: idna dependency-type: indirect
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1128,8 +1513,11 @@ Bumps [black](https://github.com/psf/black) from 24.3.0 to 24.4.0. - [Release
   [Changelog](https://github.com/psf/black/blob/main/CHANGES.md) -
   [Commits](https://github.com/psf/black/compare/24.3.0...24.4.0)
 
---- updated-dependencies: - dependency-name: black dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: black dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1142,7 +1530,10 @@ Bumps [commitizen](https://github.com/commitizen-tools/commitizen) from 3.21.3 t
   [Commits](https://github.com/commitizen-tools/commitizen/compare/v3.21.3...v3.22.0)
 
 --- updated-dependencies: - dependency-name: commitizen dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1154,7 +1545,10 @@ Bumps [poethepoet](https://github.com/nat-n/poethepoet) from 0.25.0 to 0.25.1. -
   [Commits](https://github.com/nat-n/poethepoet/compare/v0.25.0...v0.25.1)
 
 --- updated-dependencies: - dependency-name: poethepoet dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1169,7 +1563,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.4.1...v9.4.2)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-patch ...
+  direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1181,8 +1579,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.3.5 to 0.3.7. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.3.5...v0.3.7)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1203,14 +1604,14 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Add examples
+  ([`d317fee`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d317fee13e85f1a8d2faa715c475eb4f6a6949fe))
+
 - **README**: Update `Usage` section
   ([`131731a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/131731aa3f2c3902a0a64ca315da58e8e43a3e88))
 
 - **README**: Update phrasing
   ([`563a809`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/563a809b5c156064096330de3d7ee9bd930130a3))
-
-- Add examples
-  ([`d317fee`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d317fee13e85f1a8d2faa715c475eb4f6a6949fe))
 
 ### Features
 
@@ -1242,8 +1643,11 @@ Bumps [deptry](https://github.com/fpgmaas/deptry) from 0.15.0 to 0.16.1. - [Rele
   [Changelog](https://github.com/fpgmaas/deptry/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/fpgmaas/deptry/compare/0.15.0...0.16.1)
 
---- updated-dependencies: - dependency-name: deptry dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: deptry dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1258,7 +1662,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.3.1...v9.4.0)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-minor ...
+  direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1273,7 +1681,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.4.0...v9.4.1)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-patch ...
+  direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1285,8 +1697,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.3.4 to 0.3.5. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.3.4...v0.3.5)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1294,10 +1709,10 @@ Signed-off-by: dependabot[bot] <support@github.com>
   ([`3d51bcc`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3d51bccc8be13310e930aac3f28e273107008788))
 
 - **poetry**: Update dependencies
-  ([`54d82ee`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/54d82eedddef1c93a8fd36680b7f993d62ceb6c3))
+  ([`63739e3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/63739e322a793679d5012956b3ba367ae284f84a))
 
 - **poetry**: Update dependencies
-  ([`63739e3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/63739e322a793679d5012956b3ba367ae284f84a))
+  ([`54d82ee`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/54d82eedddef1c93a8fd36680b7f993d62ceb6c3))
 
 - **pre-commit**: Update dependencies
   ([`669d2c2`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/669d2c2ae6d153a91a0e1c7c4de74a72799f0828))
@@ -1305,10 +1720,10 @@ Signed-off-by: dependabot[bot] <support@github.com>
 ### Chores
 
 - **ruff**: Update config
-  ([`024d25c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/024d25cc6cce6b1c77d937b9c8499df21d1e514d))
+  ([`edb588a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/edb588a5d10c0cf5da47deeb9e57a8c8439bbdfe))
 
 - **ruff**: Update config
-  ([`edb588a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/edb588a5d10c0cf5da47deeb9e57a8c8439bbdfe))
+  ([`024d25c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/024d25cc6cce6b1c77d937b9c8499df21d1e514d))
 
 ### Code Style
 
@@ -1322,11 +1737,11 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
-- **README**: Update badges
-  ([`1d57d53`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1d57d534ead0ada2cf1ce7d7b05bf53bc33891a7))
-
 - Add examples
   ([`a942ac3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a942ac3e61697cec2b09d7bd3c1767abedf547c6))
+
+- **README**: Update badges
+  ([`1d57d53`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1d57d534ead0ada2cf1ce7d7b05bf53bc33891a7))
 
 ### Features
 
@@ -1345,14 +1760,14 @@ BREAKING CHANGE:
 
 ### Testing
 
+- Update mocks in order to new configuration keys
+  ([`1e0273c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1e0273cb00d0bbab4cb84c540df084b3b5165cfc))
+
 - **config**: Add `test__as_bool`
   ([`2a71065`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/2a7106562204f14c91e544f8887017a7a4b84f28))
 
 - **plugin**: Add `_toml_config` tests
   ([`1828af7`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1828af75940a56582a8e76858d46e4da1ae67251))
-
-- Update mocks in order to new configuration keys
-  ([`1e0273c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1e0273cb00d0bbab4cb84c540df084b3b5165cfc))
 
 
 ## v0.8.3 (2024-03-31)
@@ -1399,10 +1814,10 @@ remove CodeQL badge
 ### Bug Fixes
 
 - Update GitHub username
-  ([`6cf3264`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6cf32645405d57a648a0ccaa8160ac0c265bea3b))
+  ([`8651f6a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8651f6a31c12416a6c5c2baf857fdc5225148fb8))
 
 - Update GitHub username
-  ([`8651f6a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8651f6a31c12416a6c5c2baf857fdc5225148fb8))
+  ([`6cf3264`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6cf32645405d57a648a0ccaa8160ac0c265bea3b))
 
 ### Build System
 
@@ -1464,7 +1879,10 @@ Bumps [pytest-mock](https://github.com/pytest-dev/pytest-mock) from 3.12.0 to 3.
   [Commits](https://github.com/pytest-dev/pytest-mock/compare/v3.12.0...v3.14.0)
 
 --- updated-dependencies: - dependency-name: pytest-mock dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1481,7 +1899,10 @@ Bumps [pytest-cov](https://github.com/pytest-dev/pytest-cov) from 4.1.0 to 5.0.0
   [Commits](https://github.com/pytest-dev/pytest-cov/compare/v4.1.0...v5.0.0)
 
 --- updated-dependencies: - dependency-name: pytest-cov dependency-type: direct:development
-  update-type: version-update:semver-major ...
+
+update-type: version-update:semver-major
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1498,8 +1919,11 @@ Bumps [deptry](https://github.com/fpgmaas/deptry) from 0.14.0 to 0.15.0. - [Rele
   [Changelog](https://github.com/fpgmaas/deptry/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/fpgmaas/deptry/compare/0.14.0...0.15.0)
 
---- updated-dependencies: - dependency-name: deptry dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: deptry dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1517,7 +1941,10 @@ Bumps [commitizen](https://github.com/commitizen-tools/commitizen) from 3.18.0 t
   [Commits](https://github.com/commitizen-tools/commitizen/compare/v3.18.0...v3.20.0)
 
 --- updated-dependencies: - dependency-name: commitizen dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1534,7 +1961,10 @@ Bumps [pylsp-rope](https://github.com/python-rope/pylsp-rope) from 0.1.15 to 0.1
   [Commits](https://github.com/python-rope/pylsp-rope/compare/0.1.15...0.1.16)
 
 --- updated-dependencies: - dependency-name: pylsp-rope dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1551,8 +1981,11 @@ Bumps [deptry](https://github.com/fpgmaas/deptry) from 0.12.0 to 0.14.0. - [Rele
   [Changelog](https://github.com/fpgmaas/deptry/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/fpgmaas/deptry/compare/0.12.0...0.14.0)
 
---- updated-dependencies: - dependency-name: deptry dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: deptry dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1570,7 +2003,10 @@ Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.4.3 to 7.4.4. - [R
   [Commits](https://github.com/nedbat/coveragepy/compare/7.4.3...7.4.4)
 
 --- updated-dependencies: - dependency-name: coverage dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1587,7 +2023,10 @@ Bumps [pylsp-rope](https://github.com/python-rope/pylsp-rope) from 0.1.11 to 0.1
   [Commits](https://github.com/python-rope/pylsp-rope/compare/0.1.11...0.1.15)
 
 --- updated-dependencies: - dependency-name: pylsp-rope dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1604,8 +2043,11 @@ Bumps [black](https://github.com/psf/black) from 24.2.0 to 24.3.0. - [Release
   [Changelog](https://github.com/psf/black/blob/main/CHANGES.md) -
   [Commits](https://github.com/psf/black/compare/24.2.0...24.3.0)
 
---- updated-dependencies: - dependency-name: black dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: black dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1623,7 +2065,10 @@ Bumps [python-lsp-server](https://github.com/python-lsp/python-lsp-server) from 
   [Commits](https://github.com/python-lsp/python-lsp-server/compare/v1.10.0...v1.10.1)
 
 --- updated-dependencies: - dependency-name: python-lsp-server dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1640,7 +2085,10 @@ Bumps [crs-k/stale-branches](https://github.com/crs-k/stale-branches) from 4.0.1
   [Commits](https://github.com/crs-k/stale-branches/compare/v4.0.1...v4.1.0)
 
 --- updated-dependencies: - dependency-name: crs-k/stale-branches dependency-type: direct:production
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1695,8 +2143,11 @@ Bumps [poetry](https://github.com/python-poetry/poetry) from 1.8.1 to 1.8.2. - [
   [Changelog](https://github.com/python-poetry/poetry/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/python-poetry/poetry/compare/1.8.1...1.8.2)
 
---- updated-dependencies: - dependency-name: poetry dependency-type: direct:production update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: poetry dependency-type: direct:production
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1713,8 +2164,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.2.2 to 0.3.0. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.2.2...v0.3.0)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1731,7 +2185,10 @@ Bumps [crs-k/stale-branches](https://github.com/crs-k/stale-branches) from 3.1.4
   [Commits](https://github.com/crs-k/stale-branches/compare/v3.1.4...v4.0.1)
 
 --- updated-dependencies: - dependency-name: crs-k/stale-branches dependency-type: direct:production
-  update-type: version-update:semver-major ...
+
+update-type: version-update:semver-major
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1743,8 +2200,11 @@ Bumps [poetry](https://github.com/python-poetry/poetry) from 1.7.1 to 1.8.1. - [
   [Changelog](https://github.com/python-poetry/poetry/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/python-poetry/poetry/compare/1.7.1...1.8.1)
 
---- updated-dependencies: - dependency-name: poetry dependency-type: direct:production update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: poetry dependency-type: direct:production
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1757,7 +2217,10 @@ Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.4.1 to 7.4.3. - [R
   [Commits](https://github.com/nedbat/coveragepy/compare/7.4.1...7.4.3)
 
 --- updated-dependencies: - dependency-name: coverage dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1772,7 +2235,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.1.0...v9.1.1)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-patch ...
+  direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1789,7 +2256,10 @@ Bumps [poethepoet](https://github.com/nat-n/poethepoet) from 0.24.4 to 0.25.0. -
   [Commits](https://github.com/nat-n/poethepoet/compare/v0.24.4...v0.25.0)
 
 --- updated-dependencies: - dependency-name: poethepoet dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1805,7 +2275,9 @@ Bumps [cryptography](https://github.com/pyca/cryptography) from 42.0.2 to 42.0.4
   [Changelog](https://github.com/pyca/cryptography/blob/main/CHANGELOG.rst) -
   [Commits](https://github.com/pyca/cryptography/compare/42.0.2...42.0.4)
 
---- updated-dependencies: - dependency-name: cryptography dependency-type: indirect ...
+--- updated-dependencies: - dependency-name: cryptography dependency-type: indirect
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1825,7 +2297,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v9.0.3...v9.1.0)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-minor ...
+  direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1842,8 +2318,11 @@ Bumps [black](https://github.com/psf/black) from 24.1.1 to 24.2.0. - [Release
   [Changelog](https://github.com/psf/black/blob/main/CHANGES.md) -
   [Commits](https://github.com/psf/black/compare/24.1.1...24.2.0)
 
---- updated-dependencies: - dependency-name: black dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: black dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1860,8 +2339,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.2.1 to 0.2.2. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.2.1...v0.2.2)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1877,7 +2359,10 @@ Bumps [pyupgrade](https://github.com/asottile/pyupgrade) from 3.15.0 to 3.15.1. 
   [Commits](https://github.com/asottile/pyupgrade/compare/v3.15.0...v3.15.1)
 
 --- updated-dependencies: - dependency-name: pyupgrade dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1897,7 +2382,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v8.7.0...v9.0.3)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-major ...
+  direct:development
+
+update-type: version-update:semver-major
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1947,7 +2436,10 @@ Bumps [xdoctest](https://github.com/Erotemic/xdoctest) from 1.1.2 to 1.1.3. - [R
   [Commits](https://github.com/Erotemic/xdoctest/compare/v1.1.2...v1.1.3)
 
 --- updated-dependencies: - dependency-name: xdoctest dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1963,7 +2455,9 @@ Bumps [cryptography](https://github.com/pyca/cryptography) from 41.0.7 to 42.0.0
   [Changelog](https://github.com/pyca/cryptography/blob/main/CHANGELOG.rst) -
   [Commits](https://github.com/pyca/cryptography/compare/41.0.7...42.0.0)
 
---- updated-dependencies: - dependency-name: cryptography dependency-type: indirect ...
+--- updated-dependencies: - dependency-name: cryptography dependency-type: indirect
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1981,7 +2475,10 @@ Bumps [pytest-sugar](https://github.com/Teemu/pytest-sugar) from 0.9.7 to 1.0.0.
   [Commits](https://github.com/Teemu/pytest-sugar/compare/v0.9.7...v1.0.0)
 
 --- updated-dependencies: - dependency-name: pytest-sugar dependency-type: direct:development
-  update-type: version-update:semver-major ...
+
+update-type: version-update:semver-major
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -1999,7 +2496,11 @@ Bumps [codecov/codecov-action](https://github.com/codecov/codecov-action) from 3
   [Commits](https://github.com/codecov/codecov-action/compare/v3...v4)
 
 --- updated-dependencies: - dependency-name: codecov/codecov-action dependency-type:
-  direct:production update-type: version-update:semver-major ...
+  direct:production
+
+update-type: version-update:semver-major
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2016,7 +2517,10 @@ Bumps [crs-k/stale-branches](https://github.com/crs-k/stale-branches) from 3.0.0
   [Commits](https://github.com/crs-k/stale-branches/compare/v3.0.0...v3.1.4)
 
 --- updated-dependencies: - dependency-name: crs-k/stale-branches dependency-type: direct:production
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2028,8 +2532,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.1.14 to 0.2.0. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.1.14...v0.2.0)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2060,8 +2567,11 @@ Bumps [black](https://github.com/psf/black) from 23.12.1 to 24.1.1. - [Release
   [Changelog](https://github.com/psf/black/blob/main/CHANGES.md) -
   [Commits](https://github.com/psf/black/compare/23.12.1...24.1.1)
 
---- updated-dependencies: - dependency-name: black dependency-type: direct:development update-type:
-  version-update:semver-major ...
+--- updated-dependencies: - dependency-name: black dependency-type: direct:development
+
+update-type: version-update:semver-major
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2074,7 +2584,10 @@ Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.4.0 to 7.4.1. - [R
   [Commits](https://github.com/nedbat/coveragepy/compare/7.4.0...7.4.1)
 
 --- updated-dependencies: - dependency-name: coverage dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2091,7 +2604,11 @@ Bumps [actions/dependency-review-action](https://github.com/actions/dependency-r
   [Commits](https://github.com/actions/dependency-review-action/compare/v3...v4)
 
 --- updated-dependencies: - dependency-name: actions/dependency-review-action dependency-type:
-  direct:production update-type: version-update:semver-major ...
+  direct:production
+
+update-type: version-update:semver-major
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2103,8 +2620,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.1.13 to 0.1.14. - [Releas
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.1.13...v0.1.14)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2139,7 +2659,9 @@ Bumps [cryptography](https://github.com/pyca/cryptography) from 41.0.3 to 41.0.4
   [Changelog](https://github.com/pyca/cryptography/blob/main/CHANGELOG.rst) -
   [Commits](https://github.com/pyca/cryptography/compare/41.0.3...41.0.4)
 
---- updated-dependencies: - dependency-name: cryptography dependency-type: indirect ...
+--- updated-dependencies: - dependency-name: cryptography dependency-type: indirect
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2150,7 +2672,9 @@ Bumps [cryptography](https://github.com/pyca/cryptography) from 41.0.5 to 41.0.6
   [Changelog](https://github.com/pyca/cryptography/blob/main/CHANGELOG.rst) -
   [Commits](https://github.com/pyca/cryptography/compare/41.0.5...41.0.6)
 
---- updated-dependencies: - dependency-name: cryptography dependency-type: indirect ...
+--- updated-dependencies: - dependency-name: cryptography dependency-type: indirect
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2163,7 +2687,10 @@ Bumps [github/codeql-action](https://github.com/github/codeql-action) from 2 to 
   [Commits](https://github.com/github/codeql-action/compare/v2...v3)
 
 --- updated-dependencies: - dependency-name: github/codeql-action dependency-type: direct:production
-  update-type: version-update:semver-major ...
+
+update-type: version-update:semver-major
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2175,8 +2702,11 @@ Bumps [poetry](https://github.com/python-poetry/poetry) from 1.6.1 to 1.7.0. - [
   [Changelog](https://github.com/python-poetry/poetry/blob/master/CHANGELOG.md) -
   [Commits](https://github.com/python-poetry/poetry/compare/1.6.1...1.7.0)
 
---- updated-dependencies: - dependency-name: poetry dependency-type: direct:production update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: poetry dependency-type: direct:production
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2188,8 +2718,11 @@ Bumps [poetry](https://github.com/python-poetry/poetry) from 1.7.0 to 1.7.1. - [
   [Changelog](https://github.com/python-poetry/poetry/blob/master/CHANGELOG.md) -
   [Commits](https://github.com/python-poetry/poetry/compare/1.7.0...1.7.1)
 
---- updated-dependencies: - dependency-name: poetry dependency-type: direct:production update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: poetry dependency-type: direct:production
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2201,7 +2734,9 @@ Bumps [urllib3](https://github.com/urllib3/urllib3) from 2.0.4 to 2.0.6. - [Rele
   [Changelog](https://github.com/urllib3/urllib3/blob/main/CHANGES.rst) -
   [Commits](https://github.com/urllib3/urllib3/compare/2.0.4...2.0.6)
 
---- updated-dependencies: - dependency-name: urllib3 dependency-type: indirect ...
+--- updated-dependencies: - dependency-name: urllib3 dependency-type: indirect
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2213,7 +2748,9 @@ Bumps [urllib3](https://github.com/urllib3/urllib3) from 2.0.6 to 2.0.7. - [Rele
   [Changelog](https://github.com/urllib3/urllib3/blob/main/CHANGES.rst) -
   [Commits](https://github.com/urllib3/urllib3/compare/2.0.6...2.0.7)
 
---- updated-dependencies: - dependency-name: urllib3 dependency-type: indirect ...
+--- updated-dependencies: - dependency-name: urllib3 dependency-type: indirect
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2225,8 +2762,11 @@ Bumps [black](https://github.com/psf/black) from 23.10.0 to 23.10.1. - [Release
   [Changelog](https://github.com/psf/black/blob/main/CHANGES.md) -
   [Commits](https://github.com/psf/black/compare/23.10.0...23.10.1)
 
---- updated-dependencies: - dependency-name: black dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: black dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2238,8 +2778,11 @@ Bumps [black](https://github.com/psf/black) from 23.11.0 to 23.12.0. - [Release
   [Changelog](https://github.com/psf/black/blob/main/CHANGES.md) -
   [Commits](https://github.com/psf/black/compare/23.11.0...23.12.0)
 
---- updated-dependencies: - dependency-name: black dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: black dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2251,8 +2794,11 @@ Bumps [black](https://github.com/psf/black) from 23.12.0 to 23.12.1. - [Release
   [Changelog](https://github.com/psf/black/blob/main/CHANGES.md) -
   [Commits](https://github.com/psf/black/compare/23.12.0...23.12.1)
 
---- updated-dependencies: - dependency-name: black dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: black dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2264,8 +2810,11 @@ Bumps [black](https://github.com/psf/black) from 23.7.0 to 23.9.0. - [Release
   [Changelog](https://github.com/psf/black/blob/main/CHANGES.md) -
   [Commits](https://github.com/psf/black/compare/23.7.0...23.9.0)
 
---- updated-dependencies: - dependency-name: black dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: black dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2277,8 +2826,11 @@ Bumps [black](https://github.com/psf/black) from 23.9.0 to 23.9.1. - [Release
   [Changelog](https://github.com/psf/black/blob/main/CHANGES.md) -
   [Commits](https://github.com/psf/black/compare/23.9.0...23.9.1)
 
---- updated-dependencies: - dependency-name: black dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: black dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2290,8 +2842,11 @@ Bumps [black](https://github.com/psf/black) from 23.9.1 to 23.10.0. - [Release
   [Changelog](https://github.com/psf/black/blob/main/CHANGES.md) -
   [Commits](https://github.com/psf/black/compare/23.9.1...23.10.0)
 
---- updated-dependencies: - dependency-name: black dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: black dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2304,7 +2859,10 @@ Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.2.7 to 7.3.0. - [R
   [Commits](https://github.com/nedbat/coveragepy/compare/7.2.7...7.3.0)
 
 --- updated-dependencies: - dependency-name: coverage dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2317,7 +2875,10 @@ Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.3.0 to 7.3.1. - [R
   [Commits](https://github.com/nedbat/coveragepy/compare/7.3.0...7.3.1)
 
 --- updated-dependencies: - dependency-name: coverage dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2330,7 +2891,10 @@ Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.3.2 to 7.3.3. - [R
   [Commits](https://github.com/nedbat/coveragepy/compare/7.3.2...7.3.3)
 
 --- updated-dependencies: - dependency-name: coverage dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2343,7 +2907,10 @@ Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.3.3 to 7.3.4. - [R
   [Commits](https://github.com/nedbat/coveragepy/compare/7.3.3...7.3.4)
 
 --- updated-dependencies: - dependency-name: coverage dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2356,7 +2923,10 @@ Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.3.4 to 7.4.0. - [R
   [Commits](https://github.com/nedbat/coveragepy/compare/7.3.4...7.4.0)
 
 --- updated-dependencies: - dependency-name: coverage dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2368,7 +2938,9 @@ Bumps [gitpython](https://github.com/gitpython-developers/GitPython) from 3.1.32
   [Changelog](https://github.com/gitpython-developers/GitPython/blob/main/CHANGES) -
   [Commits](https://github.com/gitpython-developers/GitPython/compare/3.1.32...3.1.35)
 
---- updated-dependencies: - dependency-name: gitpython dependency-type: indirect ...
+--- updated-dependencies: - dependency-name: gitpython dependency-type: indirect
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2380,7 +2952,9 @@ Bumps [gitpython](https://github.com/gitpython-developers/GitPython) from 3.1.40
   [Changelog](https://github.com/gitpython-developers/GitPython/blob/main/CHANGES) -
   [Commits](https://github.com/gitpython-developers/GitPython/compare/3.1.40...3.1.41)
 
---- updated-dependencies: - dependency-name: gitpython dependency-type: indirect ...
+--- updated-dependencies: - dependency-name: gitpython dependency-type: indirect
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2392,8 +2966,11 @@ Bumps [isort](https://github.com/pycqa/isort) from 5.12.0 to 5.13.0. - [Release
   [Changelog](https://github.com/PyCQA/isort/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/pycqa/isort/compare/5.12.0...5.13.0)
 
---- updated-dependencies: - dependency-name: isort dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: isort dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2405,8 +2982,11 @@ Bumps [isort](https://github.com/pycqa/isort) from 5.13.0 to 5.13.2. - [Release
   [Changelog](https://github.com/PyCQA/isort/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/pycqa/isort/compare/5.13.0...5.13.2)
 
---- updated-dependencies: - dependency-name: isort dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: isort dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2418,7 +2998,9 @@ Bumps [jinja2](https://github.com/pallets/jinja) from 3.1.2 to 3.1.3. - [Release
   [Changelog](https://github.com/pallets/jinja/blob/main/CHANGES.rst) -
   [Commits](https://github.com/pallets/jinja/compare/3.1.2...3.1.3)
 
---- updated-dependencies: - dependency-name: jinja2 dependency-type: indirect ...
+--- updated-dependencies: - dependency-name: jinja2 dependency-type: indirect
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2428,8 +3010,11 @@ Signed-off-by: dependabot[bot] <support@github.com>
 Bumps [mypy](https://github.com/python/mypy) from 1.4.1 to 1.5.0. -
   [Commits](https://github.com/python/mypy/compare/v1.4.1...v1.5.0)
 
---- updated-dependencies: - dependency-name: mypy dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: mypy dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2439,8 +3024,11 @@ Signed-off-by: dependabot[bot] <support@github.com>
 Bumps [mypy](https://github.com/python/mypy) from 1.5.0 to 1.5.1. -
   [Commits](https://github.com/python/mypy/compare/v1.5.0...v1.5.1)
 
---- updated-dependencies: - dependency-name: mypy dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: mypy dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2450,8 +3038,11 @@ Signed-off-by: dependabot[bot] <support@github.com>
 Bumps [mypy](https://github.com/python/mypy) from 1.5.1 to 1.6.0. -
   [Commits](https://github.com/python/mypy/compare/v1.5.1...v1.6.0)
 
---- updated-dependencies: - dependency-name: mypy dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: mypy dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2462,8 +3053,11 @@ Bumps [mypy](https://github.com/python/mypy) from 1.6.0 to 1.6.1. -
   [Changelog](https://github.com/python/mypy/blob/master/CHANGELOG.md) -
   [Commits](https://github.com/python/mypy/compare/v1.6.0...v1.6.1)
 
---- updated-dependencies: - dependency-name: mypy dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: mypy dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2474,8 +3068,11 @@ Bumps [mypy](https://github.com/python/mypy) from 1.7.0 to 1.7.1. -
   [Changelog](https://github.com/python/mypy/blob/master/CHANGELOG.md) -
   [Commits](https://github.com/python/mypy/compare/v1.7.0...v1.7.1)
 
---- updated-dependencies: - dependency-name: mypy dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: mypy dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2486,8 +3083,11 @@ Bumps [mypy](https://github.com/python/mypy) from 1.7.1 to 1.8.0. -
   [Changelog](https://github.com/python/mypy/blob/master/CHANGELOG.md) -
   [Commits](https://github.com/python/mypy/compare/v1.7.1...v1.8.0)
 
---- updated-dependencies: - dependency-name: mypy dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: mypy dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2500,7 +3100,10 @@ Bumps [nitpick](https://github.com/andreoliwa/nitpick) from 0.34.0 to 0.35.0. - 
   [Commits](https://github.com/andreoliwa/nitpick/compare/v0.34.0...v0.35.0)
 
 --- updated-dependencies: - dependency-name: nitpick dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2512,7 +3115,10 @@ Bumps [poethepoet](https://github.com/nat-n/poethepoet) from 0.21.1 to 0.22.0. -
   [Commits](https://github.com/nat-n/poethepoet/compare/v0.21.1...v.0.22.0)
 
 --- updated-dependencies: - dependency-name: poethepoet dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2524,7 +3130,10 @@ Bumps [poethepoet](https://github.com/nat-n/poethepoet) from 0.22.0 to 0.22.1. -
   [Commits](https://github.com/nat-n/poethepoet/compare/v.0.22.0...v0.22.1)
 
 --- updated-dependencies: - dependency-name: poethepoet dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2536,7 +3145,10 @@ Bumps [poethepoet](https://github.com/nat-n/poethepoet) from 0.22.1 to 0.23.0. -
   [Commits](https://github.com/nat-n/poethepoet/compare/v0.22.1...v0.23.0)
 
 --- updated-dependencies: - dependency-name: poethepoet dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2548,7 +3160,10 @@ Bumps [poethepoet](https://github.com/nat-n/poethepoet) from 0.23.0 to 0.24.0. -
   [Commits](https://github.com/nat-n/poethepoet/compare/v0.23.0...v0.24.0)
 
 --- updated-dependencies: - dependency-name: poethepoet dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2560,7 +3175,10 @@ Bumps [poethepoet](https://github.com/nat-n/poethepoet) from 0.24.0 to 0.24.1. -
   [Commits](https://github.com/nat-n/poethepoet/compare/v0.24.0...v0.24.1)
 
 --- updated-dependencies: - dependency-name: poethepoet dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2572,7 +3190,10 @@ Bumps [poethepoet](https://github.com/nat-n/poethepoet) from 0.24.1 to 0.24.2. -
   [Commits](https://github.com/nat-n/poethepoet/compare/v0.24.1...v0.24.2)
 
 --- updated-dependencies: - dependency-name: poethepoet dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2584,7 +3205,10 @@ Bumps [poethepoet](https://github.com/nat-n/poethepoet) from 0.24.2 to 0.24.3. -
   [Commits](https://github.com/nat-n/poethepoet/compare/v0.24.2...v0.24.3)
 
 --- updated-dependencies: - dependency-name: poethepoet dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2596,7 +3220,10 @@ Bumps [poethepoet](https://github.com/nat-n/poethepoet) from 0.24.3 to 0.24.4. -
   [Commits](https://github.com/nat-n/poethepoet/compare/v0.24.3...v0.24.4)
 
 --- updated-dependencies: - dependency-name: poethepoet dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2609,7 +3236,10 @@ Bumps [pre-commit](https://github.com/pre-commit/pre-commit) from 3.3.3 to 3.4.0
   [Commits](https://github.com/pre-commit/pre-commit/compare/v3.3.3...v3.4.0)
 
 --- updated-dependencies: - dependency-name: pre-commit dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2622,7 +3252,10 @@ Bumps [pre-commit](https://github.com/pre-commit/pre-commit) from 3.4.0 to 3.5.0
   [Commits](https://github.com/pre-commit/pre-commit/compare/v3.4.0...v3.5.0)
 
 --- updated-dependencies: - dependency-name: pre-commit dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2634,8 +3267,11 @@ Bumps [pytest](https://github.com/pytest-dev/pytest) from 7.4.0 to 7.4.1. - [Rel
   [Changelog](https://github.com/pytest-dev/pytest/blob/main/CHANGELOG.rst) -
   [Commits](https://github.com/pytest-dev/pytest/compare/7.4.0...7.4.1)
 
---- updated-dependencies: - dependency-name: pytest dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: pytest dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2647,8 +3283,11 @@ Bumps [pytest](https://github.com/pytest-dev/pytest) from 7.4.1 to 7.4.2. - [Rel
   [Changelog](https://github.com/pytest-dev/pytest/blob/main/CHANGELOG.rst) -
   [Commits](https://github.com/pytest-dev/pytest/compare/7.4.1...7.4.2)
 
---- updated-dependencies: - dependency-name: pytest dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: pytest dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2660,8 +3299,11 @@ Bumps [pytest](https://github.com/pytest-dev/pytest) from 7.4.2 to 7.4.3. - [Rel
   [Changelog](https://github.com/pytest-dev/pytest/blob/main/CHANGELOG.rst) -
   [Commits](https://github.com/pytest-dev/pytest/compare/7.4.2...7.4.3)
 
---- updated-dependencies: - dependency-name: pytest dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: pytest dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2673,8 +3315,11 @@ Bumps [pytest](https://github.com/pytest-dev/pytest) from 7.4.3 to 7.4.4. - [Rel
   [Changelog](https://github.com/pytest-dev/pytest/blob/main/CHANGELOG.rst) -
   [Commits](https://github.com/pytest-dev/pytest/compare/7.4.3...7.4.4)
 
---- updated-dependencies: - dependency-name: pytest dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: pytest dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2687,7 +3332,10 @@ Bumps [pytest-mock](https://github.com/pytest-dev/pytest-mock) from 3.11.1 to 3.
   [Commits](https://github.com/pytest-dev/pytest-mock/compare/v3.11.1...v3.12.0)
 
 --- updated-dependencies: - dependency-name: pytest-mock dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2702,7 +3350,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v8.0.3...v8.0.6)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-patch ...
+  direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2717,7 +3369,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v8.0.6...v8.0.8)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-patch ...
+  direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2732,7 +3388,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v8.0.8...v8.1.1)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-minor ...
+  direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2747,7 +3407,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v8.1.1...v8.1.2)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-patch ...
+  direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2762,7 +3426,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v8.1.2...v8.3.0)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-minor ...
+  direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2777,7 +3445,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v8.3.0...v8.5.0)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-minor ...
+  direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2792,7 +3464,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v8.5.0...v8.5.1)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-patch ...
+  direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2807,7 +3483,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v8.5.1...v8.7.0)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-minor ...
+  direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2818,7 +3498,10 @@ Bumps [pyupgrade](https://github.com/asottile/pyupgrade) from 3.10.1 to 3.11.0. 
   [Commits](https://github.com/asottile/pyupgrade/compare/v3.10.1...v3.11.0)
 
 --- updated-dependencies: - dependency-name: pyupgrade dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2829,7 +3512,10 @@ Bumps [pyupgrade](https://github.com/asottile/pyupgrade) from 3.11.0 to 3.13.0. 
   [Commits](https://github.com/asottile/pyupgrade/compare/v3.11.0...v3.13.0)
 
 --- updated-dependencies: - dependency-name: pyupgrade dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2841,8 +3527,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.0.280 to 0.0.282. - [Rele
   [Changelog](https://github.com/astral-sh/ruff/blob/main/BREAKING_CHANGES.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.0.280...v0.0.282)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2854,8 +3543,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.0.282 to 0.0.284. - [Rele
   [Changelog](https://github.com/astral-sh/ruff/blob/main/BREAKING_CHANGES.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.0.282...v0.0.284)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2867,8 +3559,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.0.286 to 0.0.287. - [Rele
   [Changelog](https://github.com/astral-sh/ruff/blob/main/BREAKING_CHANGES.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.0.286...v0.0.287)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2880,8 +3575,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.0.287 to 0.0.290. - [Rele
   [Changelog](https://github.com/astral-sh/ruff/blob/main/BREAKING_CHANGES.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.0.287...v0.0.290)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2893,8 +3591,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.0.290 to 0.0.291. - [Rele
   [Changelog](https://github.com/astral-sh/ruff/blob/main/BREAKING_CHANGES.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.0.290...v0.0.291)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2906,8 +3607,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.0.291 to 0.1.1. - [Releas
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.0.291...v0.1.1)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2919,8 +3623,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.1.1 to 0.1.4. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.1.1...v0.1.4)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2932,8 +3639,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.1.5 to 0.1.6. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.1.5...v0.1.6)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2945,8 +3655,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.1.6 to 0.1.7. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.1.6...v0.1.7)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2958,8 +3671,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.1.7 to 0.1.8. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.1.7...v0.1.8)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2971,8 +3687,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.1.8 to 0.1.9. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.1.8...v0.1.9)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2984,8 +3703,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.1.9 to 0.1.11. - [Release
   [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.1.9...v0.1.11)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -2996,8 +3718,11 @@ Bumps [sh](https://github.com/amoffat/sh) from 2.0.4 to 2.0.6. -
   [Changelog](https://github.com/amoffat/sh/blob/develop/CHANGELOG.md) -
   [Commits](https://github.com/amoffat/sh/compare/2.0.4...2.0.6)
 
---- updated-dependencies: - dependency-name: sh dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: sh dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3010,7 +3735,10 @@ Bumps [xdoctest](https://github.com/Erotemic/xdoctest) from 1.1.1 to 1.1.2. - [R
   [Commits](https://github.com/Erotemic/xdoctest/compare/v1.1.1...v1.1.2)
 
 --- updated-dependencies: - dependency-name: xdoctest dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3037,16 +3765,13 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Chores
 
-- **deps**: Upgrade github actions
-  ([`76fa660`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/76fa660e1581cf50c2c374f97d773b93f962dec8))
-
 - Add dependabot.yml config entry for github actions
   ([`3a9ef1b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3a9ef1b50495f9bf46a2da065fdbab1a967433d1))
 
-### Code Style
+- **deps**: Upgrade github actions
+  ([`76fa660`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/76fa660e1581cf50c2c374f97d773b93f962dec8))
 
-- **ruff**: Remove stale `noqa` comments
-  ([`d241638`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d241638d013ca640ec960ae61b6e2e0753413de8))
+### Code Style
 
 - Remove unused directive
   ([`c8d7bdc`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c8d7bdced30600f5e204a23a79aee8d1be9b6b76))
@@ -3054,13 +3779,10 @@ Signed-off-by: dependabot[bot] <support@github.com>
 - Update `mypy` ignore comments
   ([`bfb3905`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/bfb3905170ee7b2249b532378e52f21fcb28d5b8))
 
+- **ruff**: Remove stale `noqa` comments
+  ([`d241638`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d241638d013ca640ec960ae61b6e2e0753413de8))
+
 ### Continuous Integration
-
-- **CD**: Remove build command
-  ([`efa417b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/efa417b1e16859134f6e399066dd281d5ac9031c))
-
-- **hooks**: Update revisions
-  ([`bf0d166`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/bf0d166edd5484513620413115242215217537fc))
 
 - Update CD workflow
   ([`63c0eac`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/63c0eac8216a2ad5521fe21d0bae8302180c5395))
@@ -3069,30 +3791,27 @@ Signed-off-by: dependabot[bot] <support@github.com>
   ([`a83b349`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a83b349cc4607381caae04d7e090913b8baaba96))
 
 - Update CD workflow
-  ([`c3cf992`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c3cf9928d8f31290723ac1cf9ad153bf1871c5ab))
-
-- Update CD workflow
   ([`ce95f95`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ce95f957582ce4ce92936d62feb67b7ad972a804))
 
-- Update changelog
-  ([`0419518`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/0419518a034dd0fdf027bc9f28cbf569fd455967))
+- Update CD workflow
+  ([`c3cf992`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c3cf9928d8f31290723ac1cf9ad153bf1871c5ab))
 
 - Update changelog
   ([`1b6a2e2`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/1b6a2e2d0bf47db46487900089ff4b232d458dfd))
 
+- Update changelog
+  ([`0419518`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/0419518a034dd0fdf027bc9f28cbf569fd455967))
+
 - Update semantic release options
   ([`46a7342`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/46a7342b44bc5be841ff4c50939efea21fec15f9))
 
+- **CD**: Remove build command
+  ([`efa417b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/efa417b1e16859134f6e399066dd281d5ac9031c))
+
+- **hooks**: Update revisions
+  ([`bf0d166`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/bf0d166edd5484513620413115242215217537fc))
+
 ### Documentation
-
-- **README**: Add `poetry` badge
-  ([`9ab93cf`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9ab93cfa95b7609789c8ebd61c72587664a416e5))
-
-- **README**: Add `pre-commit` badge
-  ([`0f8208a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/0f8208a93c92259e8b4a819fbf7d153357fc9f10))
-
-- **README**: Update style of the GitHub stars badge
-  ([`3261ce4`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3261ce41cf8810410ab67a65bd68ad4458df6708))
 
 - Update assets directory
   ([`20c3b70`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/20c3b70ebbfe616fb149b026d5f4c6bea427b67b))
@@ -3103,16 +3822,25 @@ Signed-off-by: dependabot[bot] <support@github.com>
 - Update contribution guideline
   ([`8b40105`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8b401056ebc6462b352822f6a212ff4c4422d4ce))
 
+- **README**: Add `poetry` badge
+  ([`9ab93cf`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9ab93cfa95b7609789c8ebd61c72587664a416e5))
+
+- **README**: Add `pre-commit` badge
+  ([`0f8208a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/0f8208a93c92259e8b4a819fbf7d153357fc9f10))
+
+- **README**: Update style of the GitHub stars badge
+  ([`3261ce4`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3261ce41cf8810410ab67a65bd68ad4458df6708))
+
 ### Features
+
+- Bump version
+  ([`f1f7690`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/f1f7690721a4374e7044800f00132d27f11e122a))
 
 - **README**: Remove link from the logo
   ([`8214b16`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8214b16a2eb00833abb4840f88c96b0da0b5cd56))
 
 This change is necessary to release a new version and update README at PyPI. Nothing changes
   logic-wise or functionally, so it can be considered a dummy release.
-
-- Bump version
-  ([`f1f7690`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/f1f7690721a4374e7044800f00132d27f11e122a))
 
 
 ## v0.5.2 (2023-08-05)
@@ -3127,8 +3855,11 @@ Bumps [ruff](https://github.com/astral-sh/ruff) from 0.0.275 to 0.0.280. - [Rele
   [Changelog](https://github.com/astral-sh/ruff/blob/main/BREAKING_CHANGES.md) -
   [Commits](https://github.com/astral-sh/ruff/compare/v0.0.275...v0.0.280)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3174,8 +3905,11 @@ Bumps [black](https://github.com/psf/black) from 23.3.0 to 23.7.0. - [Release
   [Changelog](https://github.com/psf/black/blob/main/CHANGES.md) -
   [Commits](https://github.com/psf/black/compare/23.3.0...23.7.0)
 
---- updated-dependencies: - dependency-name: black dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: black dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3187,7 +3921,10 @@ Bumps [codespell](https://github.com/codespell-project/codespell) from 2.2.4 to 
   [Commits](https://github.com/codespell-project/codespell/compare/v2.2.4...v2.2.5)
 
 --- updated-dependencies: - dependency-name: codespell dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3197,8 +3934,11 @@ Signed-off-by: dependabot[bot] <support@github.com>
 Bumps [mypy](https://github.com/python/mypy) from 1.4.0 to 1.4.1. -
   [Commits](https://github.com/python/mypy/compare/v1.4.0...v1.4.1)
 
---- updated-dependencies: - dependency-name: mypy dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: mypy dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3210,7 +3950,10 @@ Bumps [poethepoet](https://github.com/nat-n/poethepoet) from 0.20.0 to 0.21.1. -
   [Commits](https://github.com/nat-n/poethepoet/compare/v0.20.0...v0.21.1)
 
 --- updated-dependencies: - dependency-name: poethepoet dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3223,7 +3966,10 @@ Bumps [pre-commit](https://github.com/pre-commit/pre-commit) from 3.3.2 to 3.3.3
   [Commits](https://github.com/pre-commit/pre-commit/compare/v3.3.2...v3.3.3)
 
 --- updated-dependencies: - dependency-name: pre-commit dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3235,8 +3981,11 @@ Bumps [pytest](https://github.com/pytest-dev/pytest) from 7.3.1 to 7.3.2. - [Rel
   [Changelog](https://github.com/pytest-dev/pytest/blob/main/CHANGELOG.rst) -
   [Commits](https://github.com/pytest-dev/pytest/compare/7.3.1...7.3.2)
 
---- updated-dependencies: - dependency-name: pytest dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: pytest dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3249,7 +3998,10 @@ Bumps [pytest-mock](https://github.com/pytest-dev/pytest-mock) from 3.10.0 to 3.
   [Commits](https://github.com/pytest-dev/pytest-mock/compare/v3.10.0...v3.11.1)
 
 --- updated-dependencies: - dependency-name: pytest-mock dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3262,7 +4014,11 @@ Bumps [python-semantic-release](https://github.com/relekang/python-semantic-rele
   - [Commits](https://github.com/relekang/python-semantic-release/compare/v7.34.3...v7.34.6)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-patch ...
+  direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3277,7 +4033,11 @@ Bumps [python-semantic-release](https://github.com/python-semantic-release/pytho
   [Commits](https://github.com/python-semantic-release/python-semantic-release/compare/v7.34.6...v8.0.1)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-major ...
+  direct:development
+
+update-type: version-update:semver-major
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3288,7 +4048,10 @@ Bumps [pyupgrade](https://github.com/asottile/pyupgrade) from 3.4.0 to 3.6.0. -
   [Commits](https://github.com/asottile/pyupgrade/compare/v3.4.0...v3.6.0)
 
 --- updated-dependencies: - dependency-name: pyupgrade dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3299,7 +4062,10 @@ Bumps [pyupgrade](https://github.com/asottile/pyupgrade) from 3.6.0 to 3.7.0. -
   [Commits](https://github.com/asottile/pyupgrade/compare/v3.6.0...v3.7.0)
 
 --- updated-dependencies: - dependency-name: pyupgrade dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3311,8 +4077,11 @@ Bumps [ruff](https://github.com/charliermarsh/ruff) from 0.0.270 to 0.0.272. - [
   [Changelog](https://github.com/astral-sh/ruff/blob/main/BREAKING_CHANGES.md) -
   [Commits](https://github.com/charliermarsh/ruff/compare/v0.0.270...v0.0.272)
 
---- updated-dependencies: - dependency-name: ruff dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ruff dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3322,8 +4091,11 @@ Signed-off-by: dependabot[bot] <support@github.com>
 Bumps [yesqa](https://github.com/asottile/yesqa) from 1.4.0 to 1.5.0. -
   [Commits](https://github.com/asottile/yesqa/compare/v1.4.0...v1.5.0)
 
---- updated-dependencies: - dependency-name: yesqa dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: yesqa dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3383,8 +4155,11 @@ Bumps [poetry](https://github.com/python-poetry/poetry) from 1.4.2 to 1.5.0. - [
   [Changelog](https://github.com/python-poetry/poetry/blob/master/CHANGELOG.md) -
   [Commits](https://github.com/python-poetry/poetry/compare/1.4.2...1.5.0)
 
---- updated-dependencies: - dependency-name: poetry dependency-type: direct:production update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: poetry dependency-type: direct:production
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3396,7 +4171,9 @@ Bumps [requests](https://github.com/psf/requests) from 2.30.0 to 2.31.0. - [Rele
   [Changelog](https://github.com/psf/requests/blob/main/HISTORY.md) -
   [Commits](https://github.com/psf/requests/compare/v2.30.0...v2.31.0)
 
---- updated-dependencies: - dependency-name: requests dependency-type: indirect ...
+--- updated-dependencies: - dependency-name: requests dependency-type: indirect
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3409,7 +4186,10 @@ Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.2.3 to 7.2.5. - [R
   [Commits](https://github.com/nedbat/coveragepy/compare/7.2.3...7.2.5)
 
 --- updated-dependencies: - dependency-name: coverage dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3422,7 +4202,10 @@ Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.2.5 to 7.2.6. - [R
   [Commits](https://github.com/nedbat/coveragepy/compare/7.2.5...7.2.6)
 
 --- updated-dependencies: - dependency-name: coverage dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3434,8 +4217,11 @@ Bumps [deptry](https://github.com/fpgmaas/deptry) from 0.9.0 to 0.11.0. - [Relea
   [Changelog](https://github.com/fpgmaas/deptry/blob/main/CHANGELOG.md) -
   [Commits](https://github.com/fpgmaas/deptry/compare/0.9.0...0.11.0)
 
---- updated-dependencies: - dependency-name: deptry dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: deptry dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3447,7 +4233,10 @@ Bumps [ipython](https://github.com/ipython/ipython) from 8.12.0 to 8.12.1. - [Re
   [Commits](https://github.com/ipython/ipython/compare/8.12.0...8.12.1)
 
 --- updated-dependencies: - dependency-name: ipython dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3457,8 +4246,11 @@ Signed-off-by: dependabot[bot] <support@github.com>
 Bumps [mypy](https://github.com/python/mypy) from 1.2.0 to 1.3.0. -
   [Commits](https://github.com/python/mypy/compare/v1.2.0...v1.3.0)
 
---- updated-dependencies: - dependency-name: mypy dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: mypy dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3471,7 +4263,10 @@ Bumps [pre-commit](https://github.com/pre-commit/pre-commit) from 3.3.1 to 3.3.2
   [Commits](https://github.com/pre-commit/pre-commit/compare/v3.3.1...v3.3.2)
 
 --- updated-dependencies: - dependency-name: pre-commit dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3483,8 +4278,11 @@ Bumps [pytest](https://github.com/pytest-dev/pytest) from 7.3.0 to 7.3.1. - [Rel
   [Changelog](https://github.com/pytest-dev/pytest/blob/main/CHANGELOG.rst) -
   [Commits](https://github.com/pytest-dev/pytest/compare/7.3.0...7.3.1)
 
---- updated-dependencies: - dependency-name: pytest dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: pytest dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3496,7 +4294,10 @@ Bumps [pytest-cov](https://github.com/pytest-dev/pytest-cov) from 4.0.0 to 4.1.0
   [Commits](https://github.com/pytest-dev/pytest-cov/compare/v4.0.0...v4.1.0)
 
 --- updated-dependencies: - dependency-name: pytest-cov dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3509,7 +4310,10 @@ Bumps [pytest-sugar](https://github.com/Teemu/pytest-sugar) from 0.9.6 to 0.9.7.
   [Commits](https://github.com/Teemu/pytest-sugar/commits/v0.9.7)
 
 --- updated-dependencies: - dependency-name: pytest-sugar dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3522,7 +4326,11 @@ Bumps [python-semantic-release](https://github.com/relekang/python-semantic-rele
   - [Commits](https://github.com/relekang/python-semantic-release/compare/v7.33.2...v7.33.3)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-patch ...
+  direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3535,7 +4343,11 @@ Bumps [python-semantic-release](https://github.com/relekang/python-semantic-rele
   - [Commits](https://github.com/relekang/python-semantic-release/compare/v7.33.3...v7.33.4)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-patch ...
+  direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3548,7 +4360,11 @@ Bumps [python-semantic-release](https://github.com/relekang/python-semantic-rele
   - [Commits](https://github.com/relekang/python-semantic-release/compare/v7.33.4...v7.33.5)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-patch ...
+  direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3561,7 +4377,11 @@ Bumps [python-semantic-release](https://github.com/relekang/python-semantic-rele
   - [Commits](https://github.com/relekang/python-semantic-release/compare/v7.33.5...v7.34.1)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-minor ...
+  direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3572,7 +4392,10 @@ Bumps [pyupgrade](https://github.com/asottile/pyupgrade) from 3.3.2 to 3.4.0. -
   [Commits](https://github.com/asottile/pyupgrade/compare/v3.3.2...v3.4.0)
 
 --- updated-dependencies: - dependency-name: pyupgrade dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3583,8 +4406,11 @@ Bumps [sh](https://github.com/amoffat/sh) from 2.0.3 to 2.0.4. -
   [Changelog](https://github.com/amoffat/sh/blob/develop/CHANGELOG.md) -
   [Commits](https://github.com/amoffat/sh/compare/2.0.3...2.0.4)
 
---- updated-dependencies: - dependency-name: sh dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: sh dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3598,9 +4424,6 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Continuous Integration
 
-- **workflows**: Update secrets name
-  ([`3ac00a7`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3ac00a7368af111fcd87d6d733dc81ab89c4d558))
-
 - Update classifiers
   ([`3bc4ce8`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3bc4ce82fe19923e96cb0ed7421850e30c3b3e32))
 
@@ -3609,6 +4432,9 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 - Update ignored files
   ([`a535018`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a53501814b2d47119e87f2bb2e68b46148af9ff7))
+
+- **workflows**: Update secrets name
+  ([`3ac00a7`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3ac00a7368af111fcd87d6d733dc81ab89c4d558))
 
 ### Documentation
 
@@ -3657,7 +4483,9 @@ Bumps [cryptography](https://github.com/pyca/cryptography) from 39.0.0 to 39.0.1
   [Changelog](https://github.com/pyca/cryptography/blob/main/CHANGELOG.rst) -
   [Commits](https://github.com/pyca/cryptography/compare/39.0.0...39.0.1)
 
---- updated-dependencies: - dependency-name: cryptography dependency-type: indirect ...
+--- updated-dependencies: - dependency-name: cryptography dependency-type: indirect
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3669,8 +4497,11 @@ Bumps [poetry](https://github.com/python-poetry/poetry) from 1.3.2 to 1.4.0. - [
   [Changelog](https://github.com/python-poetry/poetry/blob/master/CHANGELOG.md) -
   [Commits](https://github.com/python-poetry/poetry/compare/1.3.2...1.4.0)
 
---- updated-dependencies: - dependency-name: poetry dependency-type: direct:production update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: poetry dependency-type: direct:production
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3682,8 +4513,11 @@ Bumps [black](https://github.com/psf/black) from 22.12.0 to 23.1.0. - [Release
   [Changelog](https://github.com/psf/black/blob/main/CHANGES.md) -
   [Commits](https://github.com/psf/black/compare/22.12.0...23.1.0)
 
---- updated-dependencies: - dependency-name: black dependency-type: direct:development update-type:
-  version-update:semver-major ...
+--- updated-dependencies: - dependency-name: black dependency-type: direct:development
+
+update-type: version-update:semver-major
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3696,7 +4530,10 @@ Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.1.0 to 7.2.1. - [R
   [Commits](https://github.com/nedbat/coveragepy/compare/7.1.0...7.2.1)
 
 --- updated-dependencies: - dependency-name: coverage dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3708,7 +4545,10 @@ Bumps [flake8-pytest-style](https://github.com/m-burst/flake8-pytest-style) from
   [Commits](https://github.com/m-burst/flake8-pytest-style/compare/v1.6.0...v1.7.0)
 
 --- updated-dependencies: - dependency-name: flake8-pytest-style dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3720,7 +4560,10 @@ Bumps [flake8-pytest-style](https://github.com/m-burst/flake8-pytest-style) from
   [Commits](https://github.com/m-burst/flake8-pytest-style/compare/v1.7.0...v1.7.2)
 
 --- updated-dependencies: - dependency-name: flake8-pytest-style dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3732,8 +4575,11 @@ Bumps [ipdb](https://github.com/gotcha/ipdb) from 0.13.11 to 0.13.13. - [Release
   [Changelog](https://github.com/gotcha/ipdb/blob/master/HISTORY.txt) -
   [Commits](https://github.com/gotcha/ipdb/compare/0.13.11...0.13.13)
 
---- updated-dependencies: - dependency-name: ipdb dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: ipdb dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3744,7 +4590,9 @@ Bumps [ipython](https://github.com/ipython/ipython) from 8.9.0 to 8.10.0. - [Rel
   notes](https://github.com/ipython/ipython/releases) -
   [Commits](https://github.com/ipython/ipython/compare/8.9.0...8.10.0)
 
---- updated-dependencies: - dependency-name: ipython dependency-type: direct:development ...
+--- updated-dependencies: - dependency-name: ipython dependency-type: direct:development
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3755,8 +4603,11 @@ Bumps [mypy](https://github.com/python/mypy) from 0.991 to 1.0.1. - [Release
   notes](https://github.com/python/mypy/releases) -
   [Commits](https://github.com/python/mypy/compare/v0.991...v1.0.1)
 
---- updated-dependencies: - dependency-name: mypy dependency-type: direct:development update-type:
-  version-update:semver-major ...
+--- updated-dependencies: - dependency-name: mypy dependency-type: direct:development
+
+update-type: version-update:semver-major
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3767,8 +4618,11 @@ Bumps [mypy](https://github.com/python/mypy) from 1.0.1 to 1.1.1. - [Release
   notes](https://github.com/python/mypy/releases) -
   [Commits](https://github.com/python/mypy/compare/v1.0.1...v1.1.1)
 
---- updated-dependencies: - dependency-name: mypy dependency-type: direct:development update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: mypy dependency-type: direct:development
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3781,7 +4635,10 @@ Bumps [pre-commit](https://github.com/pre-commit/pre-commit) from 3.0.1 to 3.0.2
   [Commits](https://github.com/pre-commit/pre-commit/compare/v3.0.1...v3.0.2)
 
 --- updated-dependencies: - dependency-name: pre-commit dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3794,7 +4651,10 @@ Bumps [pre-commit](https://github.com/pre-commit/pre-commit) from 3.0.2 to 3.0.4
   [Commits](https://github.com/pre-commit/pre-commit/compare/v3.0.2...v3.0.4)
 
 --- updated-dependencies: - dependency-name: pre-commit dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3807,7 +4667,10 @@ Bumps [pre-commit](https://github.com/pre-commit/pre-commit) from 3.0.4 to 3.1.0
   [Commits](https://github.com/pre-commit/pre-commit/compare/v3.0.4...v3.1.0)
 
 --- updated-dependencies: - dependency-name: pre-commit dependency-type: direct:development
-  update-type: version-update:semver-minor ...
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3820,7 +4683,10 @@ Bumps [pre-commit](https://github.com/pre-commit/pre-commit) from 3.1.0 to 3.1.1
   [Commits](https://github.com/pre-commit/pre-commit/compare/v3.1.0...v3.1.1)
 
 --- updated-dependencies: - dependency-name: pre-commit dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3832,8 +4698,11 @@ Bumps [pytest](https://github.com/pytest-dev/pytest) from 7.2.1 to 7.2.2. - [Rel
   [Changelog](https://github.com/pytest-dev/pytest/blob/main/CHANGELOG.rst) -
   [Commits](https://github.com/pytest-dev/pytest/compare/7.2.1...7.2.2)
 
---- updated-dependencies: - dependency-name: pytest dependency-type: direct:development update-type:
-  version-update:semver-patch ...
+--- updated-dependencies: - dependency-name: pytest dependency-type: direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3846,7 +4715,11 @@ Bumps [python-semantic-release](https://github.com/relekang/python-semantic-rele
   - [Commits](https://github.com/relekang/python-semantic-release/compare/v7.33.0...v7.33.1)
 
 --- updated-dependencies: - dependency-name: python-semantic-release dependency-type:
-  direct:development update-type: version-update:semver-patch ...
+  direct:development
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3859,7 +4732,10 @@ Bumps [xdoctest](https://github.com/Erotemic/xdoctest) from 1.1.0 to 1.1.1. - [R
   [Commits](https://github.com/Erotemic/xdoctest/compare/v1.1.0...v1.1.1)
 
 --- updated-dependencies: - dependency-name: xdoctest dependency-type: direct:development
-  update-type: version-update:semver-patch ...
+
+update-type: version-update:semver-patch
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
 
@@ -3873,8 +4749,6 @@ Signed-off-by: dependabot[bot] <support@github.com>
 - Rename plugin from `poetry-dotenv` to `poetry-plugin-dotenv`
   ([`6c28010`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6c2801005a297a7738b139014c1239fa5fae2baa))
 
-rename plugin from `poetry-dotenv` to `poetry-plugin-dotenv`
-
 
 ## v0.3.0 (2023-01-29)
 
@@ -3884,6 +4758,12 @@ rename plugin from `poetry-dotenv` to `poetry-plugin-dotenv`
   ([`dfa7a88`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/dfa7a88348a5f785d317d04e37bb3d86cbe78807))
 
 ### Build System
+
+- Update configs
+  ([`d493ea9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d493ea9a13c03b87fbbf880f532622d9b7916326))
+
+- Update tasks
+  ([`a0363ff`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a0363ff7baebcdabe8d0641172827efcb11c4b4e))
 
 - **dependencies**: Add `nitpick`
   ([`4da344d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4da344d9ff90d9c8b4ce0209ec855977c68b6c07))
@@ -3899,16 +4779,13 @@ Bumps [poetry](https://github.com/python-poetry/poetry) from 1.2.2 to 1.3.1. - [
   [Changelog](https://github.com/python-poetry/poetry/blob/1.3.1/CHANGELOG.md) -
   [Commits](https://github.com/python-poetry/poetry/compare/1.2.2...1.3.1)
 
---- updated-dependencies: - dependency-name: poetry dependency-type: direct:production update-type:
-  version-update:semver-minor ...
+--- updated-dependencies: - dependency-name: poetry dependency-type: direct:production
+
+update-type: version-update:semver-minor
+
+...
 
 Signed-off-by: dependabot[bot] <support@github.com>
-
-- Update configs
-  ([`d493ea9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d493ea9a13c03b87fbbf880f532622d9b7916326))
-
-- Update tasks
-  ([`a0363ff`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a0363ff7baebcdabe8d0641172827efcb11c4b4e))
 
 ### Continuous Integration
 
@@ -4055,14 +4932,14 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Refactoring
 
-- **docs**: Refactor
-  ([`980e172`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/980e172b79c0531ccdda8a40424935e3ee640060))
+- Update coverage
+  ([`ab458ab`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ab458abca3063f93e865ebdedbfde4cfb26ac29d))
 
 - **docs**: Refactor
   ([`e3e5028`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e3e5028a4d24c451d8ee595b456aff72915bf461))
 
-- Update coverage
-  ([`ab458ab`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ab458abca3063f93e865ebdedbfde4cfb26ac29d))
+- **docs**: Refactor
+  ([`980e172`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/980e172b79c0531ccdda8a40424935e3ee640060))
 
 
 ## v0.2.2 (2022-10-30)
@@ -4087,11 +4964,11 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Build System
 
-- **dependencies**: Remove `pytype`
-  ([`b3ce1a5`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b3ce1a5a4d4087461a1a791c7201a763f05f5672))
-
 - Add linters
   ([`526e816`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/526e81609f628808aaa81a7beda814acd56d3ae5))
+
+- **dependencies**: Remove `pytype`
+  ([`b3ce1a5`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b3ce1a5a4d4087461a1a791c7201a763f05f5672))
 
 ### Continuous Integration
 
@@ -4139,6 +5016,18 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Build System
 
+- Add `pyupgrade`
+  ([`ef11be2`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ef11be2a54cf5fa9603fb03eefc6f3c52d583def))
+
+- Remove unnecessary package
+  ([`9b4d07d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9b4d07dedc4a39ae0751d6bbd4e9e60171753e58))
+
+- Update groups
+  ([`b12fc13`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b12fc13b8e2ece8a93cfee6b63ce25972016b379))
+
+- Update versions
+  ([`8e8ea80`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8e8ea80536fa4ad0ad120f71f66ab5c6e17ac76f))
+
 - **dependencies**: Add `sh` package
   ([`b542bf8`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b542bf8d72b2df7a485f4811bf24b4c992a03b3f))
 
@@ -4154,34 +5043,34 @@ Signed-off-by: dependabot[bot] <support@github.com>
 - **tasks**: Add linter tasks
   ([`870ae7b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/870ae7ba30e8789a3014689c603c04a8ddb01f05))
 
-- Add `pyupgrade`
-  ([`ef11be2`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ef11be2a54cf5fa9603fb03eefc6f3c52d583def))
-
-- Remove unnecessary package
-  ([`9b4d07d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9b4d07dedc4a39ae0751d6bbd4e9e60171753e58))
-
-- Update groups
-  ([`b12fc13`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b12fc13b8e2ece8a93cfee6b63ce25972016b379))
-
-- Update versions
-  ([`8e8ea80`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8e8ea80536fa4ad0ad120f71f66ab5c6e17ac76f))
-
 ### Chores
+
+- Add returns
+  ([`134909f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/134909fe1a011b18cb308554bd2bb69eb8488197))
+
+- Reset
+  ([`a7123db`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a7123db2a2978ce060872a8d0d3c375ea52eee88))
+
+- Reset
+  ([`8a243a3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8a243a30bf725bb33f1f2094c0b05116ab024c38))
+
+- Update exclusions
+  ([`57c91a3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/57c91a367c74321a131ea9cb30ff9fa8f051f517))
 
 - **dotenv**: Add skeleton of the core
   ([`0ea787a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/0ea787ae6fe5e99cc8566c9ccac78bead8b7558a))
-
-- **flake8**: Update exclusions
-  ([`88f0361`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/88f03610e9ce15efafadbd58295471832c501024))
-
-- **flake8**: Update exclusions
-  ([`9c03e19`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9c03e19f4a2e73e71549e0661834e54933ad86c5))
 
 - **flake8**: Update exclusions
   ([`a2701ee`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a2701ee6f4a7f62048e11dd08d24b306a65a2292))
 
 - **flake8**: Update exclusions
   ([`d75fd94`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d75fd9400e7f95f5e09c57242eac3a74033ba2cf))
+
+- **flake8**: Update exclusions
+  ([`88f0361`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/88f03610e9ce15efafadbd58295471832c501024))
+
+- **flake8**: Update exclusions
+  ([`9c03e19`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9c03e19f4a2e73e71549e0661834e54933ad86c5))
 
 - **flake8**: Update exclusions
   ([`e0b69cb`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e0b69cb97326cea7236ee40371c6c373bf18faac))
@@ -4191,18 +5080,6 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 - **mypy**: Update target version
   ([`cfd95ed`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/cfd95ed1660a05d7c70c7f11e1abf4a12ff292db))
-
-- Add returns
-  ([`134909f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/134909fe1a011b18cb308554bd2bb69eb8488197))
-
-- Reset
-  ([`8a243a3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8a243a30bf725bb33f1f2094c0b05116ab024c38))
-
-- Reset
-  ([`a7123db`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a7123db2a2978ce060872a8d0d3c375ea52eee88))
-
-- Update exclusions
-  ([`57c91a3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/57c91a367c74321a131ea9cb30ff9fa8f051f517))
 
 ### Continuous Integration
 
@@ -4223,14 +5100,17 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Documentation
 
+- Add logo
+  ([`cd589d1`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/cd589d1faf8922bb49d56f7cc853be578a47f6d5))
+
 - **docstrings**: Update docstrings
   ([`168c692`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/168c692d60914c1c8eda91de84c905701918ce69))
 
 - **github**: Format changelog
-  ([`40ff2fa`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/40ff2fa841eb5f5285fb67b755f9ffd92891cc71))
+  ([`d3d9a4f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d3d9a4f976a744149b80d6fe9c34500937bacbfb))
 
 - **github**: Format changelog
-  ([`d3d9a4f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d3d9a4f976a744149b80d6fe9c34500937bacbfb))
+  ([`40ff2fa`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/40ff2fa841eb5f5285fb67b755f9ffd92891cc71))
 
 - **github**: Format contributing guide
   ([`8bbfa71`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8bbfa71a7bedcbfd327bedcdd1827283db978a9a))
@@ -4251,19 +5131,16 @@ Signed-off-by: dependabot[bot] <support@github.com>
   ([`c9d9885`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c9d9885e371bba74aa35d239a8f9003e0a14bddf))
 
 - **github**: Update template of the bug report
-  ([`cc2beb3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/cc2beb3f63e3c66335899c17c4537907c745fb19))
+  ([`e93452f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e93452ffebf1f07eb141e9d6874c39a1681a5328))
 
 - **github**: Update template of the bug report
-  ([`e93452f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e93452ffebf1f07eb141e9d6874c39a1681a5328))
+  ([`cc2beb3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/cc2beb3f63e3c66335899c17c4537907c745fb19))
 
 - **github**: Update template of the feature request
   ([`d07233f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d07233ff24fe154e9e5e9466d86779536dbd36d4))
 
 - **plugin**: Update docstrings
   ([`fd57094`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/fd57094b4bb063ed297cac94e22118a9123df5ff))
-
-- Add logo
-  ([`cd589d1`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/cd589d1faf8922bb49d56f7cc853be578a47f6d5))
 
 ### Features
 
@@ -4284,6 +5161,12 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Refactoring
 
+- Refactor
+  ([`c0eb76e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c0eb76e7b6e6e6eae80bd663e922f9af6219715d))
+
+- Refactor
+  ([`5c0f9cd`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5c0f9cd5dad889360b0d872fcc5b813f41065352))
+
 - **changelog**: Refactor
   ([`733c3ab`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/733c3abf0b3a79d10b1b0d72d9e96396a68c1a2e))
 
@@ -4291,10 +5174,10 @@ Signed-off-by: dependabot[bot] <support@github.com>
   ([`0212bcb`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/0212bcbd9abd02cfe1dd175f6c62f7c5a67905cb))
 
 - **dotenv**: Refactor
-  ([`066ace2`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/066ace2accc73f7c029ffda0b1b69aa6e794e235))
+  ([`d335bb9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d335bb97cc956c80b55ec4f1ca0745e85dd87f06))
 
 - **dotenv**: Refactor
-  ([`d335bb9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/d335bb97cc956c80b55ec4f1ca0745e85dd87f06))
+  ([`066ace2`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/066ace2accc73f7c029ffda0b1b69aa6e794e235))
 
 - **plugin**: Refactor
   ([`a701534`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a701534f788e103be17c8cb29265002c922910de))
@@ -4307,12 +5190,6 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 - **tests**: Refactor
   ([`0a1af8e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/0a1af8e23805f55e5ef95caa90b6a3b9e4611004))
-
-- Refactor
-  ([`5c0f9cd`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5c0f9cd5dad889360b0d872fcc5b813f41065352))
-
-- Refactor
-  ([`c0eb76e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c0eb76e7b6e6e6eae80bd663e922f9af6219715d))
 
 ### Testing
 
@@ -4342,6 +5219,9 @@ Signed-off-by: dependabot[bot] <support@github.com>
 
 ### Build System
 
+- Add plugin
+  ([`5ab0c1e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5ab0c1e8cd43b05abb1bfa6e84b17736bd1e5041))
+
 - **dependencies**: Remove docs group
   ([`4a6eb47`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4a6eb472185443713051cb6fca69a801529e3fdd))
 
@@ -4360,10 +5240,19 @@ Signed-off-by: dependabot[bot] <support@github.com>
 - **version**: Bumped version
   ([`2adb280`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/2adb28048cb1e8809f1d318a7344a7b00c70147f))
 
-- Add plugin
-  ([`5ab0c1e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5ab0c1e8cd43b05abb1bfa6e84b17736bd1e5041))
-
 ### Chores
+
+- Add base config
+  ([`107c143`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/107c1435929a3f22e5cb5f5b80e9750d87265e1d))
+
+- Add docs
+  ([`acb9095`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/acb90958501bf119ba042ca77f8c03884020f97e))
+
+- Add src
+  ([`10f55cd`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/10f55cddca494f07e8c3e9ebb70e9c57450cb91a))
+
+- Add tests
+  ([`3562c97`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3562c978e43ed3a9b6103d727638c328faf2e993))
 
 - **dependencies**: Add
   ([`6cf9087`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6cf9087fcd5f40ee290a2fed1f80cf5a11e96628))
@@ -4425,19 +5314,10 @@ source source add Add source configuration for project. source remove Remove sou
 - **ide**: Update editor configs
   ([`4a595d6`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4a595d65eefb8b4acead192d64170fe86cf342dc))
 
-- Add base config
-  ([`107c143`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/107c1435929a3f22e5cb5f5b80e9750d87265e1d))
-
-- Add docs
-  ([`acb9095`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/acb90958501bf119ba042ca77f8c03884020f97e))
-
-- Add src
-  ([`10f55cd`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/10f55cddca494f07e8c3e9ebb70e9c57450cb91a))
-
-- Add tests
-  ([`3562c97`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3562c978e43ed3a9b6103d727638c328faf2e993))
-
 ### Continuous Integration
+
+- Add workflows
+  ([`c533487`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c533487b9735c50cd0fbf7742d916c18695bee0a))
 
 - **cd**: Change notification settings
   ([`5a1fd83`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5a1fd83bd3c0772ea4419705ae6a85b94b6d4ce8))
@@ -4446,10 +5326,10 @@ source source add Add source configuration for project. source remove Remove sou
   ([`dcef229`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/dcef229f0eada839051e4a9f9d851ad7efc778cf))
 
 - **cd**: Update semantic-release entrypoint
-  ([`4efcd78`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4efcd785a99fb2869207ee6b602a183ee7abcc8f))
+  ([`ad4d9f9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ad4d9f9da06298b7d81c4c6b9e658562727ac1b3))
 
 - **cd**: Update semantic-release entrypoint
-  ([`ad4d9f9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ad4d9f9da06298b7d81c4c6b9e658562727ac1b3))
+  ([`4efcd78`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4efcd785a99fb2869207ee6b602a183ee7abcc8f))
 
 - **ci**: Fix issue with tasks
   ([`826505d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/826505da61c5e4020cd69134668ed4f2c6f29f25))
@@ -4481,19 +5361,7 @@ source source add Add source configuration for project. source remove Remove sou
 - **version**: Remove version placeholder
   ([`50d83d0`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/50d83d0046ec1f56ff0f3ec2ec0c238b0c154ab9))
 
-- Add workflows
-  ([`c533487`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c533487b9735c50cd0fbf7742d916c18695bee0a))
-
 ### Documentation
-
-- **ci**: Add changelog
-  ([`8b567de`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8b567de057494bb0eb8e83119e4ddd90cb95cad2))
-
-- **docstrings**: Update descriptions
-  ([`4f5b1bd`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4f5b1bdd511d7ff00ac61f28cf7b415e6c4d800c))
-
-- **sphinx**: Remove docs
-  ([`6268957`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/62689572ab115eabbf3970da4a0aa972e6b46423))
 
 - Add bug report
   ([`a190cfa`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a190cfa19c830a9061840d6acb353ed1d24575b8))
@@ -4519,12 +5387,24 @@ source source add Add source configuration for project. source remove Remove sou
 - Add security policy
   ([`3f40187`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3f40187c276382a81b16b15ae3f89b65b299d9bd))
 
+- **ci**: Add changelog
+  ([`8b567de`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8b567de057494bb0eb8e83119e4ddd90cb95cad2))
+
+- **docstrings**: Update descriptions
+  ([`4f5b1bd`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4f5b1bdd511d7ff00ac61f28cf7b415e6c4d800c))
+
+- **sphinx**: Remove docs
+  ([`6268957`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/62689572ab115eabbf3970da4a0aa972e6b46423))
+
 ### Features
 
 - Add plugin
   ([`30cc8ea`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/30cc8eaf0e1cf4193427736fb8f26e9b899530ff))
 
 ### Refactoring
+
+- Apply formatters
+  ([`e045c68`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e045c6886ad263299cd772062736609dd553979f))
 
 - **ci**: Apply formatter
   ([`ff0bf0d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ff0bf0d239e563acee16ae99a3ed4d18b62860b3))
@@ -4535,16 +5415,13 @@ source source add Add source configuration for project. source remove Remove sou
 - **tests**: Remove fixtures
   ([`c107b7d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c107b7db342db35c61d968371f6c1f2f2fec2a3a))
 
-- Apply formatters
-  ([`e045c68`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e045c6886ad263299cd772062736609dd553979f))
-
 ### Testing
-
-- **coverage**: Exclude method
-  ([`fcbae7f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/fcbae7f246a5dfce40fe97736a26a85c0219358d))
 
 - Add config
   ([`30d4901`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/30d49012becddc965b0e467ba45e4a4a96755165))
 
 - Add test for the plugin with default dotenv location
   ([`ff3c771`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ff3c771cb22e860d2cb3d7b09d5299b29f4c3b82))
+
+- **coverage**: Exclude method
+  ([`fcbae7f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/fcbae7f246a5dfce40fe97736a26a85c0219358d))
