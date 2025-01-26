@@ -3,7 +3,7 @@ default_language_version:
 
 repos:
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v4.1.0
+    rev: v4.1.1
     hooks:
       - id: commitizen
         stages:
@@ -45,7 +45,7 @@ repos:
       - id: python-check-blanket-type-ignore
 
   - repo: https://github.com/pre-commit/pre-commit
-    rev: v4.0.1
+    rev: v4.1.0
     hooks:
       - id: validate_manifest
 
@@ -55,7 +55,7 @@ repos:
       - id: pyupgrade
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.9.1
+    rev: v0.9.3
     hooks:
       - id: ruff
       - id: ruff-format
