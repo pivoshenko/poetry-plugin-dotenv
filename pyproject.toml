@@ -159,8 +159,7 @@ ignore-words-list = ["redunant", "resovle", "socio-economic", "emtpy"]
 skip = ["poetry.lock"]
 
 [tool.deptry.per_rule_ignores]
-DEP002 = ["poetry"]
-DEP003 = ["cleo", "poetry_plugin_dotenv", "tomlkit"]
+DEP003 = ["cleo", "tomlkit", "poetry_plugin_dotenv"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
