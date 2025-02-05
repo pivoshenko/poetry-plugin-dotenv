@@ -162,7 +162,6 @@ skip = ["poetry.lock"]
 DEP003 = ["cleo", "tomlkit", "poetry_plugin_dotenv"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
 addopts = [
   "-l",
   "-vv",
@@ -174,6 +173,7 @@ addopts = [
   "--cov-report=xml",
   "--basetemp=tests/fixtures"
 ]
+testpaths = ["tests"]
 
 [tool.coverage.run]
 omit = ["*/__init__.py"]
