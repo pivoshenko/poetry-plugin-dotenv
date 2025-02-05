@@ -155,8 +155,8 @@ ignore = ["PTH", "ANN002", "ANN003", "ARG002", "D202", "I001", "FIX002", "TD003"
 required-imports = ["from __future__ import annotations"]
 
 [tool.codespell]
-skip = ["poetry.lock"]
 ignore-words-list = ["redunant", "resovle", "socio-economic", "emtpy"]
+skip = ["poetry.lock"]
 
 [tool.deptry.per_rule_ignores]
 DEP002 = ["poetry"]
