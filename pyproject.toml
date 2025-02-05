@@ -56,6 +56,10 @@ repository = "https://github.com/pivoshenko/poetry-plugin-dotenv"
 [tool.poetry]
 packages = [{ include = "poetry_plugin_dotenv", from = "src" }]
 
+[tool.poetry.requires-plugins]
+poetry-plugin-up = "^0.9.0"
+poethepoet = "^0.32.2"
+
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.1.0"
 poethepoet = "^0.32.2"
