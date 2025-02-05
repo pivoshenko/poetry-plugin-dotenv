@@ -118,7 +118,7 @@ patch_tags = ["docs", "style"]
 exclude_commit_patterns = ['''Merged? .*''', '''Initial Commit.*''', '''^\d+\.\d+\.\d+''']
 
 [tool.commitizen]
-allowed_prefixes = ["build", "tests", "Merge", "Initial", "0", "1", "2"]
+allowed_prefixes = ["build", "tests", "Merge", "Initial", "0", "1", "2", "3"]
 
 [tool.isort]
 profile = "black"
