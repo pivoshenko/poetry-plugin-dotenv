@@ -147,7 +147,7 @@ target-version = "py313"
 
 [tool.ruff.lint]
 select = ["ALL"]
-ignore = ["PTH", "ANN002", "ANN003", "ARG002", "D202", "I001", "FIX002", "TD003"]
+ignore = ["PTH", "ANN002", "ANN003", "ARG002", "D202", "D203", "D213", "I001", "FIX002", "TD003"]
 
 [tool.ruff.lint.per-file-ignores]
 "src/poetry_plugin_dotenv/__init__.py" = ["E501"]
@@ -181,6 +181,32 @@ testpaths = ["tests"]
 
 [tool.coverage.run]
 omit = ["*/__init__.py"]
+
+[tool.poe]
+poetry_command = ""
+
+[tool.poe.tasks.format]
+help = "Run formatters"
+sequence = [
+  { shell = "find src -type f -name '*.py' | xargs pyupgrade --py313-plus", help = "Run annotations formatter" },
+  { shell = "find tests -type f -name '*.py' | xargs pyupgrade --py313-plus", help = "Run annotations formatter" },
+  { shell = "isort .", help = "Run imports formatter" },
+  { shell = "ruff format .", help = "Run code formatter" }
+]
+
+[tool.poe.tasks.lint]
+help = "Run linters"
+sequence = [
+  { shell = "deptry .", help = "Run dependencies linter" },
+  { shell = "mypy .", help = "Run types linter" },
+  { shell = "ruff check .", help = "Run code linter" },
+  { shell = "codespell .", help = "Run spell linter" },
+  { shell = "cz check --rev-range .", help = "Run commits linter" }
+]
+
+[tool.poe.tasks.tests]
+help = "Run tests"
+shell = "pytest ."
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
