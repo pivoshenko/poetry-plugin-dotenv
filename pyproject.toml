@@ -102,12 +102,12 @@ python-semantic-release = ">=9.17.0"
 poetry-plugin-dotenv = "poetry_plugin_dotenv.plugin:DotenvPlugin"
 
 [tool.semantic_release]
-logging_use_named_masks = true
 changelog_file = "CHANGELOG.md"
-version_toml = ["pyproject.toml:tool.poetry.version"]
-version_variables = ["src/poetry_plugin_dotenv/__init__.py:__version__"]
 commit_author = "github-actions <github-actions@github.com>"
 exclude_commit_patterns = ["Merge pull request"]
+logging_use_named_masks = true
+version_toml = ["pyproject.toml:project.version"]
+version_variables = ["src/poetry_plugin_dotenv/__init__.py:__version__"]
 
 [tool.semantic_release.commit_parser_options]
 major_tags = ["feat"]
