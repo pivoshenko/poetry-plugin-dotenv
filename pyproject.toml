@@ -1,11 +1,10 @@
-[project]
+[tool.poetry]
 name = "poetry-plugin-dotenv"
 version = "2.6.1"
 description = "poetry-plugin-dotenv - is the plugin that automatically loads environment variables from a dotenv file into the environment before poetry commands are run."
 license = "MIT"
-readme = "README.md"
-authors = [{ name = "Volodymyr Pivoshenko", email = "volodymyr.pivoshenko@gmail.com" }]
-maintainers = [{ name = "Volodymyr Pivoshenko", email = "volodymyr.pivoshenko@gmail.com" }]
+authors = ["Volodymyr Pivoshenko <volodymyr.pivoshenko@gmail.com>"]
+maintainers = ["Volodymyr Pivoshenko <volodymyr.pivoshenko@gmail.com>"]
 keywords = [
   "python",
   "pypi",
@@ -22,6 +21,10 @@ keywords = [
   "cross-platform",
   "hacktoberfest"
 ]
+homepage = "https://github.com/pivoshenko/poetry-plugin-dotenv"
+documentation = "https://github.com/pivoshenko/poetry-plugin-dotenv"
+repository = "https://github.com/pivoshenko/poetry-plugin-dotenv"
+readme = "README.md"
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "License :: OSI Approved :: MIT License",
@@ -43,18 +46,15 @@ classifiers = [
   "Topic :: Scientific/Engineering",
   "Natural Language :: English"
 ]
-requires-python = ">=3.9,<4.0"
-dependencies = ["poetry (>=1.5.0,<3.0.0)"]
+packages = [{ include = "poetry_plugin_dotenv", from = "src" }]
 
-[project.urls]
-homepage = "https://github.com/pivoshenko/poetry-plugin-dotenv"
-documentation = "https://github.com/pivoshenko/poetry-plugin-dotenv"
-repository = "https://github.com/pivoshenko/poetry-plugin-dotenv"
+[tool.poetry.urls]
 "Issues" = "https://github.com/pivoshenko/poetry-plugin-dotenv/issues"
 "Releases" = "https://github.com/pivoshenko/poetry-plugin-dotenv/releases"
 
-[tool.poetry]
-packages = [{ include = "poetry_plugin_dotenv", from = "src" }]
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+poetry = ">=1.5.0,^2"
 
 [tool.poetry.requires-plugins]
 poetry-plugin-up = "^0.9.0"
