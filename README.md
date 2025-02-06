@@ -90,6 +90,7 @@
 - Supports `--directory` - working directory for the `poetry` command
 - Supports multiple configuration sources
 - Supports configuration auto-completion and validation in IDEs such as Visual Studio Code or PyCharm (part of [JSON Schema Store](https://www.schemastore.org/json))
+- Supports both `poetry v1.5+` and `poetry v2+`
 
 ## Installation
 
