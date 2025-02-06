@@ -72,4 +72,4 @@ jobs:
       - name: Run linters
         id: lint
         run: |
-          python -m poetry run poe lint --directory src
+          python -m poetry run poe lint
