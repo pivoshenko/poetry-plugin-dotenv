@@ -20,8 +20,6 @@ def create_dotenv_file(tmp_path: Path) -> Callable[[dict[str, str], str], None]:
     """Get a dotenv file."""
 
     def create(content: dict[str, str], filename: str) -> None:
-        """Create a dotenv file."""
-
         dotenv_file = tmp_path / ".." / ".." / ".." / filename
         stream = (f"{kay!s}={value!s}" for kay, value in content.items())
         dotenv_file.write_text("/n".join(stream))
@@ -34,8 +32,6 @@ def remove_dotenv_file() -> Callable[[str], None]:
     """Remove a dotenv file."""
 
     def remove(filepath: str) -> None:
-        """Remove a dotenv file."""
-
         if os.path.exists(filepath):
             os.unlink(filepath)
 
