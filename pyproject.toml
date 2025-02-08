@@ -146,7 +146,7 @@ ignore = ["PTH", "ANN002", "ANN003", "ARG002", "D202", "D203", "D213", "I001", "
 "docs/examples/main.py" = ["T201"]
 "src/poetry_plugin_dotenv/__init__.py" = ["E501"]
 "src/poetry_plugin_dotenv/dotenv/core.py" = ["PTH"]
-"tests/*.*" = ["INP001", "S101"]
+"tests/*.*" = ["D103", "INP001", "S101"]
 
 [tool.ruff.lint.isort]
 required-imports = ["from __future__ import annotations"]
