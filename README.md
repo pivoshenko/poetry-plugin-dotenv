@@ -84,12 +84,12 @@
 
 ### Features
 
-- Fully type safe
-- Doesn't require any dependencies
-- Supports templates, interpolating variables using POSIX variable expansions
-- Supports `--directory` - working directory for the `poetry` command
+- Fully type-safe
+- No external dependencies required
+- Supports templates and variable interpolation using POSIX variable expansions
+- Supports `--directory`, which allows setting the working directory for the `poetry` command
 - Supports multiple configuration sources
-- Supports configuration auto-completion and validation in IDEs such as Visual Studio Code or PyCharm (part of [JSON Schema Store](https://www.schemastore.org/json))
+- Provides configuration auto-completion and validation in IDEs like Visual Studio Code or PyCharm (via [JSON Schema Store](https://www.schemastore.org/json))
 - Supports both `poetry v1.5+` and `poetry v2+`
 
 ## Installation
@@ -98,13 +98,13 @@
 poetry self add poetry-plugin-dotenv@latest
 ```
 > [!TIP]
-> New releases supports only Python 3.9+.
-> If you want to use `poetry-plugin-dotenv` with Python 3.8 please install version `2.4.0` using
+> New releases support only Python 3.9+.
+> If you want to use `poetry-plugin-dotenv` with Python 3.8, please install version `2.4.0` using
 > `poetry self add poetry-plugin-dotenv@2.4.0`
 
 ## Usage and Configuration
 
-By default, the plugin will load the `.env` file from the current working directory or "higher directories".
+By default, the plugin will load the `.env` file from the current working directory or any higher-level directories.
 
 #### `ignore`
 
@@ -124,12 +124,12 @@ Prevents `poetry` from loading the dotenv file.
 
 **Default**: `.env`
 
-If your dotenv file is located in a different path or has a different name you may set this parameter.
+If your dotenv file is located elsewhere or has a different name, you can set this parameter.
 
 ### Configuration via TOML file
 
-The plugin is able to read project-specific default values for its options from a `pyproject.toml` file.
-By default, `poetry-plugin-dotenv` looks for `pyproject.toml` containing a `[tool.poetry.plugins.dotenv]` section.
+The plugin can read project-specific default values for its options from a `pyproject.toml` file.
+By default, `poetry-plugin-dotenv` looks for a `pyproject.toml` file containing a `[tool.poetry.plugins.dotenv]` section.
 
 Example `pyproject.toml`:
 
@@ -140,25 +140,25 @@ location = ".env.dev"
 ```
 
 > [!IMPORTANT]
-> Due to the default `poetry` parser, options in the plugins sections should be always strings.
+> Due to the default `poetry` parser, options in the plugin sections should always be strings.
 
-As it was mentioned in the **Features** list, the schema of the plugin configuration is now part of the [JSON Schema Store](https://www.schemastore.org/json) which brings auto-completion and validation in IDEs such as Visual Studio Code or PyCharm "out of the box".
+As mentioned in the **Features** list, the schema for the plugin configuration is part of the [JSON Schema Store](https://www.schemastore.org/json), which enables auto-completion and validation in IDEs like Visual Studio Code and PyCharm.
 
 https://github.com/pivoshenko/poetry-plugin-dotenv/assets/40499728/15d3a988-a723-49f8-960d-f91cd6bfe536
 
 ### Configuration via environment variables
 
-`poetry-plugin-dotenv` supports the following configuration options via environment variables.
+`poetry-plugin-dotenv` supports the following configuration options via environment variables:
 
 - `POETRY_PLUGIN_DOTENV_LOCATION`
 - `POETRY_PLUGIN_DOTENV_IGNORE`
 
 > [!IMPORTANT]
-> Due to the nature of environment variables, options should be always strings.
+> As environment variables are always strings, options should always be set as strings.
 
 ### Lookup hierarchy
 
-A `pyproject.toml` can override default values. Options provided by the user via environment variables override both.
+A `pyproject.toml` file can override default values. Options provided via environment variables override both.
 
 ## Examples
 
@@ -183,7 +183,7 @@ DB__ENGINE=postgresql://${DB__USER}:${DB__PASSWORD}@${DB__HOST}/${DB__DBNAME}
 ```
 
 ```toml
-# pyroject.toml
+# pyproject.toml
 [tool.poetry.plugins.dotenv]
 location = ".env.dev"
 ```
@@ -216,7 +216,7 @@ poetry run -vvv python main.py
 # Password: 'super_secret_password'
 # Engine: 'postgresql://volodymyr:super_secret_password@localhost/local_lakehouse'
 
-# set location section in pyproject.toml
+# Set location section in pyproject.toml
 poetry run -vvv python main.py
 # Loading environment variables from '.env.dev'.
 # Host: 'dev.host'
@@ -225,7 +225,7 @@ poetry run -vvv python main.py
 # Password: 'super_secret_password'
 # Engine: 'postgresql://svc_team:super_secret_password@dev.host/dev_lakehouse'
 
-# set ignore = "true" in pyproject.toml
+# Set ignore = "true" in pyproject.toml
 poetry run -vvv python main.py
 # Not loading environment variables.
 # Environment variables not set!
