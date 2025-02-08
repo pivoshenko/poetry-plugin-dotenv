@@ -209,7 +209,7 @@ if __name__ == "__main__":
 
 ```shell
 poetry run -vvv python main.py
-# Loading environment variables from '.env'.
+# Loading environment variables: .env
 # Host: 'localhost'
 # Name: 'local_lakehouse'
 # Username: 'volodymyr'
@@ -218,7 +218,7 @@ poetry run -vvv python main.py
 
 # Set location section in pyproject.toml
 poetry run -vvv python main.py
-# Loading environment variables from '.env.dev'.
+# Loading environment variables: .env.dev
 # Host: 'dev.host'
 # Name: 'dev_lakehouse'
 # Username: 'svc_team'
@@ -227,11 +227,11 @@ poetry run -vvv python main.py
 
 # Set ignore = "true" in pyproject.toml
 poetry run -vvv python main.py
-# Not loading environment variables.
+# Not loading environment variables. Ignored by configuration
 # Environment variables not set!
 
 export POETRY_PLUGIN_DOTENV_LOCATION=.env.dev && poetry run -vvv python main.py
-# Loading environment variables from '.env.dev'.
+# Loading environment variables: .env.dev
 # Host: 'dev.host'
 # Name: 'dev_lakehouse'
 # Username: 'svc_team'
@@ -239,6 +239,6 @@ export POETRY_PLUGIN_DOTENV_LOCATION=.env.dev && poetry run -vvv python main.py
 # Engine: 'postgresql://svc_team:super_secret_password@dev.host/dev_lakehouse'
 
 export POETRY_PLUGIN_DOTENV_IGNORE=true && poetry run -vvv python main.py
-# Not loading environment variables.
+# Not loading environment variables. Ignored by configuration
 # Environment variables not set!
 ```
