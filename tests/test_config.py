@@ -1,4 +1,4 @@
-"""Tests for the module ``src/poetry_plugin_dotenv/config.py``."""
+"""Tests for the module that contains plugin's configurator."""
 
 from __future__ import annotations
 
@@ -26,6 +26,4 @@ from poetry_plugin_dotenv.config import _as_bool
     ],
 )
 def test__as_bool(value: str, expected_bool: bool) -> None:  # noqa: FBT001
-    """Test for the ``_as_bool`` function."""
-
     assert expected_bool == _as_bool(value)
