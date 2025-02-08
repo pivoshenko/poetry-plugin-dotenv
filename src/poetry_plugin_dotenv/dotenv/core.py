@@ -41,7 +41,7 @@ class DotEnv:
         self._dict: OrderedDict[str, str] | None = None
 
     def dict(self) -> OrderedDict[str, str]:
-        """Return content of a dotenv file."""
+        """Get content of a dotenv file."""
 
         if self._dict:
             return self._dict
@@ -65,7 +65,7 @@ class DotEnv:
                     yield mapping.key, mapping.value  # type: ignore[misc]
 
     def set_as_environment_variables(self) -> bool:
-        """Load current dotenv as a system environment variable."""
+        """Load current dotenv as system environment variables."""
 
         if self.dict():
             for key, value in self.dict().items():

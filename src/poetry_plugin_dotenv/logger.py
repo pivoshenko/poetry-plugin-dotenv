@@ -23,7 +23,7 @@ class Style(enum.Enum):
     ERROR = "<error>{0!s}</error>"
 
     def __call__(self, text: str) -> str:
-        """Apply a style to the text."""
+        """Apply the style to the text."""
 
         return self.value.format(text)
 
@@ -33,18 +33,18 @@ class Logger:
 
     Notes
     -----
-    Because this logger is used for the plugin that are running before the main command,
-    all the messages will be logged only in the debug mode.
+    Since this logger is used by a plugin that runs before the main command,
+    all messages are logged only in debug mode.
 
     """
 
     def __init__(self, event: ConsoleCommandEvent) -> None:
-        """Initialize."""
+        """Initialize the logger."""
 
         self.write_line = partial(event.io.write_line, verbosity=Verbosity.DEBUG)
 
     def info(self, msg: str) -> None:
-        """Log an info message."""
+        """Log an informational message."""
 
         self._log(Style.INFO, msg)
 
