@@ -10,14 +10,5 @@ max_line_length = 120
 tab_width = 4
 trim_trailing_whitespace = true
 
-[{*.har,*.jsb2,*.jsb3,*.json,.babelrc,.eslintrc,.stylelintrc,bowerrc,jest.config}]
-indent_size = 2
-
-[{*.yaml,*.yml}]
-indent_size = 2
-
-[{*.toml,*.lock}]
-indent_size = 2
-
 [{*.py,*.pyi}]
 indent_size = 4
