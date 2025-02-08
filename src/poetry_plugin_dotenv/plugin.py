@@ -23,8 +23,8 @@ if TYPE_CHECKING:  # pragma: no cover
 class DotenvPlugin(ApplicationPlugin):
     """Plugin that automatically loads environment variables from a dotenv file.
 
-    Plugin that automatically loads environment variables from a dotenv file into the environment
-    before ``poetry`` commands are run.
+    This plugin automatically loads environment variables from a dotenv file into the environment
+    before the `poetry` commands are executed.
     """
 
     def activate(self, application: Application) -> None:  # pragma: no cover
@@ -33,7 +33,7 @@ class DotenvPlugin(ApplicationPlugin):
         application.event_dispatcher.add_listener(COMMAND, listener=self.load)  # type: ignore[union-attr, arg-type]
 
     def load(self, event: ConsoleCommandEvent, *args, **kwargs) -> None:  # type: ignore[no-untyped-def]
-        """Load a dotenv file based on the provided configuration."""
+        """Load a dotenv file according to the provided configuration."""
 
         working_dir = event.io.input.option("directory") or os.path.curdir
 
@@ -44,13 +44,13 @@ class DotenvPlugin(ApplicationPlugin):
             return  # pragma: nocover
 
         if config.ignore:
-            logger.warning("Not loading environment variables")
+            logger.warning("Not loading environment variables. Ignored by configuration")
             return
 
         filepath = self._determine_filepath(config, working_dir)
 
         if filepath == "":
-            logger.warning("Not loading environment variables")
+            logger.warning("Not loading environment variables. No valid filepath")
             return
 
         if os.path.isfile(filepath):
