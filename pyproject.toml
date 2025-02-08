@@ -93,7 +93,7 @@ coverage = { version = "^7.6.10", extras = ["toml"] }
 sh = "^2.2.1"
 
 [tool.poetry.group.ci.dependencies]
-python-semantic-release = "9.17.0"
+python-semantic-release = "9.18.1"
 
 [tool.poetry.plugins."poetry.application.plugin"]
 poetry-plugin-dotenv = "poetry_plugin_dotenv.plugin:DotenvPlugin"
@@ -103,7 +103,7 @@ changelog_file = "CHANGELOG.md"
 commit_author = "github-actions <github-actions@github.com>"
 exclude_commit_patterns = ["Merge pull request"]
 logging_use_named_masks = true
-version_toml = ["pyproject.toml:project.version"]
+version_toml = ["pyproject.toml:tool.poetry.version"]
 version_variables = ["src/poetry_plugin_dotenv/__init__.py:__version__"]
 
 [tool.semantic_release.commit_parser_options]
