@@ -15,9 +15,11 @@ defaults:
     shell: bash
 
 jobs:
-  lockfile:
-    name: Check poetry.lock
+  setup:
+    name: Setup environment
     runs-on: ubuntu-latest
+    outputs:
+      poetry-cache-hit: ${{ steps.poetry-cache.outputs.cache-hit }}
     steps:
       - name: Checkout repository
         id: checkout-repository
@@ -29,47 +31,56 @@ jobs:
         id: install-python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.13
+          python-version: "3.13"
+          cache: poetry
 
-      - name: Install poetry
+      - name: Install Poetry
         id: install-poetry
-        run: |
-          python -m pip install -U poetry
+        run: python -m pip install -U poetry==2.0.1
+
+      - name: Cache Poetry virtual environment
+        id: poetry-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.virtualenvs
+          key: poetry-${{ runner.os }}-${{ hashFiles('poetry.lock') }}
+          restore-keys: poetry-${{ runner.os }}-
+
+      - name: Install dependencies
+        id: install-dependencies
+        if: steps.poetry-cache.outputs.cache-hit != 'true'
+        run: python -m poetry install --no-interaction
+
+  lockfile:
+    name: Check poetry.lock
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Restore Poetry virtual environment
+        id: restore-poetry
+        uses: actions/cache@v4
+        with:
+          path: ~/.virtualenvs
+          key: poetry-${{ runner.os }}-${{ hashFiles('poetry.lock') }}
+          restore-keys: poetry-${{ runner.os }}-
 
       - name: Check `poetry.lock`
         id: check-lock
         run: python -m poetry check --lock
 
   linters:
-    name: Run linters
+    name: Run Linters
+    needs: setup
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        id: checkout-repository
-        uses: actions/checkout@v4
+      - name: Restore Poetry virtual environment
+        id: restore-poetry
+        uses: actions/cache@v4
         with:
-          fetch-depth: 0
-
-      - name: Install Python
-        id: install-python
-        uses: actions/setup-python@v5
-        with:
-          python-version: 3.13
-
-      - name: Install poetry
-        id: install-poetry
-        run: |
-          python -m pip install -U poetry
-
-      - name: Install dependencies
-        id: install-dependencies
-        run: |
-          python -m poetry install \
-            --only main \
-            --only linters \
-            --only dev
+          path: ~/.virtualenvs
+          key: poetry-${{ runner.os }}-${{ hashFiles('poetry.lock') }}
+          restore-keys: poetry-${{ runner.os }}-
 
       - name: Run linters
-        id: lint
-        run: |
-          python -m poetry run poe lint
+        id: run-linters
+        run: python -m poetry run poe lint
