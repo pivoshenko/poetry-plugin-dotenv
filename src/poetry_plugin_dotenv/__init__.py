@@ -13,7 +13,7 @@ __author__ = "Volodymyr Pivoshenko"
 __email__ = "volodymyr.pivoshenko@gmail.com"
 
 __license__ = "MIT"
-__copyright__ = "Copyright 2023, Volodymyr Pivoshenko"
+__copyright__ = "Copyright 2025, Volodymyr Pivoshenko"
 
 from poetry_plugin_dotenv import config
 from poetry_plugin_dotenv import dotenv
