@@ -1,4 +1,4 @@
-"""Tests for the module ``src/poetry_plugin_dotenv/plugin.py``."""
+"""Tests for the that contains the core functionality of the plugin."""
 
 from __future__ import annotations
 
@@ -22,8 +22,6 @@ def test_default_dotenv_file(
     create_dotenv_file: Callable[[dict[str, str], str], None],
     remove_dotenv_file: Callable[[str], None],
 ) -> None:
-    """Test for the ``load`` method."""
-
     event = mocker.MagicMock()
     event.command = EnvCommand()
     event.io.input.option.return_value = None
@@ -45,8 +43,6 @@ def test_dotenv_file_doesnt_exist(
     mocker: pytest_mock.MockFixture,
     remove_dotenv_file: Callable[[str], None],
 ) -> None:
-    """Test for the ``load`` method."""
-
     event = mocker.MagicMock()
     event.command = EnvCommand()
     event.io.input.option.return_value = None
