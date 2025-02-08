@@ -51,5 +51,5 @@
   color: 0E8A16
 
 - name: "type: maintenance"
-  description: Indicates changes to the CI, build system, or external dependencies; a code change that neither fixes a bug nor adds a feature
+  description: Indicates changes to the CI, build system or external dependencies, a code change that neither fix
   color: FBCA04
