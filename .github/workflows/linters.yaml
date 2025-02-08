@@ -29,7 +29,7 @@ jobs:
         id: install-python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.12
+          python-version: 3.13
 
       - name: Install poetry
         id: install-poetry
@@ -54,7 +54,7 @@ jobs:
         id: install-python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.12
+          python-version: 3.13
 
       - name: Install poetry
         id: install-poetry
@@ -72,4 +72,4 @@ jobs:
       - name: Run linters
         id: lint
         run: |
-          python -m poetry run poe lint --directory src
+          python -m poetry run poe lint
