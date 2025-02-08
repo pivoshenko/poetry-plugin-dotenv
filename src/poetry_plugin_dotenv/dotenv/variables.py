@@ -1,4 +1,4 @@
-"""Module that contains models of the dotenv variables/literals."""
+"""Module that contains models of the dotenv variables and literals."""
 
 from __future__ import annotations
 
@@ -28,7 +28,7 @@ _posix_variable = re.compile(
 
 @dataclasses.dataclass(frozen=True)
 class Literal:
-    """Model of a literal."""
+    """Represents a literal value."""
 
     value: str
 
@@ -40,19 +40,19 @@ class Literal:
 
 @dataclasses.dataclass(frozen=True)
 class Variable:
-    """Model of a variable."""
+    """Represents a variable with an optional default value."""
 
     name: str
     default: str | None = None
 
     def resolve(self, env: OrderedDict[str, str], *args, **kwargs) -> str:  # type: ignore[no-untyped-def]
-        """Get a variable value."""
+        """Resolve the variable value from the environment or use the default."""
 
         return env.get(self.name, self.default) or ""  # type: ignore[arg-type]
 
 
 def parse(value: str) -> Iterator[Literal | Variable]:
-    """Parse values."""
+    """Parse a string and yield literals and variables."""
 
     cursor = 0
     value_length = len(value)
