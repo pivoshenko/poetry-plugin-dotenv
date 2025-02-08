@@ -1,6 +1,6 @@
-# Pull Request Check List
+# Pull Request Checklist
 
 **Resolves: #issue-number-here**
 
-- [ ] Added **tests** for changed code
-- [ ] Updated **documentation** for changed code
+- [ ] Added **tests** for the changed code
+- [ ] Updated **documentation** for the changed code
