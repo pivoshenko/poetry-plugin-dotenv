@@ -1,5 +1,5 @@
 default_language_version:
-  python: python3.12
+  python: python3.13
 
 repos:
   - repo: https://github.com/commitizen-tools/commitizen
@@ -55,12 +55,12 @@ repos:
       - id: pyupgrade
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.9.3
+    rev: v0.9.4
     hooks:
       - id: ruff
       - id: ruff-format
 
   - repo: https://github.com/pycqa/isort
-    rev: 5.13.2
+    rev: 6.0.0
     hooks:
       - id: isort
