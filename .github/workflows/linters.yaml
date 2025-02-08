@@ -15,11 +15,9 @@ defaults:
     shell: bash
 
 jobs:
-  setup:
-    name: Setup environment
+  linters:
+    name: Run linters
     runs-on: ubuntu-latest
-    outputs:
-      poetry-cache-hit: ${{ steps.poetry-cache.outputs.cache-hit }}
     steps:
       - name: Checkout repository
         id: checkout-repository
@@ -32,55 +30,18 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
-          cache: poetry
 
-      - name: Install Poetry
+      - name: Install poetry
         id: install-poetry
-        run: python -m pip install -U poetry==2.0.1
-
-      - name: Cache Poetry virtual environment
-        id: poetry-cache
-        uses: actions/cache@v4
-        with:
-          path: ~/.virtualenvs
-          key: poetry-${{ runner.os }}-${{ hashFiles('poetry.lock') }}
-          restore-keys: poetry-${{ runner.os }}-
+        run: |
+          python -m pip install -U poetry==2.0.1
 
       - name: Install dependencies
         id: install-dependencies
-        if: steps.poetry-cache.outputs.cache-hit != 'true'
-        run: python -m poetry install --no-interaction
-
-  lockfile:
-    name: Check poetry.lock
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
-      - name: Restore Poetry virtual environment
-        id: restore-poetry
-        uses: actions/cache@v4
-        with:
-          path: ~/.virtualenvs
-          key: poetry-${{ runner.os }}-${{ hashFiles('poetry.lock') }}
-          restore-keys: poetry-${{ runner.os }}-
-
-      - name: Check `poetry.lock`
-        id: check-lock
-        run: python -m poetry check --lock
-
-  linters:
-    name: Run Linters
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
-      - name: Restore Poetry virtual environment
-        id: restore-poetry
-        uses: actions/cache@v4
-        with:
-          path: ~/.virtualenvs
-          key: poetry-${{ runner.os }}-${{ hashFiles('poetry.lock') }}
-          restore-keys: poetry-${{ runner.os }}-
+        run: |
+          python -m poetry install --no-interaction
 
       - name: Run linters
         id: run-linters
-        run: python -m poetry run poe lint
+        run: |
+          python -m poetry run poe lint
