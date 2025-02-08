@@ -31,18 +31,18 @@ _STR_BOOLEAN_MAPPING: dict[str, bool] = {
 
 @dataclasses.dataclass
 class _Config:
-    """Defines the data schema and defaults used for plugin configuration."""
+    """Defines the schema and default values for the plugin configuration."""
 
     ignore: bool = False
     location: str = ""
 
 
-# TODO(pivoshenko): this configuration loader is a "quick patch" solution
+# TODO(pivoshenko): this configuration loader is a "quick patch" solution and needs refinement
 class Config(_Config):
-    """Configuration loader."""
+    """Configuration loader for the plugin."""
 
     def __init__(self, working_dir: str) -> None:
-        """Initialize and load configuration from sources."""
+        """Initialize and load configuration from the defined sources."""
 
         super().__init__()
 
@@ -62,7 +62,7 @@ class Config(_Config):
         self._apply_source_config(source_config)
 
     def _apply_source_config(self, source_config: dict[str, str | bool | None]) -> None:
-        """Apply source configuration to the instance."""
+        """Apply the loaded configuration to the instance variables."""
 
         for field in self.__dataclass_fields__.values():
             source_value = source_config.get(field.name)
@@ -79,7 +79,7 @@ class Config(_Config):
 
 
 def _load_config_from_toml(filepath: str, section: str) -> dict[str, str | bool | None]:
-    """Load configuration from the TOML file."""
+    """Load configuration from a TOML file."""
 
     if not os.path.exists(filepath):
         return {}
@@ -94,7 +94,7 @@ def _load_config_from_toml(filepath: str, section: str) -> dict[str, str | bool 
 
 
 def _load_config_from_os(section: str) -> dict[str, str | bool | None]:
-    """Load configuration from the OS environment variables."""
+    """Load configuration from OS environment variables."""
 
     return {
         key[len(section) :].lower(): value
@@ -104,9 +104,9 @@ def _load_config_from_os(section: str) -> dict[str, str | bool | None]:
 
 
 def _as_bool(value: str) -> bool:
-    """Convert a string value to a Boolean equivalent.
+    """Convert a string value to its Boolean equivalent.
 
-    Heavily inspired from ``distutils strtobool``.
+    This function is inspired by ``distutils strtobool``.
     """
 
     try:
