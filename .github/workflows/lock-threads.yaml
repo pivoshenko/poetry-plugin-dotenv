@@ -19,7 +19,7 @@ jobs:
           process-only: issues
           issue-inactive-days: 30
           issue-comment: |
-            This issue has been automatically locked since there has not been any recent activity after it was closed.
+            This issue has been automatically locked due to inactivity since its closure.
 
   lock-prs:
     runs-on: ubuntu-latest
@@ -34,4 +34,4 @@ jobs:
           process-only: prs
           pr-inactive-days: 30
           pr-comment: >
-            This pull request has been automatically locked since there has not been any recent activity after it was closed.
+            This pull request has been automatically locked due to inactivity since its closure.
