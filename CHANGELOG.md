@@ -1,6 +1,24 @@
 # CHANGELOG
 
 
+## v2.7.1 (2025-02-08)
+
+### Code Style
+
+- **examples**: Update GIF theme
+  ([`653401e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/653401e74db7d923e74b5af3cf69c2b1b1eab173))
+
+### Continuous Integration
+
+- **labels**: Update description
+  ([`460c7d0`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/460c7d0fa28b5dc9268cb539a2a50fb23d5d4eda))
+
+### Documentation
+
+- **README**: Update examples
+  ([`6fac995`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6fac995f6e732aa8f936d0189ecef096b5e36ff2))
+
+
 ## v2.7.0 (2025-02-08)
 
 ### Bug Fixes
