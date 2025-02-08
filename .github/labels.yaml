@@ -11,7 +11,7 @@
   color: D93F0B
 
 - name: "priority: medium"
-  description: Indicates default priority, 'should be done' but isn't prioritised ahead of others
+  description: Indicates default priority, 'should be done' but isn't prioritized ahead of others
   color: FBCA04
 
 - name: "priority: low"
@@ -51,5 +51,5 @@
   color: 0E8A16
 
 - name: "type: maintenance"
-  description: Indicates changes to the CI, build system or external dependencies, a code change that neither fix
+  description: Indicates changes to the CI, build system, or external dependencies; a code change that neither fixes a bug nor adds a feature
   color: FBCA04
