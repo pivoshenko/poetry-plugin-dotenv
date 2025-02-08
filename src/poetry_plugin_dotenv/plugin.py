@@ -44,17 +44,23 @@ class DotenvPlugin(ApplicationPlugin):
             return  # pragma: nocover
 
         if config.ignore:
-            logger.warning("Not loading environment variables.")
+            logger.warning("Not loading environment variables")
             return
 
         filepath = self._determine_filepath(config, working_dir)
 
+        if filepath == "":
+            logger.warning("Not loading environment variables")
+            return
+
         if os.path.isfile(filepath):
-            logger.info(f"Loading environment variables from '{filepath}'.")
+            msg = f"Loading environment variables: <fg=green>{filepath}</>"
+            logger.info(msg)
             dotenv.core.load(filepath)
 
         else:
-            logger.error(f"File '{filepath}' doesn't exist.")
+            msg = f"Could not load environment variables. The file does not exist: {filepath}"
+            logger.error(msg)
 
     def _determine_filepath(self, config: Config, working_dir: str) -> str:
         """Determine the appropriate filepath for the dotenv file."""
