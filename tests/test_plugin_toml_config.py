@@ -1,4 +1,4 @@
-"""Tests for the module ``src/poetry_plugin_dotenv/plugin.py`` with TOML as config source."""
+"""Tests for the that contains the core functionality of the plugin."""
 
 from __future__ import annotations
 
@@ -39,8 +39,6 @@ def test_dev_dotenv_file_toml_config(
     create_dotenv_file: Callable[[dict[str, str], str], None],
     remove_dotenv_file: Callable[[str], None],
 ) -> None:
-    """Test for the ``load`` method."""
-
     event = mocker.MagicMock()
     event.command = EnvCommand()
     event.io.input.option.return_value = None
@@ -78,8 +76,6 @@ def test_without_dotenv_file_toml_config(
     create_dotenv_file: Callable[[dict[str, str], str], None],
     remove_dotenv_file: Callable[[str], None],
 ) -> None:
-    """Test for the ``load`` method."""
-
     event = mocker.MagicMock()
     event.command = EnvCommand()
     event.io.input.option.return_value = None

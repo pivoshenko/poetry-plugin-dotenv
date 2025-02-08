@@ -1,4 +1,4 @@
-"""Tests for the module ``src/poetry_plugin_dotenv/dotenv/core.py``."""
+"""Tests for the module that contains core dotenv functionality."""
 
 from __future__ import annotations
 
@@ -44,8 +44,6 @@ def prepare_file_hierarchy(path: Path) -> tuple[Path, Path]:
 
 
 def test_find_dotenv_no_file_no_raise(tmp_path: Path) -> None:
-    """Test ``find`` function."""
-
     *_, leaf = prepare_file_hierarchy(tmp_path)
     os.chdir(str(leaf))
 
@@ -55,8 +53,6 @@ def test_find_dotenv_no_file_no_raise(tmp_path: Path) -> None:
 
 
 def test_find_dotenv_found(tmp_path: Path) -> None:
-    """Test ``find`` function."""
-
     (root, leaf) = prepare_file_hierarchy(tmp_path)
     os.chdir(str(leaf))
     dotenv_file = root / ".env"
@@ -69,8 +65,6 @@ def test_find_dotenv_found(tmp_path: Path) -> None:
 
 @mock.patch.dict(os.environ, {}, clear=True)
 def test_load_dotenv_existing_file(dotenv_file: str) -> None:
-    """Test ``load`` function."""
-
     with open(dotenv_file, "w") as env_file:
         env_file.write("a=b")
 
@@ -82,8 +76,6 @@ def test_load_dotenv_existing_file(dotenv_file: str) -> None:
 
 @mock.patch.dict(os.environ, {"a": "c"}, clear=True)
 def test_load_dotenv_existing_variable_no_override(dotenv_file: str) -> None:
-    """Test ``load`` function."""
-
     with open(dotenv_file, "w") as env_file:
         env_file.write("a=b")
 
@@ -95,8 +87,6 @@ def test_load_dotenv_existing_variable_no_override(dotenv_file: str) -> None:
 
 @mock.patch.dict(os.environ, {"a": "c"}, clear=True)
 def test_load_dotenv_existing_variable_override(dotenv_file: str) -> None:
-    """Test ``load`` function."""
-
     with open(dotenv_file, "w") as env_file:
         env_file.write("a=b")
 
@@ -108,8 +98,6 @@ def test_load_dotenv_existing_variable_override(dotenv_file: str) -> None:
 
 @mock.patch.dict(os.environ, {"a": "c"}, clear=True)
 def test_load_dotenv_redefine_var_used_in_file_no_override(dotenv_file: str) -> None:
-    """Test ``load`` function."""
-
     with open(dotenv_file, "w") as env_file:
         env_file.write('a=b\nd="${a}"')
 
@@ -121,8 +109,6 @@ def test_load_dotenv_redefine_var_used_in_file_no_override(dotenv_file: str) -> 
 
 @mock.patch.dict(os.environ, {"a": "c"}, clear=True)
 def test_load_dotenv_redefine_var_used_in_file_with_override(dotenv_file: str) -> None:
-    """Test ``load`` function."""
-
     with open(dotenv_file, "w") as env_file:
         env_file.write('a=b\nd="${a}"')
 
@@ -134,8 +120,6 @@ def test_load_dotenv_redefine_var_used_in_file_with_override(dotenv_file: str) -
 
 @mock.patch.dict(os.environ, {}, clear=True)
 def test_load_dotenv_string_io() -> None:
-    """Test ``load`` function."""
-
     stream = io.StringIO("a=à")
 
     result = dotenv.load(stream=stream)
@@ -146,8 +130,6 @@ def test_load_dotenv_string_io() -> None:
 
 @mock.patch.dict(os.environ, {}, clear=True)
 def test_load_dotenv_file_stream(dotenv_file: str) -> None:
-    """Test ``load`` function."""
-
     with open(dotenv_file, "w") as env_file:
         env_file.write("a=b")
 
@@ -159,8 +141,6 @@ def test_load_dotenv_file_stream(dotenv_file: str) -> None:
 
 
 def test_load_dotenv_in_current_dir(tmp_path: Path) -> None:
-    """Test ``load`` function."""
-
     dotenv_path = tmp_path / ".env"
     dotenv_path.write_bytes(b"a=b")
     code_path = tmp_path / "code.py"
@@ -184,8 +164,6 @@ def test_load_dotenv_in_current_dir(tmp_path: Path) -> None:
 
 
 def test_dotenv_values_file(dotenv_file: str) -> None:
-    """Test ``values`` function."""
-
     with open(dotenv_file, "w") as env_file:
         env_file.write("a=b")
 
@@ -195,8 +173,6 @@ def test_dotenv_values_file(dotenv_file: str) -> None:
 
 
 def test_dotenv_values_file_stream(dotenv_file: str) -> None:
-    """Test ``dotenv_values`` function."""
-
     with open(dotenv_file, "w") as env_file:
         env_file.write("a=b")
 
@@ -238,8 +214,6 @@ def test_dotenv_values_string_io(
     *,
     interpolate: bool,
 ) -> None:
-    """Test ``values`` function."""
-
     with mock.patch.dict(os.environ, env, clear=True):
         stream = io.StringIO(string)
         stream.seek(0)

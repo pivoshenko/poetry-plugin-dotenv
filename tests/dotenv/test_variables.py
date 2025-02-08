@@ -1,4 +1,4 @@
-"""Tests for the module ``src/poetry_plugin_dotenv/dotenv/variables.py``."""
+"""Tests for the module that contains models of the dotenv variables and literals."""
 
 from __future__ import annotations
 
@@ -36,8 +36,6 @@ from poetry_plugin_dotenv.dotenv import variables
     ],
 )
 def test_parse(value: str, expected: list[variables.Literal | variables.Variable]) -> None:
-    """Test ``parse`` function."""
-
     parsed_vars = list(variables.parse(value))
     assert parsed_vars == expected
 
@@ -51,7 +49,5 @@ def test_parse(value: str, expected: list[variables.Literal | variables.Variable
     ],
 )
 def test_resolve(model: variables.Literal | variables.Variable, expected: str) -> None:
-    """Test ``resolve`` method."""
-
     env = OrderedDict({"a": "b", "c": "d"})
     assert model.resolve(env) == expected

@@ -1,4 +1,4 @@
-"""Tests for the module ``src/poetry_plugin_dotenv/dotenv/parsers.py``."""
+"""Tests for the module that contains dotenv parsers."""
 
 from __future__ import annotations
 
@@ -541,7 +541,5 @@ from poetry_plugin_dotenv.dotenv.parsers import parse_stream
     ],
 )
 def test_parse_stream(test_input: str, expected: list[Binding]) -> None:
-    """Test ``parse_stream`` function."""
-
     parsed_stream = list(parse_stream(io.StringIO(test_input)))
     assert parsed_stream == expected
