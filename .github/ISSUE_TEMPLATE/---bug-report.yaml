@@ -8,15 +8,15 @@ body:
       value: |
         Thank you for taking the time to file a complete bug report.
         Before submitting your issue, please review [the contribution guidelines](https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/CONTRIBUTING.md).
-        Feel free to use markdown syntax in text areas.
+        Feel free to use Markdown syntax in text areas.
 
   - type: textarea
     attributes:
       label: Description
       description: |
-        Please describe what happened, with as much pertinent information as you can.
+        Please describe what happened, with as much pertinent information as possible.
         If applicable, add screenshots to help explain your problem.
-        Also, ensure that the feature is not already done in the [latest](https://github.com/pivoshenko/poetry-plugin-release/releases/latest) release.
+        Also, ensure that the feature is not already implemented in the [latest](https://github.com/pivoshenko/poetry-plugin-release/releases/latest) release.
     validations:
       required: true
 
@@ -24,7 +24,7 @@ body:
     attributes:
       label: Workarounds
       description: |
-        Is there a mitigation or workaround that allows users to avoid the issue today?
+        Is there a mitigation or workaround that allows users to avoid the issue for now?
     validations:
       required: true
 
@@ -32,16 +32,16 @@ body:
     attributes:
       label: Operating System
       description: |
-        What Operating System are you using?
+        What operating system are you using?
       placeholder: "Fedora 39"
     validations:
       required: true
 
   - type: input
     attributes:
-      label: poetry version
+      label: Poetry version
       description: |
-        Please attach output from `poetry --version`
+        Please attach the output from `poetry --version`
     validations:
       required: true
 
@@ -49,7 +49,7 @@ body:
     attributes:
       label: poetry-plugin-dotenv version
       description: |
-        Please attach output from `poetry self show poetry-plugin-dotenv`
+        Please attach the output from `poetry self show poetry-plugin-dotenv`
     validations:
       required: true
 
