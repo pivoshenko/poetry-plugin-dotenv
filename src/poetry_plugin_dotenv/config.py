@@ -8,10 +8,11 @@ import dataclasses
 import tomlkit
 
 
-CONFIG_SOURCES: dict[str, str] = {
-    "pyproject.toml": "tool.poetry.plugins.dotenv",
-    "os": "POETRY_PLUGIN_DOTENV_",
-}
+CONFIG_SOURCES: list[tuple[str, str]] = [
+    ("pyproject.toml", "tool.poetry.plugins.dotenv"),
+    ("pyproject.toml", "tool.dotenv"),
+    ("os", "POETRY_PLUGIN_DOTENV_"),
+]
 
 _STR_BOOLEAN_MAPPING: dict[str, bool] = {
     "y": True,
@@ -47,7 +48,7 @@ class Config(_Config):
         super().__init__()
 
         source_config = {}
-        for config_source, section in CONFIG_SOURCES.items():
+        for (config_source, section) in CONFIG_SOURCES:
             if config_source.endswith(".toml"):
                 config = _load_config_from_toml(os.path.join(working_dir, config_source), section)
 
