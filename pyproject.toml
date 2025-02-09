@@ -143,7 +143,7 @@ select = ["ALL"]
 ignore = ["PTH", "ANN002", "ANN003", "ARG002", "D202", "D203", "D213", "I001", "FIX002", "TD003"]
 
 [tool.ruff.lint.per-file-ignores]
-"docs/examples/main.py" = ["T201"]
+"docs/examples/main.py" = ["INP001", "T201"]
 "src/poetry_plugin_dotenv/__init__.py" = ["E501"]
 "src/poetry_plugin_dotenv/dotenv/core.py" = ["PTH"]
 "tests/*.*" = ["D103", "INP001", "S101"]
