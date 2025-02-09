@@ -1,4 +1,4 @@
-[tool.poetry.plugins.dotenv]
+[tool.dotenv]
 location = ".env.dev"
 
 [tool.poetry]

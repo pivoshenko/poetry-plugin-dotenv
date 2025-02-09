@@ -1,4 +1,4 @@
-"""Example script."""  # noqa: INP001
+"""Example script."""
 
 from __future__ import annotations
 
