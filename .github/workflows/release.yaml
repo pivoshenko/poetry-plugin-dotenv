@@ -40,7 +40,6 @@ jobs:
         uses: python-semantic-release/python-semantic-release@v9.18.1
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          force: patch
 
       - name: Build package
         id: build-package
