@@ -64,32 +64,32 @@ ipython = "^8.12.3"
 
 [tool.poetry.group.formatters.dependencies]
 isort = "^6.0.0"
-ruff = "^0.9.4"
+ruff = "^0.9.5"
 pyupgrade = "^3.19.1"
 
 [tool.poetry.group.linters.dependencies]
 mypy = "^1.15.0"
-ruff = "^0.9.4"
+ruff = "^0.9.5"
 deptry = "^0.23.0"
 codespell = "^2.4.1"
-commitizen = "^4.1.1"
+commitizen = "^4.2.1"
 
 [tool.poetry.group.lsp.dependencies]
-python-lsp-server = { extras = ["all"], version = "^1.12.0" }
-ruff-lsp = "^0.0.60"
+python-lsp-server = { extras = ["all"], version = "^1.12.2" }
+ruff-lsp = "^0.0.61"
 pylsp-mypy = "^0.7.0"
 pylsp-rope = "^0.1.17"
 python-lsp-isort = "^0.2.0"
 
 [tool.poetry.group.tests.dependencies]
-pytest = "^7.4.4"
+pytest = "^8.3.4"
 xdoctest = "^1.2.0"
 pytest-lazy-fixture = "^0.6.3"
 pytest-codeblocks = "^0.17.0"
 pytest-mock = "^3.14.0"
 pytest-cov = "^6.0.0"
 pytest-sugar = "^1.0.0"
-coverage = { version = "^7.6.10", extras = ["toml"] }
+coverage = { version = "^7.6.11", extras = ["toml"] }
 sh = "^2.2.1"
 
 [tool.poetry.group.ci.dependencies]
