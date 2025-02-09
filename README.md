@@ -129,22 +129,31 @@ If your dotenv file is located elsewhere or has a different name, you can set th
 ### Configuration via TOML file
 
 The plugin can read project-specific default values for its options from a `pyproject.toml` file.
-By default, `poetry-plugin-dotenv` looks for a `pyproject.toml` file containing a `[tool.poetry.plugins.dotenv]` section.
+By default, `poetry-plugin-dotenv` looks for a `pyproject.toml` file that includes either a `[tool.dotenv]` or `[tool.poetry.plugins.dotenv]` section.
 
 Example `pyproject.toml`:
 
 ```toml
+[tool.dotenv]
+ignore = "false"
+location = ".env.dev"
+
 [tool.poetry.plugins.dotenv]
 ignore = "false"
 location = ".env.dev"
 ```
 
+> [!WARNING]
+> In upcoming poetry releases, the `[tool.poetry.plugins]` section will be deprecated. Please migrate to `[tool.dotenv]`.
+
 > [!IMPORTANT]
-> Due to the default `poetry` parser, options in the plugin sections should always be strings.
+> Due to `poetry`'s default parser, all options in the plugin sections must be specified as strings.
 
 As mentioned in the **Features** list, the schema for the plugin configuration is part of the [JSON Schema Store](https://www.schemastore.org/json), which enables auto-completion and validation in IDEs like Visual Studio Code and PyCharm.
 
-https://github.com/pivoshenko/poetry-plugin-dotenv/assets/40499728/15d3a988-a723-49f8-960d-f91cd6bfe536
+<div align="center">
+  <img alt="logo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/assets/schema_example.png?raw=True">
+</div>
 
 ### Configuration via environment variables
 
@@ -184,7 +193,7 @@ DB__ENGINE=postgresql://${DB__USER}:${DB__PASSWORD}@${DB__HOST}/${DB__DBNAME}
 
 ```toml
 # pyproject.toml
-[tool.poetry.plugins.dotenv]
+[tool.dotenv]
 location = ".env.dev"
 ```
 
