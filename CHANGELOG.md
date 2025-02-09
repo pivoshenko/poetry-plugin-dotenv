@@ -1,6 +1,38 @@
 # CHANGELOG
 
 
+## v2.7.3 (2025-02-09)
+
+### Chores
+
+- **ruff**: Update config
+  ([`a359a3a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a359a3afd7bea6400dae8edb64341980189aff4e))
+
+### Continuous Integration
+
+- **workflows**: Remove Poetry v1.5 and v1.6 from the tests matrix
+  ([`ea0fe3c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ea0fe3c8a70c797f34b197914b3a9c25ffe0bcee))
+
+- **workflows**: Update Python version to 3.13
+  ([`239dd5a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/239dd5ac01ee2cebab4f17b51444ef98c4c32099))
+
+### Documentation
+
+- **assets**: Update demo.gif and schema_example.png
+  ([`4ee9d6b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4ee9d6b80d1a3deb5fe5f5d6de58e2583ca5002b))
+
+- **examples**: Update TOML configuration examples to use [tool.dotenv] section
+  ([`15b6f92`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/15b6f924733743a621e389204fd2e20bf05e8490))
+
+- **README**: Update notes with new [tool.dotenv] section and deprecation warning
+  ([`0fd922a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/0fd922abca87899007b2c22df453457336190fba))
+
+### Features
+
+- Add support for the [tool.dotenv] section in TOML configuration
+  ([`fe7185e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/fe7185eef7322887bb2924b1c214b7970111318f))
+
+
 ## v2.7.2 (2025-02-08)
 
 ### Bug Fixes
