@@ -76,7 +76,7 @@ commitizen = "^4.2.1"
 
 [tool.poetry.group.lsp.dependencies]
 python-lsp-server = { extras = ["all"], version = "^1.12.2" }
-ruff-lsp = "^0.0.61"
+ruff-lsp = ">=0.0.61,<0.0.63"
 pylsp-mypy = "^0.7.0"
 pylsp-rope = "^0.1.17"
 python-lsp-isort = "^0.2.0"
