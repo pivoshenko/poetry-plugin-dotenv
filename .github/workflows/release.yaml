@@ -37,7 +37,7 @@ jobs:
           python -m poetry install --only main
 
       - name: Semantic release
-        uses: python-semantic-release/python-semantic-release@v9.18.1
+        uses: python-semantic-release/python-semantic-release@v9.19.1
         with:
           github_token: ${{ secrets.GH_TOKEN }}
 
