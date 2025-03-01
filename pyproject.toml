@@ -54,7 +54,7 @@ packages = [{ include = "poetry_plugin_dotenv", from = "src" }]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<4.0"
-poetry = ">=1.5.0,^2"
+poetry = ">=1.5.0,<3.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.1.0"
