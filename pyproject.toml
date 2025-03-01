@@ -63,20 +63,20 @@ ipdb = "^0.13.13"
 ipython = "^8.12.3"
 
 [tool.poetry.group.formatters.dependencies]
-isort = "^6.0.0"
-ruff = "^0.9.5"
+isort = "^6.0.1"
+ruff = "^0.9.9"
 pyupgrade = "^3.19.1"
 
 [tool.poetry.group.linters.dependencies]
 mypy = "^1.15.0"
-ruff = "^0.9.5"
+ruff = "^0.9.9"
 deptry = "^0.23.0"
 codespell = "^2.4.1"
-commitizen = "^4.2.1"
+commitizen = "^4.3.0"
 
 [tool.poetry.group.lsp.dependencies]
 python-lsp-server = { extras = ["all"], version = "^1.12.2" }
-ruff-lsp = ">=0.0.61,<0.0.63"
+ruff-lsp = "^0.0.62"
 pylsp-mypy = "^0.7.0"
 pylsp-rope = "^0.1.17"
 python-lsp-isort = "^0.2.0"
@@ -89,8 +89,8 @@ pytest-codeblocks = "^0.17.0"
 pytest-mock = "^3.14.0"
 pytest-cov = "^6.0.0"
 pytest-sugar = "^1.0.0"
-coverage = { version = "^7.6.11", extras = ["toml"] }
-sh = "^2.2.1"
+coverage = { version = "^7.6.12", extras = ["toml"] }
+sh = "^2.2.2"
 
 [tool.poetry.group.ci.dependencies]
 python-semantic-release = "9.19.1"
