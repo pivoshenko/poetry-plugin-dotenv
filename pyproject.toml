@@ -151,6 +151,9 @@ ignore = ["PTH", "ANN002", "ANN003", "ARG002", "D202", "D203", "D213", "I001", "
 [tool.ruff.lint.isort]
 required-imports = ["from __future__ import annotations"]
 
+[tool.pyright]
+reportPossiblyUnboundVariable = false
+
 [tool.codespell]
 ignore-words-list = ["redunant", "resovle", "socio-economic"]
 skip = ["poetry.lock"]
