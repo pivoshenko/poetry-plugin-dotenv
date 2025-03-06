@@ -58,7 +58,7 @@ poetry = ">=1.5.0,<3.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.1.0"
-poethepoet = "^0.32.2"
+poethepoet = ">=0.32.2,<0.34.0"
 ipdb = "^0.13.13"
 ipython = "^8.12.3"
 
