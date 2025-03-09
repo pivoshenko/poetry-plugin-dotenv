@@ -58,21 +58,21 @@ poetry = ">=1.5.0,<3.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.1.0"
-poethepoet = ">=0.32.2,<0.34.0"
+poethepoet = "^0.33.0"
 ipdb = "^0.13.13"
 ipython = "^8.12.3"
 
 [tool.poetry.group.formatters.dependencies]
 isort = "^6.0.1"
-ruff = "^0.9.9"
+ruff = "^0.9.10"
 pyupgrade = "^3.19.1"
 
 [tool.poetry.group.linters.dependencies]
 mypy = "^1.15.0"
-ruff = "^0.9.9"
+ruff = "^0.9.10"
 deptry = "^0.23.0"
 codespell = "^2.4.1"
-commitizen = "^4.3.0"
+commitizen = "^4.4.1"
 
 [tool.poetry.group.lsp.dependencies]
 python-lsp-server = { extras = ["all"], version = "^1.12.2" }
