@@ -64,12 +64,12 @@ ipython = "^8.12.3"
 
 [tool.poetry.group.formatters.dependencies]
 isort = "^6.0.1"
-ruff = "^0.9.10"
+ruff = ">=0.9.10,<0.12.0"
 pyupgrade = "^3.19.1"
 
 [tool.poetry.group.linters.dependencies]
 mypy = "^1.15.0"
-ruff = "^0.9.10"
+ruff = ">=0.9.10,<0.12.0"
 deptry = "^0.23.0"
 codespell = "^2.4.1"
 commitizen = "^4.4.1"
