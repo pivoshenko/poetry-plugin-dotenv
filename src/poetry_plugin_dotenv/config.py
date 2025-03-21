@@ -48,7 +48,7 @@ class Config(_Config):
         super().__init__()
 
         source_config = {}
-        for (config_source, section) in CONFIG_SOURCES:
+        for config_source, section in CONFIG_SOURCES:
             if config_source.endswith(".toml"):
                 config = _load_config_from_toml(os.path.join(working_dir, config_source), section)
 
