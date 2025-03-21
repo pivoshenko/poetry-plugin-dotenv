@@ -53,68 +53,62 @@ packages = [{ include = "poetry_plugin_dotenv", from = "src" }]
 "Releases" = "https://github.com/pivoshenko/poetry-plugin-dotenv/releases"
 
 [tool.poetry.dependencies]
-python = ">=3.9,<4.0"
 poetry = ">=1.5.0,<3.0.0"
-
-[tool.poetry.group.dev.dependencies]
-poethepoet = "^0.33.1"
-ipdb = "^0.13.13"
-ipython = "^8.12.3"
-
-[tool.poetry.group.formatters.dependencies]
-isort = "^6.0.1"
-ruff = "^0.11.1"
-pyupgrade = "^3.19.1"
-
-[tool.poetry.group.linters.dependencies]
-mypy = "^1.15.0"
-ruff = "^0.11.1"
-deptry = "^0.23.0"
-codespell = "^2.4.1"
-commitizen = "^4.4.1"
-
-[tool.poetry.group.lsp.dependencies]
-python-lsp-server = { extras = ["all"], version = "^1.12.2" }
-ruff-lsp = "^0.0.62"
-pylsp-mypy = "^0.7.0"
-pylsp-rope = "^0.1.17"
-python-lsp-isort = "^0.2.0"
-
-[tool.poetry.group.tests.dependencies]
-pytest = "7.4.4"
-xdoctest = "^1.2.0"
-pytest-lazy-fixture = "^0.6.3"
-pytest-codeblocks = "^0.17.0"
-pytest-mock = "^3.14.0"
-pytest-cov = "^6.0.0"
-pytest-sugar = "^1.0.0"
-coverage = { version = "^7.7.0", extras = ["toml"] }
-sh = "^2.2.2"
+python = ">=3.9,<4.0"
 
 [tool.poetry.group.ci.dependencies]
 python-semantic-release = "9.21.0"
 
+[tool.poetry.group.dev.dependencies]
+ipdb = "^0.13.13"
+ipython = "^8.12.3"
+poethepoet = "^0.33.1"
+
+[tool.poetry.group.formatters.dependencies]
+isort = "^6.0.1"
+pyupgrade = "^3.19.1"
+ruff = "^0.11.1"
+
+[tool.poetry.group.linters.dependencies]
+codespell = "^2.4.1"
+commitizen = "^4.4.1"
+deptry = "^0.23.0"
+mypy = "^1.15.0"
+ruff = "^0.11.1"
+
+[tool.poetry.group.lsp.dependencies]
+pylsp-mypy = "^0.7.0"
+pylsp-rope = "^0.1.17"
+python-lsp-isort = "^0.2.0"
+python-lsp-server = { extras = ["all"], version = "^1.12.2" }
+ruff-lsp = "^0.0.62"
+
+[tool.poetry.group.tests.dependencies]
+coverage = { version = "^7.7.0", extras = ["toml"] }
+pytest = "7.4.4"
+pytest-codeblocks = "^0.17.0"
+pytest-cov = "^6.0.0"
+pytest-lazy-fixture = "^0.6.3"
+pytest-mock = "^3.14.0"
+pytest-sugar = "^1.0.0"
+sh = "^2.2.2"
+xdoctest = "^1.2.0"
+
 [tool.poetry.plugins."poetry.application.plugin"]
 poetry-plugin-dotenv = "poetry_plugin_dotenv.plugin:DotenvPlugin"
 
-[tool.semantic_release]
-changelog_file = "CHANGELOG.md"
-commit_author = "github-actions <github-actions@github.com>"
-exclude_commit_patterns = ["Merge pull request"]
-logging_use_named_masks = true
-version_toml = ["pyproject.toml:tool.poetry.version"]
-version_variables = ["src/poetry_plugin_dotenv/__init__.py:__version__"]
-
-[tool.semantic_release.commit_parser_options]
-major_tags = ["feat"]
-minor_tags = ["fix", "perf", "refactor"]
-patch_tags = ["docs", "style"]
-
-[tool.semantic_release.changelog]
-exclude_commit_patterns = ['''Merged? .*''', '''Initial Commit.*''', '''^\d+\.\d+\.\d+''']
+[tool.codespell]
+ignore-words-list = ["redunant", "resovle", "socio-economic"]
+skip = ["poetry.lock"]
 
 [tool.commitizen]
 allowed_prefixes = ["build", "tests", "Merge", "Initial", "0", "1", "2", "3"]
+
+[tool.coverage.run]
+omit = ["*/__init__.py"]
+
+[tool.deptry.per_rule_ignores]
+DEP003 = ["cleo", "tomlkit", "poetry_plugin_dotenv"]
 
 [tool.isort]
 color_output = true
@@ -133,32 +127,8 @@ show_error_codes = true
 strict = true
 warn_unused_configs = true
 
-[tool.ruff]
-line-length = 100
-target-version = "py313"
-
-[tool.ruff.lint]
-select = ["ALL"]
-ignore = ["PTH", "ANN002", "ANN003", "ARG002", "D202", "D203", "D213", "I001", "FIX002", "TD003"]
-
-[tool.ruff.lint.per-file-ignores]
-"docs/examples/main.py" = ["INP001", "T201"]
-"src/poetry_plugin_dotenv/__init__.py" = ["E501"]
-"src/poetry_plugin_dotenv/dotenv/core.py" = ["PTH"]
-"tests/*.*" = ["D103", "INP001", "S101"]
-
-[tool.ruff.lint.isort]
-required-imports = ["from __future__ import annotations"]
-
 [tool.pyright]
 reportPossiblyUnboundVariable = false
-
-[tool.codespell]
-ignore-words-list = ["redunant", "resovle", "socio-economic"]
-skip = ["poetry.lock"]
-
-[tool.deptry.per_rule_ignores]
-DEP003 = ["cleo", "tomlkit", "poetry_plugin_dotenv"]
 
 [tool.pytest.ini_options]
 addopts = [
@@ -170,12 +140,57 @@ addopts = [
   "--cov=src",
   "--cov-report=term-missing",
   "--cov-report=xml",
-  "--basetemp=tests/fixtures"
+  "--basetemp=tests/fixtures",
 ]
 testpaths = ["tests"]
 
-[tool.coverage.run]
-omit = ["*/__init__.py"]
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+ignore = [
+  "PTH",
+  "ANN002",
+  "ANN003",
+  "ARG002",
+  "D202",
+  "D203",
+  "D213",
+  "I001",
+  "FIX002",
+  "TD003",
+]
+select = ["ALL"]
+
+[tool.ruff.lint.isort]
+required-imports = ["from __future__ import annotations"]
+
+[tool.ruff.lint.per-file-ignores]
+"docs/examples/main.py" = ["INP001", "T201"]
+"src/poetry_plugin_dotenv/__init__.py" = ["E501"]
+"src/poetry_plugin_dotenv/dotenv/core.py" = ["PTH"]
+"tests/*.*" = ["D103", "INP001", "S101"]
+
+[tool.semantic_release]
+changelog_file = "CHANGELOG.md"
+commit_author = "github-actions <github-actions@github.com>"
+exclude_commit_patterns = ["Merge pull request"]
+logging_use_named_masks = true
+version_toml = ["pyproject.toml:tool.poetry.version"]
+version_variables = ["src/poetry_plugin_dotenv/__init__.py:__version__"]
+
+[tool.semantic_release.changelog]
+exclude_commit_patterns = [
+  '''Merged? .*''',
+  '''Initial Commit.*''',
+  '''^\d+\.\d+\.\d+''',
+]
+
+[tool.semantic_release.commit_parser_options]
+major_tags = ["feat"]
+minor_tags = ["fix", "perf", "refactor"]
+patch_tags = ["docs", "style"]
 
 [tool.poe]
 poetry_command = ""
@@ -186,7 +201,7 @@ sequence = [
   { shell = "find src -type f -name '*.py' | xargs pyupgrade --py313-plus", help = "Run annotations formatter" },
   { shell = "find tests -type f -name '*.py' | xargs pyupgrade --py313-plus", help = "Run annotations formatter" },
   { shell = "isort .", help = "Run imports formatter" },
-  { shell = "ruff format .", help = "Run code formatter" }
+  { shell = "ruff format .", help = "Run code formatter" },
 ]
 
 [tool.poe.tasks.lint]
@@ -196,7 +211,7 @@ sequence = [
   { shell = "mypy .", help = "Run types linter" },
   { shell = "ruff check .", help = "Run code linter" },
   { shell = "codespell .", help = "Run spell linter" },
-  { shell = "cz check --rev-range .", help = "Run commits linter" }
+  { shell = "cz check --rev-range .", help = "Run commits linter" },
 ]
 
 [tool.poe.tasks.tests]
@@ -204,5 +219,5 @@ help = "Run tests"
 shell = "pytest ."
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
