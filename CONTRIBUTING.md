@@ -91,18 +91,6 @@ poetry format
 poetry lint
 ```
 
-A range of linting tools will check your code to ensure consistent style and catch common mistakes. The [`pre-commit`](https://pre-commit.com) tool is used for this, requiring a one-time setup:
-
-```shell
-poetry run pre-commit install
-```
-
-`pre-commit` will check your code every time you commit. By default, it runs on changed files, but you can run it on all files manually if needed:
-
-```shell
-poetry run pre-commit run --all-files
-```
-
 > [!IMPORTANT]
 > Your code must always be accompanied by corresponding tests. Code without tests will not be merged.
 
