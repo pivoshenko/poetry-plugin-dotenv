@@ -20,14 +20,14 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/semantic-release/semantic-release">
+  <a href="https://semantic-release.gitbook.io">
     <img alt="Semantic_Release" src="https://img.shields.io/badge/Semantic_Release-angular-e10079?style=flat-square&logo=semanticrelease&logoColor=white&color=D83A56">
   </a>
-  <a href="https://github.com/PyCQA/isort">
+  <a href="https://pycqa.github.io/isort">
     <img alt="Imports" src="https://img.shields.io/badge/Imports-isort-black.svg?style=flat-square&logo=improvmx&logoColor=white&color=637A9F&">
   </a>
-  <a href="https://beta.ruff.rs/docs/">
-    <img alt="Ruff" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json&style=flat-square&logoColor=white&color=637A9F">
+  <a href="https://docs.astral.sh/ruff">
+    <img alt="Ruff" src="https://img.shields.io/badge/Style-ruff-black.svg?style=flat-square&logo=ruff&logoColor=white&color=D7FF64">
   </a>
   <a href="https://mypy.readthedocs.io/en/stable/index.html">
     <img alt="mypy" src="https://img.shields.io/badge/mypy-checked-success.svg?style=flat-square&logo=pypy&logoColor=white&color=0A6847">
@@ -53,13 +53,13 @@
   <a href="https://pypi.org/project/poetry-plugin-dotenv">
     <img alt="Downloads" src="https://img.shields.io/pypi/dm/poetry-plugin-dotenv?style=flat-square&logo=pythonanywhere&logoColor=white&color=4856CD&label=Downloads">
   </a>
-  <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/">
+  <a href="https://github.com/pivoshenko/poetry-plugin-dotenv">
     <img alt="Stars" src="https://img.shields.io/github/stars/pivoshenko/poetry-plugin-dotenv?style=flat-square&logo=apachespark&logoColor=white&color=4856CD&label=Stars">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://stand-with-ukraine.pp.ua/">
+  <a href="https://stand-with-ukraine.pp.ua">
     <img alt="StandWithUkraine" src="https://img.shields.io/badge/Support-Ukraine-FFC93C?style=flat-square&labelColor=07689F">
   </a>
   <a href="https://stand-with-ukraine.pp.ua">
