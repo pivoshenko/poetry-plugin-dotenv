@@ -16,13 +16,7 @@ from poetry_plugin_dotenv.dotenv import variables
         ("a", [variables.Literal(value="a")]),
         ("${a}", [variables.Variable(name="a")]),
         ("${a:-b}", [variables.Variable(name="a", default="b")]),
-        (
-            "${a}${b}",
-            [
-                variables.Variable(name="a"),
-                variables.Variable(name="b"),
-            ],
-        ),
+        ("${a}${b}", [variables.Variable(name="a"), variables.Variable(name="b")]),
         (
             "a${b}c${d}e",
             [
@@ -35,7 +29,10 @@ from poetry_plugin_dotenv.dotenv import variables
         ),
     ],
 )
-def test_parse(value: str, expected: list[variables.Literal | variables.Variable]) -> None:
+def test_parse(
+    value: str,
+    expected: list[variables.Literal | variables.Variable],
+) -> None:
     parsed_vars = list(variables.parse(value))
     assert parsed_vars == expected
 

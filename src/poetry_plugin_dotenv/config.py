@@ -38,7 +38,6 @@ class _Config:
     location: str = ""
 
 
-# TODO(pivoshenko): this configuration loader is a "quick patch" solution and needs refinement
 class Config(_Config):
     """Configuration loader for the plugin."""
 
