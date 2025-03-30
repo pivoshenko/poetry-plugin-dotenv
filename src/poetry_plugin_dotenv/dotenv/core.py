@@ -94,11 +94,7 @@ class DotEnv:
             yield io.StringIO("")  # pragma: nocover
 
 
-def resolve(
-    values: Iterable[tuple[str, str]],
-    *,
-    override: bool,
-) -> OrderedDict[str, str]:
+def resolve(values: Iterable[tuple[str, str]], *, override: bool) -> OrderedDict[str, str]:
     """Resolve dotenv variables."""
 
     new_values: OrderedDict[str, str] = OrderedDict()

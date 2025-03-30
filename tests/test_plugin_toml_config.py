@@ -23,15 +23,7 @@ if TYPE_CHECKING:
 @mock.patch(
     "tomlkit.load",
     return_value={
-        "tool": {
-            "poetry": {
-                "plugins": {
-                    "dotenv": {
-                        "location": ".env.dev",
-                    },
-                },
-            },
-        },
+        "tool": {"poetry": {"plugins": {"dotenv": {"location": ".env.dev"}}}},
     },
 )
 def test_dev_dotenv_file_toml_config(
@@ -59,17 +51,7 @@ def test_dev_dotenv_file_toml_config(
 @mock.patch.dict(os.environ, {}, clear=True)
 @mock.patch(
     "tomlkit.load",
-    return_value={
-        "tool": {
-            "poetry": {
-                "plugins": {
-                    "dotenv": {
-                        "ignore": True,
-                    },
-                },
-            },
-        },
-    },
+    return_value={"tool": {"poetry": {"plugins": {"dotenv": {"ignore": True}}}}},
 )
 def test_without_dotenv_file_toml_config(
     mocker: pytest_mock.MockFixture,

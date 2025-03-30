@@ -194,12 +194,7 @@ def parse_binding(reader: Reader) -> Binding:
         reader.read_regex(_multiline_whitespace)
 
         if not reader.has_next():
-            return Binding(
-                key=None,
-                value=None,
-                original=reader.get_marked(),
-                error=False,
-            )
+            return Binding(key=None, value=None, original=reader.get_marked(), error=False)
 
         reader.read_regex(_export)
         key = parse_key(reader)
@@ -215,21 +210,11 @@ def parse_binding(reader: Reader) -> Binding:
         reader.read_regex(_comment)
         reader.read_regex(_end_of_line)
 
-        return Binding(
-            key=key,
-            value=value,
-            original=reader.get_marked(),
-            error=False,
-        )
+        return Binding(key=key, value=value, original=reader.get_marked(), error=False)
 
     except PoetryPluginDotenvPatternError:
         reader.read_regex(_rest_of_line)
-        return Binding(
-            key=None,
-            value=None,
-            original=reader.get_marked(),
-            error=True,
-        )
+        return Binding(key=None, value=None, original=reader.get_marked(), error=True)
 
 
 def parse_stream(stream: IO[str]) -> Iterator[Binding]:
