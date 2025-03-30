@@ -527,7 +527,10 @@ from poetry_plugin_dotenv.dotenv.parsers import parse_stream
                 Binding(
                     key="uglyKey[%$",
                     value="S3cr3t_P4ssw#rD",
-                    original=Original(string='uglyKey[%$="S3cr3t_P4ssw#rD" #\n', line=1),
+                    original=Original(
+                        string='uglyKey[%$="S3cr3t_P4ssw#rD" #\n',
+                        line=1,
+                    ),
                     error=False,
                 ),
                 Binding(
