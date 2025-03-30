@@ -65,7 +65,6 @@ ipython = "^8.12.3"
 poethepoet = "^0.33.1"
 
 [tool.poetry.group.formatters.dependencies]
-isort = "^6.0.1"
 pyupgrade = "^3.19.1"
 ruff = "^0.11.2"
 
@@ -79,7 +78,6 @@ ruff = "^0.11.2"
 [tool.poetry.group.lsp.dependencies]
 pylsp-mypy = "^0.7.0"
 pylsp-rope = "^0.1.17"
-python-lsp-isort = "^0.2.0"
 python-lsp-server = { extras = ["all"], version = "^1.12.2" }
 ruff-lsp = "^0.0.62"
 
@@ -114,16 +112,6 @@ omit = ["*/__init__.py"]
 [tool.deptry.per_rule_ignores]
 DEP003 = ["cleo", "poetry_plugin_dotenv", "tomlkit"]
 
-[tool.isort]
-color_output = true
-force_alphabetical_sort_within_sections = true
-force_single_line = true
-length_sort_straight = true
-line_length = 100
-lines_after_imports = 2
-lines_between_types = 1
-profile = "black"
-
 [tool.mypy]
 namespace_packages = true
 python_version = "3.13"
@@ -149,25 +137,21 @@ addopts = [
 testpaths = ["tests"]
 
 [tool.ruff]
+fix = true
 line-length = 100
 target-version = "py313"
+unsafe-fixes = true
 
 [tool.ruff.lint]
-ignore = [
-  "ANN002",
-  "ANN003",
-  "ARG002",
-  "D202",
-  "D203",
-  "D213",
-  "FIX002",
-  "I001",
-  "PTH",
-  "TD003",
-]
+ignore = ["ANN002", "ANN003", "ARG002", "D202", "D203", "D213", "PTH"]
 select = ["ALL"]
 
 [tool.ruff.lint.isort]
+force-single-line = true
+from-first = false
+length-sort-straight = true
+lines-after-imports = 2
+lines-between-types = 1
 required-imports = ["from __future__ import annotations"]
 
 [tool.ruff.lint.per-file-ignores]
@@ -175,6 +159,10 @@ required-imports = ["from __future__ import annotations"]
 "src/poetry_plugin_dotenv/__init__.py" = ["E501"]
 "src/poetry_plugin_dotenv/dotenv/core.py" = ["PTH"]
 "tests/*.*" = ["D103", "INP001", "S101"]
+
+[tool.ruff.format]
+docstring-code-format = true
+quote-style = "double"
 
 [tool.semantic_release]
 changelog_file = "CHANGELOG.md"
@@ -204,7 +192,6 @@ help = "Run formatters"
 sequence = [
   { shell = "find src -type f -name '*.py' | xargs pyupgrade --py313-plus", help = "Run annotations formatter" },
   { shell = "find tests -type f -name '*.py' | xargs pyupgrade --py313-plus", help = "Run annotations formatter" },
-  { shell = "isort .", help = "Run imports formatter" },
   { shell = "ruff format .", help = "Run code formatter" },
 ]
 

@@ -1200,8 +1200,8 @@ files = [
 ]
 
 [package.dependencies]
-decorator = {version = "*", markers = "python_version > \"3.6\""}
-ipython = {version = ">=7.31.1", markers = "python_version > \"3.6\""}
+decorator = {version = "*", markers = "python_version > \"3.6\" and python_version < \"3.11\""}
+ipython = {version = ">=7.31.1", markers = "python_version > \"3.6\" and python_version < \"3.11\""}
 tomli = {version = "*", markers = "python_version > \"3.6\" and python_version < \"3.11\""}
 
 [[package]]
@@ -1288,7 +1288,7 @@ version = "6.0.1"
 description = "A Python utility / library to sort Python imports."
 optional = false
 python-versions = ">=3.9.0"
-groups = ["formatters", "lsp"]
+groups = ["lsp"]
 files = [
     {file = "isort-6.0.1-py3-none-any.whl", hash = "sha256:2dc5d7f65c9678d94c88dfc29161a320eec67328bc97aad576874cb4be1e9615"},
     {file = "isort-6.0.1.tar.gz", hash = "sha256:1cb5df28dfbc742e490c5e41bad6da41b805b0a8be7bc93cd0fb2a8a890ac450"},
@@ -2421,25 +2421,6 @@ requests-toolbelt = ">=1.0.0"
 autocompletion = ["argcomplete (>=1.10.0,<3)"]
 graphql = ["gql[httpx] (>=3.5.0,<4)"]
 yaml = ["PyYaml (>=6.0.1)"]
-
-[[package]]
-name = "python-lsp-isort"
-version = "0.2.0"
-description = "isort plugin for the Python LSP Server"
-optional = false
-python-versions = ">=3.7"
-groups = ["lsp"]
-files = [
-    {file = "python_lsp_isort-0.2.0-py3-none-any.whl", hash = "sha256:a11964af4626bb7b4dc077483a3382f352b63e3bf8ac73f2f425ae7fd9398a97"},
-    {file = "python_lsp_isort-0.2.0.tar.gz", hash = "sha256:79fe15ae71d33ab2a4ee8b7fb4727b434dfb26c7fc264527564056cdc48aa380"},
-]
-
-[package.dependencies]
-isort = ">=5.0"
-python-lsp-server = "*"
-
-[package.extras]
-dev = ["pytest"]
 
 [[package]]
 name = "python-lsp-jsonrpc"
@@ -3695,4 +3676,4 @@ cffi = ["cffi (>=1.11)"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.9,<4.0"
-content-hash = "6d769686ad0a00baa9c7bb63b19d6231a83934d438da733bbf806283d36610f7"
+content-hash = "e5c9ad964b40347349f4cd531cb7bf2324ed208b2d760a13ba18745619c8b338"
