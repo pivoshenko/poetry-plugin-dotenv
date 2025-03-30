@@ -6,20 +6,20 @@ license = "MIT"
 authors = ["Volodymyr Pivoshenko <volodymyr.pivoshenko@gmail.com>"]
 maintainers = ["Volodymyr Pivoshenko <volodymyr.pivoshenko@gmail.com>"]
 keywords = [
-  "python",
-  "pypi",
-  "poetry",
-  "plugin",
-  "plugins",
-  "poetry-plugin",
-  "poetry-plugins",
-  "env",
-  "dotenv",
   "config",
   "configuration",
   "configuration-management",
   "cross-platform",
+  "dotenv",
+  "env",
   "hacktoberfest",
+  "plugin",
+  "plugins",
+  "poetry",
+  "poetry-plugin",
+  "poetry-plugins",
+  "pypi",
+  "python",
 ]
 homepage = "https://github.com/pivoshenko/poetry-plugin-dotenv"
 documentation = "https://github.com/pivoshenko/poetry-plugin-dotenv"
@@ -97,18 +97,22 @@ xdoctest = "^1.2.0"
 [tool.poetry.plugins."poetry.application.plugin"]
 poetry-plugin-dotenv = "poetry_plugin_dotenv.plugin:DotenvPlugin"
 
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+
 [tool.codespell]
 ignore-words-list = ["redunant", "resovle", "socio-economic"]
 skip = ["poetry.lock"]
 
 [tool.commitizen]
-allowed_prefixes = ["build", "tests", "Merge", "Initial", "0", "1", "2", "3"]
+allowed_prefixes = ["0", "1", "2", "3", "Initial", "Merge", "build", "tests"]
 
 [tool.coverage.run]
 omit = ["*/__init__.py"]
 
 [tool.deptry.per_rule_ignores]
-DEP003 = ["cleo", "tomlkit", "poetry_plugin_dotenv"]
+DEP003 = ["cleo", "poetry_plugin_dotenv", "tomlkit"]
 
 [tool.isort]
 color_output = true
@@ -132,15 +136,15 @@ reportPossiblyUnboundVariable = false
 
 [tool.pytest.ini_options]
 addopts = [
-  "-l",
-  "-vv",
-  "-rx",
-  "--xdoc",
+  "--basetemp=tests/fixtures",
   "--color=yes",
-  "--cov=src",
   "--cov-report=term-missing",
   "--cov-report=xml",
-  "--basetemp=tests/fixtures",
+  "--cov=src",
+  "-l",
+  "-rx",
+  "-vv",
+  "--xdoc",
 ]
 testpaths = ["tests"]
 
@@ -150,15 +154,15 @@ target-version = "py313"
 
 [tool.ruff.lint]
 ignore = [
-  "PTH",
   "ANN002",
   "ANN003",
   "ARG002",
   "D202",
   "D203",
   "D213",
-  "I001",
   "FIX002",
+  "I001",
+  "PTH",
   "TD003",
 ]
 select = ["ALL"]
@@ -217,7 +221,3 @@ sequence = [
 [tool.poe.tasks.tests]
 help = "Run tests"
 shell = "pytest ."
-
-[build-system]
-build-backend = "poetry.core.masonry.api"
-requires = ["poetry-core>=1.0.0"]
