@@ -62,7 +62,7 @@ python-semantic-release = "9.21.0"
 [tool.poetry.group.dev.dependencies]
 ipdb = "^0.13.13"
 ipython = "^8.12.3"
-poethepoet = "^0.33.1"
+poethepoet = ">=0.33.1,<0.35.0"
 
 [tool.poetry.group.formatters.dependencies]
 pyupgrade = "^3.19.1"
