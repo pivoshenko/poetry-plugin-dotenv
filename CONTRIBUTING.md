@@ -12,34 +12,34 @@
 
 First, thank you for taking the time to contribute!
 
-The following guidelines are for contributing to `poetry-plugin-dotenv`. These are mostly guidelines, not strict rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
+The following guidelines are for contributing to `poetry-plugin-dotenv`. These are mostly guidelines, not strict rules. Use your best judgement, and feel free to propose changes to this document in a pull request.
 
 ## Reporting Bugs
 
-This section guides you through submitting a bug report for `poetry-plugin-dotenv`. Following these guidelines will help maintainers and the community understand your report, reproduce the behavior, and find related reports.
+This section guides you through submitting a bug report for `poetry-plugin-dotenv`. Following these guidelines will help maintainers and the community understand your report, reproduce the behaviour, and find related reports.
 
 Before submitting bug reports, please check if your issue already exists in the issue tracker. When creating a bug report, please include as many details as possible. Filling out the required template will help maintainers resolve the issue faster.
 
 > [!NOTE]
-> If you find a **Closed** issue that seems like the one you're experiencing, open a new issue and include a link to the original issue in the body.
+> If you find a **Closed** issue that seems like the one you're experiencing, open a new issue and include a link to the original issue in the body of your report.
 
 ### How Do I Submit a Bug Report?
 
-Bugs concerning `poetry-plugin-dotenv` should be submitted to the main issue tracker, using the appropriate issue template.
+Bugs concerning `poetry-plugin-dotenv` should be submitted to the main issue tracker using the appropriate issue template.
 
 Please follow these steps to explain the problem clearly and make it easier for others to search for and understand:
 
 - Use a clear and descriptive title to identify the issue
 - Describe the exact steps to reproduce the problem in as much detail as possible
-- Explain the observed behavior after following the steps, and how it indicates a bug
-- Describe the expected behavior and why you think the current behavior is incorrect
+- Explain the observed behaviour after following the steps, and how it indicates a bug
+- Describe the expected behaviour and why you think the current behaviour is incorrect
 - If the problem involves an unexpected error, run the problematic command in debug mode with the `-vvv` flag
 
 Provide detailed steps to reproduce your issue:
 
-- Provide your `pyproject.toml` file in a [Gist](https://gist.github.com) or an example repository, ensuring private information (like private package repositories or names) is removed
+- Include your `pyproject.toml` file in a [Gist](https://gist.github.com) or an example repository, ensuring private information (like private package repositories or names) is removed
 - Provide specific examples, such as an example repository or a sequence of steps in a container, to demonstrate the problem
-- If the issue is not consistently reproducible, explain how often it occurs and under which conditions
+- If the issue is not consistently reproducible, explain how often it occurs and under which conditions it tends to happen
 
 Additional context can help:
 
@@ -67,7 +67,7 @@ Enhancement suggestions should be submitted to the main issue tracker, using the
 
 - Use a clear and descriptive title for the suggestion
 - Provide a detailed description of the proposed enhancement, with specific steps or examples when possible
-- Describe the current behavior and explain the behavior you would like to see, and why
+- Describe the current behaviour and explain the behaviour you would like to see, and why
 
 ## Code Contributions
 
@@ -100,7 +100,7 @@ We follow the [conventional commit message syntax](https://www.conventionalcommi
 
 Every feature branch that is squashed onto the `main` branch must follow these rules. The benefits include:
 
-- A standardized way of writing commit messages for all contributors
+- A standardised way of writing commit messages for all contributors
 - Quick identification of what a commit does and which parts of the project it affects
 - Automatic changelog generation based on these keywords
 
