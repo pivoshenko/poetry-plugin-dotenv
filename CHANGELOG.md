@@ -1,6 +1,97 @@
 # CHANGELOG
 
 
+## v2.9.1 (2025-05-05)
+
+### Build System
+
+- Update dependencies
+  ([`021abfa`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/021abfad99aace90d5a16c44041d90d6ac6aba2d))
+
+- **deps-dev**: Bump commitizen from 4.4.1 to 4.5.0
+  ([`b76ce9b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b76ce9b71548149a3bfb6b90e1e87989a139498c))
+
+Bumps [commitizen](https://github.com/commitizen-tools/commitizen) from 4.4.1 to 4.5.0. - [Release
+  notes](https://github.com/commitizen-tools/commitizen/releases) -
+  [Changelog](https://github.com/commitizen-tools/commitizen/blob/master/CHANGELOG.md) -
+  [Commits](https://github.com/commitizen-tools/commitizen/compare/v4.4.1...v4.5.0)
+
+--- updated-dependencies: - dependency-name: commitizen dependency-version: 4.5.0
+
+dependency-type: direct:development
+
+update-type: version-update:semver-minor ...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+- **deps-dev**: Bump coverage from 7.7.1 to 7.8.0
+  ([`f1d236f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/f1d236fcc6537b29955da4df6726eb77ff2c6472))
+
+Bumps [coverage](https://github.com/nedbat/coveragepy) from 7.7.1 to 7.8.0. - [Release
+  notes](https://github.com/nedbat/coveragepy/releases) -
+  [Changelog](https://github.com/nedbat/coveragepy/blob/master/CHANGES.rst) -
+  [Commits](https://github.com/nedbat/coveragepy/compare/7.7.1...7.8.0)
+
+--- updated-dependencies: - dependency-name: coverage dependency-type: direct:development
+
+update-type: version-update:semver-minor ...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+- **deps-dev**: Bump pytest-cov from 6.0.0 to 6.1.1
+  ([`f7b723a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/f7b723afdd1f612abca37508164349052a986593))
+
+Bumps [pytest-cov](https://github.com/pytest-dev/pytest-cov) from 6.0.0 to 6.1.1. -
+  [Changelog](https://github.com/pytest-dev/pytest-cov/blob/master/CHANGELOG.rst) -
+  [Commits](https://github.com/pytest-dev/pytest-cov/compare/v6.0.0...v6.1.1)
+
+--- updated-dependencies: - dependency-name: pytest-cov dependency-version: 6.1.1
+
+dependency-type: direct:development
+
+update-type: version-update:semver-minor ...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+- **deps-dev**: Bump ruff from 0.11.2 to 0.11.4
+  ([`be0002f`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/be0002fc390cfd637e1a15d04c539c19b7b66c5a))
+
+Bumps [ruff](https://github.com/astral-sh/ruff) from 0.11.2 to 0.11.4. - [Release
+  notes](https://github.com/astral-sh/ruff/releases) -
+  [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md) -
+  [Commits](https://github.com/astral-sh/ruff/compare/0.11.2...0.11.4)
+
+--- updated-dependencies: - dependency-name: ruff dependency-version: 0.11.4
+
+dependency-type: direct:development
+
+update-type: version-update:semver-patch ...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+- **poetry**: Update dev dependencies
+  ([`3cb4f14`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3cb4f14938c68d44c659b87efd67e2aff6ce4af0))
+
+- **poetry**: Update dev dependencies
+  ([`fa658c3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/fa658c3e0d50b938b07a5652ae8b257a27d24162))
+
+- **poetry**: Update dev dependencies
+  ([`93e4bf3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/93e4bf3940af4d5f09ba17911e41fea47ea16270))
+
+### Continuous Integration
+
+- Update labels
+  ([`180c99c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/180c99c252b61230cd1771fb0a016600b52aac8e))
+
+### Documentation
+
+- Update contribution guidelines
+  ([`573f1c9`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/573f1c9a0c948068257b44124f3303f2eee2b981))
+
+- Update templates
+  ([`7cc8af6`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/7cc8af65738f322eb1131ce2550cbea3c83743d0))
+
+
 ## v2.9.0 (2025-03-30)
 
 ### Build System
