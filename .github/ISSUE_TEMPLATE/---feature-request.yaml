@@ -6,52 +6,52 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for taking the time to file a complete feature request.
+        Thank you for taking the time to submit a complete feature request.
         Before submitting your issue, please review [the contribution guidelines](https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/CONTRIBUTING.md).
-        If the issue is trivial, consider submitting a pull request instead.
-        Feel free to use Markdown syntax in text areas.
+        For trivial improvements, please consider submitting a pull request instead.
+        Feel free to use Markdown syntax in all text areas.
 
   - type: dropdown
     attributes:
-      label: Feature Kind
+      label: Feature Type
       description: |
-        What best describes this feature?
+        What best describes this feature request?
       options:
         - Brand new capability
-        - Change in the current behavior
+        - Change to current behaviour
         - Other
     validations:
       required: true
 
   - type: textarea
     attributes:
-      label: Is your feature request related to a problem? Please describe it.
+      label: Problem Statement
       description: |
-        A clear and concise description of what the problem is.
-        If applicable, add screenshots to help explain your problem.
+        Is your feature request related to a problem? Please provide a clear and concise description.
+        Include screenshots if they help explain the issue.
     validations:
       required: false
 
   - type: textarea
     attributes:
-      label: Describe the Feature
+      label: Proposed Feature
       description: |
-        Please describe the proposed feature, with as much pertinent information as possible.
+        Please describe the desired feature with as much pertinent information as possible.
     validations:
       required: true
 
   - type: textarea
     attributes:
-      label: Impact
+      label: Impact and Motivation
       description: |
-        Please describe the motivation for this feature. Explain, as best you can, how it improves or impacts users and why it is important.
+        Please explain the motivation for this feature. How would it improve or impact users, and why is it important?
     validations:
       required: true
 
   - type: textarea
     attributes:
-      label: Workarounds
+      label: Current Workarounds
       description: |
-        Is there a mitigation, workaround, or addon that allows users to achieve the same functionality today?
+        Are there any existing workarounds or addons that allow users to achieve similar functionality today?
     validations:
       required: false
