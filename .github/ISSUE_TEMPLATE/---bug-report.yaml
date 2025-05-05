@@ -16,7 +16,7 @@ body:
       description: |
         Please describe what happened, with as much pertinent information as possible.
         If applicable, add screenshots to help explain your problem.
-        Also, ensure that the feature is not already implemented in the [latest](https://github.com/pivoshenko/poetry-plugin-release/releases/latest) release.
+        Also, ensure that the feature is not already implemented in the [latest](https://github.com/pivoshenko/poetry-plugin-dotenv/releases/latest) release.
     validations:
       required: true
 

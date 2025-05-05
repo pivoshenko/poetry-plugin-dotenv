@@ -8,34 +8,34 @@ body:
       value: |
         Thank you for taking the time to file a complete documentation issue.
         Before submitting your issue, please review [the contribution guidelines](https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/CONTRIBUTING.md).
-        Feel free to use Markdown syntax in text areas.
+        Feel free to use Markdown syntax in the text areas.
 
   - type: dropdown
     attributes:
-      label: Issue Kind
+      label: Issue Type
       description: |
-        What best describes the issue?
+        What best describes the documentation issue?
       options:
-        - Improving documentation
-        - Missing documentation
+        - Documentation needs improvement
+        - Documentation is missing
         - Error in existing documentation
-        - Unclear documentation
-        - Other concerns with documentation
+        - Documentation is unclear
+        - Other documentation concern
     validations:
       required: true
 
   - type: input
     attributes:
-      label: Existing Link
+      label: Existing Documentation Link
       description: |
         If the documentation in question exists, please provide a link to it.
     validations:
-      required: true
+      required: false
 
   - type: textarea
     attributes:
       label: Description
       description: |
-        Please describe the issue, with as much pertinent information as possible.
+        Please describe the issue with as much relevant detail as possible.
     validations:
       required: true
