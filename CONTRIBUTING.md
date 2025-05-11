@@ -133,4 +133,3 @@ Additionally, all commit messages must be written in lowercase.
 > Make sure your branch is rebased against the latest `main` branch. Maintainers may ask you to update your branch before merging (especially if there have been CI changes on `main`), and to resolve any conflicts.
 
 All pull requests will be accepted into the `main` branch unless otherwise instructed. Maintainers will decide if backports to other branches are needed and will handle them accordingly.
-e
