@@ -66,14 +66,14 @@ poethepoet = "^0.34.0"
 
 [tool.poetry.group.formatters.dependencies]
 pyupgrade = "^3.19.1"
-ruff = "^0.11.9"
+ruff = "^0.11.10"
 
 [tool.poetry.group.linters.dependencies]
 codespell = "^2.4.1"
-commitizen = "^4.7.0"
+commitizen = "^4.7.1"
 deptry = "^0.23.0"
 mypy = "^1.15.0"
-ruff = "^0.11.9"
+ruff = "^0.11.10"
 
 [tool.poetry.group.lsp.dependencies]
 pylsp-mypy = "^0.7.0"
