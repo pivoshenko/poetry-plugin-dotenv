@@ -29,7 +29,7 @@ jobs:
           - name: macOS aarch64
             image: macos-14
         python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
-        poetry-version: ["1.7.0", "1.8.0", "2.0.0"]
+        poetry-version: ["1.7.0", "1.8.0", "2.0.0", "2.1.0"]
       fail-fast: false
     steps:
       - name: Checkout repository
