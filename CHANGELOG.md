@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v2.11.0 (2025-06-09)
+
+### Refactoring
+
+- Run linters
+  ([`a1c3f5b`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a1c3f5bc5d92ac84a3c98e7451e7e24867f7cf17))
+
+
 ## v2.10.0 (2025-06-09)
 
 ### Bug Fixes
