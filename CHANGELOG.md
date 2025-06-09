@@ -1,6 +1,54 @@
 # CHANGELOG
 
 
+## v2.10.0 (2025-06-09)
+
+### Bug Fixes
+
+- Resolve issue with invalid poetry version
+  ([`8493675`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/84936752e697387916d44c33a882890c0c0b2535))
+
+### Build System
+
+- Update dependencies
+  ([`15e2609`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/15e2609f87957fcacbb3ed6ac36d5183c187f619))
+
+- Update dependencies
+  ([`a535d28`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a535d284905e1f1facad75355abd12eb9fb9705a))
+
+- Update dev dependencies
+  ([`8c13523`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/8c1352352ae824dc48e701132d239f7258b4f991))
+
+- **deps-dev**: Bump commitizen from 4.7.1 to 4.7.2
+  ([`fcb51af`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/fcb51af294dabcc6124edac0daa77a0aa7714797))
+
+Bumps [commitizen](https://github.com/commitizen-tools/commitizen) from 4.7.1 to 4.7.2. - [Release
+  notes](https://github.com/commitizen-tools/commitizen/releases) -
+  [Changelog](https://github.com/commitizen-tools/commitizen/blob/master/CHANGELOG.md) -
+  [Commits](https://github.com/commitizen-tools/commitizen/compare/v4.7.1...v4.7.2)
+
+--- updated-dependencies: - dependency-name: commitizen dependency-version: 4.7.2
+
+dependency-type: direct:development
+
+update-type: version-update:semver-patch ...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+### Chores
+
+- Remove extraneous character
+  ([`4f965c0`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4f965c0beba88ad0028b9b738d80ee5e9b48d10c))
+
+### Continuous Integration
+
+- Add funding links
+  ([`107b623`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/107b6238e5ce77593d25d2e1d1ca9201fe241c67))
+
+- Update test matrix
+  ([`5335f07`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5335f0716a6d8a066239b5b95e58e4a7c9e3d7c0))
+
+
 ## v2.9.1 (2025-05-05)
 
 ### Build System
