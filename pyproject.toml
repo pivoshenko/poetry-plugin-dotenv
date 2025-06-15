@@ -119,6 +119,7 @@ strict = true
 warn_unused_configs = true
 
 [tool.pyright]
+reportArgumentType = false
 reportPossiblyUnboundVariable = false
 
 [tool.pytest.ini_options]

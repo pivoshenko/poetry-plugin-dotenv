@@ -41,9 +41,7 @@ class _Config:
 class Config(_Config):
     """Configuration loader for the plugin."""
 
-    def __init__(self, working_dir: str) -> None:
-        """Initialize and load configuration from the defined sources."""
-
+    def __init__(self, working_dir: str) -> None:  # noqa: D107
         super().__init__()
 
         source_config = {}
@@ -79,8 +77,6 @@ class Config(_Config):
 
 
 def _load_config_from_toml(filepath: str, section: str) -> dict[str, str | bool | None]:
-    """Load configuration from a TOML file."""
-
     if not os.path.exists(filepath):
         return {}
 
@@ -94,8 +90,6 @@ def _load_config_from_toml(filepath: str, section: str) -> dict[str, str | bool 
 
 
 def _load_config_from_os(section: str) -> dict[str, str | bool | None]:
-    """Load configuration from OS environment variables."""
-
     return {
         key[len(section) :].lower(): value
         for key, value in os.environ.items()

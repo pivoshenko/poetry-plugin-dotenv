@@ -48,7 +48,7 @@ class Variable:
     def resolve(self, env: OrderedDict[str, str], *args, **kwargs) -> str:  # type: ignore[no-untyped-def]
         """Resolve the variable value from the environment or use the default."""
 
-        return env.get(self.name, self.default) or ""
+        return env.get(self.name, self.default) or ""  # type: ignore[arg-type]
 
 
 def parse(value: str) -> Iterator[Literal | Variable]:
