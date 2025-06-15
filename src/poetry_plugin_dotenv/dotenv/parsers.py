@@ -16,9 +16,7 @@ if TYPE_CHECKING:  # pragma: no cover
     from collections.abc import Iterator
 
 
-def make_regex(string: str, extra_flags: int = 0) -> re.Pattern[str]:
-    """Construct a regex expression."""
-
+def make_regex(string: str, extra_flags: int = 0) -> re.Pattern[str]:  # noqa: D103
     return re.compile(string, re.UNICODE | extra_flags)
 
 

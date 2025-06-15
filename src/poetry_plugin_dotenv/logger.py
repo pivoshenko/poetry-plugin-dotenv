@@ -22,9 +22,7 @@ class Style(enum.Enum):
     WARNING = "<warning>{0!s}</warning>"
     ERROR = "<error>{0!s}</error>"
 
-    def __call__(self, text: str) -> str:
-        """Apply the style to the text."""
-
+    def __call__(self, text: str) -> str:  # noqa: D102
         return self.value.format(text)
 
 
@@ -38,29 +36,19 @@ class Logger:
 
     """
 
-    def __init__(self, event: ConsoleCommandEvent) -> None:
-        """Initialize the logger."""
-
+    def __init__(self, event: ConsoleCommandEvent) -> None:  # noqa: D107
         self.write_line = partial(event.io.write_line, verbosity=Verbosity.DEBUG)
 
-    def info(self, msg: str) -> None:
-        """Log an informational message."""
-
+    def info(self, msg: str) -> None:  # noqa: D102
         self._log(Style.INFO, msg)
 
-    def debug(self, msg: str) -> None:
-        """Log a debug message."""
-
+    def debug(self, msg: str) -> None:  # noqa: D102
         self._log(Style.DEBUG, msg)  # pragma: nocover
 
-    def warning(self, msg: str) -> None:
-        """Log a warning message."""
-
+    def warning(self, msg: str) -> None:  # noqa: D102
         self._log(Style.WARNING, msg)
 
-    def error(self, msg: str) -> None:
-        """Log an error message."""
-
+    def error(self, msg: str) -> None:  # noqa: D102
         self._log(Style.ERROR, msg)
 
     def _log(self, style: Style, msg: str) -> None:
