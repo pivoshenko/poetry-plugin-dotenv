@@ -23,13 +23,14 @@ if TYPE_CHECKING:  # pragma: no cover
 class DotenvPlugin(ApplicationPlugin):
     """Plugin that automatically loads environment variables from a dotenv file.
 
+    Notes
+    -----
     This plugin automatically loads environment variables from a dotenv file into the environment
-    before the `poetry` commands are executed.
+    before the ``poetry`` commands are executed.
+
     """
 
-    def activate(self, application: Application) -> None:  # pragma: no cover
-        """Activate the plugin."""
-
+    def activate(self, application: Application) -> None:  # pragma: no cover  # noqa: D102
         application.event_dispatcher.add_listener(COMMAND, listener=self.load)  # type: ignore[union-attr, arg-type]
 
     def load(self, event: ConsoleCommandEvent, *args, **kwargs) -> None:  # type: ignore[no-untyped-def]
