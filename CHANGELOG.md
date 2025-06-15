@@ -1,6 +1,24 @@
 # CHANGELOG
 
 
+## v2.12.0 (2025-06-15)
+
+### Build System
+
+- Update dev dependencies
+  ([`4a5cbeb`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4a5cbebedc6a5e6fe0f0c01e1bf220ea987d6554))
+
+### Chores
+
+- **mypy**: Update config
+  ([`111e35e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/111e35ed3750e90e49dad8fe514a8d7b5e6e7107))
+
+### Refactoring
+
+- Update docstrings
+  ([`0425341`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/0425341d4a493f994bc0813d9293a52afff2a6d6))
+
+
 ## v2.11.0 (2025-06-09)
 
 ### Refactoring
