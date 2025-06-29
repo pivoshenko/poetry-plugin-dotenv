@@ -2,8 +2,7 @@
 
 from __future__ import annotations
 
-import os
-
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 from cleo.events.console_events import COMMAND
@@ -36,7 +35,8 @@ class DotenvPlugin(ApplicationPlugin):
     def load(self, event: ConsoleCommandEvent, *args, **kwargs) -> None:  # type: ignore[no-untyped-def]
         """Load a dotenv file according to the provided configuration."""
 
-        working_dir = event.io.input.option("directory") or os.path.curdir
+        directory_option = event.io.input.option("directory")
+        working_dir = Path(directory_option) if directory_option else Path.cwd()
 
         logger = Logger(event)
         config = Config(working_dir)
@@ -50,11 +50,11 @@ class DotenvPlugin(ApplicationPlugin):
 
         filepath = self._determine_filepath(config, working_dir)
 
-        if filepath == "":
+        if not filepath:
             logger.warning("Not loading environment variables. No valid filepath")
             return
 
-        if os.path.isfile(filepath):
+        if filepath.is_file():
             msg = f"Loading environment variables: <fg=green>{filepath}</>"
             logger.info(msg)
             dotenv.core.load(filepath)
@@ -63,14 +63,14 @@ class DotenvPlugin(ApplicationPlugin):
             msg = f"Could not load environment variables. The file does not exist: {filepath}"
             logger.error(msg)
 
-    def _determine_filepath(self, config: Config, working_dir: str) -> str:
+    def _determine_filepath(self, config: Config, working_dir: Path) -> Path | None:
         """Determine the appropriate filepath for the dotenv file."""
 
-        if config.location:
-            return (
-                os.path.abspath(config.location)
-                if os.path.isabs(config.location)
-                else os.path.join(working_dir, config.location)
-            )
+        if config.location and config.location != Path():
+            location_path = config.location
+            if location_path.is_absolute():
+                return location_path.resolve()
+
+            return working_dir / location_path
 
         return dotenv.core.find(usecwd=True)
