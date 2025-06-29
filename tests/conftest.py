@@ -2,8 +2,7 @@
 
 from __future__ import annotations
 
-import os
-
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 import pytest
@@ -12,7 +11,6 @@ import pytest
 if TYPE_CHECKING:
     from collections.abc import Callable
     from collections.abc import Iterator
-    from pathlib import Path
 
 
 @pytest.fixture
@@ -32,8 +30,9 @@ def remove_dotenv_file() -> Callable[[str], None]:
     """Remove a dotenv file."""
 
     def remove(filepath: str) -> None:
-        if os.path.exists(filepath):
-            os.unlink(filepath)
+        path = Path(filepath)
+        if path.exists():
+            path.unlink()
 
     return remove
 
