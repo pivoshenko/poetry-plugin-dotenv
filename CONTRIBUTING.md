@@ -51,7 +51,7 @@ Include details about your environment:
 
 - Which version of `poetry` and `poetry-plugin-dotenv` are you using?
 - Which version of Python is being used?
-- What’s the name and version of your operating system?
+- What's the name and version of your operating system?
 
 To help others understand and reproduce your issue, provide thorough reproduction steps. If possible, ensure others can reproduce the issue in a pristine container or VM and share the steps you performed in that environment.
 
@@ -77,14 +77,14 @@ First, fork the `poetry-plugin-dotenv` repository and clone it locally to make p
 
 If you're new to `git` and pull request-based development, GitHub offers a helpful [guide](https://docs.github.com/en/get-started/quickstart/contributing-to-projects).
 
-Next, install Poetry’s dependencies and run the test suite to ensure everything is working as expected:
+Next, install dependencies and run the test suite to ensure everything is working as expected:
 
 ```shell
 poetry install
 poetry tests
 ```
 
-When contributing to Poetry, automated tools will be run to ensure your code is mergeable. You must make sure your code passes type checks and is formatted properly:
+When contributing to `poetry-plugin-dotenv`, automated tools will be run to ensure your code is mergeable. You must make sure your code passes type checks and is formatted properly:
 
 ```shell
 poetry format
