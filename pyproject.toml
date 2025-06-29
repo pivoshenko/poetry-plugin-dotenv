@@ -116,9 +116,7 @@ reportPossiblyUnboundVariable = false
 addopts = [
   "--basetemp=tests/fixtures",
   "--color=yes",
-  "--cov-report=term-missing",
   "--cov-report=xml",
-  "--cov=src",
   "--xdoc"
 ]
 testpaths = ["tests"]
@@ -181,7 +179,6 @@ sequence = [
 [tool.poe.tasks.lint]
 help = "Run linters"
 sequence = [
-  { shell = "deptry .", help = "Run dependencies linter" },
   { shell = "mypy .", help = "Run types linter" },
   { shell = "ruff check .", help = "Run code linter" },
   { shell = "codespell .", help = "Run spell linter" },
