@@ -8,6 +8,7 @@ import sys
 import contextlib
 
 from collections import OrderedDict
+from pathlib import Path
 from typing import IO
 from typing import TYPE_CHECKING
 
@@ -25,7 +26,7 @@ class DotEnv:
 
     def __init__(
         self,
-        filepath: str | None = None,
+        filepath: str | Path | None = None,
         stream: IO[str] | None = None,
         *,
         interpolate: bool = True,
@@ -33,7 +34,7 @@ class DotEnv:
     ) -> None:
         """Initialize."""
 
-        self.filepath = filepath
+        self.filepath = Path(filepath) if isinstance(filepath, str) else filepath
         self.stream = stream
         self.override = override
         self.interpolate = interpolate
@@ -83,8 +84,8 @@ class DotEnv:
     def _get_stream(self) -> Iterator[IO[str]]:
         """Get a dotenv stream."""
 
-        if self.filepath and os.path.isfile(self.filepath):
-            with open(self.filepath, encoding=self.encoding) as stream:
+        if self.filepath and self.filepath.is_file():
+            with self.filepath.open(encoding=self.encoding) as stream:
                 yield stream
 
         elif self.stream:
@@ -122,18 +123,19 @@ def resolve(values: Iterable[tuple[str, str]], *, override: bool) -> OrderedDict
     return new_values
 
 
-def walk_to_root(path: str) -> Iterator[str]:
+def walk_to_root(path: str | Path) -> Iterator[Path]:
     """Yield directories starting from the given directory up to the root."""
 
-    if not os.path.exists(path):
+    path_obj = Path(path) if isinstance(path, str) else path
+    if not path_obj.exists():
         msg = "Starting path not found."
         raise OSError(msg)
 
-    current_dir = os.path.abspath(os.path.dirname(path) if os.path.isfile(path) else path)
+    current_dir = path_obj.parent.resolve() if path_obj.is_file() else path_obj.resolve()
 
     while True:
         yield current_dir
-        parent_dir = os.path.abspath(os.path.join(current_dir, os.pardir))
+        parent_dir = current_dir.parent
 
         if current_dir == parent_dir:
             break
@@ -141,26 +143,28 @@ def walk_to_root(path: str) -> Iterator[str]:
         current_dir = parent_dir
 
 
-def find(filename: str = ".env", *, usecwd: bool = False) -> str:
+def find(filename: str = ".env", *, usecwd: bool = False) -> Path | None:
     """Search in increasingly higher folders for the given file."""
 
-    path = (
-        os.getcwd()
-        if usecwd or getattr(sys, "frozen", False)
-        else os.path.dirname(os.path.abspath(sys._getframe(1).f_code.co_filename))  # noqa: SLF001
-    )
+    if usecwd or getattr(sys, "frozen", False):
+        path = Path.cwd()
+    else:
+        # Get the directory of the caller's file
+        caller_frame = sys._getframe(1)  # noqa: SLF001
+        caller_file = Path(caller_frame.f_code.co_filename).resolve()
+        path = caller_file.parent
 
     for dirname in walk_to_root(path):
-        check_path = os.path.join(dirname, filename)
+        check_path = dirname / filename
 
-        if os.path.isfile(check_path):
+        if check_path.is_file():
             return check_path
 
-    return ""
+    return None
 
 
 def load(
-    filepath: str | None = None,
+    filepath: str | Path | None = None,
     stream: IO[str] | None = None,
     *,
     interpolate: bool = True,
@@ -173,7 +177,7 @@ def load(
 
 
 def values(
-    filepath: str | None = None,
+    filepath: str | Path | None = None,
     stream: IO[str] | None = None,
     *,
     interpolate: bool = True,

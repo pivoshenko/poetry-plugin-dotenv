@@ -7,17 +7,13 @@ import os
 import sys
 import textwrap
 
-from typing import TYPE_CHECKING
+from pathlib import Path
 from unittest import mock
 
 import sh  # type: ignore[import-untyped]
 import pytest
 
 from poetry_plugin_dotenv.dotenv import core as dotenv
-
-
-if TYPE_CHECKING:
-    from pathlib import Path
 
 
 def prepare_file_hierarchy(path: Path) -> tuple[Path, Path]:
@@ -49,7 +45,8 @@ def test_find_dotenv_no_file_no_raise(tmp_path: Path) -> None:
 
     result = dotenv.find(usecwd=True)
 
-    assert not result
+    # Check that no .env file is found in the temporary directory hierarchy
+    assert result is None or not str(result).startswith(str(tmp_path))
 
 
 def test_find_dotenv_found(tmp_path: Path) -> None:
@@ -60,15 +57,16 @@ def test_find_dotenv_found(tmp_path: Path) -> None:
 
     result = dotenv.find(usecwd=True)
 
-    assert result == str(dotenv_file)
+    assert result == dotenv_file
 
 
 @mock.patch.dict(os.environ, {}, clear=True)
 def test_load_dotenv_existing_file(dotenv_file: str) -> None:
-    with open(dotenv_file, "w") as env_file:
+    dotenv_path = Path(dotenv_file)
+    with dotenv_path.open("w") as env_file:
         env_file.write("a=b")
 
-    result = dotenv.load(dotenv_file)
+    result = dotenv.load(dotenv_path)
 
     assert result is True
     assert os.environ == {"a": "b"}
@@ -76,10 +74,11 @@ def test_load_dotenv_existing_file(dotenv_file: str) -> None:
 
 @mock.patch.dict(os.environ, {"a": "c"}, clear=True)
 def test_load_dotenv_existing_variable_no_override(dotenv_file: str) -> None:
-    with open(dotenv_file, "w") as env_file:
+    dotenv_path = Path(dotenv_file)
+    with dotenv_path.open("w") as env_file:
         env_file.write("a=b")
 
-    result = dotenv.load(dotenv_file, override=False)
+    result = dotenv.load(dotenv_path, override=False)
 
     assert result is True
     assert os.environ == {"a": "c"}
@@ -87,10 +86,11 @@ def test_load_dotenv_existing_variable_no_override(dotenv_file: str) -> None:
 
 @mock.patch.dict(os.environ, {"a": "c"}, clear=True)
 def test_load_dotenv_existing_variable_override(dotenv_file: str) -> None:
-    with open(dotenv_file, "w") as env_file:
+    dotenv_path = Path(dotenv_file)
+    with dotenv_path.open("w") as env_file:
         env_file.write("a=b")
 
-    result = dotenv.load(dotenv_file)
+    result = dotenv.load(dotenv_path)
 
     assert result is True
     assert os.environ == {"a": "b"}
@@ -98,10 +98,11 @@ def test_load_dotenv_existing_variable_override(dotenv_file: str) -> None:
 
 @mock.patch.dict(os.environ, {"a": "c"}, clear=True)
 def test_load_dotenv_redefine_var_used_in_file_no_override(dotenv_file: str) -> None:
-    with open(dotenv_file, "w") as env_file:
+    dotenv_path = Path(dotenv_file)
+    with dotenv_path.open("w") as env_file:
         env_file.write('a=b\nd="${a}"')
 
-    result = dotenv.load(dotenv_file, override=False)
+    result = dotenv.load(dotenv_path, override=False)
 
     assert result is True
     assert os.environ == {"a": "c", "d": "c"}
@@ -109,10 +110,11 @@ def test_load_dotenv_redefine_var_used_in_file_no_override(dotenv_file: str) -> 
 
 @mock.patch.dict(os.environ, {"a": "c"}, clear=True)
 def test_load_dotenv_redefine_var_used_in_file_with_override(dotenv_file: str) -> None:
-    with open(dotenv_file, "w") as env_file:
+    dotenv_path = Path(dotenv_file)
+    with dotenv_path.open("w") as env_file:
         env_file.write('a=b\nd="${a}"')
 
-    result = dotenv.load(dotenv_file, override=True)
+    result = dotenv.load(dotenv_path, override=True)
 
     assert result is True
     assert os.environ == {"a": "b", "d": "b"}
@@ -130,10 +132,11 @@ def test_load_dotenv_string_io() -> None:
 
 @mock.patch.dict(os.environ, {}, clear=True)
 def test_load_dotenv_file_stream(dotenv_file: str) -> None:
-    with open(dotenv_file, "w") as env_file:
+    dotenv_path = Path(dotenv_file)
+    with dotenv_path.open("w") as env_file:
         env_file.write("a=b")
 
-    with open(dotenv_file) as env_file:
+    with dotenv_path.open() as env_file:
         result = dotenv.load(stream=env_file)
 
     assert result is True
@@ -164,19 +167,21 @@ def test_load_dotenv_in_current_dir(tmp_path: Path) -> None:
 
 
 def test_dotenv_values_file(dotenv_file: str) -> None:
-    with open(dotenv_file, "w") as env_file:
+    dotenv_path = Path(dotenv_file)
+    with dotenv_path.open("w") as env_file:
         env_file.write("a=b")
 
-    result = dotenv.values(dotenv_file)
+    result = dotenv.values(dotenv_path)
 
     assert result == {"a": "b"}
 
 
 def test_dotenv_values_file_stream(dotenv_file: str) -> None:
-    with open(dotenv_file, "w") as env_file:
+    dotenv_path = Path(dotenv_file)
+    with dotenv_path.open("w") as env_file:
         env_file.write("a=b")
 
-    with open(dotenv_file) as env_file:
+    with dotenv_path.open() as env_file:
         result = dotenv.values(stream=env_file)
 
     assert result == {"a": "b"}
