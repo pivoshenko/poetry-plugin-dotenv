@@ -113,12 +113,7 @@ reportArgumentType = false
 reportPossiblyUnboundVariable = false
 
 [tool.pytest.ini_options]
-addopts = [
-  "--basetemp=tests/fixtures",
-  "--color=yes",
-  "--cov-report=xml",
-  "--xdoc"
-]
+addopts = ["--basetemp=tests/fixtures", "--color=yes", "--cov-report=xml", "--xdoc"]
 testpaths = ["tests"]
 
 [tool.ruff]
@@ -128,7 +123,7 @@ target-version = "py313"
 unsafe-fixes = true
 
 [tool.ruff.lint]
-ignore = ["ANN002", "ANN003", "ARG002", "D202", "D203", "D213", "COM812", "PTH"]
+ignore = ["D202", "D203", "D213", "COM812"]
 select = ["ALL"]
 
 [tool.ruff.lint.isort]
@@ -142,7 +137,8 @@ required-imports = ["from __future__ import annotations"]
 [tool.ruff.lint.per-file-ignores]
 "docs/examples/main.py" = ["INP001", "T201"]
 "src/poetry_plugin_dotenv/__init__.py" = ["E501"]
-"src/poetry_plugin_dotenv/dotenv/core.py" = ["PTH"]
+"src/poetry_plugin_dotenv/plugin.py" = ["ARG002", "ANN002", "ANN003"]
+"src/poetry_plugin_dotenv/dotenv/variables.py" = ["ARG002", "ANN002", "ANN003"]
 "tests/*.*" = ["D103", "INP001", "S101"]
 
 [tool.ruff.format]
