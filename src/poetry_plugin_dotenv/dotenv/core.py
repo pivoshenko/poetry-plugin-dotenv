@@ -5,7 +5,9 @@ from __future__ import annotations
 import io
 import os
 import sys
+import shlex
 import contextlib
+import subprocess
 
 from collections import OrderedDict
 from pathlib import Path
@@ -33,7 +35,6 @@ class DotEnv:
         override: bool = True,
     ) -> None:
         """Initialize."""
-
         self.filepath = Path(filepath) if isinstance(filepath, str) else filepath
         self.stream = stream
         self.override = override
@@ -43,7 +44,6 @@ class DotEnv:
 
     def dict(self) -> OrderedDict[str, str]:
         """Get content of a dotenv file."""
-
         if self._dict:
             return self._dict
 
@@ -59,7 +59,6 @@ class DotEnv:
 
     def parse(self) -> Iterator[tuple[str, str]]:
         """Parse a dotenv file."""
-
         with self._get_stream() as stream:
             for mapping in parsers.parse_stream(stream):
                 if mapping.key is not None:
@@ -67,14 +66,30 @@ class DotEnv:
 
     def set_as_environment_variables(self) -> bool:
         """Load current dotenv as system environment variables."""
-
         if self.dict():
             for key, value in self.dict().items():
                 if key in os.environ and not self.override:
                     continue
-
                 if value:
                     os.environ[key] = value
+
+            return True
+
+        return False  # pragma: nocover
+
+    def set_in_shell(self) -> bool:
+        """Set current dotenv in the shell."""
+        if self.dict():
+            for key, value in self.dict().items():
+                if key in os.environ and not self.override:
+                    continue
+                if value:
+                    escaped_value = shlex.quote(value)
+                    command = f"export {key}={escaped_value}"
+                    try:
+                        subprocess.run(command, shell=True, check=True)  # noqa: S602
+                    except subprocess.CalledProcessError:
+                        return False
 
             return True
 
@@ -83,7 +98,6 @@ class DotEnv:
     @contextlib.contextmanager
     def _get_stream(self) -> Iterator[IO[str]]:
         """Get a dotenv stream."""
-
         if self.filepath and self.filepath.is_file():
             with self.filepath.open(encoding=self.encoding) as stream:
                 yield stream
@@ -97,7 +111,6 @@ class DotEnv:
 
 def resolve(values: Iterable[tuple[str, str]], *, override: bool) -> OrderedDict[str, str]:
     """Resolve dotenv variables."""
-
     new_values: OrderedDict[str, str] = OrderedDict()
 
     for name, value in values:
@@ -125,7 +138,6 @@ def resolve(values: Iterable[tuple[str, str]], *, override: bool) -> OrderedDict
 
 def walk_to_root(path: str | Path) -> Iterator[Path]:
     """Yield directories starting from the given directory up to the root."""
-
     path_obj = Path(path) if isinstance(path, str) else path
     if not path_obj.exists():
         msg = "Starting path not found."
@@ -145,7 +157,6 @@ def walk_to_root(path: str | Path) -> Iterator[Path]:
 
 def find(filename: str = ".env", *, usecwd: bool = False) -> Path | None:
     """Search in increasingly higher folders for the given file."""
-
     if usecwd or getattr(sys, "frozen", False):
         path = Path.cwd()
     else:
@@ -171,7 +182,6 @@ def load(
     override: bool = True,
 ) -> bool:
     """Parse a dotenv file and then load all the variables found as environment variables."""
-
     dotenv = DotEnv(filepath=filepath, interpolate=interpolate, override=override, stream=stream)
     return dotenv.set_as_environment_variables()
 
@@ -183,5 +193,4 @@ def values(
     interpolate: bool = True,
 ) -> OrderedDict[str, str]:
     """Parse a dotenv file and return its content as a dictionary."""
-
     return DotEnv(filepath=filepath, stream=stream, interpolate=interpolate).dict()

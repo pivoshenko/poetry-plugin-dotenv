@@ -1,4 +1,4 @@
-"""Module that contains custom exceptions that are used across plugin."""
+"""Module that contains custom exceptions."""
 
 from __future__ import annotations
 

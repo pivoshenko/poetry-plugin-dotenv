@@ -82,10 +82,15 @@
 
 `poetry-plugin-dotenv` - is the plugin that automatically loads environment variables from a dotenv file into the environment before `poetry` commands are run.
 
+`poetry-plugin-dotenv` introduces **new commands** to extend the functionality of `poetry` such as:
+
+- `poetry activate` - loads environment variables from a dotenv file and activates the virtual environment
+
 ### Features
 
 - Fully type-safe
 - No external dependencies required
+- Brings back beloved `activate` command with extended functionality
 - Supports templates and variable interpolation using POSIX variable expansions
 - Supports `--directory`, which allows setting the working directory for the `poetry` command
 - Supports multiple configuration sources
@@ -171,7 +176,28 @@ A `pyproject.toml` file can override default values. Options provided via enviro
 
 ## Examples
 
-<img alt="demo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/assets/demo.gif?raw=True">
+<!-- <img alt="demo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/assets/demo.gif?raw=True"> -->
+
+Example of using activate command:
+
+```dotenv
+# .env
+DB__HOST=localhost
+DB__DBNAME=local_lakehouse
+DB__USER=volodymyr
+DB__PASSWORD=super_secret_password
+DB__ENGINE=postgresql://${DB__USER}:${DB__PASSWORD}@${DB__HOST}/${DB__DBNAME}
+```
+
+```shell
+poetry activate -v
+# Using virtualenv: ...
+# Loading environment variables: .../.env
+
+# Reloads shell within the environment with loaded environment variables
+```
+
+Example of using run command:
 
 ```dotenv
 # .env

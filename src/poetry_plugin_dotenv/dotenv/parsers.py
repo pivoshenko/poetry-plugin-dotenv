@@ -16,7 +16,7 @@ if TYPE_CHECKING:  # pragma: no cover
     from collections.abc import Iterator
 
 
-def make_regex(string: str, extra_flags: int = 0) -> re.Pattern[str]:  # noqa: D103
+def make_regex(string: str, extra_flags: int = 0) -> re.Pattern[str]:
     return re.compile(string, re.UNICODE | extra_flags)
 
 
@@ -65,18 +65,15 @@ class Position:
     @classmethod
     def start(cls) -> Position:
         """Get the starting position (line 1, character 0)."""
-
         return cls(chars=0, line=1)
 
     def set(self, other: Position) -> None:
         """Set the current position to another position."""
-
         self.chars = other.chars
         self.line = other.line
 
     def advance(self, string: str) -> None:
         """Advance the position by the length of the given string."""
-
         self.chars += len(string)
         self.line += len(re.findall(_newline, string))
 
@@ -86,24 +83,20 @@ class Reader:
 
     def __init__(self, stream: IO[str]) -> None:
         """Initialize the reader with a stream of data."""
-
         self.string = stream.read()
         self.position = Position.start()
         self.mark = Position.start()
 
     def has_next(self) -> bool:
         """Check if there are more characters to read."""
-
         return self.position.chars < len(self.string)
 
     def set_mark(self) -> None:
         """Set a mark at the current position."""
-
         self.mark.set(self.position)
 
     def get_marked(self) -> Original:
         """Get the portion of the string marked between the current position and the mark."""
-
         return Original(
             string=self.string[self.mark.chars : self.position.chars],
             line=self.mark.line,
@@ -111,12 +104,10 @@ class Reader:
 
     def peek(self, count: int) -> str:
         """Peek ahead in the string without advancing the cursor."""
-
         return self.string[self.position.chars : self.position.chars + count]
 
     def read_regex(self, regex: re.Pattern[str]) -> tuple[str, ...]:
         """Match and read a portion of the string using the given regex."""
-
         match = regex.match(self.string, self.position.chars)
 
         if match is None:
@@ -130,19 +121,16 @@ class Reader:
 
 def decode_match(match: re.Match[str]) -> str:
     """Decode a match using unicode escapes."""
-
     return codecs.decode(match.group(0), "unicode-escape")
 
 
 def decode_escapes(regex: re.Pattern[str], string: str) -> str:
     """Decode escape sequences in the string using the provided regex."""
-
     return regex.sub(decode_match, string)
 
 
 def parse_key(reader: Reader) -> str | None:
     """Parse the key part of a dotenv binding."""
-
     char = reader.peek(1)
 
     if char == "#":
@@ -159,14 +147,12 @@ def parse_key(reader: Reader) -> str | None:
 
 def parse_unquoted_value(reader: Reader) -> str:
     """Parse a value that is not quoted."""
-
     (part,) = reader.read_regex(_unquoted_value)
     return re.sub(r"\s+#.*", "", part).rstrip()
 
 
 def parse_value(reader: Reader) -> str:
     """Parse a value from a dotenv binding."""
-
     char = reader.peek(1)
 
     if char == "'":
@@ -185,7 +171,6 @@ def parse_value(reader: Reader) -> str:
 
 def parse_binding(reader: Reader) -> Binding:
     """Parse a single dotenv binding (key-value pair)."""
-
     reader.set_mark()
 
     try:
@@ -217,7 +202,6 @@ def parse_binding(reader: Reader) -> Binding:
 
 def parse_stream(stream: IO[str]) -> Iterator[Binding]:
     """Parse a dotenv stream and yield key-value bindings."""
-
     reader = Reader(stream)
 
     while reader.has_next():
