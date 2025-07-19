@@ -1,10 +1,10 @@
-"""Tests for the module that contains plugin's configurator."""
+"""Tests for the module that contains configurator."""
 
 from __future__ import annotations
 
 import pytest
 
-from poetry_plugin_dotenv.config import _as_bool
+from poetry_plugin_dotenv.configurator import _as_bool
 
 
 @pytest.mark.parametrize(

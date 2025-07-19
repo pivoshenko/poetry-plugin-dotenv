@@ -18,20 +18,17 @@ jobs:
       contents: write
     steps:
       - name: Checkout repository
-        id: checkout-repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Install Python
-        id: install-python
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
           architecture: x64
 
       - name: Install dependencies
-        id: install-dependencies
         run: |
           python -m pip install -U poetry==2.1.1 twine
           python -m poetry install --only main
@@ -42,10 +39,8 @@ jobs:
           github_token: ${{ secrets.GH_TOKEN }}
 
       - name: Build package
-        id: build-package
         run: python -m poetry build
 
       - name: Publish package
-        id: publish-package
         run: |
           python -m poetry run twine upload dist/* -u __token__ -p ${{ secrets.PYPI_TOKEN }} --skip-existing --verbose

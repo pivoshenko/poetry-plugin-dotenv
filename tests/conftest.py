@@ -40,7 +40,6 @@ def remove_dotenv_file() -> Callable[[str], None]:
 @pytest.fixture
 def dotenv_file(tmp_path: Path) -> Iterator[str]:
     """Get a dotenv file."""
-
     filepath = tmp_path / ".env"
     filepath.write_bytes(b"")
 
