@@ -37,6 +37,7 @@ jobs:
         uses: python-semantic-release/python-semantic-release@v10.1.0
         with:
           github_token: ${{ secrets.GH_TOKEN }}
+          force: "patch"
 
       - name: Build package
         run: python -m poetry build
