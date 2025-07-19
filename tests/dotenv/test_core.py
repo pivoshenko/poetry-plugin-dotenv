@@ -28,7 +28,6 @@ def prepare_file_hierarchy(path: Path) -> tuple[Path, Path]:
 
     Then try to automatically ``find_dotenv`` starting in ``child4``.
     """
-
     curr_dir = path
     dirs = []
     for filepath in ("child1", "child2", "child3", "child4"):

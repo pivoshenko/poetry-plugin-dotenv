@@ -34,7 +34,6 @@ class Literal:
 
     def resolve(self, *args, **kwargs) -> str:  # type: ignore[no-untyped-def]
         """Get a literal value."""
-
         return self.value
 
 
@@ -47,13 +46,11 @@ class Variable:
 
     def resolve(self, env: OrderedDict[str, str], *args, **kwargs) -> str:  # type: ignore[no-untyped-def]
         """Resolve the variable value from the environment or use the default."""
-
         return env.get(self.name, self.default or "") or ""
 
 
 def parse(value: str) -> Iterator[Literal | Variable]:
     """Parse a string and yield literals and variables."""
-
     cursor = 0
     value_length = len(value)
     matches = list(_posix_variable.finditer(value))

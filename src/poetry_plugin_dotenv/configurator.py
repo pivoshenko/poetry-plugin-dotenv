@@ -1,11 +1,10 @@
-"""Module that contains plugin's configurator."""
+"""Module that contains configurator."""
 
 from __future__ import annotations
 
 import os
+import pathlib
 import dataclasses
-
-from pathlib import Path
 
 import tomlkit
 
@@ -37,13 +36,13 @@ class _Config:
     """Defines the schema and default values for the plugin configuration."""
 
     ignore: bool = False
-    location: Path = Path()
+    location: pathlib.Path = pathlib.Path()
 
 
 class Config(_Config):
     """Configuration loader for the plugin."""
 
-    def __init__(self, working_dir: Path) -> None:  # noqa: D107
+    def __init__(self, working_dir: pathlib.Path) -> None:
         super().__init__()
 
         source_config = {}
@@ -63,9 +62,8 @@ class Config(_Config):
 
     def _apply_source_config(self, source_config: dict[str, str | bool | None]) -> None:
         """Apply the loaded configuration to the instance variables."""
-
         for field in self.__dataclass_fields__.values():
-            source_value: str | bool | Path | None = source_config.get(field.name)
+            source_value: str | bool | pathlib.Path | None = source_config.get(field.name)
 
             if (
                 isinstance(field.default, bool)
@@ -75,13 +73,13 @@ class Config(_Config):
             ):
                 source_value = _as_bool(source_value)
             elif field.name == "location" and source_value and isinstance(source_value, str):
-                source_value = Path(source_value)
+                source_value = pathlib.Path(source_value)
 
             if source_value is not None:
                 setattr(self, field.name, source_value)
 
 
-def _load_config_from_toml(filepath: Path, section: str) -> dict[str, str | bool | None]:
+def _load_config_from_toml(filepath: pathlib.Path, section: str) -> dict[str, str | bool | None]:
     if not filepath.exists():
         return {}
 
@@ -107,7 +105,6 @@ def _as_bool(value: str) -> bool:
 
     This function is inspired by ``distutils strtobool``.
     """
-
     try:
         return _STR_BOOLEAN_MAPPING[value.lower()]
 

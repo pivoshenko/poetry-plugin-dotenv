@@ -20,28 +20,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        id: checkout-repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Install Python
-        id: install-python
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
 
       - name: Install poetry
-        id: install-poetry
         run: |
           python -m pip install -U poetry==2.1.1
 
       - name: Install dependencies
-        id: install-dependencies
         run: |
           python -m poetry install --no-interaction
 
       - name: Run linters
-        id: run-linters
         run: |
           python -m poetry run poe lint

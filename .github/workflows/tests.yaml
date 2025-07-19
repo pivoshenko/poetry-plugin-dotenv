@@ -33,24 +33,20 @@ jobs:
       fail-fast: false
     steps:
       - name: Checkout repository
-        id: checkout-repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Install Python
-        id: install-python
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
 
       - name: Install Poetry
-        id: install-poetry
         run: |
           python -m pip install "poetry==${{ matrix.poetry-version }}"
 
       - name: Install dependencies
-        id: install-dependencies
         run: |
           python -m poetry install --no-interaction --only main --only tests
 
@@ -60,7 +56,6 @@ jobs:
           python -m poetry run pytest
 
       - name: Upload coverage to Codecov
-        id: upload-coverage
         uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
