@@ -62,25 +62,25 @@ python-semantic-release = "10.1.0"
 [tool.poetry.group.dev.dependencies]
 ipdb = "^0.13.13"
 ipython = "^8.12.3"
-poethepoet = "^0.36.0"
+poethepoet = "^0.37.0"
 
 [tool.poetry.group.formatters.dependencies]
 pyupgrade = "^3.20.0"
-ruff = "^0.12.8"
+ruff = "^0.12.9"
 
 [tool.poetry.group.linters.dependencies]
 codespell = "^2.4.1"
 commitizen = "^4.8.3"
 mypy = "^1.17.1"
-ruff = "^0.12.8"
+ruff = "^0.12.9"
 
 [tool.poetry.group.tests.dependencies]
-coverage = { version = "^7.10.2", extras = ["toml"] }
+coverage = { version = "^7.10.3", extras = ["toml"] }
 pytest = "7.4.4"
 pytest-cov = "^6.2.1"
 pytest-lazy-fixture = "^0.6.3"
 pytest-mock = "^3.14.1"
-pytest-sugar = "^1.0.0"
+pytest-sugar = "^1.1.0"
 sh = "^2.2.2"
 xdoctest = "^1.2.0"
 
@@ -163,20 +163,20 @@ poetry_command = ""
 [tool.poe.tasks.format]
 help = "Run formatters"
 sequence = [
-  { shell = "find src -type f -name '*.py' | xargs pyupgrade --py313-plus", help = "Run annotations formatter" },
-  { shell = "find tests -type f -name '*.py' | xargs pyupgrade --py313-plus", help = "Run annotations formatter" },
-  { shell = "ruff format .", help = "Run code formatter" }
+  { shell = "find src -type f -name '*.py' | xargs poetry run pyupgrade --py313-plus", help = "Run annotations formatter" },
+  { shell = "find tests -type f -name '*.py' | xargs poetry run pyupgrade --py313-plus", help = "Run annotations formatter" },
+  { shell = "poetry run ruff format .", help = "Run code formatter" }
 ]
 
 [tool.poe.tasks.lint]
 help = "Run linters"
 sequence = [
-  { shell = "mypy .", help = "Run types linter" },
-  { shell = "ruff check .", help = "Run code linter" },
-  { shell = "codespell .", help = "Run spell linter" },
-  { shell = "cz check --rev-range .", help = "Run commits linter" }
+  { shell = "poetry run mypy .", help = "Run types linter" },
+  { shell = "poetry run ruff check .", help = "Run code linter" },
+  { shell = "poetry run codespell .", help = "Run spell linter" },
+  { shell = "poetry run cz check --rev-range .", help = "Run commits linter" }
 ]
 
 [tool.poe.tasks.tests]
 help = "Run tests"
-shell = "pytest ."
+shell = "poetry run pytest ."
