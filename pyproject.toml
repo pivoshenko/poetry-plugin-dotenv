@@ -57,7 +57,7 @@ poetry = ">=1.5.0,<3.0.0"
 python = ">=3.9,<4.0"
 
 [tool.poetry.group.ci.dependencies]
-python-semantic-release = "10.3.2"
+python-semantic-release = "10.4.1"
 
 [tool.poetry.group.dev.dependencies]
 ipdb = "^0.13.13"
