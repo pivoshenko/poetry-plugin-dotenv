@@ -2,6 +2,89 @@
 
 <!-- version list -->
 
+## v3.1.0 (2025-10-05)
+
+### Bug Fixes
+
+- Improve shell detection for activation command
+  ([`91f1e19`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/91f1e1912c773dcb1b6c9c78e7d46122b1173063))
+
+### Build System
+
+- Update dev dependencies
+  ([`7307f82`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/7307f8263e2e697710a6b3ac4c68a30556284fc4))
+
+- Update dev dependencies
+  ([`4eedd8c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4eedd8c2ce803787a10bdf4679b01a57d5525942))
+
+- Update dev dependencies
+  ([`509207c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/509207c5bf0cd7b5ec685cf68d4519a14d4de15c))
+
+- Update dev dependencies
+  ([`28eaf43`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/28eaf438fb68451097c25d93323b8c86f08936a3))
+
+- Update dev dependencies
+  ([`cc0b9b1`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/cc0b9b19b715f21cddbc487ef0031d0ed23c548a))
+
+- Update dev dependencies
+  ([`baf875d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/baf875d57825219d0c9bf6cc0dda75cbe90312b9))
+
+- Update dev dependencies
+  ([`a74cacb`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a74cacb6c2e2e7a1ef62b27cde03c1ec82a8fea7))
+
+- Update dev dependencies
+  ([`19c4f4c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/19c4f4c1eb8d02ba56b8f48c8eb48b0b26ede913))
+
+- Update dev dependencies
+  ([`6983e57`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6983e5795eff59bc76d93b2ce18c1be66c51020f))
+
+- Update dev dependencies
+  ([`06516bc`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/06516bce12fa7f485e4c9eb424ce2ffd033d2958))
+
+- Update dev dependencies
+  ([`fd715b6`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/fd715b6129956806b36c3c6cd982d7da0517dd85))
+
+- Update dev dependencies
+  ([`22f1a90`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/22f1a90f02539089ba8fef16f66cb586f9f4e8ae))
+
+- Update dev dependencies
+  ([`79dd2ec`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/79dd2ec3386b0bcd8b958d6902f3d21fae38b48b))
+
+- **deps**: Bump actions/checkout from 4 to 5
+  ([`3192b01`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/3192b01670dae0feb855bf1f97b3a70bb0bb5f2c))
+
+- **deps**: Bump python-semantic-release/python-semantic-release
+  ([`9c71cc0`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9c71cc007cd2bcad1314d7e04c686c7a864c63af))
+
+- **deps**: Bump python-semantic-release/python-semantic-release
+  ([`6fe6075`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6fe60754cb754c8658fac1658e2b6320e9e30979))
+
+- **deps-dev**: Bump pytest-cov from 6.2.1 to 6.3.0
+  ([`24e4909`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/24e49096c51f9499c5bb4b7b2d2e21a171f2fe52))
+
+- **deps-dev**: Bump python-semantic-release from 10.1.0 to 10.3.1
+  ([`6adaaa1`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6adaaa14bf2056b81dc0944a2c3429287f491840))
+
+### Chores
+
+- Remove Codespell linter
+  ([`605d312`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/605d31206e05a3d05ecc68983bf9545f2b627056))
+
+### Continuous Integration
+
+- Update actions
+  ([`9e513a0`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9e513a005feb7cbfb90c982e65e1bac2dfbb69b1))
+
+- Update Poetry version
+  ([`a353ff7`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/a353ff7fe5480b7cca928c540edd2e26530faa96))
+
+- Update tests matrix
+  ([`6c4ebf1`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/6c4ebf18982a351ffa63c4fad713ae7d1f2eef18))
+
+- **workflow**: Disable force patch
+  ([`674b13c`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/674b13ca91c6cba98e706f1ed27e85e55b0ec240))
+
+
 ## v3.0.1 (2025-07-19)
 
 ### Continuous Integration
