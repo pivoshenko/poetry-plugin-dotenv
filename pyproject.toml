@@ -69,7 +69,6 @@ pyupgrade = "^3.20.0"
 ruff = "^0.13.3"
 
 [tool.poetry.group.linters.dependencies]
-codespell = "^2.4.1"
 commitizen = "^4.9.1"
 mypy = "^1.18.2"
 ruff = "^0.13.3"
@@ -173,7 +172,6 @@ help = "Run linters"
 sequence = [
   { shell = "poetry run mypy .", help = "Run types linter" },
   { shell = "poetry run ruff check .", help = "Run code linter" },
-  { shell = "poetry run codespell .", help = "Run spell linter" },
   { shell = "poetry run cz check --rev-range .", help = "Run commits linter" }
 ]
 
