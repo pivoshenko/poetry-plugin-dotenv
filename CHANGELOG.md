@@ -2,6 +2,62 @@
 
 <!-- version list -->
 
+## v3.1.1 (2026-01-10)
+
+### Build System
+
+- Update dev dependencies
+  ([`e498931`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e4989313edb297292c3c243651d2311a57ca32a8))
+
+- Update dev dependencies
+  ([`f91d98d`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/f91d98dd87d05becfceae755a02311589d4f4ff5))
+
+- Update dev dependencies
+  ([`83f0577`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/83f0577d9e7e68c25e85a893c2487f6f1b9e4aa3))
+
+- Update dev dependencies
+  ([`e11380e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e11380e30e5de3a1be71139d9f719efc88f3ea50))
+
+- Update dev dependencies
+  ([`9498fc2`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/9498fc24defb77b7f8647087f76f1ef4ad626e65))
+
+- Update dev dependencies
+  ([`181df61`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/181df611c02b519778ff75d8de7f016035f72fea))
+
+- Update dev dependencies
+  ([`70a11e7`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/70a11e7d5434057b0922fcfcd14a38fa99a29ab4))
+
+- Update dev dependencies
+  ([`ee622a7`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ee622a77a9ad3047ccb9804088888e8f0ef8e949))
+
+### Chores
+
+- Remove outdated funding links from README and FUNDING.yaml
+  ([`0a59ca5`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/0a59ca58b90b3ab745af50262aa12432ade217cc))
+
+- Update .gitignore
+  ([`c53b659`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c53b6594019e7bf80dfdb37b221d6f335171cd49))
+
+### Continuous Integration
+
+- Update codecov actions version
+  ([`e1ccb49`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/e1ccb49bd5f7d86e4314b332eab55457966d2192))
+
+- Update semantic release action version
+  ([`5cea673`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5cea6735553fc2e72e8038b59a39f55dc2a0ec01))
+
+- Update version of the Checkout action
+  ([`c91f4f0`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c91f4f003bfb98558679101a6ea7d906335527fe))
+
+- Upgrade actions
+  ([`ffa23ce`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ffa23cefded8f9b9c3770859f770a7570e45b647))
+
+### Documentation
+
+- Update license
+  ([`ff849e2`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ff849e2e11a2d9303f96ec4455b0d9649ae61f53))
+
+
 ## v3.1.0 (2025-10-05)
 
 ### Bug Fixes
