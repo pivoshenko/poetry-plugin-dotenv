@@ -66,12 +66,12 @@ poethepoet = "^0.37.0"
 
 [tool.poetry.group.formatters.dependencies]
 pyupgrade = "^3.21.0"
-ruff = "^0.14.10"
+ruff = "^0.14.11"
 
 [tool.poetry.group.linters.dependencies]
 commitizen = "^4.10.1"
 mypy = "^1.19.1"
-ruff = "^0.14.10"
+ruff = "^0.14.11"
 
 [tool.poetry.group.tests.dependencies]
 coverage = { version = "^7.10.7", extras = ["toml"] }
