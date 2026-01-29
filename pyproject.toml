@@ -66,12 +66,12 @@ poethepoet = "^0.37.0"
 
 [tool.poetry.group.formatters.dependencies]
 pyupgrade = "^3.21.0"
-ruff = "^0.14.11"
+ruff = "^0.14.14"
 
 [tool.poetry.group.linters.dependencies]
 commitizen = "^4.10.1"
-mypy = "^1.19.1"
-ruff = "^0.14.11"
+ruff = "^0.14.14"
+ty = "^0.0.14"
 
 [tool.poetry.group.tests.dependencies]
 coverage = { version = "^7.10.7", extras = ["toml"] }
@@ -99,13 +99,6 @@ allowed_prefixes = ["0", "1", "2", "3", "Initial", "Merge", "build", "tests"]
 
 [tool.coverage.run]
 omit = ["*/__init__.py"]
-
-[tool.mypy]
-namespace_packages = true
-python_version = "3.13"
-show_error_codes = true
-strict = true
-warn_unused_configs = true
 
 [tool.pytest.ini_options]
 addopts = ["--basetemp=tests/fixtures", "--color=yes", "--cov=src", "--cov-report=xml", "--cov-report=html", "--xdoc"]
@@ -162,15 +155,15 @@ poetry_command = ""
 [tool.poe.tasks.format]
 help = "Run formatters"
 sequence = [
-  { shell = "find src -type f -name '*.py' | xargs poetry run pyupgrade --py313-plus", help = "Run annotations formatter" },
-  { shell = "find tests -type f -name '*.py' | xargs poetry run pyupgrade --py313-plus", help = "Run annotations formatter" },
+  { shell = "find src -type f -name '*.py' | xargs poetry run pyupgrade --py39-plus", help = "Run annotations formatter" },
+  { shell = "find tests -type f -name '*.py' | xargs poetry run pyupgrade --py39-plus", help = "Run annotations formatter" },
   { shell = "poetry run ruff format .", help = "Run code formatter" }
 ]
 
 [tool.poe.tasks.lint]
 help = "Run linters"
 sequence = [
-  { shell = "poetry run mypy .", help = "Run types linter" },
+  { shell = "poetry run ty check .", help = "Run types linter" },
   { shell = "poetry run ruff check .", help = "Run code linter" },
   { shell = "poetry run cz check --rev-range .", help = "Run commits linter" }
 ]

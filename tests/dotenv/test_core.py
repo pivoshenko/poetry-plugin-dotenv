@@ -10,7 +10,7 @@ import textwrap
 from pathlib import Path
 from unittest import mock
 
-import sh  # type: ignore[import-untyped]
+import sh
 import pytest
 
 from poetry_plugin_dotenv.dotenv import core as dotenv
