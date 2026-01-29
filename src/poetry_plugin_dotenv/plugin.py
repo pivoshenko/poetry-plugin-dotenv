@@ -32,7 +32,7 @@ class DotenvPlugin(ApplicationPlugin):
         )
         application.command_loader.register_factory("activate", commands.activate_command_factory)
 
-    def load(self, event: ConsoleCommandEvent, *args, **kwargs) -> None:  # type: ignore[no-untyped-def]
+    def load(self, event: ConsoleCommandEvent, *args, **kwargs) -> None:
         command = event.command
 
         if command.name in COMMANDS_EXCLUSION:

@@ -62,7 +62,7 @@ class DotEnv:
         with self._get_stream() as stream:
             for mapping in parsers.parse_stream(stream):
                 if mapping.key is not None:
-                    yield mapping.key, mapping.value  # type: ignore[misc]
+                    yield mapping.key, mapping.value
 
     def set_as_environment_variables(self) -> bool:
         """Load current dotenv as system environment variables."""
