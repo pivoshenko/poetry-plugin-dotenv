@@ -66,11 +66,11 @@ poethepoet = "^0.37.0"
 
 [tool.poetry.group.formatters.dependencies]
 pyupgrade = "^3.21.0"
-ruff = "^0.14.14"
+ruff = ">=0.14.14,<0.16.0"
 
 [tool.poetry.group.linters.dependencies]
 commitizen = "^4.10.1"
-ruff = "^0.14.14"
+ruff = ">=0.14.14,<0.16.0"
 ty = "^0.0.14"
 
 [tool.poetry.group.tests.dependencies]
