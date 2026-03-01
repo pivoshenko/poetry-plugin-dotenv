@@ -74,3 +74,30 @@ def test_without_dotenv_file_toml_config(
 
     with pytest.raises(KeyError):
         os.environ["POSTGRES_USER"]
+
+
+@mock.patch(
+    "tomlkit.load",
+    return_value={
+        "tool": {"poetry": {"plugins": {"dotenv": {"location": ".env,.env.local"}}}},
+    },
+)
+def test_multiple_dotenv_files_toml_config(
+    mocker: pytest_mock.MockFixture,
+    create_dotenv_file: Callable[[dict[str, str], str], None],
+    remove_dotenv_file: Callable[[str], None],
+) -> None:
+    event = mocker.MagicMock()
+    event.command = EnvCommand()
+    event.io.input.option.return_value = None
+
+    create_dotenv_file({"POSTGRES_USER": "admin"}, ".env")
+    create_dotenv_file({"POSTGRES_USER": "root"}, ".env.local")
+
+    plugin = DotenvPlugin()
+    plugin.load(event)
+
+    remove_dotenv_file(".env")
+    remove_dotenv_file(".env.local")
+
+    assert os.environ["POSTGRES_USER"] == "root"

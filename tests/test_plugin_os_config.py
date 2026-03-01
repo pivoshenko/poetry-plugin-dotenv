@@ -65,3 +65,25 @@ def test_without_dotenv_file_os_config(
 
     with pytest.raises(KeyError):
         os.environ["POSTGRES_USER"]
+
+
+@mock.patch.dict(os.environ, {"POETRY_PLUGIN_DOTENV_LOCATION": ".env,.env.local"}, clear=True)
+def test_multiple_dotenv_files_os_config(
+    mocker: pytest_mock.MockFixture,
+    create_dotenv_file: Callable[[dict[str, str], str], None],
+    remove_dotenv_file: Callable[[str], None],
+) -> None:
+    event = mocker.MagicMock()
+    event.command = EnvCommand()
+    event.io.input.option.return_value = None
+
+    create_dotenv_file({"POSTGRES_USER": "admin"}, ".env")
+    create_dotenv_file({"POSTGRES_USER": "root"}, ".env.local")
+
+    plugin = DotenvPlugin()
+    plugin.load(event)
+
+    remove_dotenv_file(".env")
+    remove_dotenv_file(".env.local")
+
+    assert os.environ["POSTGRES_USER"] == "root"
