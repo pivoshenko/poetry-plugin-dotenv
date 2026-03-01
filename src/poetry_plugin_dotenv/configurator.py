@@ -36,7 +36,7 @@ class _Config:
     """Defines the schema and default values for the plugin configuration."""
 
     ignore: bool = False
-    location: pathlib.Path = pathlib.Path()
+    location: list[pathlib.Path] = dataclasses.field(default_factory=list)
 
 
 class Config(_Config):
@@ -63,7 +63,7 @@ class Config(_Config):
     def _apply_source_config(self, source_config: dict[str, str | bool | None]) -> None:
         """Apply the loaded configuration to the instance variables."""
         for field in self.__dataclass_fields__.values():
-            source_value: str | bool | pathlib.Path | None = source_config.get(field.name)
+            source_value: str | bool | list[str] | pathlib.Path | None = source_config.get(field.name)
 
             if (
                 isinstance(field.default, bool)
@@ -72,8 +72,8 @@ class Config(_Config):
                 and isinstance(source_value, str)
             ):
                 source_value = _as_bool(source_value)
-            elif field.name == "location" and source_value and isinstance(source_value, str):
-                source_value = pathlib.Path(source_value)
+            elif field.name == "location" and source_value:
+                source_value = _as_paths(source_value)
 
             if source_value is not None:
                 setattr(self, field.name, source_value)
@@ -98,6 +98,13 @@ def _load_config_from_os(section: str) -> dict[str, str | bool | None]:
         for key, value in os.environ.items()
         if key.startswith(section)
     }
+
+
+def _as_paths(value: str | list[str]) -> list[pathlib.Path]:
+    if isinstance(value, str):
+        return [pathlib.Path(path.strip()) for path in value.split(",") if path.strip()]
+
+    return [pathlib.Path(path.strip()) for path in value if path.strip()]
 
 
 def _as_bool(value: str) -> bool:

@@ -14,32 +14,38 @@ if typing.TYPE_CHECKING:  # pragma: no cover
 
 
 def load(logger: logging.Logger, config: configurator.Config, working_dir: pathlib.Path) -> None:
-    filepath = _determine_filepath(config, working_dir)
+    filepaths = _determine_filepaths(config, working_dir)
 
     if config.ignore:
         logger.warning("Not loading environment variables. Ignored by configuration")
         return
 
-    if not filepath:
+    if not filepaths:
         logger.warning("Not loading environment variables. No valid filepath")
         return
 
-    if filepath.is_file():
-        logger.info(f"Loading environment variables: <fg=green>{filepath}</>")  # noqa: G004
-        dotenv.core.load(filepath=filepath)
-    else:
-        logger.error(f"Could not load environment variables. The file does not exist: {filepath}")  # noqa: G004
+    for filepath in filepaths:
+        if filepath.is_file():
+            logger.info(f"Loading environment variables: <fg=green>{filepath}</>")  # noqa: G004
+            dotenv.core.load(filepath=filepath)
+        else:
+            logger.error(f"Could not load environment variables. The file does not exist: {filepath}")  # noqa: G004
 
 
-def _determine_filepath(
+def _determine_filepaths(
     config: configurator.Config,
     working_dir: pathlib.Path,
-) -> pathlib.Path | None:
-    if config.location and config.location != pathlib.Path():
-        location_path = config.location
-        if location_path.is_absolute():
-            return location_path.resolve()
+) -> list[pathlib.Path]:
+    if config.location:
+        filepaths: list[pathlib.Path] = []
 
-        return working_dir / location_path
+        for location_path in config.location:
+            if location_path.is_absolute():
+                filepaths.append(location_path.resolve())
+            else:
+                filepaths.append(working_dir / location_path)
 
-    return dotenv.core.find(usecwd=True)
+        return filepaths
+
+    filepath = dotenv.core.find(usecwd=True)
+    return [filepath] if filepath else []
