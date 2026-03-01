@@ -3,12 +3,13 @@
 from __future__ import annotations
 
 import typing
-import pathlib
 
 from poetry_plugin_dotenv import dotenv
 
 
 if typing.TYPE_CHECKING:  # pragma: no cover
+    import pathlib
+
     from poetry_plugin_dotenv import configurator
     from poetry_plugin_dotenv import logging
 
@@ -29,7 +30,9 @@ def load(logger: logging.Logger, config: configurator.Config, working_dir: pathl
             logger.info(f"Loading environment variables: <fg=green>{filepath}</>")  # noqa: G004
             dotenv.core.load(filepath=filepath)
         else:
-            logger.error(f"Could not load environment variables. The file does not exist: {filepath}")  # noqa: G004
+            logger.error(
+                f"Could not load environment variables. The file does not exist: {filepath}"  # noqa: G004
+            )
 
 
 def _determine_filepaths(
