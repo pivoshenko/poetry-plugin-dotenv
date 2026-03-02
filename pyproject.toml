@@ -71,7 +71,7 @@ ruff = "^0.15.4"
 [tool.poetry.group.linters.dependencies]
 commitizen = "^4.10.1"
 ruff = "^0.15.4"
-ty = ">=0.0.17,<0.0.19"
+ty = ">=0.0.17,<0.0.20"
 
 [tool.poetry.group.tests.dependencies]
 coverage = { version = "^7.10.7", extras = ["toml"] }
