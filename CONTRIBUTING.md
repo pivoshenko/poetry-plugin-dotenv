@@ -2,134 +2,98 @@
 
 - [Contributing](#contributing)
   - [Reporting Bugs](#reporting-bugs)
-    - [How Do I Submit a Bug Report?](#how-do-i-submit-a-bug-report)
+    - [How To Submit a Bug Report](#how-to-submit-a-bug-report)
   - [Suggesting Enhancements](#suggesting-enhancements)
-    - [How Do I Submit A Suggested Enhancement?](#how-do-i-submit-a-suggested-enhancement)
+    - [How To Submit an Enhancement](#how-to-submit-an-enhancement)
   - [Code Contributions](#code-contributions)
     - [Local Development](#local-development)
     - [Commits](#commits)
     - [Pull Requests](#pull-requests)
 
-First, thank you for taking the time to contribute!
+Thank you for taking the time to contribute.
 
-The following guidelines are for contributing to `poetry-plugin-dotenv`. These are mostly guidelines, not strict rules. Use your best judgement, and feel free to propose changes to this document in a pull request.
+These guidelines are intended to make contributions consistent and easy to review across repositories. They are guidance, not hard rules, and maintainers may adapt them when needed.
 
 ## Reporting Bugs
 
-This section guides you through submitting a bug report for `poetry-plugin-dotenv`. Following these guidelines will help maintainers and the community understand your report, reproduce the behaviour, and find related reports.
+Before creating a bug report, search existing issues to avoid duplicates.
 
-Before submitting bug reports, please check if your issue already exists in the issue tracker. When creating a bug report, please include as many details as possible. Filling out the required template will help maintainers resolve the issue faster.
+When opening a bug report, include enough context for someone else to reproduce the issue and understand the impact.
 
 > [!NOTE]
-> If you find a **Closed** issue that seems like the one you're experiencing, open a new issue and include a link to the original issue in the body of your report.
+> If you find a closed issue that looks similar, open a new issue and link the previous one.
 
-### How Do I Submit a Bug Report?
+### How To Submit a Bug Report
 
-Bugs concerning `poetry-plugin-dotenv` should be submitted to the main issue tracker using the appropriate issue template.
+Use the bug issue template and provide the following:
 
-Please follow these steps to explain the problem clearly and make it easier for others to search for and understand:
+- A clear, descriptive title
+- Reproduction steps (minimal and reliable if possible)
+- Current behavior and expected behavior
+- Relevant environment details (for example OS, runtime, browser, framework versions)
+- Logs, stack traces, screenshots, or recordings when useful
 
-- Use a clear and descriptive title to identify the issue
-- Describe the exact steps to reproduce the problem in as much detail as possible
-- Explain the observed behaviour after following the steps, and how it indicates a bug
-- Describe the expected behaviour and why you think the current behaviour is incorrect
-- If the problem involves an unexpected error, run the problematic command in debug mode with the `-vvv` flag
-
-Provide detailed steps to reproduce your issue:
-
-- Include your `pyproject.toml` file in a [Gist](https://gist.github.com) or an example repository, ensuring private information (like private package repositories or names) is removed
-- Provide specific examples, such as an example repository or a sequence of steps in a container, to demonstrate the problem
-- If the issue is not consistently reproducible, explain how often it occurs and under which conditions it tends to happen
-
-Additional context can help:
-
-- Did the problem start after an update (e.g., to a new version of `poetry-plugin-dotenv`), or was it always present?
-- If the problem started recently, can you reproduce it in an older version? Which version was the last working one?
-- Are there any unusual aspects of your environment (e.g., special container images or Apple Silicon CPUs)?
-
-Include details about your environment:
-
-- Which version of `poetry` and `poetry-plugin-dotenv` are you using?
-- Which version of Python is being used?
-- What's the name and version of your operating system?
-
-To help others understand and reproduce your issue, provide thorough reproduction steps. If possible, ensure others can reproduce the issue in a pristine container or VM and share the steps you performed in that environment.
+If the issue is intermittent, describe how often it happens and known triggers.
+If the issue appeared after a change, mention the last known working version or commit if available.
 
 ## Suggesting Enhancements
 
-This section provides guidance on submitting enhancement suggestions for `poetry-plugin-dotenv`, including entirely new features and improvements to existing functionality. Following these guidelines will help maintainers and the community understand your suggestion and identify related suggestions.
+Before submitting an enhancement, check whether a similar request already exists.
 
-Before creating an enhancement suggestion, please check this list to see if your suggestion already exists. When submitting an enhancement, include as many details as possible, and fill out the template with steps you would take if the requested feature were implemented.
+Enhancement requests can include new features, changes to existing behavior, usability improvements, or performance improvements.
 
-### How Do I Submit A Suggested Enhancement?
+### How To Submit an Enhancement
 
-Enhancement suggestions should be submitted to the main issue tracker, using the appropriate issue template.
+Use the feature request template and provide the following:
 
-- Use a clear and descriptive title for the suggestion
-- Provide a detailed description of the proposed enhancement, with specific steps or examples when possible
-- Describe the current behaviour and explain the behaviour you would like to see, and why
+- A clear problem statement
+- The proposed solution
+- Alternatives considered or current workarounds
+- Expected impact (who benefits and how)
+
+Concrete examples, API sketches, UI mockups, or references are helpful when relevant.
 
 ## Code Contributions
 
 ### Local Development
 
-First, fork the `poetry-plugin-dotenv` repository and clone it locally to make pull requests against the project.
+1. Fork the repository and create a branch for your change.
+2. Set up the project using the repository's README or development docs.
+3. Run the project's tests and quality checks locally before opening a pull request.
 
-If you're new to `git` and pull request-based development, GitHub offers a helpful [guide](https://docs.github.com/en/get-started/quickstart/contributing-to-projects).
-
-Next, install dependencies and run the test suite to ensure everything is working as expected:
-
-```shell
-poetry install
-poetry tests
-```
-
-When contributing to `poetry-plugin-dotenv`, automated tools will be run to ensure your code is mergeable. You must make sure your code passes type checks and is formatted properly:
-
-```shell
-poetry format
-poetry lint
-```
+When a repository includes helper scripts or task runners, prefer using those documented commands.
 
 > [!IMPORTANT]
-> Your code must always be accompanied by corresponding tests. Code without tests will not be merged.
+> Behavioral code changes should include or update tests.
 
 ### Commits
 
-We follow the [conventional commit message syntax](https://www.conventionalcommits.org/en/v1.0.0). For example: `feat: allow provided config object to extend other configs`.
+Use clear, focused commits with descriptive messages.
 
-Every feature branch that is squashed onto the `main` branch must follow these rules. The benefits include:
+This template recommends [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/):
 
-- A standardised way of writing commit messages for all contributors
-- Quick identification of what a commit does and which parts of the project it affects
-- Automatic changelog generation based on these keywords
-
-Supported keywords (heavily inspired by [`config-conventional`](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional)):
-
-- `ci`
-- `chore`
-- `docs`
 - `feat`
 - `fix`
-- `perf`
+- `docs`
 - `refactor`
-- `revert`
-- `style`
 - `test`
+- `chore`
+- `ci`
+- `build`
+- `perf`
+- `style`
+- `revert`
 
-Additionally, all commit messages must be written in lowercase.
+Example: `feat(auth): add token refresh support`
 
-> [!NOTE]
-> All commits in a pull request are squashed when merged into the `main` branch. This means only the commit message of the squashed branch must follow the conventional commit format. You do not need to follow this convention for commits within a branch, which may include multiple `wip` commits.
+If your repository enforces a different commit style, follow the repository-specific rule.
 
 ### Pull Requests
 
-- Fill out the pull request description completely and accurately, ensuring it reflects the final changes and potential changelog entry
-- Ensure your pull request includes tests that cover the changed or added code. Code without tests will not be merged
-- Make sure your pull request passes all checks. You can run these tools locally to verify this
-- If your changes affect the documentation, ensure the pull request also updates the documentation. Review the documentation preview generated by CI for any rendering issues
+- Fill out the pull request template completely
+- Keep the pull request focused and scoped to one change set
+- Ensure tests and checks pass before requesting review
+- Update documentation when behavior or interfaces change
+- Respond to review feedback and keep the branch up to date with the target branch
 
-> [!NOTE]
-> Make sure your branch is rebased against the latest `main` branch. Maintainers may ask you to update your branch before merging (especially if there have been CI changes on `main`), and to resolve any conflicts.
-
-All pull requests will be accepted into the `main` branch unless otherwise instructed. Maintainers will decide if backports to other branches are needed and will handle them accordingly.
+Maintainers may ask for changes, additional tests, or scope adjustments before merging.
