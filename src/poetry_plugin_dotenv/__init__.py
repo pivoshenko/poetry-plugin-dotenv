@@ -10,7 +10,7 @@ __uri__ = "https://github.com/pivoshenko/poetry-plugin-dotenv"
 __version__ = "3.1.1"
 
 __author__ = "Volodymyr Pivoshenko"
-__email__ = "volodymyr.pivoshenko@gmail.com"
+__email__ = "contact@pivoshenko.dev"
 
 __license__ = "MIT"
 __copyright__ = "Copyright 2025, Volodymyr Pivoshenko"
