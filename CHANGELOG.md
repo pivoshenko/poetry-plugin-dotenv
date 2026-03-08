@@ -2,6 +2,39 @@
 
 <!-- version list -->
 
+## v3.2.0 (2026-03-08)
+
+### Bug Fixes
+
+- Update metadata
+  ([`dbd24e3`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/dbd24e3ad0760ef460a322097b62851686fd99b0))
+
+### Build System
+
+- Replace mypy wit ty
+  ([`4ef043e`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/4ef043e88a7957109855ed52b30782e7f62aeed4))
+
+- Update dev dependencies
+  ([`386fe5a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/386fe5aa16a809509930cb18d8b52120dbff6d9f))
+
+- Update dev dependencies
+  ([`5e02133`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/5e0213396ea8e4768e078a63879f37bdac06cbdb))
+
+- **deps**: Bump crazy-max/ghaction-github-labeler from 5 to 6
+  ([`ccfca69`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ccfca698050f1c5e737b8e174826314689809cc4))
+
+- **deps-dev**: Bump ty from 0.0.17 to 0.0.18
+  ([`ab92374`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/ab92374bdd777ee1be073ae0480d1cdeec2a9c86))
+
+- **deps-dev**: Bump ty from 0.0.18 to 0.0.19
+  ([`c7a0532`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/c7a0532f5976b309681d3170ae963f58183ee2f9))
+
+### Chores
+
+- Update chore files
+  ([`b1f0bed`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/b1f0bed390cac284ead5eb1ba52d03e0655c69af))
+
+
 ## v3.1.1 (2026-01-10)
 
 ### Build System
