@@ -6,7 +6,7 @@ name = "poetry-plugin-dotenv"
 version = "0.0.1"
 description = "..."
 license = "MIT"
-authors = ["Volodymyr Pivoshenko <volodymyr.pivoshenko@gmail.com>"]
+authors = ["Volodymyr Pivoshenko <contact@pivoshenko.dev>"]
 
 [tool.poetry.dependencies]
 python = ">=3.8.1,<4.0"
