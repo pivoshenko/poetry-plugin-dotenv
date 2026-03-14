@@ -2,6 +2,37 @@
 
 <!-- version list -->
 
+## v3.3.0 (2026-03-14)
+
+### Bug Fixes
+
+- **ci**: Resolve linter failures in multiple dotenv support
+  ([`18b00ca`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/18b00ca95262e6cb08d0a2ec10b6b7780c75cd53))
+
+### Build System
+
+- Update dev dependencies
+  ([`0f398d0`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/0f398d0f4f787d2cd490257d7c712d140296ce25))
+
+- **deps-dev**: Bump ty from 0.0.19 to 0.0.21
+  ([`62d7744`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/62d7744cbb94db35053c7e62b2e65c6b729120de))
+
+### Continuous Integration
+
+- Lower codecov target to 90%
+  ([`2cfe0c2`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/2cfe0c28be869abaf5cfdcf4dba15a4fa0b08ecd))
+
+### Features
+
+- **config**: Support multiple dotenv locations
+  ([`2ee7aba`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/2ee7aba67b43283c3e1b39c83beb592ce0920240))
+
+### Refactoring
+
+- Address PR review comments
+  ([`720376a`](https://github.com/pivoshenko/poetry-plugin-dotenv/commit/720376a6f7b3dc5123300e1a908bbd89c12fbb12))
+
+
 ## v3.2.0 (2026-03-08)
 
 ### Bug Fixes
