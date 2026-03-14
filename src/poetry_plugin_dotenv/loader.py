@@ -22,7 +22,7 @@ def load(logger: logging.Logger, config: configurator.Config, working_dir: pathl
         return
 
     if not filepaths:
-        logger.warning("Not loading environment variables. No valid filepath")
+        logger.warning("Not loading environment variables. No valid dotenv filepaths")
         return
 
     for filepath in filepaths:

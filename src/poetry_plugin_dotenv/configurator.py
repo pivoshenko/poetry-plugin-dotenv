@@ -5,6 +5,8 @@ from __future__ import annotations
 import os
 import pathlib
 import dataclasses
+from typing import TYPE_CHECKING
+from typing import Any
 
 import tomlkit
 
@@ -39,13 +41,19 @@ class _Config:
     location: list[pathlib.Path] = dataclasses.field(default_factory=list)
 
 
+if TYPE_CHECKING:
+    ConfigValue = str | bool | list[str] | list[pathlib.Path] | pathlib.Path | None
+else:
+    ConfigValue = Any
+
+
 class Config(_Config):
     """Configuration loader for the plugin."""
 
     def __init__(self, working_dir: pathlib.Path) -> None:
         super().__init__()
 
-        source_config = {}
+        source_config: dict[str, ConfigValue] = {}
         for config_source, section in CONFIG_SOURCES:
             if config_source.endswith(".toml"):
                 config = _load_config_from_toml(working_dir / config_source, section)
@@ -60,12 +68,10 @@ class Config(_Config):
 
         self._apply_source_config(source_config)
 
-    def _apply_source_config(self, source_config: dict[str, str | bool | None]) -> None:
+    def _apply_source_config(self, source_config: dict[str, ConfigValue]) -> None:
         """Apply the loaded configuration to the instance variables."""
         for field in self.__dataclass_fields__.values():
-            source_value: str | bool | list[str] | list[pathlib.Path] | pathlib.Path | None = (
-                source_config.get(field.name)
-            )
+            source_value: ConfigValue = source_config.get(field.name)
 
             if (
                 isinstance(field.default, bool)
@@ -84,7 +90,7 @@ class Config(_Config):
                 setattr(self, field.name, source_value)
 
 
-def _load_config_from_toml(filepath: pathlib.Path, section: str) -> dict[str, str | bool | None]:
+def _load_config_from_toml(filepath: pathlib.Path, section: str) -> dict[str, ConfigValue]:
     if not filepath.exists():
         return {}
 
@@ -97,7 +103,7 @@ def _load_config_from_toml(filepath: pathlib.Path, section: str) -> dict[str, st
     return config if isinstance(config, dict) else {}
 
 
-def _load_config_from_os(section: str) -> dict[str, str | bool | None]:
+def _load_config_from_os(section: str) -> dict[str, ConfigValue]:
     return {
         key[len(section) :].lower(): value
         for key, value in os.environ.items()
