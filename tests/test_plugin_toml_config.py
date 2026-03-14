@@ -20,6 +20,7 @@ if TYPE_CHECKING:
     import pytest_mock
 
 
+@mock.patch.dict(os.environ, {}, clear=True)
 @mock.patch(
     "tomlkit.load",
     return_value={
@@ -76,6 +77,7 @@ def test_without_dotenv_file_toml_config(
         os.environ["POSTGRES_USER"]
 
 
+@mock.patch.dict(os.environ, {}, clear=True)
 @mock.patch(
     "tomlkit.load",
     return_value={
