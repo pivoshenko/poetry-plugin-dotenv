@@ -5,8 +5,14 @@
 name: Release
 
 on:
-  push:
-    branches: ["main"]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version override (leave empty to auto-detect from commits)"
+        required: false
+
+permissions:
+  contents: write
 
 jobs:
   release:
@@ -33,10 +39,18 @@ jobs:
           python -m pip install -U poetry==2.2.0 twine
           python -m poetry install --only main
 
-      - name: Semantic release
+      - name: Semantic release (auto)
+        if: ${{ !inputs.version }}
         uses: python-semantic-release/python-semantic-release@v10.5.3
         with:
           github_token: ${{ secrets.GH_TOKEN }}
+
+      - name: Semantic release (version override)
+        if: ${{ inputs.version }}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          python -m poetry run semantic-release version --define "version=${{ inputs.version }}"
 
       - name: Build package
         run: python -m poetry build

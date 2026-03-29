@@ -1,17 +1,19 @@
 # Requires GitHub secrets
 # - GH_TOKEN
 
-name: Update GitHub Labels
+name: Update Labels
 
 on:
   push:
     branches: ["main"]
     paths:
       - ".github/labels.yaml"
-      - ".github/workflows/labels.yaml"
+      - ".github/workflows/update-labels.yaml"
+  workflow_dispatch:
 
 jobs:
-  labels:
+  update-labels:
+    name: Update Labels
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
