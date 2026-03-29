@@ -28,17 +28,6 @@
   </a>
 </p>
 
-- [Overview](#overview)
-  - [Features](#features)
-- [Installation](#installation)
-- [Usage and Configuration](#usage-and-configuration)
-    - [`ignore`](#ignore)
-    - [`location`](#location)
-  - [Configuration via TOML file](#configuration-via-toml-file)
-  - [Configuration via environment variables](#configuration-via-environment-variables)
-  - [Lookup hierarchy](#lookup-hierarchy)
-- [Examples](#examples)
-
 ## Overview
 
 `poetry-plugin-dotenv` - is the plugin that automatically loads environment variables from a dotenv file into the environment before `poetry` commands are run.
