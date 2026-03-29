@@ -29,8 +29,8 @@
   <a href="https://docs.astral.sh/ruff">
     <img alt="Ruff" src="https://img.shields.io/badge/Style-ruff-black.svg?style=flat-square&logo=ruff&logoColor=white&color=D7FF64">
   </a>
-  <a href="https://mypy.readthedocs.io/en/stable/index.html">
-    <img alt="mypy" src="https://img.shields.io/badge/mypy-checked-success.svg?style=flat-square&logo=pypy&logoColor=white&color=0A6847">
+  <a href="https://docs.astral.sh/ty">
+    <img alt="ty" src="https://img.shields.io/badge/ty-checked-success.svg?style=flat-square&logo=pypy&logoColor=white&color=0A6847">
   </a>
 </p>
 
