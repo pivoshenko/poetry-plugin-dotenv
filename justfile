@@ -6,7 +6,6 @@ format:
 lint:
   poetry run ty check .
   poetry run ruff check .
-  poetry run cz check --rev-range .
 
 test:
   poetry run pytest .

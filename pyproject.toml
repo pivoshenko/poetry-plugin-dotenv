@@ -69,7 +69,6 @@ pyupgrade = "~=3.21.0"
 ruff = "~=0.15.8"
 
 [tool.poetry.group.linters.dependencies]
-commitizen = "~=4.10.1"
 ruff = "~=0.15.8"
 ty = "~=0.0.17,<0.0.24"
 
@@ -93,9 +92,6 @@ requires = ["poetry-core~=1.0.0"]
 [tool.codespell]
 ignore-words-list = ["redunant", "resovle", "socio-economic"]
 skip = ["poetry.lock"]
-
-[tool.commitizen]
-allowed_prefixes = ["0", "1", "2", "3", "Initial", "Merge", "build", "tests"]
 
 [tool.coverage.run]
 omit = ["*/__init__.py"]
