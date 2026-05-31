@@ -76,7 +76,7 @@ poetry-plugin-dotenv = "poetry_plugin_dotenv.plugin:DotenvPlugin"
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
-requires = ["poetry-core~=1.0.0"]
+requires = ["poetry-core>=1.0.0,<3.0.0"]
 
 [tool.coverage.run]
 omit = ["*/__init__.py"]
