@@ -2,65 +2,47 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Project Overview
+## What this is
 
-Poetry plugin that automatically loads environment variables from `.env` files before Poetry commands execute. Also provides an `activate` command that loads env vars then spawns a shell. Zero external runtime dependencies beyond Poetry itself.
+A Poetry application plugin (`poetry.application.plugin` entry point `poetry-plugin-dotenv` → `poetry_plugin_dotenv.plugin:DotenvPlugin`) that loads `.env` variables into the environment before any Poetry command runs, and ships a new `poetry activate` command that re-execs the user's shell with the venv activated. Must support both `poetry 1.5+` and `poetry 2+`, and Python 3.9+.
 
 ## Commands
 
-```bash
-# Install dependencies
-poetry install
+Task runner is `just` (see `justfile`); Poetry is the package manager.
 
-# Run tests (pytest with coverage)
-just test
+- `just install` — `poetry install --all-groups --all-extras`
+- `just format` — `pyupgrade --py310-plus` over `src/` and `tests/`, then `ruff format .`
+- `just lint` — `ty check .` then `ruff check .`
+- `just test` — `pytest .` (coverage is wired via `addopts` in `pyproject.toml`)
+- `just check` — `lint` + `test` (the CI gate)
+- `just update` — `poetry update`
 
-# Run linters (ty type checker + ruff)
-just lint
-
-# Run formatters (pyupgrade + ruff format)
-just format
-
-# Run a single test
-poetry run pytest tests/path/test_file.py::test_name -v
-
-# Update dependencies
-just update
-```
+Run a single test: `poetry run pytest tests/test_plugin.py::test_name` (or `-k <pattern>`).
 
 ## Architecture
 
-The plugin hooks into Poetry's event system via Cleo's `COMMAND` event:
+Flow on every Poetry command:
 
-```
-DotenvPlugin (plugin.py)
-├── Event listener: intercepts all commands except `activate`
-│   └── loader.load() → Configurator → DotEnv → sets env vars
-└── Command factory: registers `activate` command
-    └── ActivateCommand (commands.py) → loads env vars then os.execvp() into shell
-```
+1. `plugin.DotenvPlugin.activate` registers a `COMMAND`-event listener (`load`) and the `activate` command factory.
+2. On each command, `plugin.load` builds `working_dir` from the `--directory` option (or cwd), constructs a `logging.Logger` wrapping the Cleo event, and a `configurator.Config(working_dir)`, then calls `loader.load`.
+3. `configurator.Config` walks `CONFIG_SOURCES` in order — `[tool.poetry.plugins.dotenv]` in `pyproject.toml`, then `[tool.dotenv]`, then `POETRY_PLUGIN_DOTENV_*` env vars — each later source overrides earlier ones. Booleans go through `_STR_BOOLEAN_MAPPING` (`yes/true/1/...`), `location` is normalized to `list[pathlib.Path]` via `_as_paths` (comma-separated strings allowed).
+4. `loader.load` short-circuits on `ignore`, otherwise resolves filepaths: explicit `config.location` entries (absolute kept, relative joined to `working_dir`) or `dotenv.core.find(usecwd=True)` walking up from cwd. Each existing file is parsed and applied via `dotenv.core.load`.
+5. The `activate` subcommand in `commands.py` re-execs the user's shell (`SHELL` env), with fish/POSIX/PowerShell/cmd branches, after loading dotenv.
 
-**Configuration flow** (`configurator.py`): Environment variables > `[tool.dotenv]` in pyproject.toml > `[tool.poetry.plugins.dotenv]` > defaults. Config fields: `ignore` (bool) and `location` (list of paths, default `.env`).
+`src/poetry_plugin_dotenv/dotenv/` is a self-contained dotenv implementation (no `python-dotenv` dependency — keeping the plugin dep-free is a project invariant). Split:
 
-**Dotenv parsing pipeline** (`dotenv/`):
-- `parsers.py`: `Reader` streams characters → `parse_stream()` yields `Binding` objects (key-value pairs with metadata)
-- `variables.py`: Resolves POSIX variable expansions (`${VAR:-default}`) into `Variable`/`Literal` atoms
-- `core.py`: `DotEnv` class orchestrates parsing, interpolation via `resolve()`, and environment injection
+- `parsers.py` — tokenizer/parser for `.env` syntax (quotes, escapes, comments, exports).
+- `variables.py` — POSIX variable expansion (`${VAR}`, `${VAR:-default}`, etc.) used inside values.
+- `core.py` — `find()` (upward search) and `load()` (parse + apply to `os.environ`).
 
-## Code Conventions
+Custom listener exclusions live in `plugin.COMMANDS_EXCLUSION` (currently `{"activate"}` — the activate command does its own loading).
 
-- All modules require `from __future__ import annotations`
-- Line length: 100 characters
-- Type hints required everywhere; checked with `ty`
-- Ruff handles both linting and formatting
-- Coverage target: 90%
-- Conventional Commits: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`, `ci`, `build`, `perf`, `style`, `revert`
+## Code style
 
-## Testing
+- Ruff config in `pyproject.toml`: `select = ["ALL"]`, line length 100, double quotes, single-line imports, `from __future__ import annotations` is **required** in every module (enforced via `required-imports`). Tests get `INP001/PLR2004/S101/SLF001` waived.
+- `ty` (Astral's type checker) is part of lint; target `python-version = "3.10"`.
+- `pyupgrade --py310-plus` runs in `just format` even though the project supports 3.9 — keep modern syntax with `from __future__ import annotations` covering forward refs.
 
-Tests mirror source structure under `tests/`. Key patterns:
-- Temporary `.env` files via `create_dotenv_file`/`dotenv_file` fixtures in `conftest.py`
-- Mocked Poetry events and IO objects via `pytest-mock`
-- `@mock.patch.dict(os.environ)` for environment variable isolation
-- Parametrized tests for config source variants (`test_plugin_toml_config.py`, `test_plugin_os_config.py`)
-- `--basetemp=tests/fixtures` for temp file location
+## Releases
+
+Changelog is generated by `git-cliff` (`cliff.toml`); commits follow Angular conventional format. Release workflow is `.github/workflows/release.yaml`.

@@ -1,24 +1,19 @@
 # Security Policy
 
-- [Security Policy](#security-policy)
-  - [Supported Versions](#supported-versions)
-  - [Reporting a Vulnerability](#reporting-a-vulnerability)
+## Supported versions
 
-## Supported Versions
+Only the latest release series is supported for security fixes.
 
-Use this section to tell people about which versions of your project are currently being supported
-with security updates.
+## Reporting a vulnerability
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| \< 4.0  | :x:                |
+Please do not open public issues for suspected vulnerabilities.
 
-## Reporting a Vulnerability
+Report privately to:
+- contact@pivoshenko.dev
 
-Use this section to tell people how to report a vulnerability.
+Include:
+- affected version
+- reproduction steps
+- impact assessment
 
-Tell them where to go, how often they can expect to get an update on a reported vulnerability, what
-to expect if the vulnerability is accepted or declined, etc.
+We will acknowledge within 72 hours and provide remediation timeline after triage.
