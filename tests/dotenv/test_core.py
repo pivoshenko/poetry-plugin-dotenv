@@ -6,11 +6,11 @@ import io
 import os
 import sys
 import textwrap
+import subprocess
 
 from pathlib import Path
 from unittest import mock
 
-import sh
 import pytest
 
 from poetry_plugin_dotenv.dotenv import core as dotenv
@@ -158,9 +158,14 @@ def test_load_dotenv_in_current_dir(tmp_path: Path) -> None:
     )
     os.chdir(str(tmp_path))
 
-    result = sh.Command(sys.executable)(code_path)
+    result = subprocess.run(  # noqa: S603
+        [sys.executable, str(code_path)],
+        capture_output=True,
+        text=True,
+        check=True,
+    )
 
-    assert result == "b\n"
+    assert result.stdout == "b\n"
 
     code_path.unlink()
 
