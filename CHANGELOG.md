@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.3.2] - 2026-05-31
+
+### Build
+
+- Widen poetry-core constraint to support poetry 2
+
 ## [3.3.1] - 2026-05-31
 
 ### Build
@@ -36,6 +42,10 @@ All notable changes to this project will be documented in this file.
 ### Testing
 
 - Replace sh with stdlib subprocess in core tests
+
+### Release
+
+- V3.3.1
 
 ## [3.3.0] - 2026-03-14
 
