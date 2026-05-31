@@ -1,7 +1,3 @@
-# Requires GitHub secrets
-# - GH_TOKEN
-# - PYPI_TOKEN
-
 name: Release
 
 on:
@@ -15,46 +11,106 @@ permissions:
   contents: write
 
 jobs:
-  release:
-    name: Release
+  tag:
     runs-on: ubuntu-latest
-    concurrency: release
-    permissions:
-      id-token: write
-      contents: write
+    outputs:
+      tag: v${{ steps.version.outputs.version }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
-      - name: Install Python
-        uses: actions/setup-python@v6
+      - name: Install git-cliff
+        uses: orhun/git-cliff-action@v4
+        with:
+          args: --version
+
+      - name: Add git-cliff to PATH
+        run: echo "$RUNNER_TEMP/git-cliff/bin" >> "$GITHUB_PATH"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.13"
-          architecture: x64
 
-      - name: Install dependencies
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+
+      - name: Resolve version
+        id: version
         run: |
-          python -m pip install -U poetry==2.2.0 poetry-core twine
-          python -m poetry install --only main
+          if [[ -n "${{ github.event.inputs.version }}" ]]; then
+            VERSION="${{ github.event.inputs.version }}"
+          else
+            VERSION=$(git-cliff --bumped-version)
+            VERSION="${VERSION#v}"
+          fi
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
 
-      - name: Semantic release (auto)
-        if: ${{ !inputs.version }}
-        uses: python-semantic-release/python-semantic-release@v10.5.3
+      - name: Update version
+        run: poetry version "${{ steps.version.outputs.version }}"
+
+      - name: Generate changelog
+        uses: orhun/git-cliff-action@v4
         with:
-          github_token: ${{ secrets.GH_TOKEN }}
+          args: --tag v${{ steps.version.outputs.version }} --output CHANGELOG.md
 
-      - name: Semantic release (version override)
-        if: ${{ inputs.version }}
+      - name: Commit and tag
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add pyproject.toml CHANGELOG.md
+          if ! git diff --cached --quiet; then
+            git commit -m "release: v${VERSION}"
+          fi
+          git tag "v${VERSION}"
+          git push origin main --tags
+
+  release:
+    needs: tag
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ needs.tag.outputs.tag }}
+          fetch-depth: 0
+
+      - name: Generate Changelog
+        uses: orhun/git-cliff-action@v4
+        id: changelog
+        with:
+          args: --latest --strip header
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ needs.tag.outputs.tag }}
+          body: ${{ steps.changelog.outputs.content }}
+
+  publish:
+    needs: [tag, release]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ needs.tag.outputs.tag }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+
+      - name: Build
+        run: poetry build
+
+      - name: Publish to PyPI
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          python -m poetry run semantic-release version --define "version=${{ inputs.version }}"
-
-      - name: Build package
-        run: python -m poetry build
-
-      - name: Publish package
-        run: |
-          python -m poetry run twine upload dist/* -u __token__ -p ${{ secrets.PYPI_TOKEN }} --skip-existing --verbose
+          POETRY_PYPI_TOKEN_PYPI: ${{ secrets.PYPI_TOKEN }}
+        run: poetry publish
