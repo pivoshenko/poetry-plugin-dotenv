@@ -56,14 +56,6 @@ packages = [{ include = "poetry_plugin_dotenv", from = "src" }]
 poetry = ">=1.5.0,<3.0.0"
 python = "~=3.9,<4.0"
 
-[tool.poetry.group.ci.dependencies]
-python-semantic-release = "~=10.5.3"
-
-[tool.poetry.group.dev.dependencies]
-ipdb = "~=0.13.13"
-ipython = "~=8.12.3"
-poethepoet = "~=0.37.0"
-
 [tool.poetry.group.formatters.dependencies]
 pyupgrade = "~=3.21.0"
 ruff = "~=0.15.8"
@@ -74,13 +66,10 @@ ty = "~=0.0.17,<0.0.24"
 
 [tool.poetry.group.tests.dependencies]
 coverage = { version = "~=7.10.7", extras = ["toml"] }
-pytest = "7.4.4"
+pytest = "~=7.4.4"
 pytest-cov = "~=7.1.0"
-pytest-lazy-fixture = "~=0.6.3"
 pytest-mock = "~=3.15.1"
 pytest-sugar = "~=1.1.1"
-sh = "~=2.2.2"
-xdoctest = "~=1.3.2"
 
 [tool.poetry.plugins."poetry.application.plugin"]
 poetry-plugin-dotenv = "poetry_plugin_dotenv.plugin:DotenvPlugin"
@@ -89,21 +78,24 @@ poetry-plugin-dotenv = "poetry_plugin_dotenv.plugin:DotenvPlugin"
 build-backend = "poetry.core.masonry.api"
 requires = ["poetry-core~=1.0.0"]
 
-[tool.codespell]
-ignore-words-list = ["redunant", "resovle", "socio-economic"]
-skip = ["poetry.lock"]
-
 [tool.coverage.run]
 omit = ["*/__init__.py"]
 
 [tool.pytest.ini_options]
-addopts = ["--basetemp=tests/fixtures", "--color=yes", "--cov=src", "--cov-report=xml", "--cov-report=html", "--xdoc"]
+addopts = ["--basetemp=tests/fixtures", "--color=yes", "--cov=src", "--cov-report=term-missing"]
 testpaths = ["tests"]
+
+[tool.ty.environment]
+python-version = "3.10"
 
 [tool.ruff]
 fix = true
 line-length = 100
 unsafe-fixes = true
+
+[tool.ruff.format]
+docstring-code-format = true
+quote-style = "double"
 
 [tool.ruff.lint]
 ignore = ["D107", "D102", "D103", "D203", "D213", "COM812"]
@@ -123,46 +115,3 @@ required-imports = ["from __future__ import annotations"]
 "src/poetry_plugin_dotenv/plugin.py" = ["ARG002", "ANN002", "ANN003"]
 "src/poetry_plugin_dotenv/dotenv/variables.py" = ["ARG002", "ANN002", "ANN003"]
 "tests/*.*" = ["INP001", "S101"]
-
-[tool.ruff.format]
-docstring-code-format = true
-quote-style = "double"
-
-[tool.semantic_release]
-changelog_file = "CHANGELOG.md"
-commit_author = "github-actions <github-actions@github.com>"
-exclude_commit_patterns = ["Merge pull request"]
-logging_use_named_masks = true
-version_toml = ["pyproject.toml:tool.poetry.version"]
-version_variables = ["src/poetry_plugin_dotenv/__init__.py:__version__"]
-
-[tool.semantic_release.changelog]
-exclude_commit_patterns = ['''Merged? .*''', '''Initial Commit.*''', '''~=\d+\.\d+\.\d+''']
-
-[tool.semantic_release.commit_parser_options]
-major_tags = ["feat"]
-minor_tags = ["fix", "perf", "refactor"]
-patch_tags = ["docs", "style"]
-
-[tool.poe]
-poetry_command = ""
-
-[tool.poe.tasks.format]
-help = "Run formatters"
-sequence = [
-  { shell = "find src -type f -name '*.py' | xargs poetry run pyupgrade --py39-plus", help = "Run annotations formatter" },
-  { shell = "find tests -type f -name '*.py' | xargs poetry run pyupgrade --py39-plus", help = "Run annotations formatter" },
-  { shell = "poetry run ruff format .", help = "Run code formatter" }
-]
-
-[tool.poe.tasks.lint]
-help = "Run linters"
-sequence = [
-  { shell = "poetry run ty check .", help = "Run types linter" },
-  { shell = "poetry run ruff check .", help = "Run code linter" },
-  { shell = "poetry run cz check --rev-range .", help = "Run commits linter" }
-]
-
-[tool.poe.tasks.tests]
-help = "Run tests"
-shell = "poetry run pytest ."
