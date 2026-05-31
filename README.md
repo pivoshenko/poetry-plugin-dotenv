@@ -1,13 +1,9 @@
-<div align="center">
-  <img alt="logo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/assets/logo.svg?raw=True" height=200>
-</div>
-
-<br>
+<h1 align="left">
+  <img src="docs/assets/logo.svg" alt="" height="40" align="left" style="vertical-align: middle; margin-right: 12px;">
+  poetry-plugin-dotenv
+</h1>
 
 <p align="left">
-  <a href="https://opensource.org/licenses/MIT">
-    <img alt="License" src="https://img.shields.io/pypi/l/poetry-plugin-dotenv?style=flat-square&logo=opensourceinitiative&logoColor=white&color=0A6847&label=License">
-  </a>
   <a href="https://pypi.org/project/poetry-plugin-dotenv">
     <img alt="Python" src="https://img.shields.io/pypi/pyversions/poetry-plugin-dotenv?style=flat-square&logo=python&logoColor=white&color=4856CD&label=Python">
   </a>
@@ -16,9 +12,6 @@
   </a>
   <a href="https://github.com/pivoshenko/poetry-plugin-dotenv/actions/workflows/ci.yaml">
     <img alt="CI" src="https://img.shields.io/github/actions/workflow/status/pivoshenko/poetry-plugin-dotenv/ci.yaml?label=CI&style=flat-square&logo=githubactions&logoColor=white&color=0A6847">
-  </a>
-  <a href="https://codecov.io/gh/pivoshenko/poetry-plugin-dotenv">
-    <img alt="Coverage" src="https://img.shields.io/codecov/c/gh/pivoshenko/poetry-plugin-dotenv?token=cqRQxVnDR6&style=flat-square&logo=codecov&logoColor=white&color=0A6847&label=Coverage">
   </a>
   <a href="https://docs.astral.sh/ruff">
     <img alt="Ruff" src="https://img.shields.io/badge/Style-ruff-black.svg?style=flat-square&logo=ruff&logoColor=white&color=D7FF64">

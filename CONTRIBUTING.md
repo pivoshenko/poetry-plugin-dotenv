@@ -1,15 +1,5 @@
 # Contributing
 
-- [Contributing](#contributing)
-  - [Reporting Bugs](#reporting-bugs)
-    - [How To Submit a Bug Report](#how-to-submit-a-bug-report)
-  - [Suggesting Enhancements](#suggesting-enhancements)
-    - [How To Submit an Enhancement](#how-to-submit-an-enhancement)
-  - [Code Contributions](#code-contributions)
-    - [Local Development](#local-development)
-    - [Commits](#commits)
-    - [Pull Requests](#pull-requests)
-
 Thank you for taking the time to contribute.
 
 These guidelines are intended to make contributions consistent and easy to review across repositories. They are guidance, not hard rules, and maintainers may adapt them when needed.
@@ -66,27 +56,66 @@ When a repository includes helper scripts or task runners, prefer using those do
 > [!IMPORTANT]
 > Behavioral code changes should include or update tests.
 
+### Branches
+
+Branch names follow the pattern `<type>/<short-description>` using the same type prefixes as commits.
+The description should be lowercase kebab-case, brief, and specific enough to identify the change at a glance.
+
+Examples:
+
+```
+feat/github-token-refresh
+fix/private-repo-archive-auth
+docs/update-sync-flow-diagram
+refactor/mcps-schema-alignment
+```
+
+A branch covering multiple unrelated changes should be split — one concern per branch makes review and bisect much easier.
+
 ### Commits
 
 Use clear, focused commits with descriptive messages.
 
-This template recommends [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/):
+This project follows [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
-- `feat`
-- `fix`
-- `docs`
-- `refactor`
-- `test`
-- `chore`
-- `ci`
-- `build`
-- `perf`
-- `style`
-- `revert`
+**Format**
 
-Example: `feat(auth): add token refresh support`
+```
+<type>(<scope>): <subject>
 
-If your repository enforces a different commit style, follow the repository-specific rule.
+[optional body]
+```
+
+- **type** — one of the prefixes from the table below
+- **scope** — the module, command, or area being changed (e.g. `sync`, `mcps`, `github`, `landing`, `config`); omit when the change is truly cross-cutting
+- **subject** — imperative mood, lowercase, no trailing period, 72 characters or fewer
+- **body** — optional; use it to explain *why*, not *what*; wrap at 72 characters
+
+**Type prefixes**
+
+| Prefix     | When to use                                                                                             |
+| ---------- | ------------------------------------------------------------------------------------------------------- |
+| `feat`     | A new feature or user-facing capability                                                                 |
+| `fix`      | A bug fix that corrects incorrect behavior                                                              |
+| `docs`     | Changes to documentation only (README, comments, guides)                                                |
+| `refactor` | Code restructuring that does not change external behavior (renaming, extracting functions, simplifying) |
+| `test`     | Adding, updating, or fixing tests without changing production code                                      |
+| `chore`    | Maintenance tasks that don't affect source code or tests (dependency bumps, config tweaks, .gitignore)  |
+| `ci`       | Changes to CI/CD configuration and scripts (GitHub Actions, workflows, pipelines)                       |
+| `build`    | Changes to the build system or external dependencies (Cargo.toml, build scripts, Makefile)              |
+| `perf`     | A code change that improves performance without altering functionality                                  |
+| `style`    | Formatting-only changes (whitespace, semicolons, linting) with no logic changes                         |
+| `design`   | Changes to visual or UI design assets and layout                                                        |
+| `revert`   | Reverts a previous commit (reference the reverted commit hash in the body)                              |
+
+**Examples**
+
+```
+feat(sync): support skills source sub-directory selection
+fix(github): url-encode git refs in API tarball endpoint
+refactor(mcps): align mcps[] schema with skills[]
+docs(config): document browser URL auto-rewriting for --config
+```
 
 ### Pull Requests
 
