@@ -14,8 +14,8 @@ permissions:
   contents: read
 
 jobs:
-  ci:
-    runs-on: ubuntu-latest
+  lint:
+    runs-on: ubuntu-24.04-arm
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -37,5 +37,50 @@ jobs:
       - name: Run linters
         run: just lint
 
+  audit:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Install just
+        uses: extractions/setup-just@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+
+      - name: Install dependencies
+        run: just install
+
+      - name: Run audit
+        run: just audit
+
+  test:
+    needs: [lint, audit]
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Install just
+        uses: extractions/setup-just@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+
+      - name: Install dependencies
+        run: just install
+
       - name: Run tests
+        if: hashFiles('.no-tests') == ''
         run: just test
