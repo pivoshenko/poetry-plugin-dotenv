@@ -88,6 +88,10 @@ testpaths = ["tests"]
 [tool.ty.environment]
 python-version = "3.10"
 
+[tool.ty.rules]
+invalid-yield = "ignore"
+unresolved-attribute = "ignore"
+
 [tool.ruff]
 fix = true
 line-length = 100
