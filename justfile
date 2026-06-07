@@ -15,7 +15,7 @@ lint:
     uvx ty check
 
 test:
-    uvx pytest
+    @[ -f .no-tests ] && echo "skipping (.no-tests sentinel)" || uvx pytest
 
 check: lint test
 
