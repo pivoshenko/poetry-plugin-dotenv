@@ -5,18 +5,23 @@ install:
     poetry install --all-groups --all-extras
 
 format:
-    find src -type f -name '*.py' | xargs poetry run pyupgrade --py310-plus
-    find tests -type f -name '*.py' | xargs poetry run pyupgrade --py310-plus
-    poetry run ruff format .
+    find src -type f -name '*.py' | xargs uvx pyupgrade --py310-plus
+    find tests -type f -name '*.py' | xargs uvx pyupgrade --py310-plus
+    uvx ruff check --fix .
+    uvx ruff format .
 
 lint:
-    poetry run ty check .
-    poetry run ruff check .
+    uvx ruff check .
+    uvx ruff format --check .
+    uvx ty check
 
 test:
-    poetry run pytest .
+    uvx pytest
 
 check: lint test
 
 update:
     poetry update
+
+audit:
+    uvx pip-audit
