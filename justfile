@@ -5,8 +5,7 @@ install:
     poetry install --all-groups --all-extras
 
 format:
-    find src -type f -name '*.py' | xargs uvx pyupgrade --py310-plus
-    find tests -type f -name '*.py' | xargs uvx pyupgrade --py310-plus
+    find . -type f -name '*.py' -not -path '*/.venv/*' | xargs uvx pyupgrade --py310-plus
     uvx ruff check --fix .
     uvx ruff format .
 

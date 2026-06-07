@@ -11,7 +11,7 @@ A Poetry application plugin (`poetry.application.plugin` entry point `poetry-plu
 Task runner is `just` (see `justfile`); Poetry is the package manager.
 
 - `just install` — `poetry install --all-groups --all-extras`
-- `just format` — `uvx pyupgrade --py310-plus` over `src/` and `tests/`, then `uvx ruff check --fix .`, then `uvx ruff format .`
+- `just format` — `uvx pyupgrade --py310-plus` over `.` (excluding `.venv`), then `uvx ruff check --fix .`, then `uvx ruff format .`
 - `just lint` — `uvx ruff check .`, `uvx ruff format --check .`, then `uvx ty check`
 - `just test` — `uvx pytest` (coverage is wired via `addopts` in `pyproject.toml`)
 - `just check` — `lint` + `test` (the CI gate)
