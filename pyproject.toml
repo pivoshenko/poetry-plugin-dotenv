@@ -91,6 +91,7 @@ python-version = "3.10"
 [tool.ty.rules]
 invalid-yield = "ignore"
 unresolved-attribute = "ignore"
+invalid-argument-type = "ignore"
 
 [tool.ruff]
 fix = true

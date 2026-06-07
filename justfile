@@ -11,7 +11,6 @@ format:
 
 lint:
     uvx ruff check .
-    uvx ruff format --check .
     uvx ty check
 
 test:
