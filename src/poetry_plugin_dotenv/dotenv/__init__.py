@@ -1,4 +1,4 @@
-"""Package for the dotenv functionality.
+"""Package that contains the dotenv functionality.
 
 This package is a fork of the ``python-dotenv`` package.
 

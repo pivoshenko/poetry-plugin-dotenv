@@ -1,4 +1,4 @@
-"""Tests for the module that contains models of the dotenv variables and literals."""
+"""Module that contains tests for the module that contains dotenv variable and literal models."""
 
 from __future__ import annotations
 

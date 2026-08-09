@@ -1,4 +1,4 @@
-"""Tests for the module that contains core dotenv functionality."""
+"""Module that contains tests for the module that contains core dotenv functionality."""
 
 from __future__ import annotations
 

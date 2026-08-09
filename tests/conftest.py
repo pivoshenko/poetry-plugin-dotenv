@@ -1,4 +1,4 @@
-"""Fixtures and configuration for the tests."""
+"""Module that contains fixtures and configuration for the tests."""
 
 from __future__ import annotations
 

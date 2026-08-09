@@ -1,4 +1,4 @@
-"""Tests for the module that contains dotenv parsers."""
+"""Module that contains tests for the module that contains dotenv parsers."""
 
 from __future__ import annotations
 
