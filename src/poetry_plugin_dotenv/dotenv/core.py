@@ -160,7 +160,6 @@ def find(filename: str = ".env", *, usecwd: bool = False) -> Path | None:
     if usecwd or getattr(sys, "frozen", False):
         path = Path.cwd()
     else:
-        # Get the directory of the caller's file
         caller_frame = sys._getframe(1)  # noqa: SLF001
         caller_file = Path(caller_frame.f_code.co_filename).resolve()
         path = caller_file.parent

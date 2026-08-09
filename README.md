@@ -23,9 +23,9 @@
 
 ## Overview
 
-`poetry-plugin-dotenv` - is the plugin that automatically loads environment variables from a dotenv file into the environment before `poetry` commands are run.
+`poetry-plugin-dotenv` loads environment variables from a dotenv file into the environment before any `poetry` command runs.
 
-`poetry-plugin-dotenv` introduces **new commands** to extend the functionality of `poetry` such as:
+It also adds new `poetry` commands:
 
 - `poetry activate` - loads environment variables from a dotenv file and activates the virtual environment
 
@@ -74,7 +74,7 @@ Prevents `poetry` from loading the dotenv file.
 
 If your dotenv file is located elsewhere or has a different name, you can set this parameter.
 
-### Configuration via TOML file
+### Configuration via TOML File
 
 The plugin can read project-specific default values for its options from a `pyproject.toml` file.
 By default, `poetry-plugin-dotenv` looks for a `pyproject.toml` file that includes either a `[tool.dotenv]` or `[tool.poetry.plugins.dotenv]` section.
@@ -97,13 +97,13 @@ location = ".env.dev"
 > [!IMPORTANT]
 > Due to `poetry`'s default parser, all options in the plugin sections must be specified as strings.
 
-As mentioned in the **Features** list, the schema for the plugin configuration is part of the [JSON Schema Store](https://www.schemastore.org/json), which enables auto-completion and validation in IDEs like Visual Studio Code and PyCharm.
+The configuration schema is part of the [JSON Schema Store](https://www.schemastore.org/json), so IDEs like Visual Studio Code and PyCharm offer auto-completion and validation for it.
 
 <div align="center">
   <img alt="logo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/assets/schema_example.png?raw=True">
 </div>
 
-### Configuration via environment variables
+### Configuration via Environment Variables
 
 `poetry-plugin-dotenv` supports the following configuration options via environment variables:
 
@@ -113,15 +113,15 @@ As mentioned in the **Features** list, the schema for the plugin configuration i
 > [!IMPORTANT]
 > As environment variables are always strings, options should always be set as strings.
 
-### Lookup hierarchy
+### Lookup Hierarchy
 
-A `pyproject.toml` file can override default values. Options provided via environment variables override both.
+A `pyproject.toml` file can override default values. Environment variables override both.
 
 ## Examples
 
 <!-- <img alt="demo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/assets/demo.gif?raw=True"> -->
 
-Example of using activate command:
+Using the `activate` command:
 
 ```dotenv
 # .env
@@ -140,7 +140,7 @@ poetry activate -v
 # Reloads shell within the environment with loaded environment variables
 ```
 
-Example of using run command:
+Using the `run` command:
 
 ```dotenv
 # .env
