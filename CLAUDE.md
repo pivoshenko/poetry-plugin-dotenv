@@ -41,7 +41,7 @@ Custom listener exclusions live in `plugin.COMMANDS_EXCLUSION` (currently `{"act
 ## Code style
 
 - Ruff config in `pyproject.toml`: `select = ["ALL"]`, line length 100, double quotes, single-line imports, `from __future__ import annotations` is **required** in every module (enforced via `required-imports`). Tests get `INP001/PLR2004/S101/SLF001` waived.
-- `ty` (Astral's type checker) is part of lint; target `python-version = "3.10"`. A `[tool.ty.rules]` block in `pyproject.toml` suppresses `invalid-yield`, `unresolved-attribute`, and `invalid-argument-type` — these are preexisting code issues surfaced when `ty` was added to the lint gate; suppressed to keep CI green without rewriting the affected logic.
+- `ty` (Astral's type checker) is part of lint; target `python-version = "3.10"`. A `[tool.ty.rules]` block in `pyproject.toml` suppresses `unresolved-attribute` and `invalid-argument-type` — these are preexisting code issues surfaced when `ty` was added to the lint gate; suppressed to keep CI green without rewriting the affected logic.
 - `pyupgrade --py310-plus` runs in `just format` even though the project supports 3.9 — keep modern syntax with `from __future__ import annotations` covering forward refs.
 
 ## Releases
