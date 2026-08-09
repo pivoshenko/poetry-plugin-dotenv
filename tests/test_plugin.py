@@ -1,4 +1,4 @@
-"""Tests for the module that contains plugin definition."""
+"""Module that contains tests for the module that contains plugin definition."""
 
 from __future__ import annotations
 

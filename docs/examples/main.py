@@ -1,4 +1,4 @@
-"""Example script."""
+"""Module that contains an example script."""
 
 from __future__ import annotations
 

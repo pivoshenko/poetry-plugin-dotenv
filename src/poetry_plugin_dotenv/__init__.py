@@ -1,4 +1,4 @@
-"""poetry-plugin-dotenv - is the plugin that automatically loads environment variables from a dotenv file into the environment before poetry commands are run."""
+"""Package that contains poetry-plugin-dotenv, the plugin that automatically loads environment variables from a dotenv file into the environment before poetry commands are run."""
 
 from __future__ import annotations
 

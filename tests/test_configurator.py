@@ -1,4 +1,4 @@
-"""Tests for the module that contains configurator."""
+"""Module that contains tests for the module that contains configurator."""
 
 from __future__ import annotations
 
