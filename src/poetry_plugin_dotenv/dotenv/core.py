@@ -40,9 +40,9 @@ class DotEnv:
         self.override = override
         self.interpolate = interpolate
         self.encoding = "utf-8"
-        self._dict: OrderedDict[str, str] | None = None
+        self._dict: OrderedDict[str, str | None] | None = None
 
-    def dict(self) -> OrderedDict[str, str]:
+    def dict(self) -> OrderedDict[str, str | None]:
         """Get content of a dotenv file."""
         if self._dict:
             return self._dict
@@ -57,7 +57,7 @@ class DotEnv:
 
         return self._dict
 
-    def parse(self) -> Iterator[tuple[str, str]]:
+    def parse(self) -> Iterator[tuple[str, str | None]]:
         """Parse a dotenv file."""
         with self._get_stream() as stream:
             for mapping in parsers.parse_stream(stream):
@@ -109,9 +109,13 @@ class DotEnv:
             yield io.StringIO("")  # pragma: nocover
 
 
-def resolve(values: Iterable[tuple[str, str]], *, override: bool) -> OrderedDict[str, str]:
+def resolve(
+    values: Iterable[tuple[str, str | None]],
+    *,
+    override: bool,
+) -> OrderedDict[str, str | None]:
     """Resolve dotenv variables."""
-    new_values: OrderedDict[str, str] = OrderedDict()
+    new_values: OrderedDict[str, str | None] = OrderedDict()
 
     for name, value in values:
         if value is None:
@@ -119,7 +123,7 @@ def resolve(values: Iterable[tuple[str, str]], *, override: bool) -> OrderedDict
 
         else:
             atoms = variables.parse(value)
-            env: OrderedDict[str, str] = OrderedDict()
+            env: OrderedDict[str, str | None] = OrderedDict()
 
             if override:
                 env.update(os.environ)
@@ -190,6 +194,6 @@ def values(
     stream: IO[str] | None = None,
     *,
     interpolate: bool = True,
-) -> OrderedDict[str, str]:
+) -> OrderedDict[str, str | None]:
     """Parse a dotenv file and return its content as a dictionary."""
     return DotEnv(filepath=filepath, stream=stream, interpolate=interpolate).dict()

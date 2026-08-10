@@ -44,7 +44,7 @@ class Variable:
     name: str
     default: str | None = None
 
-    def resolve(self, env: OrderedDict[str, str], *args, **kwargs) -> str:
+    def resolve(self, env: OrderedDict[str, str | None], *args, **kwargs) -> str:
         """Resolve the variable value from the environment or use the default."""
         return env.get(self.name, self.default or "") or ""
 
