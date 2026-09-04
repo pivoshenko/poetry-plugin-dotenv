@@ -1,7 +1,3 @@
-# Publishes via PyPI trusted publishing (OIDC), so no PyPI token is needed.
-# The trusted publisher on PyPI must match: owner pivoshenko, repository
-# poetry-plugin-dotenv, workflow release.yaml, no environment.
-
 name: Release
 
 on:
