@@ -1,5 +1,6 @@
-# Requires GitHub secrets
-# - PYPI_TOKEN
+# Publishes via PyPI trusted publishing (OIDC), so no PyPI token is needed.
+# The trusted publisher on PyPI must match: owner pivoshenko, repository
+# poetry-plugin-dotenv, workflow release.yaml, no environment.
 
 name: Release
 
@@ -96,6 +97,9 @@ jobs:
   publish:
     needs: [tag, release]
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -114,6 +118,4 @@ jobs:
         run: poetry build
 
       - name: Publish to PyPI
-        env:
-          POETRY_PYPI_TOKEN_PYPI: ${{ secrets.PYPI_TOKEN }}
-        run: poetry publish
+        uses: pypa/gh-action-pypi-publish@release/v1
