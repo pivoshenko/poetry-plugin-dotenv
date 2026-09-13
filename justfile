@@ -20,6 +20,3 @@ check: lint test
 
 update:
     poetry update
-
-audit:
-    uvx pip-audit

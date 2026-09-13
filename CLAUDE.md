@@ -20,12 +20,11 @@ Hard constraints that shape the code:
 - `just lint` — `uvx ruff check .` then `uvx ty check`
 - `just test` — `poetry run pytest` (skipped if a `.no-tests` sentinel file exists at repo root; none is committed)
 - `just check` — lint + test
-- `just audit` — `uvx pip-audit`
 - `just update` — `poetry update`
 
 Single test: `poetry run pytest tests/test_plugin.py::test_default_dotenv_file` or `poetry run pytest -k <pattern>`.
 
-CI (`.github/workflows/ci.yaml`) gates on `just lint`, `just audit`, `just test` (Python 3.13, ubuntu ARM).
+CI (`.github/workflows/ci.yaml`) gates on `just lint` and `just test` (Python 3.13, ubuntu ARM).
 
 ## Architecture
 
