@@ -8,9 +8,7 @@ Set TypingSpeed 0.5
 Set Theme "Catppuccin Macchiato"
 Set Shell "zsh"
 
-# ================================================================
-# Intro
-# ================================================================
+# == Intro ==
 
 Type "echo 'Welcome to poetry-plugin-dotenv!'"
 Enter
@@ -27,9 +25,7 @@ Enter
 Sleep 5s
 Ctrl+L
 
-# ================================================================
-# TOML Configuration - default
-# ================================================================
+# == TOML Configuration - Default ==
 
 Hide
 Type "cp configs/pyproject.toml pyproject.toml"
@@ -50,9 +46,7 @@ Enter
 Sleep 7s
 Ctrl+L
 
-# ================================================================
-# TOML Configuration - custom location
-# ================================================================
+# == TOML Configuration - Custom Location ==
 
 Hide
 Type "cp configs/pyproject_location.toml pyproject.toml"
@@ -73,9 +67,7 @@ Enter
 Sleep 7s
 Ctrl+L
 
-# ================================================================
-# TOML Configuration - ignore
-# ================================================================
+# == TOML Configuration - Ignore ==
 
 Hide
 Type "cp configs/pyproject_ignore.toml pyproject.toml"
@@ -92,9 +84,7 @@ Enter
 Sleep 7s
 Ctrl+L
 
-# ================================================================
-# OS Configuration - custom location
-# ================================================================
+# == OS Configuration - Custom Location ==
 
 Hide
 Type "cp configs/pyproject.toml pyproject.toml"
@@ -111,9 +101,7 @@ Enter
 Sleep 7s
 Ctrl+L
 
-# ================================================================
-# OS Configuration - ignore
-# ================================================================
+# == OS Configuration - Ignore ==
 
 Type "export POETRY_PLUGIN_DOTENV_IGNORE=true && poetry run -vvv python main.py"
 Enter
