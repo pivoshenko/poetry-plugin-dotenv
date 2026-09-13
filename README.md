@@ -74,7 +74,7 @@ Prevents `poetry` from loading the dotenv file.
 
 If your dotenv file is located elsewhere or has a different name, you can set this parameter.
 
-### Configuration via TOML File
+### Configuration Via TOML File
 
 The plugin can read project-specific default values for its options from a `pyproject.toml` file.
 By default, `poetry-plugin-dotenv` looks for a `pyproject.toml` file that includes either a `[tool.dotenv]` or `[tool.poetry.plugins.dotenv]` section.
@@ -103,7 +103,7 @@ The configuration schema is part of the [JSON Schema Store](https://www.schemast
   <img alt="logo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/assets/schema_example.png?raw=True">
 </div>
 
-### Configuration via Environment Variables
+### Configuration Via Environment Variables
 
 `poetry-plugin-dotenv` supports the following configuration options via environment variables:
 

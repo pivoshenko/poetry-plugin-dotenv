@@ -7,8 +7,8 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: ci-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
 permissions:
   contents: read
@@ -18,13 +18,13 @@ jobs:
     runs-on: ubuntu-24.04-arm
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Install just
         uses: extractions/setup-just@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v6
+      - name: Setup Python
+        uses: actions/setup-python@v7
         with:
           python-version: "3.13"
 
@@ -32,7 +32,7 @@ jobs:
         uses: snok/install-poetry@v1
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v6
+        uses: astral-sh/setup-uv@v10
 
       - name: Install dependencies
         run: just install

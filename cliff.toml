@@ -32,6 +32,8 @@ commit_parsers = [
     { message = "^test",     group = "Testing" },
     { message = "^build",    group = "Build" },
     { message = "^ci",       group = "CI/CD" },
+    { message = "^style",    group = "Style" },
+    { message = "^design",   group = "Design" },
     { message = "^chore",    group = "Miscellaneous" },
     { message = "^revert",   group = "Reverts" },
 ]
