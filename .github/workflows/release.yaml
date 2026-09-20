@@ -119,5 +119,8 @@ jobs:
       - name: Build
         run: poetry build
 
+      - name: Install uv
+        uses: astral-sh/setup-uv@v10.1.0
+
       - name: Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
+        run: uv publish --trusted-publishing always
