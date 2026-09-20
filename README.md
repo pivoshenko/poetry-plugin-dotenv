@@ -1,5 +1,5 @@
 <h1 align="left">
-  <img src="docs/assets/logo.svg" alt="" height="40" align="left" style="vertical-align: middle; margin-right: 12px;">
+  <img src="https://raw.githubusercontent.com/pivoshenko/poetry-plugin-dotenv/main/assets/logo.svg" alt="" height="40" align="left" style="vertical-align: middle; margin-right: 12px;">
   poetry-plugin-dotenv
 </h1>
 
@@ -100,7 +100,7 @@ location = ".env.dev"
 The configuration schema is part of the [JSON Schema Store](https://www.schemastore.org/json), so IDEs like Visual Studio Code and PyCharm offer auto-completion and validation for it.
 
 <div align="center">
-  <img alt="logo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/assets/schema_example.png?raw=True">
+  <img alt="logo" src="https://raw.githubusercontent.com/pivoshenko/poetry-plugin-dotenv/main/assets/schema_example.png">
 </div>
 
 ### Configuration Via Environment Variables
@@ -119,7 +119,7 @@ A `pyproject.toml` file can override default values. Environment variables overr
 
 ## Examples
 
-<!-- <img alt="demo" src="https://github.com/pivoshenko/poetry-plugin-dotenv/blob/main/docs/assets/demo.gif?raw=True"> -->
+<!-- <img alt="demo" src="https://raw.githubusercontent.com/pivoshenko/poetry-plugin-dotenv/main/assets/demo.gif"> -->
 
 Using the `activate` command:
 
