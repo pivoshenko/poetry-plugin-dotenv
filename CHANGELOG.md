@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.3.4] - 2026-09-20
+
+### CI/CD
+
+- Publish via uv to fix the arm64 runner
+
 ## [3.3.3] - 2026-09-20
 
 ### Bug fixes
@@ -72,6 +78,10 @@ All notable changes to this project will be documented in this file.
 ### Testing
 
 - Restore cwd with monkeypatch.chdir
+
+### Release
+
+- V3.3.3
 
 ## [3.3.2] - 2026-05-31
 
