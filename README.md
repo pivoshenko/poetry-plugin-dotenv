@@ -100,7 +100,7 @@ location = ".env.dev"
 The configuration schema is part of the [JSON Schema Store](https://www.schemastore.org/json), so IDEs like Visual Studio Code and PyCharm offer auto-completion and validation for it.
 
 <div align="center">
-  <img alt="logo" src="https://raw.githubusercontent.com/pivoshenko/poetry-plugin-dotenv/main/assets/schema_example.png">
+  <img alt="logo" src="https://raw.githubusercontent.com/pivoshenko/poetry-plugin-dotenv/main/assets/preview_schema.png">
 </div>
 
 ### Configuration Via Environment Variables
