@@ -2,11 +2,86 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.3.3] - 2026-09-20
+
+### Bug fixes
+
+- **dotenv**: Widen dotenv value annotations to str | None
+
+### Build
+
+- Align python targets on 3.9 floor and bump pytest
+- Add .python-version
+- Update dependencies
+- Update dependencies
+- **ty**: Drop unknown invalid-yield rule
+- **deps**: Update dependencies
+- **deps**: Update dependencies
+
+### CI/CD
+
+- Pin workflow python to 3.14
+- Pin setup-uv to v10.1.0
+- Drop label sync in favor of terraform
+- Publish to pypi via trusted publishing instead of a token
+- Ignore rules newly stabilized in ruff 0.16
+- Use poetry run pytest so pytest-cov is on PATH
+- Drop ruff format --check from lint; suppress more ty rules
+- Suppress preexisting ty findings in invalid-yield and unresolved-attribute
+- Use uv run pytest for project venv; format example file
+- Fix action versions and test recipe failures
+- Drop hashFiles guard; move .no-tests sentinel handling into justfile
+- Flatten to one job per language
+- Bump action versions to latest major
+- Standardize workflow to per-language parallel pipelines on ubuntu-24.04-arm
+
+### Documentation
+
+- Refresh python version notes
+- Rewrite CLAUDE.md from scratch
+- Regenerate CLAUDE.md and add AGENTS.md
+- **release**: Drop trusted publishing header comments
+- Add pull request template
+- Regenerate CLAUDE.md
+- Document the module docstring convention
+- Normalize module and package docstrings
+- Tighten prose and drop redundant comments
+- Refresh CLAUDE.md for current justfile + CI shape
+- **ci**: Document required secrets at top of workflow files
+
+### Miscellaneous
+
+- **assets**: Rename schema example to kind-first name
+- **assets**: Move assets to repo root
+- Repository housekeeping
+- Symlink AGENTS.md to CLAUDE.md
+- Remove local pull request template
+- **deps**: Update locked dependencies
+- **deps**: Update lockfile dependencies
+- **deps**: Update lockfile dependencies
+- Update dependency lockfile
+- Add editorconfig
+- **justfile**: Use uv lock --upgrade for update, scope pyupgrade to . excluding .venv
+- Standardize justfile recipes and refresh CLAUDE.md
+
+### Refactor
+
+- Use Union alias for python 3.9 compatibility
+- **justfile**: Standardize recipe names and ordering
+
+### Testing
+
+- Restore cwd with monkeypatch.chdir
+
 ## [3.3.2] - 2026-05-31
 
 ### Build
 
 - Widen poetry-core constraint to support poetry 2
+
+### Release
+
+- V3.3.2
 
 ## [3.3.1] - 2026-05-31
 
@@ -600,17 +675,17 @@ All notable changes to this project will be documented in this file.
 - **logger**: Reduce code duplication
 - Update type annotations
 
-### Testing
-
-- Split tests based on the config source
-- Mock IO options
-
 ### Style
 
 - **examples**: Update GIF theme
 - **examples**: Remove noqa suppressions
 - Run formatter
 - **labels**: Update formatting
+
+### Testing
+
+- Split tests based on the config source
+- Mock IO options
 
 ## [2.1.6] - 2024-05-13
 
@@ -736,28 +811,45 @@ All notable changes to this project will be documented in this file.
 - **deps-dev**: Bump ruff from 0.3.5 to 0.3.7
 - **deps-dev**: Bump poethepoet from 0.25.0 to 0.25.1
 - **deps**: Bump idna from 3.6 to 3.7
+- **poetry**: Update dependencies
+- **poetry**: Add `ipython`
+- **pre-commit**: Update dependencies
+- **poetry**: Update dependencies
 
 ### CI/CD
 
 - **workflows.ci**: Remove `macos` from tests strategy
+- **.gitignore**: Add `.import_linter_cache`
 
 ### Documentation
 
 - **README**: Update phrasing
 - **README**: Update `Usage` section
 - Add examples
+- Add examples
 
 ### Miscellaneous
 
+- **ruff**: Update config
+- **ruff**: Update config
 - **ruff**: Update config
 
 ### Refactor
 
 - Remove `Self` type annotation
+- **dotenv**: Update functions signatures
+- **tests**: Update functions signatures
+
+### Style
+
+- Add "no coverage" for `TYPE_CHECKING` sections
 
 ### Testing
 
 - **plugin**: Update section in `_toml_config` tests
+- **plugin**: Add `_toml_config` tests
+- **config**: Add `test__as_bool`
+- Update mocks in order to new configuration keys
 
 ## [0.8.4] - 2024-04-11
 
@@ -767,39 +859,10 @@ All notable changes to this project will be documented in this file.
 - **deps-dev**: Bump python-semantic-release from 9.4.0 to 9.4.1
 - **deps-dev**: Bump ruff from 0.3.4 to 0.3.5
 - **deps-dev**: Bump python-semantic-release from 9.3.1 to 9.4.0
-- **poetry**: Update dependencies
-- **poetry**: Add `ipython`
-- **pre-commit**: Update dependencies
-- **poetry**: Update dependencies
-
-### CI/CD
-
-- **.gitignore**: Add `.import_linter_cache`
 
 ### Documentation
 
 - **README**: Update badges
-- Add examples
-
-### Miscellaneous
-
-- **ruff**: Update config
-- **ruff**: Update config
-
-### Refactor
-
-- **dotenv**: Update functions signatures
-- **tests**: Update functions signatures
-
-### Testing
-
-- **plugin**: Add `_toml_config` tests
-- **config**: Add `test__as_bool`
-- Update mocks in order to new configuration keys
-
-### Style
-
-- Add "no coverage" for `TYPE_CHECKING` sections
 
 ## [0.8.3] - 2024-03-31
 
@@ -1017,6 +1080,7 @@ All notable changes to this project will be documented in this file.
 - **pre-commit**: Update dependencies
 - **poetry**: Remove `nitpick`
 - **poetry**: Update dependencies
+- **deps-dev**: Bump ruff from 0.1.14 to 0.2.0
 
 ### CI/CD
 
@@ -1059,7 +1123,6 @@ All notable changes to this project will be documented in this file.
 ### Build
 
 - **deps**: Bump crs-k/stale-branches from 3.0.0 to 3.1.4
-- **deps-dev**: Bump ruff from 0.1.14 to 0.2.0
 
 ## [0.6.5] - 2024-02-03
 
@@ -1408,12 +1471,17 @@ All notable changes to this project will be documented in this file.
 
 - **docs**: Update docs
 
-## [0.2.5] - 2022-11-18
+## [0.2.6] - 2022-12-03
 
 ### Bug fixes
 
 - **docs**: Update docs
 - **dependencies**: Update dependencies
+
+## [0.2.5] - 2022-11-18
+
+### Bug fixes
+
 - **dependencies**: Update base Python version
 
 ### Documentation
