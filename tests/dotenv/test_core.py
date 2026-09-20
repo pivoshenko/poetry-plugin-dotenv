@@ -38,9 +38,9 @@ def prepare_file_hierarchy(path: Path) -> tuple[Path, Path]:
     return dirs[0], dirs[-1]
 
 
-def test_find_dotenv_no_file_no_raise(tmp_path: Path) -> None:
+def test_find_dotenv_no_file_no_raise(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     *_, leaf = prepare_file_hierarchy(tmp_path)
-    os.chdir(str(leaf))
+    monkeypatch.chdir(leaf)
 
     result = dotenv.find(usecwd=True)
 
@@ -48,9 +48,9 @@ def test_find_dotenv_no_file_no_raise(tmp_path: Path) -> None:
     assert result is None or not str(result).startswith(str(tmp_path))
 
 
-def test_find_dotenv_found(tmp_path: Path) -> None:
+def test_find_dotenv_found(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     (root, leaf) = prepare_file_hierarchy(tmp_path)
-    os.chdir(str(leaf))
+    monkeypatch.chdir(leaf)
     dotenv_file = root / ".env"
     dotenv_file.write_bytes(b"TEST=test\n")
 
@@ -142,7 +142,7 @@ def test_load_dotenv_file_stream(dotenv_file: str) -> None:
     assert os.environ == {"a": "b"}
 
 
-def test_load_dotenv_in_current_dir(tmp_path: Path) -> None:
+def test_load_dotenv_in_current_dir(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     dotenv_path = tmp_path / ".env"
     dotenv_path.write_bytes(b"a=b")
     code_path = tmp_path / "code.py"
@@ -156,7 +156,7 @@ def test_load_dotenv_in_current_dir(tmp_path: Path) -> None:
         """,
         ),
     )
-    os.chdir(str(tmp_path))
+    monkeypatch.chdir(tmp_path)
 
     result = subprocess.run(  # noqa: S603
         [sys.executable, str(code_path)],
