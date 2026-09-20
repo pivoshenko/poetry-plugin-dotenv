@@ -59,7 +59,7 @@ Concrete examples, API sketches, UI mockups, or references are helpful when rele
 
 ### Local Development
 
-This repo needs Python 3.13, [Poetry](https://python-poetry.org) for dependency management, [uv](https://docs.astral.sh/uv) for the `uvx` tooling, and `just`.
+This repo needs Python 3.14, [Poetry](https://python-poetry.org) for dependency management, [uv](https://docs.astral.sh/uv) for the `uvx` tooling, and `just`.
 
 This project uses [`just`](https://github.com/casey/just) as its task runner. Run `just --list` for the full set; these are the ones you need day to day:
 
@@ -85,7 +85,7 @@ Workflows live in `.github/workflows`:
 
 | Workflow | Trigger | What it does |
 | --- | --- | --- |
-| CI | Push to `main`, pull requests, `workflow_dispatch` | Single `ci` job on `ubuntu-24.04-arm`; sets up just, Python 3.13, Poetry and uv, then installs the project, lints it and runs the test suite |
+| CI | Push to `main`, pull requests, `workflow_dispatch` | Single `ci` job on `ubuntu-24.04-arm`; sets up just, Python 3.14, Poetry and uv, then installs the project, lints it and runs the test suite |
 | Release | `workflow_dispatch` (optional `version` input) | Three chained jobs, all on `ubuntu-24.04-arm`: `tag` resolves the next version from the `version` input or from the commit history via git-cliff, bumps the version in `pyproject.toml`, regenerates `CHANGELOG.md`, then commits and pushes `main` with the new tag; `release` (needs `tag`) publishes the GitHub Release with the generated notes as its body; `publish` (needs `tag` and `release`) builds the package and uploads it to PyPI with OIDC trusted publishing |
 
 CI must be green before a pull request is merged.
