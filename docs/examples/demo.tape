@@ -1,4 +1,4 @@
-Output ../assets/demo.gif
+Output ../../assets/demo.gif
 
 Set FontSize 26
 Set Width 1920
