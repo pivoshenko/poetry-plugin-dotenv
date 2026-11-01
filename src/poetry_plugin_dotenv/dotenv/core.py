@@ -19,6 +19,7 @@ from poetry_plugin_dotenv.dotenv import variables
 
 
 if TYPE_CHECKING:  # pragma: no cover
+    from collections.abc import Generator
     from collections.abc import Iterable
     from collections.abc import Iterator
 
@@ -96,7 +97,7 @@ class DotEnv:
         return False  # pragma: nocover
 
     @contextlib.contextmanager
-    def _get_stream(self) -> Iterator[IO[str]]:
+    def _get_stream(self) -> Generator[IO[str]]:
         """Get a dotenv stream."""
         if self.filepath and self.filepath.is_file():
             with self.filepath.open(encoding=self.encoding) as stream:
