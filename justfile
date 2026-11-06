@@ -5,7 +5,6 @@ install:
     poetry install --all-groups --all-extras
 
 format:
-    find . -type f -name '*.py' -not -path '*/.venv/*' | xargs uvx pyupgrade --py39-plus
     uvx ruff check --fix .
     uvx ruff format .
 
