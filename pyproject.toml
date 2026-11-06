@@ -1,3 +1,7 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0,<3.0.0"]
+
 [tool.poetry]
 name = "poetry-plugin-dotenv"
 version = "3.3.4"
@@ -5,6 +9,10 @@ description = "poetry-plugin-dotenv - is the plugin that automatically loads env
 license = "MIT"
 authors = ["Volodymyr Pivoshenko <contact@pivoshenko.dev>"]
 maintainers = ["Volodymyr Pivoshenko <contact@pivoshenko.dev>"]
+readme = "README.md"
+homepage = "https://github.com/pivoshenko/poetry-plugin-dotenv"
+repository = "https://github.com/pivoshenko/poetry-plugin-dotenv"
+documentation = "https://github.com/pivoshenko/poetry-plugin-dotenv"
 keywords = [
   "config",
   "configuration",
@@ -21,15 +29,14 @@ keywords = [
   "pypi",
   "python"
 ]
-homepage = "https://github.com/pivoshenko/poetry-plugin-dotenv"
-documentation = "https://github.com/pivoshenko/poetry-plugin-dotenv"
-repository = "https://github.com/pivoshenko/poetry-plugin-dotenv"
-readme = "README.md"
 classifiers = [
   "Development Status :: 5 - Production/Stable",
-  "License :: OSI Approved :: MIT License",
-  "Operating System :: OS Independent",
   "Environment :: Other Environment",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Information Technology",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.9",
@@ -38,84 +45,66 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: 3.14",
-  "Intended Audience :: Developers",
-  "Intended Audience :: Information Technology",
+  "Topic :: Scientific/Engineering",
   "Topic :: Software Development",
   "Topic :: Software Development :: Libraries",
-  "Topic :: Software Development :: Libraries :: Python Modules",
-  "Topic :: Scientific/Engineering",
-  "Natural Language :: English"
+  "Topic :: Software Development :: Libraries :: Python Modules"
 ]
 packages = [{ include = "poetry_plugin_dotenv", from = "src" }]
-
-[tool.poetry.urls]
-"Issues" = "https://github.com/pivoshenko/poetry-plugin-dotenv/issues"
-"Releases" = "https://github.com/pivoshenko/poetry-plugin-dotenv/releases"
-
-[tool.poetry.dependencies]
-poetry = ">=1.5.0,<3.0.0"
-python = ">=3.9,<4.0"
-
-[tool.poetry.group.formatters.dependencies]
-ruff = "~=0.15.8"
-
-[tool.poetry.group.linters.dependencies]
-ruff = "~=0.15.8"
-ty = "~=0.0.17,<0.0.24"
-
-[tool.poetry.group.tests.dependencies]
-coverage = { version = "~=7.10.7", extras = ["toml"] }
-pytest = "~=8.4.2"
-pytest-cov = "~=7.1.0"
-pytest-mock = "~=3.15.1"
-pytest-sugar = "~=1.1.1"
-
-[tool.poetry.plugins."poetry.application.plugin"]
-poetry-plugin-dotenv = "poetry_plugin_dotenv.plugin:DotenvPlugin"
-
-[build-system]
-build-backend = "poetry.core.masonry.api"
-requires = ["poetry-core>=1.0.0,<3.0.0"]
-
-[tool.coverage.run]
-omit = ["*/__init__.py"]
-
-[tool.pytest.ini_options]
-addopts = ["--basetemp=tests/fixtures", "--color=yes", "--cov=src", "--cov-report=term-missing"]
-testpaths = ["tests"]
-
-[tool.ty.environment]
-python-version = "3.9"
-
-[tool.ty.rules]
-unresolved-attribute = "ignore"
-invalid-argument-type = "ignore"
+dependencies.python = ">=3.9,<4.0"
+dependencies.poetry = ">=1.5.0,<3.0.0"
+group.dev.dependencies.ipdb = "~=0.13.13"
+group.dev.dependencies.ipython = { version = "~=9.18.1", python = ">=3.11" }
+group.formatters.dependencies.ruff = "~=0.17.4"
+group.linters.dependencies.ruff = "~=0.17.4"
+group.linters.dependencies.ty = "~=0.0.99"
+group.tests.dependencies.coverage = { version = "~=7.10.7", extras = ["toml"] }
+group.tests.dependencies.pytest = "~=8.4.2"
+group.tests.dependencies.pytest-cov = "~=7.1.0"
+group.tests.dependencies.pytest-mock = "~=3.15.1"
+group.tests.dependencies.pytest-sugar = "~=1.1.1"
+plugins."poetry.application.plugin".poetry-plugin-dotenv = "poetry_plugin_dotenv.plugin:DotenvPlugin"
+urls.Issues = "https://github.com/pivoshenko/poetry-plugin-dotenv/issues"
+urls.Releases = "https://github.com/pivoshenko/poetry-plugin-dotenv/releases"
 
 [tool.ruff]
-fix = true
-line-length = 100
 target-version = "py39"
+line-length = 100
+fix = true
 unsafe-fixes = true
+format.quote-style = "double"
+format.docstring-code-format = true
+lint.select = ["ALL"]
+lint.ignore = ["COM812", "CPY001", "D101", "D102", "D103", "D107", "D203", "D213"]
+lint.per-file-ignores."docs/examples/main.py" = ["INP001", "T201"]
+lint.per-file-ignores."src/poetry_plugin_dotenv/__init__.py" = ["E501"]
+lint.per-file-ignores."src/poetry_plugin_dotenv/dotenv/variables.py" = [
+  "ANN002",
+  "ANN003",
+  "ARG002"
+]
+lint.per-file-ignores."src/poetry_plugin_dotenv/plugin.py" = ["ANN002", "ANN003", "ARG002"]
+lint.per-file-ignores."tests/**" = ["INP001", "PLR2004", "S101", "SLF001"]
+lint.isort.force-single-line = true
+lint.isort.from-first = false
+lint.isort.length-sort-straight = true
+lint.isort.lines-after-imports = 2
+lint.isort.lines-between-types = 1
+lint.isort.required-imports = ["from __future__ import annotations"]
 
-[tool.ruff.format]
-docstring-code-format = true
-quote-style = "double"
+[tool.ty]
+environment.python-version = "3.9"
+rules.invalid-argument-type = "ignore"
+rules.unresolved-attribute = "ignore"
 
-[tool.ruff.lint]
-ignore = ["D107", "D102", "D103", "D203", "D213", "COM812", "CPY001"]
-select = ["ALL"]
+[tool.pytest]
+ini_options.testpaths = ["tests"]
+ini_options.addopts = [
+  "--basetemp=tests/fixtures",
+  "--color=yes",
+  "--cov=src",
+  "--cov-report=term-missing"
+]
 
-[tool.ruff.lint.isort]
-force-single-line = true
-from-first = false
-length-sort-straight = true
-lines-after-imports = 2
-lines-between-types = 1
-required-imports = ["from __future__ import annotations"]
-
-[tool.ruff.lint.per-file-ignores]
-"docs/examples/main.py" = ["INP001", "T201"]
-"src/poetry_plugin_dotenv/__init__.py" = ["E501"]
-"src/poetry_plugin_dotenv/plugin.py" = ["ARG002", "ANN002", "ANN003"]
-"src/poetry_plugin_dotenv/dotenv/variables.py" = ["ARG002", "ANN002", "ANN003"]
-"tests/*.*" = ["INP001", "S101"]
+[tool.coverage]
+run.omit = ["*/__init__.py"]
