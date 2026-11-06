@@ -5,15 +5,15 @@ install:
     poetry install --all-groups --all-extras
 
 format:
-    uvx ruff check --fix .
-    uvx ruff format .
+    poetry run ruff check --fix .
+    poetry run ruff format .
 
 lint:
-    uvx ruff check .
-    uvx ty check
+    poetry run ruff check .
+    poetry run ty check .
 
 test:
-    @[ -f .no-tests ] && echo "skipping (.no-tests sentinel)" || poetry run pytest
+    @[ -f .no-tests ] && echo "skipping (.no-tests sentinel)" || poetry run pytest .
 
 check: lint test
 
