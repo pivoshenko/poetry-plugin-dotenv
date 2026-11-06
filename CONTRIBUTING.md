@@ -59,7 +59,7 @@ Concrete examples, API sketches, UI mockups, or references are helpful when rele
 
 ### Local Development
 
-This repo needs Python 3.14, [Poetry](https://python-poetry.org) for dependency management, [uv](https://docs.astral.sh/uv) for the `uvx` tooling, and `just`.
+This repo needs Python 3.14, [Poetry](https://python-poetry.org) for dependency management, and `just`.
 
 This project uses [`just`](https://github.com/casey/just) as its task runner. Run `just --list` for the full set; these are the ones you need day to day:
 

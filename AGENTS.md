@@ -8,7 +8,7 @@ It is a plugin, not an app - there is nothing to run locally except the test sui
 
 - **Zero runtime dependencies besides `poetry` itself.** `tomlkit` and `cleo` come transitively from Poetry. This is a headline feature of the project; do not add a runtime dependency without a very good reason
 - **`just lint` rewrites files** despite its name - `[tool.ruff]` sets `fix = true` and `unsafe-fixes = true`. It is not a read-only check
-- the lint tools are invoked through `uvx`, so they resolve from `~/.cache/uv`, not from `.venv`. `poetry install` is still needed for `just test`, since `poetry_plugin_dotenv.__init__` reads its own version through `importlib.metadata` and fails on import if the package is not installed
+- the lint tools run through `poetry run` from the project environment, so `poetry install` is needed before `just lint` and `just test`; the latter also needs it because `poetry_plugin_dotenv.__init__` reads its own version through `importlib.metadata` and fails on import if the package is not installed
 - **Never hand-edit the version** in `pyproject.toml` or `CHANGELOG.md` - the `Release` workflow resolves and writes both with `git-cliff`
 - `src/poetry_plugin_dotenv/dotenv/` is a **fork of `python-dotenv`**, vendored to avoid a runtime dependency. Keep its structure recognisable against upstream so fixes can be ported, and do not restructure it opportunistically
 - type checking is `ty` (Astral), **not mypy**
