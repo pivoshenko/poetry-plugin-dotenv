@@ -66,7 +66,7 @@ This project uses [`just`](https://github.com/casey/just) as its task runner. Ru
 | Command | What it does |
 | --- | --- |
 | `just install` | Installs the project with every dependency group and extra |
-| `just format` | Upgrades Python syntax in place with pyupgrade, then applies Ruff autofixes and formatting |
+| `just format` | Applies Ruff autofixes, including its pyupgrade rules, and formatting in place |
 | `just lint` | Lints the project with Ruff and type-checks it with ty |
 | `just test` | Runs the test suite with pytest, skipped when the `.no-tests` sentinel is present |
 | `just check` | Runs `lint` then `test` in sequence |
