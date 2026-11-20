@@ -2,13 +2,32 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.3.4] - 2026-09-20
+## [4.0.0] - 2026-11-20
+
+### Build
+
+- **justfile**: Split recipes into package parts and add audit
+- Require python 3.11 or newer
+- Standardize the pyproject configuration
+- Standardize just recipes
+- Drop pyupgrade in favor of ruff
+- **deps**: Update dependencies
 
 ### CI/CD
 
-- Publish via uv to fix the arm64 runner
+- Fold audit into ci and standardize the release
 
-## [3.3.3] - 2026-09-20
+### Documentation
+
+- Describe the standardized recipes
+- Describe format without pyupgrade
+- Move agent instructions from CLAUDE.md to AGENTS.md
+
+### Refactor
+
+- **dotenv**: Annotate _get_stream as a Generator
+
+## [3.3.4] - 2026-09-20
 
 ### Bug fixes
 
@@ -26,6 +45,7 @@ All notable changes to this project will be documented in this file.
 
 ### CI/CD
 
+- Publish via uv to fix the arm64 runner
 - Pin workflow python to 3.14
 - Pin setup-uv to v10.1.0
 - Drop label sync in favor of terraform
@@ -81,6 +101,7 @@ All notable changes to this project will be documented in this file.
 
 ### Release
 
+- V3.3.4
 - V3.3.3
 
 ## [3.3.2] - 2026-05-31
