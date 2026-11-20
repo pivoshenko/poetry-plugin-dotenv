@@ -1,9 +1,9 @@
 name: CI
 
 on:
+  pull_request:
   push:
     branches: ["main"]
-  pull_request:
   workflow_dispatch:
 
 concurrency:
@@ -14,7 +14,7 @@ permissions:
   contents: read
 
 jobs:
-  ci:
+  ci-package:
     runs-on: ubuntu-24.04-arm
     steps:
       - name: Checkout repository
@@ -35,10 +35,13 @@ jobs:
         uses: astral-sh/setup-uv@v10.1.0
 
       - name: Install dependencies
-        run: just install
+        run: just install-package
 
       - name: Run linters
-        run: just lint
+        run: just lint-package
+
+      - name: Run audit
+        run: just audit-package
 
       - name: Run tests
-        run: just test
+        run: just test-package
