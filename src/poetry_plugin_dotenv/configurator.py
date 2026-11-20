@@ -8,8 +8,6 @@ import dataclasses
 
 from typing import TYPE_CHECKING
 from typing import Any
-from typing import Optional
-from typing import Union
 
 import tomlkit
 
@@ -45,7 +43,7 @@ class _Config:
 
 
 if TYPE_CHECKING:
-    ConfigValue = Optional[Union[str, bool, list[str], list[pathlib.Path], pathlib.Path]]
+    ConfigValue = str | bool | list[str] | list[pathlib.Path] | pathlib.Path | None
 else:
     ConfigValue = Any
 
