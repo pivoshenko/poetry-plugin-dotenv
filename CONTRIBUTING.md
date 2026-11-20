@@ -65,12 +65,19 @@ This project uses [`just`](https://github.com/casey/just) as its task runner. Ru
 
 | Command | What it does |
 | --- | --- |
-| `just install` | Installs the project with every dependency group and extra |
-| `just format` | Applies Ruff autofixes, including its pyupgrade rules, and formatting in place |
-| `just lint` | Lints the project with Ruff and type-checks it with ty |
-| `just test` | Runs the test suite with pytest, skipped when the `.no-tests` sentinel is present |
+| `just install` | Runs `install-package` |
+| `just install-package` | Installs the project with every dependency group and extra |
+| `just format` | Runs `format-package` |
+| `just format-package` | Applies Ruff autofixes, including its pyupgrade rules, and formatting in place |
+| `just lint` | Runs `lint-package` |
+| `just lint-package` | Lints the project with Ruff and type-checks it with ty |
+| `just audit` | Runs `audit-package` |
+| `just audit-package` | Checks the locked dependencies for known vulnerabilities: exports `poetry.lock` with poetry-plugin-export and audits it with pip-audit, both through `uvx` |
+| `just test` | Runs `test-package` |
+| `just test-package` | Runs the test suite with pytest, skipped when the `.no-tests` sentinel is present |
 | `just check` | Runs `lint` then `test` in sequence |
-| `just update` | Upgrades locked dependencies |
+| `just update` | Runs `update-package` |
+| `just update-package` | Upgrades locked dependencies |
 
 1. Fork the repository and clone your fork locally
 2. Create a branch using the naming pattern described below
@@ -85,8 +92,8 @@ Workflows live in `.github/workflows`:
 
 | Workflow | Trigger | What it does |
 | --- | --- | --- |
-| CI | Push to `main`, pull requests, `workflow_dispatch` | Single `ci` job on `ubuntu-24.04-arm`; sets up just, Python 3.14, Poetry and uv, then installs the project, lints it and runs the test suite |
-| Release | `workflow_dispatch` (optional `version` input) | Three chained jobs, all on `ubuntu-24.04-arm`: `tag` resolves the next version from the `version` input or from the commit history via git-cliff, bumps the version in `pyproject.toml`, regenerates `CHANGELOG.md`, then commits and pushes `main` with the new tag; `release` (needs `tag`) publishes the GitHub Release with the generated notes as its body; `publish` (needs `tag` and `release`) builds the package and uploads it to PyPI with OIDC trusted publishing |
+| CI | Push to `main`, pull requests, `workflow_dispatch` | One job on `ubuntu-24.04-arm`: `ci-package` sets up just, Python 3.14, Poetry and uv, then installs the project, lints it, runs `just audit-package` (no project install needed) and runs the test suite through the `*-package` recipes |
+| Release | `workflow_dispatch` (optional `version` input) | Three chained jobs, all on `ubuntu-24.04-arm`: `tag` resolves the next version from the `version` input (must be `MAJOR.MINOR.PATCH`) or from the commit history via git-cliff, bumps the version in `pyproject.toml`, regenerates `CHANGELOG.md`, then commits and pushes `main` with the new tag and uploads the release notes as the `notes` artifact; `release` (needs `tag`) publishes the GitHub Release with those notes as its body; `publish-pypi` (needs `tag` and `release`) builds the package and uploads it to PyPI with OIDC trusted publishing |
 
 CI must be green before a pull request is merged.
 
